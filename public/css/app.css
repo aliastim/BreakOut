@@ -161,8 +161,10 @@ template {
 @font-face { font-family: 'JosefinSans-ThinItalic';  src: url('/polices/JosefinSans-ThinItalic.ttf'); }
 
 :root {
-    --main: #394E63;
+    --main: #394e63;
     --black : #212121;
+    --gold : linear-gradient(60deg, #7B5B25, #F9BA48, #C38414,#7B5B25);
+    --webkit-gold : -webkit-gradient(linear, left top, right top, from(#7B5B25), color-stop(#F9BA48), color-stop(#C38414), to(#7B5B25));
 }
 html, body {
     background-color: var(--main);
@@ -179,11 +181,134 @@ html, body {
     left: 30px;
     right: 30px;
     top: 20px;
+    /*height: 60px;*/ /*Bloque le responsive*/
     border-radius: 50px;
     background-color: var(--black);
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+    box-shadow: 4px 8px 8px rgba(0,0,0,0.26);
+
+    /*position: relative;*/
+    position: fixed;
+    z-index: 1000;
 }
 
+.navbar-logo {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    /*content: url("/img/icones-navbar/BreakOut_Logotype_Navbar.png");*/
+    background-image: url("/img/icones-navbar/BreakOut_Logotype_Navbar.png") !important;
+    background-color: var(--black) !important;
+    background-repeat: no-repeat !important;
+    background-size: 100px !important;
+    background-position: center ;
+    border-radius: 65px 0 0 65px ;
+    width: 140px;
+    height: 65px;
+    border: 3px solid black;
+}
+
+.nav-link{
+    color: white !important;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-family: 'JosefinSans-Regular';
+}
+.nav-link-icones-span
+{
+    margin-left: 25px !important;
+    margin-top: 1px !important;
+}
+.nav-link-icones
+{
+    position: relative;
+    margin-top: 3px;
+
+}
+.nav-link-icones:before
+{
+    content: '';
+    position: absolute;
+    margin-top: -2px;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    width: 18px;
+    height: 18px;
+}
+
+.nav-link-info:before { background-image: url("/img/icones-navbar/alert.png") !important; }
+.nav-link-home:before { background-image: url("/img/icones-navbar/home.png") !important; }
+.nav-link-room:before { background-image: url("/img/icones-navbar/puzzle.png") !important; }
+.nav-link-forum:before { background-image: url("/img/icones-navbar/chat.png") !important; }
+.nav-link-shop:before { background-image: url("/img/icones-navbar/cart.png") !important; }
+.nav-link-parameters:before { background-image: url("/img/icones-navbar/cog.png") !important; }
+.nav-link-sound:before { background-image: url("/img/icones-navbar/speaker.png") !important; }
+.navbar-left
+{
+    margin-left: 120px;
+}
+
+.breakout-bakground
+{
+    background: url("/img/wallpaper/BreakOut_Maze_Wallpaper.png") no-repeat;
+    background-size: 100%;
+    padding-top: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.breakout-bakground:before
+{
+    content: '';
+    background: rgba(57,78,99,0.80);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.navbar-profile-button {
+    padding: 2px;
+    font-size: 17px;
+    color: #000;
+    background: var(--webkit-gold);
+    background: var(--gold);
+    border-radius: 30px;
+}
+.navbar-profile-button > span {
+    display: block;
+    padding: 10px 30px;
+    font-size: 11px;
+    background: #212121;
+    border-radius: 30px;
+    color: white;
+    font-family: 'JosefinSans-SemiBold';
+    text-transform: uppercase;
+}
+
+.navbar-profile-button:hover > span {
+    background: transparent;
+    transition: 0.5s;
+}
+
+.navbar-button > button {
+    margin: 1px 0 0;
+    /*padding: 0;
+    font-size: 1em;
+    background: transparent;*/
+    border: 0;
+    border-radius: 50px;
+    box-shadow: none;
+    outline: 0;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("/img/icones-navbar/open-menu.png") !important;
+}
 /*CSS de laravel en dessous*/
 .full-height {
     height: 100vh;
@@ -193,36 +318,4 @@ html, body {
     align-items: center;
     display: flex;
     justify-content: center;
-}
-
-.position-ref {
-    position: relative;
-}
-
-.top-right {
-    position: absolute;
-    right: 10px;
-    top: 18px;
-}
-
-.content {
-    text-align: center;
-}
-
-.title {
-    font-size: 84px;
-}
-
-.links > a {
-    color: #636b6f;
-    padding: 0 25px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.m-b-md {
-    margin-bottom: 30px;
 }
