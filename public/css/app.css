@@ -163,6 +163,8 @@ template {
 :root {
     --main: #394e63;
     --black : #212121;
+    --yellow: #C38414;
+    --yellow2: #F9BA48;
     --gold : linear-gradient(60deg, #7B5B25, #F9BA48, #C38414,#7B5B25);
     --webkit-gold : -webkit-gradient(linear, left top, right top, from(#7B5B25), color-stop(#F9BA48), color-stop(#C38414), to(#7B5B25));
 }
@@ -178,6 +180,7 @@ html, body {
 .breakout-navbar
 {
     width: calc(100% - 60px);
+    max-width: 2000px;
     left: 30px;
     right: 30px;
     top: 20px;
@@ -213,6 +216,10 @@ html, body {
     text-transform: uppercase;
     font-family: 'JosefinSans-Regular';
 }
+
+.nav-link:hover{
+    color: var(--yellow2) !important;
+}
 .nav-link-icones-span
 {
     margin-left: 25px !important;
@@ -221,7 +228,7 @@ html, body {
 .nav-link-icones
 {
     position: relative;
-    margin-top: 3px;
+    margin-top: 4px;
 
 }
 .nav-link-icones:before
@@ -279,7 +286,7 @@ html, body {
 }
 .navbar-profile-button > span {
     display: block;
-    padding: 10px 30px;
+    padding: 11px 30px 9px 30px;
     font-size: 11px;
     background: #212121;
     border-radius: 30px;
@@ -308,14 +315,4 @@ html, body {
 
 .navbar-light .navbar-toggler-icon {
     background-image: url("/img/icones-navbar/open-menu.png") !important;
-}
-/*CSS de laravel en dessous*/
-.full-height {
-    height: 100vh;
-}
-
-.flex-center {
-    align-items: center;
-    display: flex;
-    justify-content: center;
 }

@@ -64,7 +64,7 @@
                         </div>
                     </li>
                     @endauth
-                    <li class="nav-item pr-3">
+                    <li class="nav-item pr-4">
                         <a class="nav-link nav-link-sound nav-link-icones" href=""></a>
                     </li>
                     <li class="nav-item navbar-button">
