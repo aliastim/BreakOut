@@ -167,6 +167,7 @@ template {
     --yellow2: #F9BA48;
     --gold : linear-gradient(60deg, #7B5B25, #F9BA48, #C38414,#7B5B25);
     --webkit-gold : -webkit-gradient(linear, left top, right top, from(#7B5B25), color-stop(#F9BA48), color-stop(#C38414), to(#7B5B25));
+    --fond: #FFEFBC
 }
 html, body {
     background-color: var(--main);
@@ -177,10 +178,23 @@ html, body {
     margin: 0;
 }
 
+main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.app
+{
+    /*position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;*/
+}
 .breakout-navbar
 {
     width: calc(100% - 60px);
-    max-width: 2000px;
     left: 30px;
     right: 30px;
     top: 20px;
@@ -188,10 +202,13 @@ html, body {
     border-radius: 50px;
     background-color: var(--black);
     box-shadow: 4px 8px 8px rgba(0,0,0,0.26);
+    max-width: 2000px;
 
     /*position: relative;*/
     position: fixed;
     z-index: 1000;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .navbar-logo {
@@ -316,3 +333,71 @@ html, body {
 .navbar-light .navbar-toggler-icon {
     background-image: url("/img/icones-navbar/open-menu.png") !important;
 }
+
+.breakout-body{
+    position: relative;
+    /*argin-top: 200px;*/
+    width: calc(100% - 250px);
+    height: 200px;
+    background: var(--fond);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1900px;
+}
+
+.breakout-body-before
+{
+    position: relative;
+    background: #1C2731;
+    height: 40px;
+    width: calc(100% - 248px);
+    max-width: 1900px;
+    border-radius: 10px 10px 0 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    color: white;
+    padding-top: 8px;
+    font-family: 'JosefinSans-Light';
+    overflow: hidden;
+}
+
+/*-----------ACCUEIL--------------*/
+
+#carousel
+{
+    position: relative;
+    width: calc(100% - 400px);
+    max-width: 1800px;
+    margin-top: 85px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.liseret-rouge
+{
+    border: 3px solid #75101C;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 !important;
+}
+
+.btn-home-play
+{
+    background: linear-gradient(#B3000F, #80000B);
+    position: absolute;
+    top: -32px;
+    z-index: 9999;
+    color: white;
+    padding: 18px 40px 15px 40px;
+    text-transform: uppercase;
+    font-family: 'JosefinSans-Bold';
+    font-size: 28px;
+    border: 1px solid #3C3C3C;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0, 0.5);
+}
+
+
