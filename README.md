@@ -7,6 +7,7 @@ composer create-project --prefer-dist laravel/laravel BreakOut
 Lancer le serveur : 
 ```bash
 php artisan serve
+npm run watch
 ```
 
 installer vuejs : 
