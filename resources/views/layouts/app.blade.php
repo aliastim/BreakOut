@@ -62,9 +62,83 @@
                         <a class="nav-link nav-link-sound nav-link-icones" href=""></a>
                     </li>
                     <li class="nav-item navbar-button">
-                        <button class="navbar-profile-button">
-                            <span>Mon profil</span>
-                        </button>
+                        @guest
+                            <button class="navbar-profile-button" data-toggle="modal" data-target="#modalconnexion">
+                                <span>Se connecter</span>
+                            </button>
+                            <div class="modal fade" id="modalconnexion" tabindex="-1" aria-labelledby="modalconnexion" aria-hidden="true">
+                                <div class="modal-dialog login-modal-dialog modal-dialog-centered">
+                                    <div class="login-modal-content">
+                                        <div class="login-modal-header">
+                                            <div></div>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="opacity: 1 !important;">
+                                                <div aria-hidden="true" class="modal-cross"></div>
+                                            </button>
+                                        </div>
+                                        <div class="login-modal-body">
+                                            <ul class="nav nav-pills justify-content-between mb-3" id="pills-tab" role="tablist">
+                                                <li class="nav-item onglet-modal-login margin-modal-login-left" role="presentation">
+                                                    <a class="nav-link w-100 active" id="pills-connect-tab" data-toggle="pill" href="#pills-connect" role="tab" aria-controls="pills-connect" aria-selected="true">Se connecter</a>
+                                                </li>
+                                                <li class="nav-item onglet-modal-login margin-modal-login-right" role="presentation">
+                                                    <a class="nav-link w-100" id="pills-register-tab" data-toggle="pill" href="#pills-register" role="tab" aria-controls="pills-register" aria-selected="false">S'inscrire</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="pills-tabContent">
+                                                <div class="tab-pane d-flex justify-content-between fade show active" id="pills-connect" role="tabpanel" aria-labelledby="pills-connect-tab">
+                                                    <div class="onglet-modal-login-body margin-modal-login-left" style="margin-top: 0 !important; margin-bottom: 10px !important;">
+                                                    </div>
+                                                    <div class="onglet-modal-login-body margin-modal-login-right" style="margin-top: 0 !important; margin-bottom: 10px !important;">
+                                                        <div class="w-100 h-100 p-3">
+                                                            <div class="d-flex justify-content-center">
+                                                                <img class="modal-login-logo" src="{{ asset('img/logos/BreakOut_Logotype_Citation.png') }}">
+                                                            </div>
+                                                            <form method="POST" action="{{ route('login')}}" class="mt-4">
+                                                                @csrf
+                                                                <label for="login-mail" class="modal-login-credentials-text">Nom d'utilisateur :</label>
+                                                                <input id="login-mail" class="input-login @error('email') is-invalid @enderror" type="email" placeholder="Votre email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                                                    @error('email')
+                                                                    <span class="invalid-feedback" role="alert">
+                                                                        <strong>{{ $message }}</strong>
+                                                                    </span>
+                                                                    @enderror
+                                                                <label for="login-password" class="modal-login-credentials-text mt-2">Mot de passe :</label>
+                                                                <div class="input-group">
+                                                                    <input id="login-password  @error('password') is-invalid @enderror" type="password" class="form-control input-login-2" placeholder="Mot de passe" name="password" required autocomplete="current-password">
+                                                                    <div class="input-group-append">
+                                                                        <button class="btn btn-outline-secondary input-login-btn" type="submit">GO</button>
+                                                                    </div>
+                                                                </div>
+                                                                    @error('password')
+                                                                    <span class="invalid-feedback" role="alert">
+                                                                        <strong>{{ $message }}</strong>
+                                                                    </span>
+                                                                    @enderror
+                                                                <div class="w-100 text-center mt-1">
+                                                                    @if (Route::has('password.request'))
+                                                                        <a class="small-text-login" href="{{ route('password.request') }}">
+                                                                            <small>Mot de passe oublié ?</small>
+                                                                        </a>
+                                                                    @endif
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="pills-register-tab">
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @else
+                            <button class="navbar-profile-button" >
+                                <span>Mon profil</span>
+                            </button>
+                        @endguest
                     </li>
                     <!-- Authentication Links -->
                     @guest
