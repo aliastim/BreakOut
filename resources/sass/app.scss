@@ -407,7 +407,7 @@ main {
 
 .login-modal-dialog
 {
-    max-width: 800px !important;
+    max-width: 750px !important;
 }
 
 .login-modal-content
@@ -473,6 +473,8 @@ main {
 {
     background: var(--fond);
     border-radius: 5px;
+    padding-top: 3px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
 }
 
 .onglet-modal-login>a
@@ -488,6 +490,10 @@ main {
 {
     color: var(--fond) !important;
     background-color: #7B5B25 !important;
+
+    margin-top: -3px;
+    height: 43px;
+    padding-top: 11px;
 }
 
 .onglet-modal-login-body
@@ -496,6 +502,7 @@ main {
     height: 370px;
     border-radius: 5px;
     overflow: hidden;
+    box-shadow: -3px -3px 10px rgba(0,0,0,0.16);
 }
 
 .modal-login-logo
@@ -547,4 +554,67 @@ main {
     font-family: 'JosefinSans-Regular';
     color: var(--yellow) !important;
     font-size: 16px;
+}
+
+.onglet-modal-register-body
+{
+    background: var(--fond);
+    height: 370px;
+    width: calc(100% - 20px);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: -3px -3px 10px rgba(0,0,0,0.16);
+    margin-bottom: 10px;
+}
+
+.btn-parrainage-prepend
+{
+    height: 40px;
+    background-color: transparent !important;
+    border: 2px solid #1F3143;
+    border-right: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.btn-parrainage-prepend>span
+{
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.btn-parrainage-prepend>span>img
+{
+   max-height: 25px;
+}
+
+
+.btn-parrainage
+{
+    background: none;
+    height: 40px;
+    border: 2px solid #1F3143;
+    border-left: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 180px;
+}
+
+.btn-submit-register
+{
+    border: 2px solid black;
+    border-radius: 10px;
+    background: var(--yellow2);
+    font-family: 'JosefinSans-Bold';
+    font-size: 18px;
+    color: black;
+    text-transform: uppercase;
+    height: 40px;
+    width: 100%;
+    padding-top: 4px;
+}
+
+.lien-conditions
+{
+    color: #C38414 !important;
 }

@@ -85,48 +85,120 @@
                                                 </li>
                                             </ul>
                                             <div class="tab-content" id="pills-tabContent">
-                                                <div class="tab-pane d-flex justify-content-between fade show active" id="pills-connect" role="tabpanel" aria-labelledby="pills-connect-tab">
-                                                    <div class="onglet-modal-login-body margin-modal-login-left" style="margin-top: 0 !important; margin-bottom: 10px !important;">
-                                                    </div>
-                                                    <div class="onglet-modal-login-body margin-modal-login-right" style="margin-top: 0 !important; margin-bottom: 10px !important;">
-                                                        <div class="w-100 h-100 p-3">
-                                                            <div class="d-flex justify-content-center">
-                                                                <img class="modal-login-logo" src="{{ asset('img/logos/BreakOut_Logotype_Citation.png') }}">
-                                                            </div>
-                                                            <form method="POST" action="{{ route('login')}}" class="mt-4">
-                                                                @csrf
-                                                                <label for="login-mail" class="modal-login-credentials-text">Nom d'utilisateur :</label>
-                                                                <input id="login-mail" class="input-login @error('email') is-invalid @enderror" type="email" placeholder="Votre email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                                                                    @error('email')
-                                                                    <span class="invalid-feedback" role="alert">
-                                                                        <strong>{{ $message }}</strong>
-                                                                    </span>
-                                                                    @enderror
-                                                                <label for="login-password" class="modal-login-credentials-text mt-2">Mot de passe :</label>
-                                                                <div class="input-group">
-                                                                    <input id="login-password  @error('password') is-invalid @enderror" type="password" class="form-control input-login-2" placeholder="Mot de passe" name="password" required autocomplete="current-password">
-                                                                    <div class="input-group-append">
-                                                                        <button class="btn btn-outline-secondary input-login-btn" type="submit">GO</button>
+                                                <div class="tab-pane fade show active" id="pills-connect" role="tabpanel" aria-labelledby="pills-connect-tab">
+                                                    <div class="w-100 d-flex justify-content-between">
+                                                        <div class="onglet-modal-login-body margin-modal-login-left" style="margin-top: 0 !important; margin-bottom: 10px !important;">
+                                                        </div>
+                                                        <div class="onglet-modal-login-body margin-modal-login-right" style="margin-top: 0 !important; margin-bottom: 10px !important;">
+                                                            <div class="w-100 h-100 p-3">
+                                                                <div class="d-flex justify-content-center">
+                                                                    <img class="modal-login-logo" src="{{ asset('img/logos/BreakOut_Logotype_Citation.png') }}">
+                                                                </div>
+                                                                <form method="POST" action="{{ route('login')}}" class="mt-4">
+                                                                    @csrf
+                                                                    <label for="login-mail" class="modal-login-credentials-text">Nom d'utilisateur :</label>
+                                                                    <input id="login-mail" class="input-login @error('email') is-invalid @enderror" type="email" placeholder="Votre email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                                                        @error('email')
+                                                                        <span class="invalid-feedback" role="alert">
+                                                                            <strong>{{ $message }}</strong>
+                                                                        </span>
+                                                                        @enderror
+                                                                    <label for="login-password" class="modal-login-credentials-text mt-2">Mot de passe :</label>
+                                                                    <div class="input-group">
+                                                                        <input id="login-password  @error('password') is-invalid @enderror" type="password" class="form-control input-login-2" placeholder="Mot de passe" name="password" required autocomplete="current-password">
+                                                                        <div class="input-group-append">
+                                                                            <button class="btn btn-outline-secondary input-login-btn" type="submit">GO</button>
+                                                                        </div>
                                                                     </div>
-                                                                </div>
-                                                                    @error('password')
-                                                                    <span class="invalid-feedback" role="alert">
-                                                                        <strong>{{ $message }}</strong>
-                                                                    </span>
-                                                                    @enderror
-                                                                <div class="w-100 text-center mt-1">
-                                                                    @if (Route::has('password.request'))
-                                                                        <a class="small-text-login" href="{{ route('password.request') }}">
-                                                                            <small>Mot de passe oublié ?</small>
-                                                                        </a>
-                                                                    @endif
-                                                                </div>
-                                                            </form>
+                                                                        @error('password')
+                                                                        <span class="invalid-feedback" role="alert">
+                                                                            <strong>{{ $message }}</strong>
+                                                                        </span>
+                                                                        @enderror
+                                                                    <div class="w-100 text-center mt-1">
+                                                                        @if (Route::has('password.request'))
+                                                                            <a class="small-text-login" href="{{ route('password.request') }}">
+                                                                                <small>Mot de passe oublié ?</small>
+                                                                            </a>
+                                                                        @endif
+                                                                    </div>
+                                                                </form>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="pills-register-tab">
+                                                    <div class="w-100 d-flex justify-content-center">
+                                                        <div class="onglet-modal-register-body">
+                                                            <form method="POST" action="{{ route('register') }}">
+                                                                @csrf
+                                                                <div class="w-100 h-100 d-flex justify-content-between">
+                                                                    <div class="margin-modal-login-left h-100" style="margin-top: 0 !important; margin-bottom: 10px !important;">
+                                                                        <div class="w-100 h-100 p-3">
+                                                                            <label for="login-mail" class="modal-login-credentials-text mt-1">Votre adresse email :</label>
+                                                                            <input id="login-mail" class="input-login @error('email') is-invalid @enderror" type="email" placeholder="Votre email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
+                                                                            @error('email')
+                                                                            <span class="invalid-feedback" role="alert">
+                                                                                <strong>{{ $message }}</strong>
+                                                                            </span>
+                                                                            @enderror
+
+                                                                            <label for="name" class="modal-login-credentials-text mt-2">Votre nom d'utilisateur :</label>
+                                                                            <input id="name" class="input-login @error('name') is-invalid @enderror" type="text" placeholder="Votre pseudo" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                                                                            @error('name')
+                                                                            <span class="invalid-feedback" role="alert">
+                                                                                <strong>{{ $message }}</strong>
+                                                                            </span>
+                                                                            @enderror
+
+                                                                            <label for="password" class="modal-login-credentials-text mt-2">Votre mot de passe :</label>
+                                                                            <input id="password" type="password" class="input-login @error('password') is-invalid @enderror" placeholder="Votre mot de passe" name="password" required autocomplete="new-password">
+
+                                                                            @error('password')
+                                                                            <span class="invalid-feedback" role="alert">
+                                                                                <strong>{{ $message }}</strong>
+                                                                            </span>
+                                                                            @enderror
+
+                                                                            <label for="password-confirm" class="modal-login-credentials-text mt-2">Confirmation du mot de passe :</label>
+                                                                            <input id="password-confirm" type="password" class="input-login" placeholder="Confirmer le mot de passe" name="password_confirmation" required autocomplete="new-password">
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="margin-modal-login-right h-100" style="margin-top: 0 !important; margin-bottom: 10px !important;">
+                                                                        <div class="w-100 h-100 p-3">
+                                                                            <div class="d-flex justify-content-center">
+                                                                                <img class="modal-login-logo" src="{{ asset('img/logos/BreakOut_Logotype_Citation.png') }}">
+                                                                            </div>
+                                                                            <div class="text-center">
+                                                                                <label for="password-confirm" class="modal-login-credentials-text" style="margin-top: 42px;">Un code de parrainage :</label>
+                                                                                <div class="w-100">
+                                                                                    <div class="input-group mb-3 d-flex justify-content-center">
+                                                                                        <div class="input-group-prepend btn-parrainage-prepend">
+                                                                                            <span class="input-group-text" id="inputGroup-sizing-default"><img src="{{asset('img/icones/ajouter_un_ami.png')}}"></span>
+                                                                                        </div>
+                                                                                        <input type="text" class="btn-parrainage" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-check" style="margin-top: -6px;">
+                                                                                    <input class="form-check-input" type="checkbox" value="" id="CheckConditions">
+                                                                                    <label class="form-check-label" for="CheckConditions">
+                                                                                        <small>J'ai bien lu et j'accepte les conditions générales</small>
+                                                                                    </label>
+                                                                                </div>
+                                                                                <button type="submit" class="btn-submit-register" style="margin-top: 6px;">Envoyer</button>
+                                                                                <div class="text-center" style="margin-top: 3px;">
+                                                                                    <a href="" class="lien-conditions"><small>Conditions générales</small></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
 
@@ -140,7 +212,7 @@
                             </button>
                         @endguest
                     </li>
-                    <!-- Authentication Links -->
+                    <!-- Authentication Links | A SUPPRIMER QUAND LA MODAL PROFIL SERA CREE -->
                     @guest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -169,6 +241,7 @@
                             </div>
                         </li>
                     @endguest
+                    <!-- ______ -->
                 </ul>
             </div>
         </nav>
