@@ -273,6 +273,7 @@ template {
   --gold: linear-gradient(60deg, #7B5B25, #F9BA48, #C38414,#7B5B25);
   --webkit-gold: -webkit-gradient(linear, left top, right top, from(#7B5B25), color-stop(#F9BA48), color-stop(#C38414), to(#7B5B25));
   --fond: #FFEFBC;
+  --marron1: #5C4725;
 }
 
 html,
@@ -291,6 +292,30 @@ main {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: calc(100% - 20px) !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: calc(100% - 30px) !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: calc(100% - 50px) !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .d-none-991 {
+    display: none !important;
+  }
 }
 
 .josephin-bold {
@@ -342,6 +367,14 @@ main {
   width: 140px;
   height: 65px;
   border: 3px solid black;
+}
+
+@media screen and (max-width: 991px) {
+  .breakout-navbar {
+    width: 95%;
+    left: 2.5%;
+    right: 2.5%;
+  }
 }
 
 .nav-link {
@@ -685,9 +718,8 @@ main {
 
 .breakout-body {
   position: relative;
-  /*argin-top: 200px;*/
-  width: calc(100% - 250px);
-  height: 200px;
+  /*margin-top: 200px;*/
+  width: calc(100% - 150px);
   background: var(--fond);
   margin-left: auto;
   margin-right: auto;
@@ -698,7 +730,7 @@ main {
   position: relative;
   background: #1C2731;
   height: 40px;
-  width: calc(100% - 248px);
+  width: calc(100% - 148px);
   max-width: 1900px;
   border-radius: 10px 10px 0 0;
   margin-left: auto;
@@ -710,6 +742,16 @@ main {
   overflow: hidden;
 }
 
+@media screen and (max-width: 991px) {
+  .breakout-body {
+    width: 95%;
+  }
+
+  .breakout-body-before {
+    width: calc(95% - 2px);
+  }
+}
+
 #carousel {
   position: relative;
   width: calc(100% - 400px);
@@ -717,6 +759,16 @@ main {
   margin-top: 85px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (max-width: 991px) {
+  #carousel {
+    width: 90%;
+  }
+
+  .carousel__pagination {
+    display: none;
+  }
 }
 
 .liseret-rouge {
@@ -729,21 +781,9 @@ main {
 }
 
 .btn-home-play {
-  /*background: linear-gradient(#B3000F, #80000B);
   position: absolute;
   top: -32px;
-  z-index: 9999;
-  color: white;
-  padding: 18px 40px 15px 40px;
-  text-transform: uppercase;
-  font-family: 'JosefinSans-Bold';
-  font-size: 28px;
-  border: 1px solid #3C3C3C;
-  border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0,0,0, 0.5);*/
-  position: absolute;
-  top: -32px;
-  z-index: 9999;
+  z-index: 1;
   padding: 18px 40px 15px 40px;
   text-transform: uppercase;
   text-align: center;
@@ -762,5 +802,102 @@ main {
   background-position: bottom center;
   transform: scale(1.05);
   cursor: pointer;
+}
+
+.panneau-accueil {
+  background: var(--marron1);
+  color: var(--yellow2);
+  padding: 11px 20px 2px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.panneau-accueil > h3 {
+  font-family: "JosefinSans-Bold";
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 991px) {
+  .panneau-accueil {
+    background: var(--marron1);
+    color: var(--yellow2);
+    padding: 12px 10px 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  .panneau-accueil > h3 {
+    font-family: "JosefinSans-Bold";
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+}
+
+.carre-salle-accueil {
+  position: relative;
+  height: 250px;
+  width: 100%;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  border-radius: 10px 10px 0 0;
+}
+
+.carre-salle-accueil-apres {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 7px 7px 0 0;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+.carre-salle-accueil-apres > div > div > div > h2 {
+  font-size: 1.4rem;
+  font-family: "JosefinSans-SemiBold";
+  color: white;
+  text-transform: uppercase;
+}
+
+.carre-salle-accueil-apres > div > div > div > a > button {
+  width: 90%;
+  max-width: 400px;
+  background: rgba(0, 0, 0, 0.3);
+  border: white 3px solid;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  color: white;
+  font-family: "JosefinSans-Bold";
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 12px 10px 10px 10px;
+  border-radius: 50px;
+  height: 45px;
+  margin: auto;
+}
+
+.carre-salle-accueil-apres > div > div > div > a > button:hover {
+  transition: 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.carre-salle-accueil-footer {
+  width: 100%;
+  background: var(--black);
+  margin-top: -2px !important;
+  height: 35px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.carre-salle-accueil-footer > div > div {
+  font-size: 14px;
+  color: white;
+  font-family: "JosefinSans-SemiBold";
 }
 
