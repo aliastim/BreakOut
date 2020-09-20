@@ -269,7 +269,7 @@ template {
   --main: #394e63;
   --black: #212121;
   --yellow: #C38414;
-  --yellow2: #F9BA48;
+  --yellow2: #f9ba48;
   --gold: linear-gradient(60deg, #7B5B25, #F9BA48, #C38414,#7B5B25);
   --webkit-gold: -webkit-gradient(linear, left top, right top, from(#7B5B25), color-stop(#F9BA48), color-stop(#C38414), to(#7B5B25));
   --fond: #FFEFBC;
@@ -293,12 +293,22 @@ main {
   right: 0;
 }
 
+.josephin-bold {
+  font-family: "JosefinSans-Bold" !important;
+}
+
+.color-white {
+  color: white !important;
+}
+
 .app {
   /*position: absolute;
   display: flex;
   justify-content: center;
   width: 100%;*/
 }
+
+/*------------NAVBAR------------*/
 
 .breakout-navbar {
   width: calc(100% - 60px);
@@ -397,27 +407,6 @@ main {
   margin-left: 120px;
 }
 
-.breakout-bakground {
-  background: url("/img/wallpaper/BreakOut_Maze_Wallpaper.png") no-repeat;
-  background-size: 100%;
-  padding-top: 100px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-
-.breakout-bakground:before {
-  content: "";
-  background: rgba(57, 78, 99, 0.8);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
 .navbar-profile-button {
   padding: 2px;
   font-size: 17px;
@@ -460,67 +449,7 @@ main {
   background-image: url("/img/icones-navbar/open-menu.png") !important;
 }
 
-.breakout-body {
-  position: relative;
-  /*argin-top: 200px;*/
-  width: calc(100% - 250px);
-  height: 200px;
-  background: var(--fond);
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1900px;
-}
-
-.breakout-body-before {
-  position: relative;
-  background: #1C2731;
-  height: 40px;
-  width: calc(100% - 248px);
-  max-width: 1900px;
-  border-radius: 10px 10px 0 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15px;
-  color: white;
-  padding-top: 8px;
-  font-family: "JosefinSans-Light";
-  overflow: hidden;
-}
-
-/*-----------ACCUEIL--------------*/
-
-#carousel {
-  position: relative;
-  width: calc(100% - 400px);
-  max-width: 1800px;
-  margin-top: 85px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.liseret-rouge {
-  border: 3px solid #75101C;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 !important;
-}
-
-.btn-home-play {
-  background: linear-gradient(#B3000F, #80000B);
-  position: absolute;
-  top: -32px;
-  z-index: 9999;
-  color: white;
-  padding: 18px 40px 15px 40px;
-  text-transform: uppercase;
-  font-family: "JosefinSans-Bold";
-  font-size: 28px;
-  border: 1px solid #3C3C3C;
-  border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-}
+/*-----MODAL CONNEXION / PROFIL -----*/
 
 .modal-backdrop {
   z-index: 0;
@@ -706,5 +635,132 @@ main {
 
 .lien-conditions {
   color: #C38414 !important;
+}
+
+.btn-profile {
+  height: 45px;
+  width: 45px;
+  border: 4px solid #1F3143;
+  border-radius: 13px;
+  background: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  transition: 0.3s;
+}
+
+.btn-profile:hover {
+  background: #1F3143;
+}
+
+.btn-profile:hover > i {
+  color: var(--yellow);
+}
+
+.btn-profile > i {
+  color: var(--yellow2);
+  font-size: 22px;
+}
+
+/*-----------ACCUEIL--------------*/
+
+.breakout-bakground {
+  background: url("/img/wallpaper/BreakOut_Maze_Wallpaper.png") no-repeat;
+  background-size: 100%;
+  padding-top: 100px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.breakout-bakground:before {
+  content: "";
+  background: rgba(57, 78, 99, 0.8);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.breakout-body {
+  position: relative;
+  /*argin-top: 200px;*/
+  width: calc(100% - 250px);
+  height: 200px;
+  background: var(--fond);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1900px;
+}
+
+.breakout-body-before {
+  position: relative;
+  background: #1C2731;
+  height: 40px;
+  width: calc(100% - 248px);
+  max-width: 1900px;
+  border-radius: 10px 10px 0 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  color: white;
+  padding-top: 8px;
+  font-family: "JosefinSans-Light";
+  overflow: hidden;
+}
+
+#carousel {
+  position: relative;
+  width: calc(100% - 400px);
+  max-width: 1800px;
+  margin-top: 85px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.liseret-rouge {
+  border: 3px solid #75101C;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 !important;
+}
+
+.btn-home-play {
+  /*background: linear-gradient(#B3000F, #80000B);
+  position: absolute;
+  top: -32px;
+  z-index: 9999;
+  color: white;
+  padding: 18px 40px 15px 40px;
+  text-transform: uppercase;
+  font-family: 'JosefinSans-Bold';
+  font-size: 28px;
+  border: 1px solid #3C3C3C;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0, 0.5);*/
+  position: absolute;
+  top: -32px;
+  z-index: 9999;
+  padding: 18px 40px 15px 40px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  font-family: "JosefinSans-Bold";
+  font-size: 28px;
+  border: 1px solid #3C3C3C;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+  background-size: 100% 200%;
+  background-image: linear-gradient(to top, #80000B 0%, #f3071c 50%, #80000B 50%, #B3000F 100%);
+  transition: 0.3s;
+}
+
+.btn-home-play:hover {
+  background-position: bottom center;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 

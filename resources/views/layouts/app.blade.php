@@ -15,6 +15,8 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('css/all.css')}}" > <!-- FontAwesome -->
+
 </head>
 <body>
     <div id="app" class="app">
@@ -207,41 +209,32 @@
                                 </div>
                             </div>
                         @else
-                            <button class="navbar-profile-button" >
+                            <button class="navbar-profile-button" data-toggle="modal" data-target="#modalprofil">
                                 <span>Mon profil</span>
                             </button>
+                            <div class="modal fade" id="modalprofil" tabindex="-1" aria-labelledby="modalprofil" aria-hidden="true">
+                                <div class="modal-dialog login-modal-dialog modal-dialog-centered">
+                                    <div class="login-modal-content">
+                                        <div class="login-modal-header">
+                                            <div class="josephin-bold color-white">{{ Auth::user()->name }} - Mon profil</div>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="opacity: 1 !important;">
+                                                <div aria-hidden="true" class="modal-cross"></div>
+                                            </button>
+                                        </div>
+                                        <div class="login-modal-body">
+                                            <div class="">{{ Auth::user()->name }} - Mon profil</div>
+
+                                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><button class="btn-profile"><i class="fas fa-sign-out-alt"></i></button></a>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         @endguest
                     </li>
-                    <!-- Authentication Links | A SUPPRIMER QUAND LA MODAL PROFIL SERA CREE -->
-                    @guest
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li>
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                        @endif
-                    @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                    @endguest
-                    <!-- ______ -->
                 </ul>
             </div>
         </nav>
