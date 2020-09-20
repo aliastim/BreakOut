@@ -223,6 +223,11 @@ main {
     font-family: 'JosefinSans-Bold' !important;
 }
 
+.josephin-bold-italic
+{
+    font-family: 'JosefinSans-BoldItalic' !important;
+}
+
 .color-white
 {
     color: white !important;
@@ -854,4 +859,90 @@ main {
     font-size: 14px;
     color: white;
     font-family: 'JosefinSans-SemiBold';
+}
+
+.cadre-explications
+{
+    position: relative;
+    width: 100%;
+    background: #CEB883;
+    border-radius: 5px;
+    border: 4px solid #7B5B25;
+    text-align: center;
+}
+
+.cadre-explications-panneau
+{
+    position: absolute;
+    height: 40px;
+    top: -23px;
+    background: #7B5B25;
+    border: 4px solid #7B5B25;
+    padding: 0px 20px 0px 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    overflow: hidden;
+}
+
+.cadre-explications-panneau>h1
+{
+    font-family: 'JosefinSans-Bold';
+    font-size: 20px;
+    color: white;
+    margin-top: 6px;
+}
+
+@media screen and (max-width: 767px)
+{
+    .cadre-explications-panneau>h1
+    {
+        font-size: 16px;
+    }
+}
+
+.sous-cadre-explications
+{
+    background: #DFCC97;
+    border-radius: 10px;
+}
+
+.sous-cadre-explications>div>div>h3
+{
+    color: #7B5B25;
+    font-family: 'JosefinSans-Bold';
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.icones-explications-accueil>div:nth-child(1)>div:nth-child(1)
+{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    background: #7B5B25;
+    display: flex;
+}
+
+.icones-explications-accueil>div>div>img
+{
+    margin: auto;
+}
+
+
+.icones-explications-accueil>div>div>p
+{
+    color: #7B5B25;
+    font-family: 'JosefinSans-Bold';
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 767px)
+{
+    .icones-explications-accueil>div>div>p
+    {
+        font-size: 16px;
+    }
 }
