@@ -946,3 +946,117 @@ main {
         font-size: 16px;
     }
 }
+
+.panneau-ligne-1
+{
+    position: relative;
+}
+
+.panneau-ligne-1>hr
+{
+    border: 1px solid #5C4725;
+}
+
+
+.panneau-ligne-1>div>div
+{
+    position: absolute;
+    height: 40px;
+    top: -23px;
+    background: #5C4725;
+    border: 4px solid #5C4725;
+    padding: 0px 20px 0px 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    overflow: hidden;
+}
+
+.panneau-ligne-1>div>div>h2
+{
+    font-family: 'JosefinSans-Bold';
+    font-size: 20px;
+    color: var(--yellow2);
+    margin-top: 6px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.cadre-top-joueurs
+{
+    position: relative;
+    height: 250px;
+    width: 100%;
+    background: #47443B;
+    border: 2px solid #212121;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1199px)
+{
+    .cadre-top-joueurs-middle
+    {
+        margin-top: 57px !important;
+    }
+}
+
+.cadre-top-joueurs-header
+{
+    height: 150px;
+    background: blue;
+    border-radius: 8px;
+}
+
+.cadre-top-joueurs-header-middle
+{
+    height: 200px;
+    background: green;
+    border-radius: 8px;
+}
+
+.top-medal-joueurs
+{
+    position: absolute;
+    top: -45px;
+    height: 90px;
+    width: 90px;
+    background: #212121;
+    border-radius: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.top-medal-joueurs>img
+{
+    width: 110px;
+    margin-top: 4px;
+    margin-left: -10px;
+}
+
+.top-medal-joueurs-middle
+{
+    position: absolute;
+    top: -50px;
+    height: 100px;
+    width: 100px;
+    background: #212121;
+    border-radius: 100%;
+}
+
+.top-medal-joueurs-middle>img
+{
+    width: 123px;
+    margin-top: 5px;
+    margin-left: -11px;
+}
+
+.padding-991
+{
+    margin-bottom: 40px !important;
+}
+
+@media screen and (max-width: 1199px) {
+    .padding-991
+    {
+        margin-bottom: 0 !important;
+    }
+}

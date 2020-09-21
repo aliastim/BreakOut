@@ -105,7 +105,7 @@
                 </div>
             </div>
         </div>
-        <div class="row pb-5 mb-5">
+        <div class="row pb-5">
             <div class="col-12">
                 <div class="cadre-explications p-3">
                     <div class="d-flex justify-content-center">
@@ -166,6 +166,63 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-12 col-md-6">
+                <div class="panneau-ligne-1 pb-3 padding-991">
+                    <hr>
+                    <div class="d-flex justify-content-center">
+                        <div><h2>Top 3 joueurs</h2></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-xl-4">
+                        <div class="cadre-top-joueurs" style="margin-top: 50px;">
+                            <div class="d-flex justify-content-center">
+                                <div class="top-medal-joueurs">
+                                    <img src="{{ asset('/img/icones/medal_silver.png') }}">
+                                </div>
+                            </div>
+                            <div class="cadre-top-joueurs-header">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        <div class="cadre-top-joueurs cadre-top-joueurs-middle" style="height: 300px;">
+                            <div class="d-flex justify-content-center">
+                                <div class="top-medal-joueurs-middle">
+                                    <img src="{{ asset('/img/icones/medal_gold.png') }}">
+                                </div>
+                            </div>
+                            <div class="cadre-top-joueurs-header-middle">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        <div class="cadre-top-joueurs" style="margin-top: 50px;">
+                            <div class="d-flex justify-content-center">
+                                <div class="top-medal-joueurs">
+                                    <img src="{{ asset('/img/icones/medal_bronze.png') }}">
+                                </div>
+                            </div>
+                            <div class="cadre-top-joueurs-header">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 pb-5">
+                <div class="panneau-ligne-1">
+                    <hr>
+                    <div class="d-flex justify-content-center">
+                        <div><h2>Top 3 salles</h2></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
