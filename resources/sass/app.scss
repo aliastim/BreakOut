@@ -1003,16 +1003,54 @@ main {
 
 .cadre-top-joueurs-header
 {
-    height: 150px;
+    height: 130px;
     background: blue;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
+    position: relative;
 }
 
 .cadre-top-joueurs-header-middle
 {
-    height: 200px;
+    height: 180px;
     background: green;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+}
+
+.cadre-top-joueurs-header>div>div, .cadre-top-joueurs-header-middle>div>div
+{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+.cadre-top-joueurs-header>div>div>div>div
+{
+    height: 35px;
+    width: 90%;
+    background: var(--black);
+    font-family: 'JosefinSans-Bold';
+    font-size: 18px;
+    border-radius: 20px;
+    padding-top: 3px;
+}
+
+.cadre-top-joueurs-header-middle>div>div>div>div
+{
+    height: 40px;
+    width: 90%;
+    background: var(--black);
+    font-family: 'JosefinSans-Bold';
+    font-size: 25px;
+    border-radius: 20px;
+}
+
+.cadre-top-joueurs-header-middle>div>div>p, .cadre-top-joueurs-header>div>div>p
+{
+    font-family: 'JosefinSans-Regular';
+    font-size: 10px;
+    color: var(--yellow2);
+    margin-bottom: 0 !important;
 }
 
 .top-medal-joueurs
@@ -1042,6 +1080,7 @@ main {
     width: 100px;
     background: #212121;
     border-radius: 100%;
+    z-index: 1;
 }
 
 .top-medal-joueurs-middle>img
@@ -1049,6 +1088,7 @@ main {
     width: 123px;
     margin-top: 5px;
     margin-left: -11px;
+    z-index: 2;
 }
 
 .padding-991

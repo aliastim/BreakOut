@@ -184,7 +184,14 @@
                                 </div>
                             </div>
                             <div class="cadre-top-joueurs-header">
-
+                                <div class="d-flex justify-content-center w-100">
+                                    <div class="w-100 d-flex flex-column text-center">
+                                        <div class="w-100 d-flex justify-content-center">
+                                            <div style="color: #E0E0E0 !important;">Pseudo</div>
+                                        </div>
+                                        <p>Inscrit depuis le 24/09/2020</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -196,7 +203,14 @@
                                 </div>
                             </div>
                             <div class="cadre-top-joueurs-header-middle">
-
+                                <div class="d-flex justify-content-center w-100">
+                                    <div class="w-100 d-flex flex-column text-center">
+                                        <div class="w-100 d-flex justify-content-center">
+                                            <div style="color: #FFE27A;">Pseudo</div>
+                                        </div>
+                                        <p>Inscrit depuis le 24/09/2020</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -208,7 +222,14 @@
                                 </div>
                             </div>
                             <div class="cadre-top-joueurs-header">
-
+                                <div class="d-flex justify-content-center w-100">
+                                    <div class="w-100 d-flex flex-column text-center">
+                                        <div class="w-100 d-flex justify-content-center">
+                                            <div style="color: #FF9838 !important;">Pseudo</div>
+                                        </div>
+                                        <p>Inscrit depuis le 24/09/2020</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
