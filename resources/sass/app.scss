@@ -171,6 +171,7 @@ template {
     --webkit-gold : -webkit-gradient(linear, left top, right top, from(#7B5B25), color-stop(#F9BA48), color-stop(#C38414), to(#7B5B25));
     --fond: #FFEFBC;
     --marron1 : #5C4725;
+    --marron2 : #7B5B25;
 }
 html, body {
     background-color: var(--main);
@@ -751,6 +752,7 @@ main {
     transform: scale(1.10);
     background: linear-gradient(to top,#80000B, #B3000F);
     transition: 0.3s;
+    box-shadow: 0 0 20px #B3000F;
 }
 
 .panneau-accueil
@@ -1234,4 +1236,41 @@ main {
     background: rgba(0, 0, 0, 0.6);
     font-size: 15px;
     cursor: pointer;
+}
+
+.cadre-top-salles-apres>div:nth-child(1)
+{
+    text-align: center;
+}
+
+.cadre-top-salles-apres>div:nth-child(1)>div>h2
+{
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: "JosefinSans-SemiBold";
+}
+.top-salles-stars>p
+{
+    color: var(--yellow2);
+    font-size: 16px;
+}
+
+.btn-sous-top
+{
+    background: var(--marron2);
+    border: none;
+    border-radius: 20px;
+    padding: 5px 20px;
+    max-width: 90%;
+    color: white;
+    font-family: "JosefinSans-Bold";
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn-sous-top:hover
+{
+    background: var(--marron1);
+    font-size: 17px;
 }

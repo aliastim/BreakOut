@@ -62,7 +62,7 @@
                         <div class="d-flex flex-column w-100">
                             <div class="w-100 d-flex" style="height: calc(100% - 60px);">
                                 <div class="m-auto">
-                                    <h2>Le tombeau<br> d'agamemnon</h2>
+                                    <h2>La forêt<br> d'esrael</h2>
                                 </div>
                             </div>
                             <div class="w-100" style="height: 60px;">
@@ -86,7 +86,7 @@
                         <div class="d-flex flex-column w-100">
                             <div class="w-100 d-flex" style="height: calc(100% - 60px);">
                                 <div class="m-auto">
-                                    <h2>Le tombeau<br> d'agamemnon</h2>
+                                    <h2>La prison<br> de pandragon</h2>
                                 </div>
                             </div>
                             <div class="w-100" style="height: 60px;">
@@ -246,7 +246,7 @@
                                     <p>
                                         <i class="fas fa-gamepad"></i><br>
                                         Parties jouées :
-                                        <span>31</span>
+                                        <span>32</span>
                                     </p>
                                     <p>
                                         <i class="fas fa-hourglass-half"></i><br>
@@ -284,7 +284,7 @@
                                 <i class="fas fa-trophy"></i>
                             </div>
                             <div class="cadre-top-joueurs-body text-center">
-                                <h6>31 Victoires</h6>
+                                <h6>28 Victoires</h6>
                                 <div>
                                     <p>
                                         <i class="fas fa-gamepad"></i><br>
@@ -306,6 +306,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="w-100 text-center pt-4">
+                    <a href="#">
+                        <button class="btn-sous-top">Accéder au forum</button>
+                    </a>
+                </div>
             </div>
             <div class="col-12 col-md-6 pb-5">
                 <div class="panneau-ligne-1 pb-3 padding-991">
@@ -323,7 +328,20 @@
                                 </div>
                             </div>
                             <div class="cadre-top-salles-apres">
-                                <div></div>
+                                <div class="d-flex w-100">
+                                    <div class="m-auto">
+                                        <h2>La forêt<br> d'esrael</h2>
+                                        <div class="top-salles-stars">
+                                            <p>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="w-100 d-flex justify-content-center">
                                     <button>
                                         Jouer
@@ -340,7 +358,20 @@
                                 </div>
                             </div>
                             <div class="cadre-top-salles-apres">
-                                <div></div>
+                                <div class="d-flex w-100">
+                                    <div class="m-auto">
+                                        <h2 style="font-size: 18px; font-family: 'JosefinSans-Bold'">Le tombeau<br> d'agamemnon</h2>
+                                        <div class="top-salles-stars">
+                                            <p>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="w-100 d-flex justify-content-center">
                                     <button>
                                         Jouer
@@ -357,7 +388,20 @@
                                 </div>
                             </div>
                             <div class="cadre-top-salles-apres">
-                                <div></div>
+                                <div class="d-flex w-100">
+                                    <div class="m-auto">
+                                        <h2>La prison<br> de pandragon</h2>
+                                        <div class="top-salles-stars">
+                                            <p>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="w-100 d-flex justify-content-center">
                                     <button>
                                         Jouer
@@ -366,6 +410,11 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="w-100 text-center pt-4">
+                    <a href="#">
+                        <button class="btn-sous-top">Voir toutes les salles</button>
+                    </a>
                 </div>
             </div>
 
