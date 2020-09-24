@@ -177,7 +177,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 col-xl-4">
-                        <div class="cadre-top-joueurs" style="margin-top: 50px;">
+                        <div class="cadre-top-joueurs" style="margin-top: 20px;">
                             <div class="d-flex justify-content-center">
                                 <div class="top-medal-joueurs">
                                     <img src="{{ asset('/img/icones/medal_silver.png') }}">
@@ -193,10 +193,34 @@
                                     </div>
                                 </div>
                             </div>
+                            <hr>
+                            <div class="cadre-top-joueurs-coupe coupe-small">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="cadre-top-joueurs-body text-center">
+                                <h6>31 Victoires</h6>
+                                <div>
+                                    <p>
+                                        <i class="fas fa-gamepad"></i><br>
+                                        Parties jouées :
+                                        <span>31</span>
+                                    </p>
+                                    <p>
+                                        <i class="fas fa-hourglass-half"></i><br>
+                                        Meilleur temps :
+                                        <span>43 min</span>
+                                    </p>
+                                    <p>
+                                        <i class="fas fa-hourglass-half"></i><br>
+                                        Temps moyen :
+                                        <span>56 min</span>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 col-xl-4">
-                        <div class="cadre-top-joueurs cadre-top-joueurs-middle" style="height: 300px;">
+                        <div class="cadre-top-joueurs cadre-top-joueurs-middle" style="height: 440px;">
                             <div class="d-flex justify-content-center">
                                 <div class="top-medal-joueurs-middle">
                                     <img src="{{ asset('/img/icones/medal_gold.png') }}">
@@ -212,10 +236,34 @@
                                     </div>
                                 </div>
                             </div>
+                            <hr>
+                            <div class="cadre-top-joueurs-coupe coupe-big" style="margin-top: -20px !important; margin-bottom: 10px !important;">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="cadre-top-joueurs-body text-center">
+                                <h6>31 Victoires</h6>
+                                <div>
+                                    <p>
+                                        <i class="fas fa-gamepad"></i><br>
+                                        Parties jouées :
+                                        <span>31</span>
+                                    </p>
+                                    <p>
+                                        <i class="fas fa-hourglass-half"></i><br>
+                                        Meilleur temps :
+                                        <span>43 min</span>
+                                    </p>
+                                    <p>
+                                        <i class="fas fa-hourglass-half"></i><br>
+                                        Temps moyen :
+                                        <span>56 min</span>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 col-xl-4">
-                        <div class="cadre-top-joueurs" style="margin-top: 50px;">
+                        <div class="cadre-top-joueurs bronze-991" style="margin-top: 20px;">
                             <div class="d-flex justify-content-center">
                                 <div class="top-medal-joueurs">
                                     <img src="{{ asset('/img/icones/medal_bronze.png') }}">
@@ -231,15 +279,92 @@
                                     </div>
                                 </div>
                             </div>
+                            <hr>
+                            <div class="cadre-top-joueurs-coupe coupe-small">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="cadre-top-joueurs-body text-center">
+                                <h6>31 Victoires</h6>
+                                <div>
+                                    <p>
+                                        <i class="fas fa-gamepad"></i><br>
+                                        Parties jouées :
+                                        <span>31</span>
+                                    </p>
+                                    <p>
+                                        <i class="fas fa-hourglass-half"></i><br>
+                                        Meilleur temps :
+                                        <span>43 min</span>
+                                    </p>
+                                    <p>
+                                        <i class="fas fa-hourglass-half"></i><br>
+                                        Temps moyen :
+                                        <span>56 min</span>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-6 pb-5">
-                <div class="panneau-ligne-1">
+                <div class="panneau-ligne-1 pb-3 padding-991">
                     <hr>
                     <div class="d-flex justify-content-center">
                         <div><h2>Top 3 salles</h2></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-xl-4">
+                        <div class="cadre-top-salles" style="background: url({{ asset('/img/illustrations_salles/exemple2.png') }}); margin-top: 20px;">
+                            <div class="d-flex justify-content-center">
+                                <div class="top-medal-joueurs" style="background: #7B5B25 !important;">
+                                    <img src="{{ asset('/img/icones/medal_silver.png') }}">
+                                </div>
+                            </div>
+                            <div class="cadre-top-salles-apres">
+                                <div></div>
+                                <div class="w-100 d-flex justify-content-center">
+                                    <button>
+                                        Jouer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        <div class="cadre-top-salles cadre-top-joueurs-middle" style="background: url({{ asset('/img/illustrations_salles/exemple1.jpg') }}); height: 440px;">
+                            <div class="d-flex justify-content-center">
+                                <div class="top-medal-joueurs-middle" style="background: #7B5B25 !important;">
+                                    <img src="{{ asset('/img/icones/medal_gold.png') }}">
+                                </div>
+                            </div>
+                            <div class="cadre-top-salles-apres">
+                                <div></div>
+                                <div class="w-100 d-flex justify-content-center">
+                                    <button>
+                                        Jouer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        <div class="cadre-top-salles bronze-991" style="background: url({{ asset('/img/illustrations_salles/exemple3.png') }}); margin-top: 20px;">
+                            <div class="d-flex justify-content-center">
+                                <div class="top-medal-joueurs" style="background: #7B5B25 !important;">
+                                    <img src="{{ asset('/img/icones/medal_bronze.png') }}">
+                                </div>
+                            </div>
+                            <div class="cadre-top-salles-apres">
+                                <div></div>
+                                <div class="w-100 d-flex justify-content-center">
+                                    <button>
+                                        Jouer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
