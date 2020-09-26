@@ -113,7 +113,7 @@
                             <h1>BreakOut : L’escape game 100% virtuel</h1>
                         </div>
                     </div>
-                    <p>Vous avez l’âme d’un enquêteur et êtes à l’affut du moindre indice ?
+                    <p class="pt-1">Vous avez l’âme d’un enquêteur et êtes à l’affut du moindre indice ?
                         Alors mettez vos acquittées à l’épreuve ! <span class="josephin-bold-italic" style="color: #B3000F !important;">Choisissez une salle de jeu
                             et relevez des énigmes</span> qui sauront mettre tous vos sens à l’épreuve !
                     </p>
@@ -167,7 +167,7 @@
                 </div>
             </div>
         </div>
-        <div class="row mb-5">
+        <div class="row mb-3">
             <div class="col-12 col-md-6">
                 <div class="panneau-ligne-1 pb-3 padding-991">
                     <hr>
@@ -306,7 +306,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-100 text-center pt-4">
+                <div class="w-100 text-center pt-4 pb-3">
                     <a href="#">
                         <button class="btn-sous-top">Accéder au forum</button>
                     </a>
@@ -411,16 +411,160 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-100 text-center pt-4">
+                <div class="w-100 text-center pt-4 pb-3">
                     <a href="#">
                         <button class="btn-sous-top">Voir toutes les salles</button>
                     </a>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="panneau-ligne-1 pb-4">
+                    <hr>
+                    <div class="d-flex justify-content-left">
+                        <div><h2>Objets hebdomadaire</h2></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-xl-4 pb-3">
+                        <div class="cadre-boutique-accueil">
+                            <div>
+                                <div>
+                                    <img src="{{ asset('img/Banque_graphique/Objets/Plot_Machine_256.png') }}">
+                                </div>
+                            </div>
+                            <div>
+                                <div><h5>Machine à sous</h5></div>
+                                <div>
+                                    <p>
+                                        Tentez votre chance à la machine à sous ! Dépensez 20 pièces à chaque tirage et tentez de gagner des cadeaux mystères !
+                                    </p>
+                                </div>
+                                <div>
+                                    <div><button>Acheter</button></div>
+                                    <div>
+                                        <div class="div-price">
+                                            700
+                                        </div>
+                                        <div class="div-gold"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4 pb-3">
+                        <div class="cadre-boutique-accueil">
+                            <div>
+                                <div>
+                                    <img src="{{ asset('img/Banque_graphique/Objets/gemme_256.png') }}">
+                                </div>
+                            </div>
+                            <div>
+                                <div><h5>Gemme de l'outre tombe</h5></div>
+                                <div>
+                                    <p>
+                                        Vous vous perdez dans ses reflets profonds. Cette gemme vous offrira une seconde chance lorsque vous tomberez au combat.
+                                    </p>
+                                </div>
+                                <div>
+                                    <div><button>Acheter</button></div>
+                                    <div>
+                                        <div class="div-price">
+                                            700
+                                        </div>
+                                        <div class="div-gold"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4 pb-3">
+                        <div class="cadre-boutique-accueil">
+                            <div>
+                                <div>
+                                    <img src="{{ asset('img/Banque_graphique/Objets/carte_256.png') }}">
+                                </div>
+                            </div>
+                            <div>
+                                <div><h5>Ancienne carte</h5></div>
+                                <div>
+                                    <p>
+                                        Tout les pièces
+                                        (ou presque) sont représentées sur cette vieille carte.
+                                        Utilisez-la pour vous diriger
+                                        en partie.
+                                    </p>
+                                </div>
+                                <div>
+                                    <div><button>Acheter</button></div>
+                                    <div>
+                                        <div class="div-price">
+                                            700
+                                        </div>
+                                        <div class="div-gold"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 d-flex pb-4">
+                    <div class="mr-auto"></div>
+                    <div><a href="#" class="lien-simple">Voir la boutique</a></div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="panneau-ligne-1 pb-3">
+                    <hr>
+                    <div class="d-flex justify-content-center">
+                        <div><h2>statistiques</h2></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-md-3">
+                        <div class="w-100 d-flex flex-column cadre-statistiques">
+                            <div><i class="fas fa-gamepad"></i></div>
+                            <div><p><span>577</span> Parties jouées</p></div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 stats-left">
+                        <div class="w-100 d-flex flex-column cadre-statistiques">
+                            <div><i class="fas fa-trophy"></i></div>
+                            <div><p><span>436</span> Victoires</p></div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 stats-right">
+                        <div class="w-100 d-flex flex-column cadre-statistiques">
+                            <div><i class="far fa-clock"></i></div>
+                            <div><p>Durée moyenne : <span>67 minutes</span></p></div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="w-100 d-flex flex-column cadre-statistiques">
+                            <div><i class="fas fa-users"></i></div>
+                            <div><p><span>123</span> inscrits</p></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
 
     </div>
+    <footer>
+        <img class="img-fluid" src="{{ asset('img/Banque_graphique/Footer/footer_landscape_min.svg') }}">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                test
+            </div>
+            <div class="col-12 col-md-4">
+                test
+            </div>
+            <div class="col-12 col-md-4">
+                test
+            </div>
+        </div>
+    </footer>
 </div>
 
 @endsection

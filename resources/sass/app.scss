@@ -445,7 +445,25 @@ main {
     background-image: url("/img/icones-navbar/open-menu.png") !important;
 }
 
+/*---------------FOOTER--------------*/
+footer
+{
+    background: var(--black);
+    width: 100%;
+    min-height: 250px;
+    margin-bottom: 50px;
+    border-radius: 0 0 10px 10px;
+}
 
+footer>img
+{
+    margin-top: -5px;
+}
+
+footer>div
+{
+    margin-top: -10px;
+}
 /*-----MODAL CONNEXION / PROFIL -----*/
 .modal-backdrop
 {
@@ -539,7 +557,7 @@ main {
     background-color: #7B5B25 !important;
 
     margin-top: -3px;
-    height: 43px;
+    height: 45px;
     padding-top: 11px;
 }
 
@@ -723,6 +741,7 @@ main {
     /*margin-top: 200px;*/
     width: calc(100% - 150px);
     background: var(--fond);
+    border-radius: 0 0 10px 10px;
     margin-left: auto;
     margin-right: auto;
     max-width: 1900px;
@@ -1330,7 +1349,8 @@ main {
     background: var(--marron2);
     border: none;
     border-radius: 20px;
-    padding: 5px 20px;
+    height: 30px;
+    padding: 7px 20px;
     max-width: 90%;
     color: white;
     font-family: "JosefinSans-Bold";
@@ -1342,4 +1362,238 @@ main {
 {
     background: var(--marron1);
     font-size: 17px;
+}
+
+.cadre-boutique-accueil
+{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 4px solid #5A431B;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(black, 0.16);
+}
+
+.cadre-boutique-accueil>div:nth-child(1)
+{
+    height: 100%;
+    width: 40%;
+    background: #5D5D5D;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.cadre-boutique-accueil>div:nth-child(1)>div
+{
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    background: #3E3E3E;
+    margin: 10px;
+    border-radius: 2px;
+    display: flex;
+}
+
+.cadre-boutique-accueil>div:nth-child(1)>div>img
+{
+    padding: 5px;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.cadre-boutique-accueil>div:nth-child(2)
+{
+    height: 100%;
+    width: 60%;
+    background: var(--fond);
+    border-left: 4px solid #5A431B;
+    position: relative;
+}
+
+.cadre-boutique-accueil>div:nth-child(2)>div:nth-child(1)
+{
+    position: absolute;
+    height: 25px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--marron2);
+    text-align: center;
+    padding-top: 2px;
+    overflow: auto;
+}
+
+.cadre-boutique-accueil>div:nth-child(2)>div:nth-child(1)>h5
+{
+    color: white;
+    font-family: "JosefinSans-Bold";
+    font-size: 16px;
+}
+
+.cadre-boutique-accueil>div:nth-child(2)>div:nth-child(2)
+{
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    height: calc(100% - 60px);
+    background: var(--fond);
+    text-align: center;
+    overflow: auto;
+}
+
+.cadre-boutique-accueil>div:nth-child(2)>div:nth-child(2)>p
+{
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.cadre-boutique-accueil>div:nth-child(2)>div:nth-child(3)
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+}
+
+.cadre-boutique-accueil>div:nth-child(2)>div:nth-child(3)>div:nth-child(1)
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 60%;
+}
+
+.cadre-boutique-accueil>div:nth-child(2)>div:nth-child(3)>div:nth-child(1)>button
+{
+    width: 100%;
+    height: 100%;
+    font-family: "JosefinSans-Bold";
+    font-size: 14px;
+    background: var(--yellow2);
+    color: var(--black);
+    border-top: 4px solid #5A431B;
+    border-right: 2px solid #5A431B;
+    border-bottom: none;
+    border-left: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 3px;
+    transition: 0.3s;
+}
+
+.cadre-boutique-accueil>div:nth-child(2)>div:nth-child(3)>div:nth-child(1)>button:hover
+{
+    font-family: "JosefinSans-Bold";
+    font-size: 13px;
+    background: #4EC833;
+    color: black;
+    padding-top: 3px;
+}
+
+.cadre-boutique-accueil>div:nth-child(2)>div:nth-child(3)>div:nth-child(2)
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 40%;
+    border-top: 4px solid #5A431B;
+    border-left: 2px solid #5A431B;
+    background: var(--main);
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;
+    overflow: hidden;
+}
+
+.div-price
+{
+    color: var(--yellow2);
+    font-family: "JosefinSans-Bold";
+    font-size: 16px;
+}
+
+.div-gold
+{
+    height: 16px;
+    width: 16px;
+    background: url("/img/Banque_graphique/Objets/BOCoin_64.png") no-repeat center !important;
+    background-size: contain !important;
+    margin-left: 3px;
+    margin-top: 3px;
+}
+
+.lien-simple
+{
+    font-family: "JosefinSans-Bold";
+    color: var(--marron2);
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.lien-simple:hover
+{
+    color: var(--yellow2);
+    text-decoration: none !important;
+}
+
+.cadre-statistiques
+{
+    height: 130px;
+    text-align: center;
+    position: relative;
+}
+
+.cadre-statistiques>div:nth-child(1)
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    font-size: 50px;
+    color: var(--yellow2);
+    overflow: hidden;
+}
+
+.cadre-statistiques>div:nth-child(2)
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    color: var(--black);
+    font-family: 'JosefinSans-SemiBold';
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.stats-left
+{
+    border-left: 1px solid var(--marron2);
+    border-right: 1px solid var(--marron2);
+}
+
+.stats-right
+{
+    border-right: 1px solid var(--marron2);
+}
+
+@media screen and (max-width: 767px){
+    .stats-left
+    {
+        border: none !important;
+    }
+
+    .stats-right
+    {
+        border: none !important;
+    }
+
 }
