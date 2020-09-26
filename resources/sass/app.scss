@@ -265,6 +265,22 @@ main {
     margin-right: auto;
 }
 
+.breakout-navbar-full
+{
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    /*height: 60px;*/
+    background-color: var(--black);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.26);
+    max-width: 2000px;
+    position: fixed;
+    z-index: 1000;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .navbar-logo {
     position: absolute;
     top: -5px;
@@ -281,13 +297,66 @@ main {
     border: 3px solid black;
 }
 
+
+.navbar-logo-full {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*content: url("/img/icones-navbar/BreakOut_Logotype_Navbar.png");*/
+    background-image: url("/img/icones-navbar/BreakOut_Logotype_Navbar.png") !important;
+    background-color: var(--black) !important;
+    background-repeat: no-repeat !important;
+    background-size: 100px !important;
+    background-position: center ;
+    width: 140px;
+    height: 100%;
+    border-right: 3px solid black;
+}
+
 @media screen and (max-width: 991px)
 {
     .breakout-navbar
     {
-        width: 95%;
-        left: 2.5%;
-        right: 2.5%;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        /*height: 60px;*/
+        background-color: var(--black);
+        box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.26);
+        max-width: 2000px;
+        position: fixed;
+        z-index: 1000;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 0;
+    }
+
+    .navbar-logo {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        /*content: url("/img/icones-navbar/BreakOut_Logotype_Navbar.png");*/
+        background-image: url("/img/icones-navbar/BreakOut_Logotype_Navbar.png") !important;
+        background-color: var(--black) !important;
+        background-repeat: no-repeat !important;
+        background-size: 100px !important;
+        background-position: center ;
+        width: 140px;
+        height: 100%;
+        border-left: none;
+        border-top: none;
+        border-bottom: none;
+        border-right: 3px solid black;
+        border-radius: 0 !important;
+    }
+
+    .navbar-left
+    {
+        margin-left: 0 !important;
+        text-align: center;
     }
 }
 

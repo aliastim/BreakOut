@@ -21,9 +21,9 @@
 </head>
 <body>
     <div id="app" class="app">
-        <nav class="navbar navbar-expand-lg navbar-light breakout-navbar">
+        <nav id="header" class="navbar navbar-expand-lg navbar-light breakout-navbar">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <div class="navbar-logo"></div>
+                <div  id="header-logo" class="navbar-logo"></div>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
@@ -61,7 +61,7 @@
                         </div>
                     </li>
                     @endauth
-                    <li class="nav-item pr-4">
+                    <li class="nav-item pr-4 d-none-991">
                         <a class="nav-link nav-link-sound nav-link-icones" href=""></a>
                     </li>
                     <li class="nav-item navbar-button">
@@ -243,5 +243,57 @@
             @yield('content')
         </main>
     </div>
+<script>
+    var scroll_position = 0;
+
+    window.addEventListener('scroll',function(e){
+
+        scroll_position = window.scrollY;
+        //console.log(scroll_position)
+        if (scroll_position >= 100) {
+            if(!(document.getElementById('header').classList.contains("breakout-navbar-full")))
+            {
+                window.requestAnimationFrame(function() {
+                    document.getElementById('header').classList.remove("breakout-navbar");
+                    document.getElementById('header-logo').classList.remove("navbar-logo");
+
+                    document.getElementById('header').classList.add("breakout-navbar-full");
+                    document.getElementById('header-logo').classList.add("navbar-logo-full");
+                });
+            }
+        } else
+        {
+            if(document.getElementById('header').classList.contains("breakout-navbar-full"))
+            {
+                window.requestAnimationFrame(function() {
+                    document.getElementById('header').classList.remove("breakout-navbar-full");
+                    document.getElementById('header-logo').classList.remove("navbar-logo-full");
+
+                    document.getElementById('header-logo').classList.add("navbar-logo");
+                    document.getElementById('header').classList.add("breakout-navbar");
+                });
+            }
+        }
+    })
+
+    //Responsive
+    if (document.body.clientWidth <= 991)
+    {
+        document.getElementById('header-logo').classList.add("d-none");
+        //console.log(document.body.clientWidth);
+    }
+    window.onresize = function (){
+        if (document.body.clientWidth <= 991)
+        {
+            document.getElementById('header-logo').classList.add("d-none");
+            //console.log(document.body.clientWidth);
+        } else {
+            if (document.getElementById('header-logo').classList.contains("d-none")) {
+                document.getElementById('header-logo').classList.remove("d-none");
+            }
+        }
+    }
+
+</script>
 </body>
 </html>
