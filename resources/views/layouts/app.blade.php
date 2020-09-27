@@ -54,10 +54,10 @@
                             <span class="nav-link-icones-span">Paramètres</span>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Mon compte</a>
-                            <a class="dropdown-item" href="#">Mon avatar</a>
-                            <a class="dropdown-item" href="#">Inventaire</a>
-                            <a class="dropdown-item" href="#">Mes salles</a>
+                            <a class="dropdown-item" href="{{ url('/account') }}">Mon compte</a>
+                            <a class="dropdown-item" href="{{ url('/avatar') }}">Mon avatar</a>
+                            <a class="dropdown-item" href="{{ url('/inventory') }}">Inventaire</a>
+                            <a class="dropdown-item" href="{{ url('/myrooms') }}">Mes salles</a>
                         </div>
                     </li>
                     @endauth

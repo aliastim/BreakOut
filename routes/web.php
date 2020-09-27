@@ -13,10 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
+});*/
+
+Route::get('/', function () {
+    return view('home');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/shop', 'ShopController@index')->name('shop');
+Route::get('/account', 'AccountController@index')->name('account');
+Route::get('/avatar', 'AvatarController@index')->name('avatar');
+Route::get('/inventory', 'InventoryController@index')->name('inventory');
+Route::get('/myrooms', 'MyroomsController@index')->name('myrooms');

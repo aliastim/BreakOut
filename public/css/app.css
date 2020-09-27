@@ -11465,6 +11465,7 @@ footer {
   min-height: 250px;
   margin-bottom: 50px;
   border-radius: 0 0 10px 10px;
+  overflow: hidden;
 }
 
 footer > img {
@@ -11473,6 +11474,39 @@ footer > img {
 
 footer > div {
   margin-top: -10px;
+}
+
+.logo-footer {
+  max-width: 150px;
+  margin: 20px;
+}
+
+.texte-footer {
+  color: white;
+  font-size: 16px;
+}
+
+.btn-twitter {
+  background: url("/img/Banque_graphique/Footer/twitter.png") !important;
+}
+
+.btn-facebook {
+  background: url("/img/Banque_graphique/Footer/facebook.png") !important;
+}
+
+.btn-instagram {
+  background: url("/img/Banque_graphique/Footer/instagram.png") !important;
+}
+
+.btn-footer {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-size: contain !important;
+  background-color: transparent !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  margin: 10px;
 }
 
 /*-----MODAL CONNEXION / PROFIL -----*/
