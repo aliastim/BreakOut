@@ -25,8 +25,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/rooms', 'ShopController@index')->name('rooms');
 Route::get('/shop', 'ShopController@index')->name('shop');
 Route::get('/account', 'AccountController@index')->name('account');
 Route::get('/avatar', 'AvatarController@index')->name('avatar');
 Route::get('/inventory', 'InventoryController@index')->name('inventory');
 Route::get('/myrooms', 'MyroomsController@index')->name('myrooms');
+
+//Scénario 1
+Route::get('/room_one', 'RomeOneController@index')->name('room_one');

@@ -474,7 +474,6 @@ footer>div
 .texte-footer
 {
     color: white;
-    font-size: 16px;
 }
 
 .btn-twitter
@@ -1638,3 +1637,137 @@ footer>div
     }
 
 }
+
+/*-----------BOUTIQUE--------------*/
+.shop-barre-annonce
+{
+    margin-top: 120px; /*85px*/
+    position: relative;
+    width: calc(100% - 150px);
+    background: linear-gradient(to right, rgba(33,33,33,1), rgba(60,38,0,0.6));
+    border-radius: 0 10px 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1900px;
+    height: 300px;
+    box-shadow: 0 3px 6px var(--black);
+    //overflow: hidden;
+}
+
+@media screen and (max-width: 991px)
+{
+    .shop-barre-annonce
+    {
+        width: 95%;
+    }
+}
+
+.boutique-bienvenue
+{
+    position: absolute;
+    top: -30px;
+    padding: 6px 20px;
+    height: 60px;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(33,33,33,1) 50%, rgba(33,33,33,0) 20%);
+    border-radius: 5px;
+    /*box-shadow: 0 3px 6px var(--black);*/
+    z-index: 1;
+}
+
+.boutique-bienvenue>h1
+{
+    font-size: 20px;
+    color: var(--yellow2);
+    font-family: 'JosefinSans-Bold';
+    text-transform: uppercase;
+}
+
+.shop-barre-annonce-image
+{
+    position: relative;
+}
+
+.shop-barre-annonce-image>img
+{
+    height: 90%;
+    width: auto;
+    max-width: 100%;
+    margin: auto;
+}
+
+.yellow-border
+{
+    position: absolute;
+    border: 1px solid var(--yellow2);
+    /*transform: rotate(90deg);*/
+    right: -14px;
+    height: 260px;
+    padding-top: 10px;
+}
+
+.shop-barre-annonce-description>div>div>h1
+{
+    font-size: 20px;
+    color: var(--yellow2);
+    text-transform: uppercase;
+    font-family: 'JosefinSans-SemiBold';
+}
+
+.shop-barre-annonce-description>div>div>h2
+{
+    font-size: 40px;
+    color: var(--yellow2);
+    text-transform: uppercase;
+    font-family: 'JosefinSans-Bold';
+}
+
+.shop-barre-annonce-description>div>div>h3
+{
+    font-size: 20px;
+    color: var(--yellow2);
+    font-family: 'JosefinSans-Bold';
+    padding-bottom: 30px;
+}
+
+.shop-barre-annonce-description>div>div>p
+{
+    font-size: 16px;
+    color: white;
+}
+
+.shop-barre-annonce-description>div>div>div
+{
+    position: relative;
+    max-width: 250px;
+    height: 40px;
+    background: #1b4b72;
+}
+
+
+.shop-barre-annonce-description>div>div>div>button
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 60%;
+}
+
+.shop-barre-annonce-description>div>div>div>div
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 40%;
+    background: var(--main);
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;
+    overflow: hidden;
+}
+
+
