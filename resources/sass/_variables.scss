@@ -6,14 +6,24 @@ $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
+@font-face { font-family: 'JosefinSans-Bold';  src: url('/polices/JosefinSans-Bold.ttf'); }
+@font-face { font-family: 'JosefinSans-BoldItalic';  src: url('/polices/JosefinSans-BoldItalic.ttf'); }
+@font-face { font-family: 'JosefinSans-Italic';  src: url('/polices/JosefinSans-Italic.ttf'); }
+@font-face { font-family: 'JosefinSans-Light';  src: url('/polices/JosefinSans-Light.ttf'); }
+@font-face { font-family: 'JosefinSans-LightItalic';  src: url('/polices/JosefinSans-LightItalic.ttf'); }
+@font-face { font-family: 'JosefinSans-Regular';  src: url('/polices/JosefinSans-Regular.ttf'); }
+@font-face { font-family: 'JosefinSans-SemiBold';  src: url('/polices/JosefinSans-SemiBold.ttf'); }
+@font-face { font-family: 'JosefinSans-SemiBoldItalic';  src: url('/polices/JosefinSans-SemiBoldItalic.ttf'); }
+@font-face { font-family: 'JosefinSans-Thin';  src: url('/polices/JosefinSans-Thin.ttf'); }
+@font-face { font-family: 'JosefinSans-ThinItalic';  src: url('/polices/JosefinSans-ThinItalic.ttf'); }
+
 // Colors
-$blue: #3490dc;
-$indigo: #6574cd;
-$purple: #9561e2;
-$pink: #f66d9b;
-$red: #e3342f;
-$orange: #f6993f;
-$yellow: #ffed4a;
-$green: #38c172;
-$teal: #4dc0b5;
-$cyan: #6cb2eb;
+$main : #394e63;
+$black_bo : #212121;
+$yellow_bo: #C38414;
+$yellow2: #f9ba48;
+$gold : linear-gradient(60deg, #7B5B25, #F9BA48, #C38414,#7B5B25);
+$webkit-gold : -webkit-gradient(linear, left top, right top, from(#7B5B25), color-stop(#F9BA48), color-stop(#C38414), to(#7B5B25));
+$fond: #FFEFBC;
+$marron1 : #5C4725;
+$marron2 : #7B5B25;

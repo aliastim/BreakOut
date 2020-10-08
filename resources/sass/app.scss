@@ -151,6 +151,7 @@ template {
 }
 /*https://necolas.github.io/normalize.css/8.0.1/normalize.css*/
 /*===============FIN RESET================*/
+/*
 @font-face { font-family: 'JosefinSans-Bold';  src: url('/polices/JosefinSans-Bold.ttf'); }
 @font-face { font-family: 'JosefinSans-BoldItalic';  src: url('/polices/JosefinSans-BoldItalic.ttf'); }
 @font-face { font-family: 'JosefinSans-Italic';  src: url('/polices/JosefinSans-Italic.ttf'); }
@@ -162,6 +163,7 @@ template {
 @font-face { font-family: 'JosefinSans-Thin';  src: url('/polices/JosefinSans-Thin.ttf'); }
 @font-face { font-family: 'JosefinSans-ThinItalic';  src: url('/polices/JosefinSans-ThinItalic.ttf'); }
 
+
 :root {
     --main: #394e63;
     --black : #212121;
@@ -172,10 +174,10 @@ template {
     --fond: #FFEFBC;
     --marron1 : #5C4725;
     --marron2 : #7B5B25;
-}
+}*/
 html, body {
-    background-color: var(--main);
-    color: var(--black);
+    background-color: $main;
+    color: $black_bo;
     font-family: 'JosefinSans-Regular', sans-serif !important;
     font-weight: 200;
     height: 100vh;
@@ -254,7 +256,7 @@ main {
     top: 20px;
     /*height: 60px;*/ /*Bloque le responsive*/
     border-radius: 50px;
-    background-color: var(--black);
+    background-color: $black_bo;
     box-shadow: 4px 8px 8px rgba(0,0,0,0.26);
     max-width: 2000px;
 
@@ -272,7 +274,7 @@ main {
     right: 0;
     top: 0;
     /*height: 60px;*/
-    background-color: var(--black);
+    background-color: $black_bo;
     box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.26);
     max-width: 2000px;
     position: fixed;
@@ -287,7 +289,7 @@ main {
     left: 0;
     /*content: url("/img/icones-navbar/BreakOut_Logotype_Navbar.png");*/
     background-image: url("/img/icones-navbar/BreakOut_Logotype_Navbar.png") !important;
-    background-color: var(--black) !important;
+    background-color: $black_bo !important;
     background-repeat: no-repeat !important;
     background-size: 100px !important;
     background-position: center ;
@@ -305,7 +307,7 @@ main {
     left: 0;
     /*content: url("/img/icones-navbar/BreakOut_Logotype_Navbar.png");*/
     background-image: url("/img/icones-navbar/BreakOut_Logotype_Navbar.png") !important;
-    background-color: var(--black) !important;
+    background-color: $black_bo !important;
     background-repeat: no-repeat !important;
     background-size: 100px !important;
     background-position: center ;
@@ -323,7 +325,7 @@ main {
         right: 0;
         top: 0;
         /*height: 60px;*/
-        background-color: var(--black);
+        background-color: $black_bo;
         box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.26);
         max-width: 2000px;
         position: fixed;
@@ -340,7 +342,7 @@ main {
         left: 0;
         /*content: url("/img/icones-navbar/BreakOut_Logotype_Navbar.png");*/
         background-image: url("/img/icones-navbar/BreakOut_Logotype_Navbar.png") !important;
-        background-color: var(--black) !important;
+        background-color: $black_bo !important;
         background-repeat: no-repeat !important;
         background-size: 100px !important;
         background-position: center ;
@@ -368,7 +370,7 @@ main {
 }
 
 .nav-link:hover{
-    color: var(--yellow2) !important;
+    color: $yellow2 !important;
 }
 .nav-link-icones-span
 {
@@ -408,8 +410,8 @@ main {
     padding: 2px;
     font-size: 17px;
     color: #000;
-    background: var(--webkit-gold);
-    background: var(--gold);
+    background: $webkit-gold;
+    background: $gold;
     border-radius: 30px;
 }
 .navbar-profile-button > span {
@@ -448,7 +450,7 @@ main {
 /*---------------FOOTER--------------*/
 footer
 {
-    background: var(--black);
+    background: $black_bo;
     width: 100%;
     min-height: 250px;
     margin-bottom: 50px;
@@ -524,7 +526,7 @@ footer>div
     flex-direction: column;
     width: 100%;
     pointer-events: auto;
-    background-color: var(--main);
+    background-color: $main;
     background-clip: padding-box;
     border: 4px solid black;
     border-radius: 16px;
@@ -544,6 +546,14 @@ footer>div
     border-bottom: 1px solid black;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    max-height: 32px;
+}
+
+.login-modal-error
+{
+    height: 20px;
+    overflow: auto;
+    color: darkred;
 }
 
 .modal-cross
@@ -576,7 +586,7 @@ footer>div
 
 .onglet-modal-login
 {
-    background: var(--fond);
+    background: $fond;
     border-radius: 5px;
     padding-top: 3px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16);
@@ -593,7 +603,7 @@ footer>div
 
 .onglet-modal-login>.active
 {
-    color: var(--fond) !important;
+    color: $fond !important;
     background-color: #7B5B25 !important;
 
     margin-top: -3px;
@@ -603,7 +613,7 @@ footer>div
 
 .onglet-modal-login-body
 {
-    background: var(--fond);
+    background: $fond;
     height: 370px;
     border-radius: 5px;
     overflow: hidden;
@@ -619,7 +629,7 @@ footer>div
 {
     font-family: 'JosefinSans-Bold';
     font-size: 16px;
-    color: var(--main);
+    color: $main;
 }
 
 .input-login
@@ -627,7 +637,7 @@ footer>div
     width: 100%;
     border-radius: 10px;
     border: 2px solid black;
-    color: var(--yellow2);
+    color: $yellow2;
     height: 40px;
     padding-left: 10px;
 }
@@ -636,7 +646,7 @@ footer>div
 {
     border-radius: 10px 0 0 10px;
     border: 2px solid black;
-    color: var(--yellow2) !important;
+    color: $yellow2 !important;
     height: 40px;
     padding-left: 10px;
 }
@@ -646,7 +656,7 @@ footer>div
     border: 2px solid black;
     border-radius: 0 10px 10px 0;
     border-left: 1px solid black;
-    background: var(--yellow2);
+    background: $yellow2;
     font-family: 'JosefinSans-Bold';
     font-size: 18px;
     color: black;
@@ -657,13 +667,13 @@ footer>div
 .small-text-login
 {
     font-family: 'JosefinSans-Regular';
-    color: var(--yellow) !important;
+    color: $yellow_bo !important;
     font-size: 16px;
 }
 
 .onglet-modal-register-body
 {
-    background: var(--fond);
+    background: $fond;
     height: 370px;
     width: calc(100% - 20px);
     border-radius: 5px;
@@ -709,7 +719,7 @@ footer>div
 {
     border: 2px solid black;
     border-radius: 10px;
-    background: var(--yellow2);
+    background: $yellow2;
     font-family: 'JosefinSans-Bold';
     font-size: 18px;
     color: black;
@@ -742,12 +752,12 @@ footer>div
 
 .btn-profile:hover>i
 {
-    color: var(--yellow);
+    color: $yellow_bo;
 }
 
 .btn-profile>i
 {
-    color: var(--yellow2);
+    color: $yellow2;
     font-size: 22px;
 }
 
@@ -780,7 +790,7 @@ footer>div
     position: relative;
     /*margin-top: 200px;*/
     width: calc(100% - 150px);
-    background: var(--fond);
+    background: $fond;
     border-radius: 0 0 10px 10px;
     margin-left: auto;
     margin-right: auto;
@@ -885,8 +895,8 @@ footer>div
 
 .panneau-accueil
 {
-    background: var(--marron1);
-    color: var(--yellow2);
+    background: $marron1;
+    color: $yellow2;
     padding: 11px 20px 2px 20px;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.50);
@@ -902,8 +912,8 @@ footer>div
 @media screen and (max-width: 991px){
     .panneau-accueil
     {
-        background: var(--marron1);
-        color: var(--yellow2);
+        background: $marron1;
+        color: $yellow2;
         padding: 12px 10px 0 10px;
         border-radius: 5px;
         box-shadow: 0 3px 6px rgba(0,0,0,0.50);
@@ -988,7 +998,7 @@ footer>div
 .carre-salle-accueil-footer
 {
     width: 100%;
-    background: var(--black);
+    background: $black_bo;
     margin-top: -2px !important;
     height: 35px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16);
@@ -1115,7 +1125,7 @@ footer>div
 {
     font-family: 'JosefinSans-Bold';
     font-size: 20px;
-    color: var(--yellow2);
+    color: $yellow2;
     margin-top: 6px;
     text-transform: uppercase;
     text-align: center;
@@ -1176,7 +1186,7 @@ footer>div
 {
     height: 35px;
     width: 90%;
-    background: var(--black);
+    background: $black_bo;
     font-family: 'JosefinSans-Bold';
     font-size: 18px;
     border-radius: 20px;
@@ -1188,7 +1198,7 @@ footer>div
 {
     height: 40px;
     width: 90%;
-    background: var(--black);
+    background: $black_bo;
     font-family: 'JosefinSans-Bold';
     font-size: 25px;
     border-radius: 20px;
@@ -1199,7 +1209,7 @@ footer>div
 {
     font-family: 'JosefinSans-Regular';
     font-size: 10px;
-    color: var(--yellow2);
+    color: $yellow2;
     margin-bottom: 0 !important;
 }
 
@@ -1267,13 +1277,13 @@ footer>div
 
 .coupe-small
 {
-    color: var(--yellow2);
+    color: $yellow2;
     font-size: 40px;
 }
 
 .coupe-big
 {
-    color: var(--yellow2);
+    color: $yellow2;
     font-size: 50px;
 }
 
@@ -1288,7 +1298,7 @@ footer>div
     font-family: 'JosefinSans-Bold';
     font-size: 16px;
     text-transform: uppercase;
-    color: var(--yellow2);
+    color: $yellow2;
 }
 
 .cadre-top-joueurs-body>div>p
@@ -1300,7 +1310,7 @@ footer>div
 
 .cadre-top-joueurs-body>div>p>i, .cadre-top-joueurs-body>div>p>span
 {
-    color: var(--yellow2) !important;
+    color: $yellow2 !important;
 }
 
 .cadre-top-salles
@@ -1380,13 +1390,13 @@ footer>div
 }
 .top-salles-stars>p
 {
-    color: var(--yellow2);
+    color: $yellow2;
     font-size: 16px;
 }
 
 .btn-sous-top
 {
-    background: var(--marron2);
+    background: $marron2;
     border: none;
     border-radius: 20px;
     height: 30px;
@@ -1400,7 +1410,7 @@ footer>div
 
 .btn-sous-top:hover
 {
-    background: var(--marron1);
+    background: $marron1;
     font-size: 17px;
 }
 
@@ -1446,7 +1456,7 @@ footer>div
 {
     height: 100%;
     width: 60%;
-    background: var(--fond);
+    background: $fond;
     border-left: 4px solid #5A431B;
     position: relative;
 }
@@ -1458,7 +1468,7 @@ footer>div
     top: 0;
     left: 0;
     right: 0;
-    background: var(--marron2);
+    background: $marron2;
     text-align: center;
     padding-top: 2px;
     overflow: auto;
@@ -1478,7 +1488,7 @@ footer>div
     left: 0;
     right: 0;
     height: calc(100% - 60px);
-    background: var(--fond);
+    background: $fond;
     text-align: center;
     overflow: auto;
 }
@@ -1514,8 +1524,8 @@ footer>div
     height: 100%;
     font-family: "JosefinSans-Bold";
     font-size: 14px;
-    background: var(--yellow2);
-    color: var(--black);
+    background: $yellow2;
+    color: $black_bo;
     border-top: 4px solid #5A431B;
     border-right: 2px solid #5A431B;
     border-bottom: none;
@@ -1544,7 +1554,7 @@ footer>div
     width: 40%;
     border-top: 4px solid #5A431B;
     border-left: 2px solid #5A431B;
-    background: var(--main);
+    background: $main;
     display: flex;
     justify-content: center;
     padding-top: 4px;
@@ -1553,7 +1563,7 @@ footer>div
 
 .div-price
 {
-    color: var(--yellow2);
+    color: $yellow2;
     font-family: "JosefinSans-Bold";
     font-size: 16px;
 }
@@ -1571,14 +1581,14 @@ footer>div
 .lien-simple
 {
     font-family: "JosefinSans-Bold";
-    color: var(--marron2);
+    color: $marron2;
     transition: 0.3s;
     text-decoration: none;
 }
 
 .lien-simple:hover
 {
-    color: var(--yellow2);
+    color: $yellow2;
     text-decoration: none !important;
 }
 
@@ -1597,7 +1607,7 @@ footer>div
     right: 0;
     height: 70px;
     font-size: 50px;
-    color: var(--yellow2);
+    color: $yellow2;
     overflow: hidden;
 }
 
@@ -1608,7 +1618,7 @@ footer>div
     left: 0;
     right: 0;
     height: 50px;
-    color: var(--black);
+    color: $black_bo;
     font-family: 'JosefinSans-SemiBold';
     font-size: 16px;
     overflow: hidden;
@@ -1616,13 +1626,13 @@ footer>div
 
 .stats-left
 {
-    border-left: 1px solid var(--marron2);
-    border-right: 1px solid var(--marron2);
+    border-left: 1px solid $marron2;
+    border-right: 1px solid $marron2;
 }
 
 .stats-right
 {
-    border-right: 1px solid var(--marron2);
+    border-right: 1px solid $marron2;
 }
 
 @media screen and (max-width: 767px){
@@ -1650,7 +1660,7 @@ footer>div
     margin-right: auto;
     max-width: 1900px;
     height: 300px;
-    box-shadow: 0 3px 6px var(--black);
+    box-shadow: 0 3px 6px $black_bo;
     //overflow: hidden;
 }
 
@@ -1671,14 +1681,14 @@ footer>div
     text-align: center;
     background: linear-gradient(to bottom, rgba(33,33,33,1) 50%, rgba(33,33,33,0) 20%);
     border-radius: 5px;
-    /*box-shadow: 0 3px 6px var(--black);*/
+    /*box-shadow: 0 3px 6px $black_bo;*/
     z-index: 1;
 }
 
 .boutique-bienvenue>h1
 {
     font-size: 20px;
-    color: var(--yellow2);
+    color: $yellow2;
     font-family: 'JosefinSans-Bold';
     text-transform: uppercase;
 }
@@ -1699,7 +1709,7 @@ footer>div
 .yellow-border
 {
     position: absolute;
-    border: 1px solid var(--yellow2);
+    border: 1px solid $yellow2;
     /*transform: rotate(90deg);*/
     right: -14px;
     height: 260px;
@@ -1709,7 +1719,7 @@ footer>div
 .shop-barre-annonce-description>div>div>h1
 {
     font-size: 20px;
-    color: var(--yellow2);
+    color: $yellow2;
     text-transform: uppercase;
     font-family: 'JosefinSans-SemiBold';
 }
@@ -1717,7 +1727,7 @@ footer>div
 .shop-barre-annonce-description>div>div>h2
 {
     font-size: 40px;
-    color: var(--yellow2);
+    color: $yellow2;
     text-transform: uppercase;
     font-family: 'JosefinSans-Bold';
 }
@@ -1725,7 +1735,7 @@ footer>div
 .shop-barre-annonce-description>div>div>h3
 {
     font-size: 20px;
-    color: var(--yellow2);
+    color: $yellow2;
     font-family: 'JosefinSans-Bold';
     padding-bottom: 30px;
 }
@@ -1763,11 +1773,42 @@ footer>div
     bottom: 0;
     height: 100%;
     width: 40%;
-    background: var(--main);
+    background: $main;
     display: flex;
     justify-content: center;
     padding-top: 4px;
     overflow: hidden;
 }
 
+/**********/
+.gemclicker-body
+{
+    position: relative;
+    display: flex;
+    /*margin-top: 200px;*/
+    width: calc(100% - 150px);
+    background: $main;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1900px;
+    height: 100vh;
+}
 
+.gemclicker-gemme {
+    margin: auto;
+    height: 500px;
+    width: 500px;
+    background-image: url("/img/Banque_graphique/Objets/gemmeclick.png") !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: center !important;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.gemclicker-gemme:active {
+    background-image: url("/img/Banque_graphique/Objets/gemmeclick_click.png") !important;
+    transform: scale(1.2);
+    cursor: pointer;
+}

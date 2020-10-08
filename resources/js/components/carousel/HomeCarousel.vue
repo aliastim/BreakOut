@@ -1,0 +1,35 @@
+<template>
+    <div>
+        <div class="breakout-bakground"></div>
+            <div id="carousel">
+                <carousel>
+                    <carousel-slide>
+                        <div style="position: absolute; left: 0; right: 0; text-align: center; top: 50%; color: white;"></div>
+                        <img src="img/Carousel_images/test.png" width="100%">
+                    </carousel-slide>
+                    <carousel-slide>
+                        <div style="position: absolute; left: 0; right: 0; text-align: center; top: 50%; color: white;"></div>
+                        <img src="img/Carousel_images/test.png" width="100%">
+                    </carousel-slide>
+                    <carousel-slide>
+                        <div style="position: absolute; left: 0; right: 0; text-align: center; top: 50%; color: white;"></div>
+                        <img src="img/Carousel_images/test.png" width="100%">
+                    </carousel-slide>
+                </carousel>
+            </div>
+            <div class="breakout-body-before">
+                texte
+            </div>
+    </div>
+</template>
+<script>
+import Carousel from "./Carousel";
+import CarouselSlide from "./CarouselSlide";
+export default {
+    name: "HomeCarousel",
+    components: {Carousel, CarouselSlide}
+}
+</script>
+<style>
+
+</style>

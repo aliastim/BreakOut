@@ -1,11 +1,25 @@
 require('./bootstrap');
+
 import Vue from 'vue'
-/*import VueRouter from 'vue-router'*/
-import Carousel from "./components/carousel/Carousel";
-import CarouselSlide from "./components/carousel/CarouselSlide";
+import VueRouter from 'vue-router'
 
-/*Vue.use(VueRouter)*/
+Vue.use(VueRouter)
+import router from './routes';
 
+/*import { BootstrapVue } from 'bootstrap-vue';
+Vue.use(BootstrapVue)*/
+
+Vue.component('app', require('./components/App.vue').default)
+
+const content = new Vue ({
+    el: '#app',
+    router
+});
+
+/*https://www.digitalocean.com/community/tutorials/handling-authentication-in-vue-using-vuex*/
+
+
+/*
 let $carousel = document.querySelector('#carousel')
 
 if ($carousel) {
@@ -20,7 +34,7 @@ if ($carousel) {
 
 
 }
-
+*/
 /*
 require('./bootstrap');
 
