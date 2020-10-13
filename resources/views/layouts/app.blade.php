@@ -1,3 +1,8 @@
+<?php
+    $titles = [
+        "index.php" => "Page d'accueil"
+    ]
+?>
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -8,6 +13,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'BreakOut') }}</title>
+    <!--<title> echo $titles[$_SERVER['PHP_SELF']] ?></title>-->
     <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">-->
     <!-- bootstrap est importé dans app.scss et se charge avec npm run watch -->
 

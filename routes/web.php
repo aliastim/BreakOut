@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,3 +22,11 @@ Route::prefix('auth')->group(function () {
     Route::post('register', 'AppController@register');
     Route::post('logout', 'AppController@logout');
 });
+
+// Users
+Route::prefix('users')->group(function () {
+    Route::post('loadall', 'UserController@loadAll');
+    Route::delete('userdelete/{id}', [UserController::class, 'userDelete']);
+    Route::post('findone', [UserController::class, 'findOne']);
+});
+

@@ -11,6 +11,9 @@ import Inventory from './components/parameters/Inventory';
 import Myrooms from './components/parameters/Myrooms';
 import Gemclicker from './components/hidden/Gemclicker'
 
+//Vue utilisateur
+import Admin_dashboard from './components/admin/Dashboard';
+
 //Vue d'erreurs
 import PageNotFound from './components/errors/PageNotFound'
 
@@ -19,6 +22,7 @@ const router = new VueRouter({
     routes : [
         { path: '/', component: Home},
         { path: '/home', component: Home},
+        { path: '/admin', component: Admin_dashboard},
         { path: '/rooms', component: Rooms},
         { path: '/shop', component: Shop},
         { path: '/account', component: Account},

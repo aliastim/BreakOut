@@ -12657,3 +12657,100 @@ footer > div {
   cursor: pointer;
 }
 
+/*------------ADMIN------------*/
+
+/*LEFT*/
+
+.breakout-admin-body {
+  position: relative;
+  display: flex;
+  /*margin-top: 200px;*/
+  width: calc(100% - 150px);
+  background: #FFEFBC;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1900px;
+  height: calc(100vh - 120px);
+  margin-top: 100px;
+  overflow: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.breakout-admin-left {
+  width: 200px;
+  background: #7B5B25;
+  overflow: hidden;
+}
+
+.breakout-admin-right {
+  width: calc(100% - 200px);
+  overflow: auto;
+}
+
+.breakout-admin-left > div > .nav-link {
+  height: calc(100% / 4) !important;
+  text-align: center;
+  display: flex;
+}
+
+.breakout-admin-left > div > .nav-link:hover {
+  cursor: pointer;
+}
+
+.breakout-admin-left > div > .active {
+  background: #5C4725 !important;
+}
+
+.breakout-admin-left > div > .nav-link > div {
+  margin: auto;
+}
+
+/*USERS*/
+
+.table-admin-users {
+  width: 100%;
+  margin-top: -1px;
+}
+
+.table-admin-users > thead {
+  background: #5C4725;
+  color: #f9ba48;
+  font-family: "JosefinSans-Bold";
+}
+
+.table-admin-users td {
+  /*padding: 0.75rem;*/
+  height: calc(1.6em + 0.75rem + 2px);
+  padding: 5px 0.5rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.table-admin-users td > p {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.table-admin-users tr:hover {
+  background: #5C4725;
+  color: white;
+}
+
+.btn-table-delete-admin {
+  width: 100%;
+  height: calc(1.6em + 0.75rem + 2px);
+  border: 1px solid #C38414;
+  color: #C38414;
+  background: transparent;
+  border-radius: 0.25rem;
+}
+
+.btn-table-delete-admin:hover {
+  border: 2px solid #FF253D;
+  color: white;
+  background: #FF253D;
+}
+
+/*----------FIN ADMIN----------*/
+

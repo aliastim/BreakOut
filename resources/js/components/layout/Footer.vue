@@ -25,7 +25,7 @@
                             <a href="#" class="texte-footer">Utilisation des données personnelles</a><br>
                             <a href="#" class="texte-footer">Support</a><br>
                             <a href="#" class="texte-footer">Plan du site</a><br>
-                            <a href="#" class="texte-footer">Gemclicker</a>
+                            <router-link to="/gemclicker" class="texte-footer">Gemclicker</router-link>
                         </div>
                     </div>
                 </div>
