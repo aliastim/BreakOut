@@ -2595,6 +2595,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Users__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Users */ "./resources/js/components/admin/Users.vue");
+/* harmony import */ var _Rooms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Rooms */ "./resources/js/components/admin/Rooms.vue");
 //
 //
 //
@@ -2630,11 +2631,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Admin",
   props: ['app'],
   components: {
-    Users: _Users__WEBPACK_IMPORTED_MODULE_0__["default"]
+    Users: _Users__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Rooms: _Rooms__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
@@ -2709,6 +2712,61 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin/Rooms.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/admin/Rooms.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Rooms",
+  props: ['admin'],
+  data: function data() {
+    return {};
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin/Users.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/admin/Users.vue?vue&type=script&lang=js& ***!
@@ -2756,13 +2814,57 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Users",
   props: ['admin'],
   data: function data() {
     return {
       users: [],
-      errors: []
+      errors: [],
+      search: "",
+      search_users: []
     };
   },
   mounted: function mounted() {
@@ -2795,8 +2897,29 @@ __webpack_require__.r(__webpack_exports__);
       });
       console.log("[Suppression de l'utilisateur avec l'id " + id + "] => Index dans le tableau : " + index);
     },
-    findOne: function findOne(id) {
+    searchUser: function searchUser(search) {
       var _this2 = this;
+
+      if (search !== "" && search !== null) {
+        this.admin.req.post('users/searchuser/' + search).then(function (response) {
+          _this2.search_users = response.data;
+          console.log(response.data);
+        })["catch"](function (error) {
+          _this2.errors.push(error.response.data.error);
+        });
+      } else {
+        console.log(search);
+      }
+    },
+    DeleteSearchUser: function DeleteSearchUser(id, index2) {
+      this.search_users.splice(index2, 1);
+      this.admin.req["delete"]('users/userdelete/' + id).then(function (response) {
+        console.log(response.data);
+      });
+      console.log("[Suppression de l'utilisateur avec l'id " + id + "] => Index dans le tableau : " + index);
+    },
+    findOne: function findOne(id) {
+      var _this3 = this;
 
       var data = {
         id: id
@@ -2804,7 +2927,20 @@ __webpack_require__.r(__webpack_exports__);
       this.admin.req.post("users/findone", data).then(function (response) {
         console.log(response.data);
       })["catch"](function (error) {
-        _this2.errors.push(error.response.data.error);
+        _this3.errors.push(error.response.data.error);
+      });
+    },
+    updateStatus: function updateStatus(id, status) {
+      var _this4 = this;
+
+      var data = {
+        id: id,
+        admin: status
+      };
+      this.admin.req.post("users/updatestatus", data).then(function (response) {
+        console.log(response.data);
+      })["catch"](function (error) {
+        _this4.errors.push(error.response.data.error);
       });
     }
   } // post(url, requête, header)
@@ -8033,6 +8169,25 @@ __webpack_require__.r(__webpack_exports__);
 
 })));
 //# sourceMappingURL=bootstrap.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin/Rooms.vue?vue&type=style&index=0&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/admin/Rooms.vue?vue&type=style&index=0&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.breakout-admin-rooms-left>div>.nav-link\n{\n    height: calc(100% / 4) !important;\n    text-align: center;\n    display: flex;\n}\n.breakout-admin-rooms-left>div>.nav-link:hover\n{\n    cursor: pointer;\n}\n.breakout-admin-rooms-left>div>.active\n{\n    background: #C38414 !important;\n}\n.breakout-admin-rooms-left>div>.nav-link>div\n{\n    margin: auto;\n}\n", ""]);
+
+// exports
 
 
 /***/ }),
@@ -39234,6 +39389,36 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin/Rooms.vue?vue&type=style&index=0&lang=css&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/admin/Rooms.vue?vue&type=style&index=0&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--7-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./Rooms.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin/Rooms.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/carousel/Carousel.vue?vue&type=style&index=0&lang=css&":
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/carousel/Carousel.vue?vue&type=style&index=0&lang=css& ***!
@@ -41229,65 +41414,70 @@ var render = function() {
             [
               _vm._m(0),
               _vm._v(" "),
-              _c("div", { staticClass: "breakout-admin-right" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "tab-content",
-                    attrs: { id: "v-pills-tabContent" }
-                  },
-                  [
-                    _c("div", {
-                      staticClass: "tab-pane fade",
-                      attrs: {
-                        id: "v-pills-dashboard",
-                        role: "tabpanel",
-                        "aria-labelledby": "v-pills-dashboard-tab"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "tab-pane fade show active",
-                        attrs: {
-                          id: "v-pills-users",
-                          role: "tabpanel",
-                          "aria-labelledby": "v-pills-users-tab"
-                        }
-                      },
-                      [_c("Users", { attrs: { admin: this } })],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
+              _c(
+                "div",
+                { staticClass: "breakout-admin-right position-relative" },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "tab-content h-100",
+                      attrs: { id: "v-pills-tabContent" }
+                    },
+                    [
+                      _c("div", {
                         staticClass: "tab-pane fade",
                         attrs: {
-                          id: "v-pills-rooms",
+                          id: "v-pills-dashboard",
                           role: "tabpanel",
-                          "aria-labelledby": "v-pills-rooms-tab"
+                          "aria-labelledby": "v-pills-dashboard-tab"
                         }
-                      },
-                      [_vm._v("...")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "tab-pane fade",
-                        attrs: {
-                          id: "v-pills-objets",
-                          role: "tabpanel",
-                          "aria-labelledby": "v-pills-objets-tab"
-                        }
-                      },
-                      [_vm._v("...")]
-                    )
-                  ]
-                )
-              ])
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "tab-pane fade",
+                          attrs: {
+                            id: "v-pills-users",
+                            role: "tabpanel",
+                            "aria-labelledby": "v-pills-users-tab"
+                          }
+                        },
+                        [_c("Users", { attrs: { admin: this } })],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "tab-pane fade h-100 show active",
+                          attrs: {
+                            id: "v-pills-rooms",
+                            role: "tabpanel",
+                            "aria-labelledby": "v-pills-rooms-tab"
+                          }
+                        },
+                        [_c("Rooms", { attrs: { admin: this } })],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "tab-pane fade",
+                          attrs: {
+                            id: "v-pills-objets",
+                            role: "tabpanel",
+                            "aria-labelledby": "v-pills-objets-tab"
+                          }
+                        },
+                        [_vm._v("...")]
+                      )
+                    ]
+                  )
+                ]
+              )
             ]
           )
         ])
@@ -41330,7 +41520,7 @@ var staticRenderFns = [
           _c(
             "a",
             {
-              staticClass: "nav-link active",
+              staticClass: "nav-link",
               attrs: {
                 id: "v-pills-users-tab",
                 "data-toggle": "pill",
@@ -41346,7 +41536,7 @@ var staticRenderFns = [
           _c(
             "a",
             {
-              staticClass: "nav-link",
+              staticClass: "nav-link active",
               attrs: {
                 id: "v-pills-rooms-tab",
                 "data-toggle": "pill",
@@ -41391,6 +41581,196 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin/Rooms.vue?vue&type=template&id=2f13f31d&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/admin/Rooms.vue?vue&type=template&id=2f13f31d& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "breakout-admin-rooms-body" }, [
+      _c(
+        "div",
+        {
+          staticClass: "w-100 h-100 row",
+          staticStyle: { margin: "0 !important" }
+        },
+        [
+          _c("div", { staticClass: "breakout-admin-rooms-left" }, [
+            _c(
+              "div",
+              {
+                staticClass: "nav flex-column nav-pills h-100",
+                attrs: {
+                  id: "v-pills-tab",
+                  role: "tablist",
+                  "aria-orientation": "vertical"
+                }
+              },
+              [
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link active",
+                    attrs: {
+                      id: "rooms-add-tab",
+                      "data-toggle": "pill",
+                      href: "#rooms-add",
+                      role: "tab",
+                      "aria-controls": "rooms-add",
+                      "aria-selected": "true"
+                    }
+                  },
+                  [_c("div", [_vm._v("Nouvelle salle")])]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link",
+                    attrs: {
+                      id: "rooms-tab-1",
+                      "data-toggle": "pill",
+                      href: "#rooms-1",
+                      role: "tab",
+                      "aria-controls": "rooms-1",
+                      "aria-selected": "false"
+                    }
+                  },
+                  [_c("div", [_vm._v("Salle 1")])]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link",
+                    attrs: {
+                      id: "rooms-tab-2",
+                      "data-toggle": "pill",
+                      href: "#rooms-2",
+                      role: "tab",
+                      "aria-controls": "rooms-2",
+                      "aria-selected": "false"
+                    }
+                  },
+                  [
+                    _c("div", [
+                      _vm._v(
+                        "\n                        Salle 2\n                    "
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link",
+                    attrs: {
+                      id: "rooms-tab-3",
+                      "data-toggle": "pill",
+                      href: "#rooms-3",
+                      role: "tab",
+                      "aria-controls": "v-pills-objets",
+                      "aria-selected": "false"
+                    }
+                  },
+                  [_c("div", [_vm._v("Salle 3")])]
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "breakout-admin-rooms-right position-relative" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass: "tab-content",
+                  attrs: { id: "v-pills-tabContent" }
+                },
+                [
+                  _c("div", {
+                    staticClass: "tab-pane fade show active",
+                    attrs: {
+                      id: "rooms-add",
+                      role: "tabpanel",
+                      "aria-labelledby": "rooms-add-tab"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "tab-pane fade",
+                      attrs: {
+                        id: "rooms-1",
+                        role: "tabpanel",
+                        "aria-labelledby": "rooms-tab-1"
+                      }
+                    },
+                    [
+                      _c("p", [_vm._v("image")]),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Description")]),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Temps, joueurs, etc")])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", {
+                    staticClass: "tab-pane fade",
+                    attrs: {
+                      id: "rooms-2",
+                      role: "tabpanel",
+                      "aria-labelledby": "rooms-tab-2"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "tab-pane fade",
+                      attrs: {
+                        id: "rooms-3",
+                        role: "tabpanel",
+                        "aria-labelledby": "rooms-tab-3"
+                      }
+                    },
+                    [_vm._v("...")]
+                  )
+                ]
+              )
+            ]
+          )
+        ]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin/Users.vue?vue&type=template&id=fa2043a6&":
 /*!**************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/admin/Users.vue?vue&type=template&id=fa2043a6& ***!
@@ -41406,50 +41786,248 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("table", { staticClass: "table-admin-users" }, [
-    _vm._m(0),
+  return _c("div", [
+    _c("div", { staticClass: "body-admin-users-head" }, [
+      _c("table", { staticClass: "table-admin-users" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "tbody",
+          _vm._l(_vm.users, function(user, index) {
+            return _c("tr", { attrs: { index: index } }, [
+              _c("td", [
+                _c("p", { domProps: { textContent: _vm._s(user.id) } })
+              ]),
+              _vm._v(" "),
+              _c("td", [
+                _c("p", { domProps: { textContent: _vm._s(user.name) } })
+              ]),
+              _vm._v(" "),
+              _c("td", [
+                _c("p", { domProps: { textContent: _vm._s(user.email) } })
+              ]),
+              _vm._v(" "),
+              _c("td", [
+                _c("p", { domProps: { textContent: _vm._s(user.experience) } })
+              ]),
+              _vm._v(" "),
+              _c("td", [
+                _c("p", {
+                  domProps: { textContent: _vm._s(user.games_played) }
+                })
+              ]),
+              _vm._v(" "),
+              _c("td", { staticStyle: { width: "160px !important" } }, [
+                _c(
+                  "select",
+                  {
+                    staticClass: "custom-select",
+                    attrs: { id: "inputGroupSelect01" }
+                  },
+                  [
+                    _c(
+                      "option",
+                      {
+                        attrs: { value: "0" },
+                        domProps: { selected: user.admin === 0 },
+                        on: {
+                          click: function($event) {
+                            return _vm.updateStatus(user.id, 0)
+                          }
+                        }
+                      },
+                      [_vm._v("Utilisateur")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "option",
+                      {
+                        attrs: { value: "1" },
+                        domProps: { selected: user.admin === 1 },
+                        on: {
+                          click: function($event) {
+                            return _vm.updateStatus(user.id, 1)
+                          }
+                        }
+                      },
+                      [_vm._v("Administrateur")]
+                    )
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("td", { staticStyle: { width: "60px !important" } }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn-table-delete-admin",
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        return _vm.DeleteUser(user.id, index)
+                      }
+                    }
+                  },
+                  [_c("i", { staticClass: "fas fa-user-times" })]
+                )
+              ])
+            ])
+          }),
+          0
+        )
+      ])
+    ]),
     _vm._v(" "),
-    _c(
-      "tbody",
-      _vm._l(_vm.users, function(user, index) {
-        return _c("tr", { attrs: { index: index } }, [
-          _c("td", [_c("p", { domProps: { textContent: _vm._s(user.id) } })]),
-          _vm._v(" "),
-          _c("td", [_c("p", { domProps: { textContent: _vm._s(user.name) } })]),
-          _vm._v(" "),
-          _c("td", [
-            _c("p", { domProps: { textContent: _vm._s(user.email) } })
-          ]),
-          _vm._v(" "),
-          _c("td", [
-            _c("p", { domProps: { textContent: _vm._s(user.experience) } })
-          ]),
-          _vm._v(" "),
-          _c("td", [
-            _c("p", { domProps: { textContent: _vm._s(user.games_played) } })
-          ]),
-          _vm._v(" "),
-          _vm._m(1, true),
-          _vm._v(" "),
-          _c("td", { staticStyle: { width: "60px !important" } }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn-table-delete-admin",
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    return _vm.DeleteUser(user.id, index)
+    _c("div", { staticClass: "body-admin-users-foot" }, [
+      _c("div", { staticClass: "nav-user-footer" }, [
+        _c(
+          "form",
+          {
+            attrs: { method: "post" },
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.searchUser(_vm.search)
+              }
+            }
+          },
+          [
+            _c("div", { staticClass: "d-flex" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _c("div", { staticClass: "input-group input-search-user" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.search,
+                      expression: "search"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "text",
+                    placeholder: "Nom d'utilisateur ou email",
+                    "aria-label": "Recipient's username",
+                    "aria-describedby": "button-addon2"
+                  },
+                  domProps: { value: _vm.search },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.search = $event.target.value
+                    }
                   }
-                }
-              },
-              [_c("i", { staticClass: "fas fa-user-times" })]
-            )
-          ])
-        ])
-      }),
-      0
-    )
+                }),
+                _vm._v(" "),
+                _vm._m(2)
+              ])
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c(
+        "table",
+        {
+          staticClass: "table-admin-users",
+          staticStyle: { "margin-top": "49px" }
+        },
+        [
+          _vm._m(3),
+          _vm._v(" "),
+          _c(
+            "tbody",
+            _vm._l(_vm.search_users, function(user, index2) {
+              return _c("tr", { attrs: { index2: index2 } }, [
+                _c("td", [
+                  _c("p", { domProps: { textContent: _vm._s(user.id) } })
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("p", { domProps: { textContent: _vm._s(user.name) } })
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("p", { domProps: { textContent: _vm._s(user.email) } })
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("p", {
+                    domProps: { textContent: _vm._s(user.experience) }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("p", {
+                    domProps: { textContent: _vm._s(user.games_played) }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("td", { staticStyle: { width: "160px !important" } }, [
+                  _c(
+                    "select",
+                    {
+                      staticClass: "custom-select",
+                      attrs: { id: "inputGroupSelect02" }
+                    },
+                    [
+                      _c(
+                        "option",
+                        {
+                          attrs: { value: "0" },
+                          domProps: { selected: user.admin === 0 },
+                          on: {
+                            click: function($event) {
+                              return _vm.updateStatus(user.id, 0)
+                            }
+                          }
+                        },
+                        [_vm._v("Utilisateur")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "option",
+                        {
+                          attrs: { value: "1" },
+                          domProps: { selected: user.admin === 1 },
+                          on: {
+                            click: function($event) {
+                              return _vm.updateStatus(user.id, 1)
+                            }
+                          }
+                        },
+                        [_vm._v("Administrateur")]
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("td", { staticStyle: { width: "60px !important" } }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn-table-delete-admin",
+                      on: {
+                        click: function($event) {
+                          $event.preventDefault()
+                          return _vm.DeleteSearchUser(user.id, index2)
+                        }
+                      }
+                    },
+                    [_c("i", { staticClass: "fas fa-user-times" })]
+                  )
+                ])
+              ])
+            }),
+            0
+          )
+        ]
+      )
+    ])
   ])
 }
 var staticRenderFns = [
@@ -41477,16 +42055,45 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", { staticStyle: { width: "160px !important" } }, [
+    return _c("div", { staticClass: "mr-auto" }, [
+      _c("p", { staticClass: "table-text" }, [
+        _vm._v("Rechercher un utilisateur")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-append" }, [
       _c(
-        "select",
-        { staticClass: "custom-select", attrs: { id: "inputGroupSelect01" } },
-        [
-          _c("option", { attrs: { value: "0" } }, [_vm._v("Utilisateur")]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "1" } }, [_vm._v("Administrateur")])
-        ]
+        "button",
+        {
+          staticClass: "btn btn-search-user",
+          attrs: { type: "submit", id: "button-addon2" }
+        },
+        [_vm._v("GO")]
       )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "text-center" }, [
+      _c("td", [_vm._v("Id")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("Pseudo")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("Email")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("Niveau")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("Parties")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("Statut")]),
+      _vm._v(" "),
+      _c("td")
     ])
   }
 ]
@@ -59088,6 +59695,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_template_id_12658639___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_template_id_12658639___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/Rooms.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/components/admin/Rooms.vue ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Rooms_vue_vue_type_template_id_2f13f31d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Rooms.vue?vue&type=template&id=2f13f31d& */ "./resources/js/components/admin/Rooms.vue?vue&type=template&id=2f13f31d&");
+/* harmony import */ var _Rooms_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Rooms.vue?vue&type=script&lang=js& */ "./resources/js/components/admin/Rooms.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Rooms_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Rooms.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/admin/Rooms.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Rooms_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Rooms_vue_vue_type_template_id_2f13f31d___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Rooms_vue_vue_type_template_id_2f13f31d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/admin/Rooms.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/Rooms.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/admin/Rooms.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Rooms_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Rooms.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin/Rooms.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Rooms_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/Rooms.vue?vue&type=style&index=0&lang=css&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/admin/Rooms.vue?vue&type=style&index=0&lang=css& ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Rooms_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--7-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./Rooms.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin/Rooms.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Rooms_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Rooms_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Rooms_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Rooms_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Rooms_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/Rooms.vue?vue&type=template&id=2f13f31d&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/admin/Rooms.vue?vue&type=template&id=2f13f31d& ***!
+  \********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Rooms_vue_vue_type_template_id_2f13f31d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Rooms.vue?vue&type=template&id=2f13f31d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin/Rooms.vue?vue&type=template&id=2f13f31d&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Rooms_vue_vue_type_template_id_2f13f31d___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Rooms_vue_vue_type_template_id_2f13f31d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

@@ -28,5 +28,7 @@ Route::prefix('users')->group(function () {
     Route::post('loadall', 'UserController@loadAll');
     Route::delete('userdelete/{id}', [UserController::class, 'userDelete']);
     Route::post('findone', [UserController::class, 'findOne']);
+    Route::post('searchuser/{search}', [UserController::class, 'searchUser']);
+    Route::post('updatestatus', 'UserController@updateStatus');
 });
 

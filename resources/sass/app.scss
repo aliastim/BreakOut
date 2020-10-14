@@ -1838,12 +1838,6 @@ footer>div
     overflow: hidden;
 }
 
-.breakout-admin-right
-{
-    width: calc(100% - 200px) ;
-    overflow: auto;
-}
-
 .breakout-admin-left>div>.nav-link
 {
     height: calc(100% / 4) !important;
@@ -1865,7 +1859,34 @@ footer>div
 {
     margin: auto;
 }
+/*RIGHT*/
+.breakout-admin-right
+{
+    width: calc(100% - 200px) ;
+    overflow: auto;
+}
 /*USERS*/
+.body-admin-users-head
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: calc(100% - 237px);
+    overflow: auto;
+    //background: olivedrab;
+}
+
+.body-admin-users-foot
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 237px;
+    overflow: auto;
+    //background: orange;
+}
 .table-admin-users
 {
     width: 100%;
@@ -1914,5 +1935,71 @@ footer>div
     border: 2px solid $red1;
     color: white;
     background: $red1;
+}
+
+.nav-user-footer
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: $marron2;
+}
+
+.table-text
+{
+    color: $yellow2;
+    font-family: "JosefinSans-Bold";
+    padding: 14px 20px;
+    text-transform: uppercase;
+}
+
+.input-search-user
+{
+    width: 250px !important;
+    margin-top: 6px;
+    margin-right: 6px;
+}
+
+.btn-search-user
+{
+    background: $yellow_bo;
+    width: 50px;
+    overflow: hidden;
+    font-family: "JosefinSans-Bold";
+    padding-bottom: 2px;
+    color: white !important;
+    height: 37px;
+}
+
+.btn-search-user:hover
+{
+    background: $yellow2;
+    width: 50px;
+    overflow: hidden;
+}
+/*ROOMS*/
+.breakout-admin-rooms-body
+{
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.breakout-admin-rooms-left
+{
+    width: 150px;
+    height: 100%;
+    background: $marron1;
+    overflow: hidden;
+}
+
+.breakout-admin-rooms-right
+{
+    width: calc(100% - 150px);
+    height: 100%;
+    //background: purple;
+    overflow: auto;
 }
 /*----------FIN ADMIN----------*/
