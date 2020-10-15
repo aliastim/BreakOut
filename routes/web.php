@@ -32,3 +32,7 @@ Route::prefix('users')->group(function () {
     Route::post('updatestatus', 'UserController@updateStatus');
 });
 
+// Rooms
+Route::prefix('bo_rooms')->group(function () {
+    Route::post('newroom', 'RoomsController@newRoom');
+});

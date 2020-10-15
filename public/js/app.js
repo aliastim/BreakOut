@@ -2596,6 +2596,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Users__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Users */ "./resources/js/components/admin/Users.vue");
 /* harmony import */ var _Rooms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Rooms */ "./resources/js/components/admin/Rooms.vue");
+/* harmony import */ var _Parameters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Parameters */ "./resources/js/components/admin/Parameters.vue");
 //
 //
 //
@@ -2630,6 +2631,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2637,7 +2639,8 @@ __webpack_require__.r(__webpack_exports__);
   props: ['app'],
   components: {
     Users: _Users__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Rooms: _Rooms__WEBPACK_IMPORTED_MODULE_1__["default"]
+    Rooms: _Rooms__WEBPACK_IMPORTED_MODULE_1__["default"],
+    Parameters: _Parameters__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   data: function data() {
     return {
@@ -2712,6 +2715,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin/Parameters.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/admin/Parameters.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Parameters",
+  props: ['admin'],
+  data: function data() {
+    return {};
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin/Rooms.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/admin/Rooms.vue?vue&type=script&lang=js& ***!
@@ -2757,11 +2786,147 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Rooms",
   props: ['admin'],
   data: function data() {
-    return {};
+    return {
+      room_name: "",
+      room_description: "",
+      room_players: 1,
+      room_device: "",
+      room_riddles: 1,
+      room_duration: "",
+      room_difficulty: 1,
+      room_price: 0,
+      room_image: "",
+      room_url: "",
+      errors: [],
+      new_room: null
+    };
+  },
+  methods: {
+    getImage: function getImage() {
+      var image = this.$refs.file_image.files[0]; //console.log(this.$refs.file_image.files[0]);
+
+      var reader = new FileReader();
+      var vm = this;
+
+      reader.onload = function (e) {
+        //console.log(e);
+        vm.room_image = e.target.result; //console.log(image);
+      };
+
+      reader.readAsDataURL(image);
+    },
+    newRoom: function newRoom() {
+      var _this = this;
+
+      this.errors = [];
+
+      if (!this.room_name) {
+        this.errors.push('Un nom de salle est requis');
+      }
+
+      if (!this.room_description) {
+        this.errors.push('Une description est requise');
+      }
+
+      if (!this.errors.length) {
+        //https://www.youtube.com/watch?v=rYkBRdDuFzU
+        //https://codepen.io/Atinux/pen/qOvawK/
+        //Envoi de l'image
+
+        /*let formData = new FormData();
+        formData.append('file', this.room_image);
+         console.log(formData)
+        this.admin.req.post( 'bo_rooms/newroom',
+            formData,
+            {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            }
+        ).then(response => {
+            console.log(response);
+        }).catch(function(){
+                console.log('FAILURE!!');
+        });*/
+        var data = {
+          room_name: this.room_name,
+          room_description: this.room_description,
+          room_players: this.room_players,
+          room_device: this.room_device,
+          room_riddles: this.room_riddles,
+          room_duration: this.room_duration,
+          room_difficulty: this.room_difficulty,
+          room_price: this.room_price,
+          room_image: this.room_image,
+          room_url: this.room_url
+        }; //console.log(data)
+
+        this.admin.req.post('bo_rooms/newroom', data).then(function (response) {
+          _this.new_room = response.data;
+          console.log(_this.new_room);
+        })["catch"](function (error) {
+          _this.errors.push(error.response.data.error);
+        });
+        /*this.admin.req.post('bo_rooms/newroom', data, {headers: {'Content-Type': 'multipart/form-data charset=utf-8; boundary=' + Math.random().toString().substr(2)}}).then(response => {
+            this.new_room = response.data;
+            console.log(this.new_room);
+         }).catch(error => {
+            this.errors.push(error.response.data.error);
+        });*/
+      } else {
+        console.log(this.errors);
+      }
+    }
   }
 });
 
@@ -41425,14 +41590,19 @@ var render = function() {
                       attrs: { id: "v-pills-tabContent" }
                     },
                     [
-                      _c("div", {
-                        staticClass: "tab-pane fade",
-                        attrs: {
-                          id: "v-pills-dashboard",
-                          role: "tabpanel",
-                          "aria-labelledby": "v-pills-dashboard-tab"
-                        }
-                      }),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "tab-pane fade",
+                          attrs: {
+                            id: "v-pills-dashboard",
+                            role: "tabpanel",
+                            "aria-labelledby": "v-pills-dashboard-tab"
+                          }
+                        },
+                        [_c("Parameters", { attrs: { admin: this } })],
+                        1
+                      ),
                       _vm._v(" "),
                       _c(
                         "div",
@@ -41581,10 +41751,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin/Rooms.vue?vue&type=template&id=2f13f31d&":
-/*!**************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/admin/Rooms.vue?vue&type=template&id=2f13f31d& ***!
-  \**************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin/Parameters.vue?vue&type=template&id=e66303d6&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/admin/Parameters.vue?vue&type=template&id=e66303d6& ***!
+  \*******************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -41603,166 +41773,597 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "breakout-admin-rooms-body" }, [
-      _c(
-        "div",
-        {
-          staticClass: "w-100 h-100 row",
-          staticStyle: { margin: "0 !important" }
-        },
-        [
-          _c("div", { staticClass: "breakout-admin-rooms-left" }, [
+    return _c(
+      "div",
+      { staticClass: "row", staticStyle: { margin: "0 !important" } },
+      [
+        _c("div", [_c("p", [_vm._v("Cadre image 1")])]),
+        _vm._v(" "),
+        _c("div", [_c("p", [_vm._v("Cadre image 2")])]),
+        _vm._v(" "),
+        _c("div", [_c("p", [_vm._v("Cadre image 3")])])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin/Rooms.vue?vue&type=template&id=2f13f31d&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/admin/Rooms.vue?vue&type=template&id=2f13f31d& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "breakout-admin-rooms-body" }, [
+    _c(
+      "div",
+      {
+        staticClass: "w-100 h-100 row",
+        staticStyle: { margin: "0 !important" }
+      },
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "breakout-admin-rooms-right position-relative" },
+          [
             _c(
               "div",
               {
-                staticClass: "nav flex-column nav-pills h-100",
-                attrs: {
-                  id: "v-pills-tab",
-                  role: "tablist",
-                  "aria-orientation": "vertical"
-                }
+                staticClass: "tab-content",
+                attrs: { id: "v-pills-tabContent" }
               },
               [
                 _c(
-                  "a",
+                  "div",
                   {
-                    staticClass: "nav-link active",
-                    attrs: {
-                      id: "rooms-add-tab",
-                      "data-toggle": "pill",
-                      href: "#rooms-add",
-                      role: "tab",
-                      "aria-controls": "rooms-add",
-                      "aria-selected": "true"
-                    }
-                  },
-                  [_c("div", [_vm._v("Nouvelle salle")])]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass: "nav-link",
-                    attrs: {
-                      id: "rooms-tab-1",
-                      "data-toggle": "pill",
-                      href: "#rooms-1",
-                      role: "tab",
-                      "aria-controls": "rooms-1",
-                      "aria-selected": "false"
-                    }
-                  },
-                  [_c("div", [_vm._v("Salle 1")])]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass: "nav-link",
-                    attrs: {
-                      id: "rooms-tab-2",
-                      "data-toggle": "pill",
-                      href: "#rooms-2",
-                      role: "tab",
-                      "aria-controls": "rooms-2",
-                      "aria-selected": "false"
-                    }
-                  },
-                  [
-                    _c("div", [
-                      _vm._v(
-                        "\n                        Salle 2\n                    "
-                      )
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass: "nav-link",
-                    attrs: {
-                      id: "rooms-tab-3",
-                      "data-toggle": "pill",
-                      href: "#rooms-3",
-                      role: "tab",
-                      "aria-controls": "v-pills-objets",
-                      "aria-selected": "false"
-                    }
-                  },
-                  [_c("div", [_vm._v("Salle 3")])]
-                )
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "breakout-admin-rooms-right position-relative" },
-            [
-              _c(
-                "div",
-                {
-                  staticClass: "tab-content",
-                  attrs: { id: "v-pills-tabContent" }
-                },
-                [
-                  _c("div", {
                     staticClass: "tab-pane fade show active",
                     attrs: {
                       id: "rooms-add",
                       role: "tabpanel",
                       "aria-labelledby": "rooms-add-tab"
                     }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "tab-pane fade",
-                      attrs: {
-                        id: "rooms-1",
-                        role: "tabpanel",
-                        "aria-labelledby": "rooms-tab-1"
-                      }
-                    },
-                    [
-                      _c("p", [_vm._v("image")]),
-                      _vm._v(" "),
-                      _c("p", [_vm._v("Description")]),
-                      _vm._v(" "),
-                      _c("p", [_vm._v("Temps, joueurs, etc")])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", {
+                  },
+                  [
+                    _c(
+                      "form",
+                      {
+                        attrs: {
+                          method: "POST",
+                          enctype: "multipart/form-data"
+                        },
+                        on: {
+                          submit: function($event) {
+                            $event.preventDefault()
+                            return _vm.newRoom($event)
+                          }
+                        }
+                      },
+                      [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.room_name,
+                              expression: "room_name"
+                            }
+                          ],
+                          attrs: {
+                            type: "text",
+                            placeholder: "Nom de la salle"
+                          },
+                          domProps: { value: _vm.room_name },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.room_name = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("textarea", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.room_description,
+                              expression: "room_description"
+                            }
+                          ],
+                          domProps: { value: _vm.room_description },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.room_description = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.room_players,
+                                expression: "room_players"
+                              }
+                            ],
+                            staticClass: "custom-select",
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.room_players = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              }
+                            }
+                          },
+                          [
+                            _c("option", { attrs: { disabled: "" } }, [
+                              _vm._v("Nombre de joueurs")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { selected: "", value: "1" } },
+                              [_vm._v("1")]
+                            ),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "2" } }, [
+                              _vm._v("2")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "3" } }, [
+                              _vm._v("3")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "4" } }, [
+                              _vm._v("4")
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.room_device,
+                                expression: "room_device"
+                              }
+                            ],
+                            staticClass: "custom-select",
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.room_device = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              }
+                            }
+                          },
+                          [
+                            _c("option", { attrs: { disabled: "" } }, [
+                              _vm._v("Nombre de joueurs")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { selected: "", value: "Desktop" } },
+                              [_vm._v("Desktop")]
+                            ),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "Mobile" } }, [
+                              _vm._v("Mobile")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "Tablette" } }, [
+                              _vm._v("Tablette")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "All" } }, [
+                              _vm._v("Tous les appareils")
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.room_riddles,
+                              expression: "room_riddles"
+                            }
+                          ],
+                          attrs: { type: "number" },
+                          domProps: { value: _vm.room_riddles },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.room_riddles = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.room_duration,
+                                expression: "room_duration"
+                              }
+                            ],
+                            staticClass: "custom-select",
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.room_duration = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              }
+                            }
+                          },
+                          [
+                            _c("option", { attrs: { disabled: "" } }, [
+                              _vm._v("Durée estimée")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { selected: "", value: "15min" } },
+                              [_vm._v("15 minutes")]
+                            ),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "30min" } }, [
+                              _vm._v("30 minutes")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "45min" } }, [
+                              _vm._v("45 minutes")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "1h" } }, [
+                              _vm._v("1 heure")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "1h30" } }, [
+                              _vm._v("1 heure 30")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "2h" } }, [
+                              _vm._v("2 heures")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "2h+" } }, [
+                              _vm._v("Plus de 2 heures")
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.room_difficulty,
+                                expression: "room_difficulty"
+                              }
+                            ],
+                            staticClass: "custom-select",
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.room_difficulty = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              }
+                            }
+                          },
+                          [
+                            _c("option", { attrs: { disabled: "" } }, [
+                              _vm._v("Difficulté de la salle")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { selected: "", value: "1" } },
+                              [_vm._v("1/5")]
+                            ),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "2" } }, [
+                              _vm._v("2/5")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "3" } }, [
+                              _vm._v("3/5")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "4" } }, [
+                              _vm._v("4/5")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "5" } }, [
+                              _vm._v("5/5")
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.room_price,
+                              expression: "room_price"
+                            }
+                          ],
+                          attrs: {
+                            type: "text",
+                            placeholder: "Prix de la salle"
+                          },
+                          domProps: { value: _vm.room_price },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.room_price = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "newimage" } }, [
+                          _vm._v("Image de la salle")
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          ref: "file_image",
+                          attrs: { type: "file", id: "newimage" },
+                          on: {
+                            change: function($event) {
+                              return _vm.getImage()
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.room_url,
+                              expression: "room_url"
+                            }
+                          ],
+                          attrs: {
+                            type: "text",
+                            placeholder: "Url de la salle"
+                          },
+                          domProps: { value: _vm.room_url },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.room_url = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("button", { attrs: { type: "submit" } }, [
+                          _vm._v("Créer")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("img", {
+                      attrs: { src: _vm.room_image, alt: "Couverture de salle" }
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _vm._m(1),
+                _vm._v(" "),
+                _c("div", {
+                  staticClass: "tab-pane fade",
+                  attrs: {
+                    id: "rooms-2",
+                    role: "tabpanel",
+                    "aria-labelledby": "rooms-tab-2"
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
                     staticClass: "tab-pane fade",
                     attrs: {
-                      id: "rooms-2",
+                      id: "rooms-3",
                       role: "tabpanel",
-                      "aria-labelledby": "rooms-tab-2"
+                      "aria-labelledby": "rooms-tab-3"
                     }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "tab-pane fade",
-                      attrs: {
-                        id: "rooms-3",
-                        role: "tabpanel",
-                        "aria-labelledby": "rooms-tab-3"
-                      }
-                    },
-                    [_vm._v("...")]
-                  )
-                ]
-              )
+                  },
+                  [_vm._v("...")]
+                )
+              ]
+            )
+          ]
+        )
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "breakout-admin-rooms-left" }, [
+      _c(
+        "div",
+        {
+          staticClass: "nav flex-column nav-pills h-100",
+          attrs: {
+            id: "v-pills-tab",
+            role: "tablist",
+            "aria-orientation": "vertical"
+          }
+        },
+        [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link active",
+              attrs: {
+                id: "rooms-add-tab",
+                "data-toggle": "pill",
+                href: "#rooms-add",
+                role: "tab",
+                "aria-controls": "rooms-add",
+                "aria-selected": "true"
+              }
+            },
+            [_c("div", [_vm._v("Nouvelle salle")])]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: {
+                id: "rooms-tab-1",
+                "data-toggle": "pill",
+                href: "#rooms-1",
+                role: "tab",
+                "aria-controls": "rooms-1",
+                "aria-selected": "false"
+              }
+            },
+            [_c("div", [_vm._v("Salle 1")])]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: {
+                id: "rooms-tab-2",
+                "data-toggle": "pill",
+                href: "#rooms-2",
+                role: "tab",
+                "aria-controls": "rooms-2",
+                "aria-selected": "false"
+              }
+            },
+            [
+              _c("div", [
+                _vm._v(
+                  "\n                        Salle 2\n                    "
+                )
+              ])
             ]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: {
+                id: "rooms-tab-3",
+                "data-toggle": "pill",
+                href: "#rooms-3",
+                role: "tab",
+                "aria-controls": "v-pills-objets",
+                "aria-selected": "false"
+              }
+            },
+            [_c("div", [_vm._v("Salle 3")])]
           )
         ]
       )
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "tab-pane fade",
+        attrs: {
+          id: "rooms-1",
+          role: "tabpanel",
+          "aria-labelledby": "rooms-tab-1"
+        }
+      },
+      [
+        _c("p", [_vm._v("image")]),
+        _vm._v(" "),
+        _c("p", [_vm._v("Description")]),
+        _vm._v(" "),
+        _c("p", [_vm._v("Temps, joueurs, etc")])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -59695,6 +60296,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_template_id_12658639___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_template_id_12658639___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/Parameters.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/components/admin/Parameters.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Parameters_vue_vue_type_template_id_e66303d6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Parameters.vue?vue&type=template&id=e66303d6& */ "./resources/js/components/admin/Parameters.vue?vue&type=template&id=e66303d6&");
+/* harmony import */ var _Parameters_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Parameters.vue?vue&type=script&lang=js& */ "./resources/js/components/admin/Parameters.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Parameters_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Parameters_vue_vue_type_template_id_e66303d6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Parameters_vue_vue_type_template_id_e66303d6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/admin/Parameters.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/Parameters.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/admin/Parameters.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Parameters_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Parameters.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin/Parameters.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Parameters_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/Parameters.vue?vue&type=template&id=e66303d6&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/admin/Parameters.vue?vue&type=template&id=e66303d6& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Parameters_vue_vue_type_template_id_e66303d6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Parameters.vue?vue&type=template&id=e66303d6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/admin/Parameters.vue?vue&type=template&id=e66303d6&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Parameters_vue_vue_type_template_id_e66303d6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Parameters_vue_vue_type_template_id_e66303d6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
