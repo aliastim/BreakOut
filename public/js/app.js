@@ -2832,11 +2832,272 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Rooms",
   props: ['admin'],
   data: function data() {
     return {
+      // Load Rooms
+      rooms: [],
+      nbr_rooms: 0,
+      // Create New Room
       room_name: "",
       room_description: "",
       room_players: 1,
@@ -2848,10 +3109,37 @@ __webpack_require__.r(__webpack_exports__);
       room_image: "",
       room_url: "",
       errors: [],
-      new_room: null
+      new_room: null,
+      // Update Room
+      room_name_update: "",
+      room_description_update: "",
+      room_players_update: null,
+      room_device_update: "",
+      room_riddles_update: null,
+      room_duration_update: "",
+      room_difficulty_update: null,
+      room_price_update: null,
+      room_image_update: "",
+      room_url_update: "",
+      errors_update: [],
+      room_image_update_name: "Changer l'image de couverture"
     };
   },
+  mounted: function mounted() {
+    this.loadAll();
+  },
   methods: {
+    loadAll: function loadAll() {
+      var _this = this;
+
+      this.admin.req.post('bo_rooms/loadall').then(function (response) {
+        _this.rooms = response.data;
+        _this.nbr_rooms = _this.rooms.length;
+        console.log(_this.rooms);
+      })["catch"](function (error) {
+        _this.errors.push(error.response.data.error);
+      });
+    },
     getImage: function getImage() {
       var image = this.$refs.file_image.files[0]; //console.log(this.$refs.file_image.files[0]);
 
@@ -2866,7 +3154,7 @@ __webpack_require__.r(__webpack_exports__);
       reader.readAsDataURL(image);
     },
     newRoom: function newRoom() {
-      var _this = this;
+      var _this2 = this;
 
       this.errors = [];
 
@@ -2879,25 +3167,6 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if (!this.errors.length) {
-        //https://www.youtube.com/watch?v=rYkBRdDuFzU
-        //https://codepen.io/Atinux/pen/qOvawK/
-        //Envoi de l'image
-
-        /*let formData = new FormData();
-        formData.append('file', this.room_image);
-         console.log(formData)
-        this.admin.req.post( 'bo_rooms/newroom',
-            formData,
-            {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            }
-        ).then(response => {
-            console.log(response);
-        }).catch(function(){
-                console.log('FAILURE!!');
-        });*/
         var data = {
           room_name: this.room_name,
           room_description: this.room_description,
@@ -2909,23 +3178,81 @@ __webpack_require__.r(__webpack_exports__);
           room_price: this.room_price,
           room_image: this.room_image,
           room_url: this.room_url
-        }; //console.log(data)
-
+        };
+        console.log(data);
         this.admin.req.post('bo_rooms/newroom', data).then(function (response) {
-          _this.new_room = response.data;
-          console.log(_this.new_room);
+          _this2.new_room = response.data;
+          console.log(_this2.new_room);
+
+          _this2.loadAll();
         })["catch"](function (error) {
-          _this.errors.push(error.response.data.error);
+          _this2.errors.push(error.response.data.error);
         });
-        /*this.admin.req.post('bo_rooms/newroom', data, {headers: {'Content-Type': 'multipart/form-data charset=utf-8; boundary=' + Math.random().toString().substr(2)}}).then(response => {
-            this.new_room = response.data;
-            console.log(this.new_room);
-         }).catch(error => {
-            this.errors.push(error.response.data.error);
-        });*/
       } else {
         console.log(this.errors);
       }
+    },
+    getImageUpdate: function getImageUpdate(id) {
+      var newfile = 'file_image_update' + id;
+      var image = this.$refs[newfile][0].files[0];
+      var reader = new FileReader();
+      var vm = this;
+
+      reader.onload = function (e) {
+        vm.room_image_update = e.target.result;
+      };
+
+      reader.readAsDataURL(image);
+      this.room_image_update_name = "Image chargée";
+    },
+    updateRoom: function updateRoom(id, index) {
+      var _this3 = this;
+
+      this.errors_update = [];
+
+      if (!this.errors_update.length) {
+        var data = {
+          room_id: id,
+          room_name: this.room_name_update,
+          room_description: this.room_description_update,
+          room_players: this.room_players_update,
+          room_device: this.room_device_update,
+          room_riddles: this.room_riddles_update,
+          room_duration: this.room_duration_update,
+          room_difficulty: this.room_difficulty_update,
+          room_price: this.room_price_update,
+          room_image: this.room_image_update,
+          room_url: this.room_url_update
+        }; //console.log(data);
+
+        this.admin.req.post('bo_rooms/updateroom', data).then(function (response) {
+          console.log(response.data); //Une fois créé on vide les variables
+
+          _this3.room_name_update = "";
+          _this3.room_description_update = "";
+          _this3.room_players_update = null;
+          _this3.room_device_update = "";
+          _this3.room_riddles_update = null;
+          _this3.room_duration_update = "";
+          _this3.room_difficulty_update = null;
+          _this3.room_price_update = null;
+          _this3.room_image_update = "";
+          _this3.room_url_update = "";
+
+          _this3.loadAll();
+        })["catch"](function (error) {
+          _this3.errors_update.push(error.response.data.error);
+        });
+      } else {
+        console.log(this.errors_update);
+      }
+    },
+    deleteRoom: function deleteRoom(id, index) {
+      this.rooms.splice(index, 1);
+      this.nbr_rooms = this.nbr_rooms - 1;
+      this.admin.req["delete"]('bo_rooms/deleteroom/' + id).then(function (response) {
+        console.log(response.data);
+      });
     }
   }
 });
@@ -8350,7 +8677,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.breakout-admin-rooms-left>div>.nav-link\n{\n    height: calc(100% / 4) !important;\n    text-align: center;\n    display: flex;\n}\n.breakout-admin-rooms-left>div>.nav-link:hover\n{\n    cursor: pointer;\n}\n.breakout-admin-rooms-left>div>.active\n{\n    background: #C38414 !important;\n}\n.breakout-admin-rooms-left>div>.nav-link>div\n{\n    margin: auto;\n}\n", ""]);
+exports.push([module.i, "\n.breakout-admin-rooms-left>div>.nav-link\n{\n    /*height: calc(100% / 4) !important;*/\n    text-align: center;\n    display: flex;\n}\n.breakout-admin-rooms-left>div>.nav-link:hover\n{\n    cursor: pointer;\n}\n.breakout-admin-rooms-left>div>.active\n{\n    background: #C38414 !important;\n}\n.breakout-admin-rooms-left>div>.nav-link>div\n{\n    margin: auto;\n}\n", ""]);
 
 // exports
 
@@ -41815,7 +42142,63 @@ var render = function() {
         staticStyle: { margin: "0 !important" }
       },
       [
-        _vm._m(0),
+        _c("div", { staticClass: "breakout-admin-rooms-left" }, [
+          _c(
+            "div",
+            {
+              staticClass: "nav flex-column nav-pills h-100",
+              attrs: {
+                id: "v-pills-tab",
+                role: "tablist",
+                "aria-orientation": "vertical"
+              }
+            },
+            [
+              _c(
+                "a",
+                {
+                  staticClass: "nav-link active",
+                  style: {
+                    height: "calc(100% /" + (_vm.nbr_rooms + 1) + ") !important"
+                  },
+                  attrs: {
+                    id: "rooms-add-tab",
+                    "data-toggle": "pill",
+                    href: "#rooms-add",
+                    role: "tab",
+                    "aria-controls": "rooms-add",
+                    "aria-selected": "true"
+                  }
+                },
+                [_c("div", [_vm._v("Nouvelle salle")])]
+              ),
+              _vm._v(" "),
+              _vm._l(_vm.rooms, function(room, index) {
+                return _c(
+                  "a",
+                  {
+                    staticClass: "nav-link",
+                    style: {
+                      height:
+                        "calc(100% /" + (_vm.nbr_rooms + 1) + ") !important"
+                    },
+                    attrs: {
+                      index: index,
+                      id: "rooms-tab-" + index,
+                      "data-toggle": "pill",
+                      href: "#rooms-" + index,
+                      role: "tab",
+                      "aria-controls": "rooms-1",
+                      "aria-selected": "false"
+                    }
+                  },
+                  [_c("div", { domProps: { textContent: _vm._s(room.name) } })]
+                )
+              })
+            ],
+            2
+          )
+        ]),
         _vm._v(" "),
         _c(
           "div",
@@ -41824,14 +42207,14 @@ var render = function() {
             _c(
               "div",
               {
-                staticClass: "tab-content",
+                staticClass: "tab-content h-100",
                 attrs: { id: "v-pills-tabContent" }
               },
               [
                 _c(
                   "div",
                   {
-                    staticClass: "tab-pane fade show active",
+                    staticClass: "tab-pane h-100 fade show active",
                     attrs: {
                       id: "rooms-add",
                       role: "tabpanel",
@@ -41839,412 +42222,1299 @@ var render = function() {
                     }
                   },
                   [
-                    _c(
-                      "form",
-                      {
-                        attrs: {
-                          method: "POST",
-                          enctype: "multipart/form-data"
+                    _c("div", { staticClass: "breakout-admin-rooms-content" }, [
+                      _c(
+                        "div",
+                        { staticClass: "bandeau-nouvelle-salle mb-3" },
+                        [
+                          _vm._v(
+                            "\n                            Création d'une nouvelle salle\n                        "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "form",
+                        {
+                          attrs: {
+                            method: "POST",
+                            enctype: "multipart/form-data"
+                          },
+                          on: {
+                            submit: function($event) {
+                              $event.preventDefault()
+                              return _vm.newRoom($event)
+                            }
+                          }
                         },
-                        on: {
-                          submit: function($event) {
-                            $event.preventDefault()
-                            return _vm.newRoom($event)
-                          }
-                        }
-                      },
-                      [
-                        _c("input", {
-                          directives: [
+                        [
+                          _c(
+                            "div",
                             {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.room_name,
-                              expression: "room_name"
-                            }
-                          ],
-                          attrs: {
-                            type: "text",
-                            placeholder: "Nom de la salle"
-                          },
-                          domProps: { value: _vm.room_name },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.room_name = $event.target.value
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("textarea", {
-                          directives: [
+                              staticClass: "row",
+                              staticStyle: { margin: "0" }
+                            },
+                            [
+                              _c("div", { staticClass: "col-12 col-md-4" }, [
+                                _c("div", { staticClass: "input-group" }, [
+                                  _vm._m(0),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.room_name,
+                                        expression: "room_name"
+                                      }
+                                    ],
+                                    staticClass: "input-bo",
+                                    attrs: {
+                                      type: "text",
+                                      placeholder: "Nom de la salle"
+                                    },
+                                    domProps: { value: _vm.room_name },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.room_name = $event.target.value
+                                      }
+                                    }
+                                  })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _vm._m(1),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    ref: "file_image",
+                                    staticClass: "d-none",
+                                    attrs: {
+                                      type: "file",
+                                      accept: "image/*",
+                                      id: "newimage"
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        return _vm.getImage()
+                                      }
+                                    }
+                                  })
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-12 col-md-8" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "cadre-admin-image-salle" },
+                                  [
+                                    _c("img", {
+                                      attrs: { src: _vm.room_image }
+                                    })
+                                  ]
+                                )
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
                             {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.room_description,
-                              expression: "room_description"
-                            }
-                          ],
-                          domProps: { value: _vm.room_description },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.room_description = $event.target.value
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.room_players,
-                                expression: "room_players"
-                              }
-                            ],
-                            staticClass: "custom-select",
-                            on: {
-                              change: function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
+                              staticClass: "row",
+                              staticStyle: { margin: "0" }
+                            },
+                            [
+                              _c("div", { staticClass: "col-12" }, [
+                                _vm._m(2),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c("textarea", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.room_description,
+                                        expression: "room_description"
+                                      }
+                                    ],
+                                    staticClass: "textarea-bo",
+                                    domProps: { value: _vm.room_description },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.room_description =
+                                          $event.target.value
+                                      }
+                                    }
                                   })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.room_players = $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              }
-                            }
-                          },
-                          [
-                            _c("option", { attrs: { disabled: "" } }, [
-                              _vm._v("Nombre de joueurs")
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              { attrs: { selected: "", value: "1" } },
-                              [_vm._v("1")]
-                            ),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "2" } }, [
-                              _vm._v("2")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "3" } }, [
-                              _vm._v("3")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "4" } }, [
-                              _vm._v("4")
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.room_device,
-                                expression: "room_device"
-                              }
-                            ],
-                            staticClass: "custom-select",
-                            on: {
-                              change: function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
-                                  })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.room_device = $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              }
-                            }
-                          },
-                          [
-                            _c("option", { attrs: { disabled: "" } }, [
-                              _vm._v("Nombre de joueurs")
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              { attrs: { selected: "", value: "Desktop" } },
-                              [_vm._v("Desktop")]
-                            ),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "Mobile" } }, [
-                              _vm._v("Mobile")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "Tablette" } }, [
-                              _vm._v("Tablette")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "All" } }, [
-                              _vm._v("Tous les appareils")
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
+                                ])
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
                             {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.room_riddles,
-                              expression: "room_riddles"
-                            }
-                          ],
-                          attrs: { type: "number" },
-                          domProps: { value: _vm.room_riddles },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.room_riddles = $event.target.value
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.room_duration,
-                                expression: "room_duration"
-                              }
-                            ],
-                            staticClass: "custom-select",
-                            on: {
-                              change: function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
+                              staticClass: "row",
+                              staticStyle: { margin: "0" }
+                            },
+                            [
+                              _c("div", { staticClass: "col-12 col-md-4" }, [
+                                _vm._m(3),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "input-group" }, [
+                                  _vm._m(4),
+                                  _vm._v(" "),
+                                  _c(
+                                    "select",
+                                    {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.room_players,
+                                          expression: "room_players"
+                                        }
+                                      ],
+                                      staticClass: "custom-select input-bo",
+                                      on: {
+                                        change: function($event) {
+                                          var $$selectedVal = Array.prototype.filter
+                                            .call(
+                                              $event.target.options,
+                                              function(o) {
+                                                return o.selected
+                                              }
+                                            )
+                                            .map(function(o) {
+                                              var val =
+                                                "_value" in o
+                                                  ? o._value
+                                                  : o.value
+                                              return val
+                                            })
+                                          _vm.room_players = $event.target
+                                            .multiple
+                                            ? $$selectedVal
+                                            : $$selectedVal[0]
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "option",
+                                        { attrs: { disabled: "" } },
+                                        [_vm._v("Nombre de joueurs")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { selected: "", value: "1" } },
+                                        [_vm._v("1")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("option", { attrs: { value: "2" } }, [
+                                        _vm._v("2")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("option", { attrs: { value: "3" } }, [
+                                        _vm._v("3")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("option", { attrs: { value: "4" } }, [
+                                        _vm._v("4")
+                                      ])
+                                    ]
+                                  )
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-12 col-md-4" }, [
+                                _vm._m(5),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "input-group" }, [
+                                  _vm._m(6),
+                                  _vm._v(" "),
+                                  _c(
+                                    "select",
+                                    {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.room_device,
+                                          expression: "room_device"
+                                        }
+                                      ],
+                                      staticClass: "custom-select input-bo",
+                                      on: {
+                                        change: function($event) {
+                                          var $$selectedVal = Array.prototype.filter
+                                            .call(
+                                              $event.target.options,
+                                              function(o) {
+                                                return o.selected
+                                              }
+                                            )
+                                            .map(function(o) {
+                                              var val =
+                                                "_value" in o
+                                                  ? o._value
+                                                  : o.value
+                                              return val
+                                            })
+                                          _vm.room_device = $event.target
+                                            .multiple
+                                            ? $$selectedVal
+                                            : $$selectedVal[0]
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "option",
+                                        { attrs: { disabled: "" } },
+                                        [_vm._v("Support")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: {
+                                            selected: "",
+                                            value: "Desktop"
+                                          }
+                                        },
+                                        [_vm._v("Desktop")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "Mobile" } },
+                                        [_vm._v("Mobile")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "Tablette" } },
+                                        [_vm._v("Tablette")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "All" } },
+                                        [_vm._v("Tous les appareils")]
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-12 col-md-4" }, [
+                                _vm._m(7),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "input-group" }, [
+                                  _vm._m(8),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.room_riddles,
+                                        expression: "room_riddles"
+                                      }
+                                    ],
+                                    staticClass: "input-bo",
+                                    attrs: { type: "number" },
+                                    domProps: { value: _vm.room_riddles },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.room_riddles = $event.target.value
+                                      }
+                                    }
                                   })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.room_duration = $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              }
-                            }
-                          },
-                          [
-                            _c("option", { attrs: { disabled: "" } }, [
-                              _vm._v("Durée estimée")
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              { attrs: { selected: "", value: "15min" } },
-                              [_vm._v("15 minutes")]
-                            ),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "30min" } }, [
-                              _vm._v("30 minutes")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "45min" } }, [
-                              _vm._v("45 minutes")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "1h" } }, [
-                              _vm._v("1 heure")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "1h30" } }, [
-                              _vm._v("1 heure 30")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "2h" } }, [
-                              _vm._v("2 heures")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "2h+" } }, [
-                              _vm._v("Plus de 2 heures")
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.room_difficulty,
-                                expression: "room_difficulty"
-                              }
-                            ],
-                            staticClass: "custom-select",
-                            on: {
-                              change: function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
-                                  })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.room_difficulty = $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              }
-                            }
-                          },
-                          [
-                            _c("option", { attrs: { disabled: "" } }, [
-                              _vm._v("Difficulté de la salle")
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              { attrs: { selected: "", value: "1" } },
-                              [_vm._v("1/5")]
-                            ),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "2" } }, [
-                              _vm._v("2/5")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "3" } }, [
-                              _vm._v("3/5")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "4" } }, [
-                              _vm._v("4/5")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "5" } }, [
-                              _vm._v("5/5")
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
+                                ])
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
                             {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.room_price,
-                              expression: "room_price"
-                            }
-                          ],
-                          attrs: {
-                            type: "text",
-                            placeholder: "Prix de la salle"
-                          },
-                          domProps: { value: _vm.room_price },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.room_price = $event.target.value
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("label", { attrs: { for: "newimage" } }, [
-                          _vm._v("Image de la salle")
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          ref: "file_image",
-                          attrs: { type: "file", id: "newimage" },
-                          on: {
-                            change: function($event) {
-                              return _vm.getImage()
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
+                              staticClass: "row",
+                              staticStyle: { margin: "0" }
+                            },
+                            [
+                              _c("div", { staticClass: "col-12 col-md-4" }, [
+                                _vm._m(9),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "input-group" }, [
+                                  _vm._m(10),
+                                  _vm._v(" "),
+                                  _c(
+                                    "select",
+                                    {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.room_duration,
+                                          expression: "room_duration"
+                                        }
+                                      ],
+                                      staticClass: "custom-select input-bo",
+                                      on: {
+                                        change: function($event) {
+                                          var $$selectedVal = Array.prototype.filter
+                                            .call(
+                                              $event.target.options,
+                                              function(o) {
+                                                return o.selected
+                                              }
+                                            )
+                                            .map(function(o) {
+                                              var val =
+                                                "_value" in o
+                                                  ? o._value
+                                                  : o.value
+                                              return val
+                                            })
+                                          _vm.room_duration = $event.target
+                                            .multiple
+                                            ? $$selectedVal
+                                            : $$selectedVal[0]
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "option",
+                                        { attrs: { disabled: "" } },
+                                        [_vm._v("Durée estimée")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: {
+                                            selected: "",
+                                            value: "15min"
+                                          }
+                                        },
+                                        [_vm._v("15 minutes")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "30min" } },
+                                        [_vm._v("30 minutes")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "45min" } },
+                                        [_vm._v("45 minutes")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("option", { attrs: { value: "1h" } }, [
+                                        _vm._v("1 heure")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "1h30" } },
+                                        [_vm._v("1 heure 30")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("option", { attrs: { value: "2h" } }, [
+                                        _vm._v("2 heures")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "2h+" } },
+                                        [_vm._v("Plus de 2 heures")]
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-12 col-md-4" }, [
+                                _vm._m(11),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "input-group" }, [
+                                  _vm._m(12),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.room_price,
+                                        expression: "room_price"
+                                      }
+                                    ],
+                                    staticClass: "input-bo",
+                                    attrs: {
+                                      type: "text",
+                                      placeholder: "Prix de la salle"
+                                    },
+                                    domProps: { value: _vm.room_price },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.room_price = $event.target.value
+                                      }
+                                    }
+                                  })
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-12 col-md-4" }, [
+                                _vm._m(13),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "input-group" }, [
+                                  _vm._m(14),
+                                  _vm._v(" "),
+                                  _c(
+                                    "select",
+                                    {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.room_difficulty,
+                                          expression: "room_difficulty"
+                                        }
+                                      ],
+                                      staticClass: "custom-select input-bo",
+                                      on: {
+                                        change: function($event) {
+                                          var $$selectedVal = Array.prototype.filter
+                                            .call(
+                                              $event.target.options,
+                                              function(o) {
+                                                return o.selected
+                                              }
+                                            )
+                                            .map(function(o) {
+                                              var val =
+                                                "_value" in o
+                                                  ? o._value
+                                                  : o.value
+                                              return val
+                                            })
+                                          _vm.room_difficulty = $event.target
+                                            .multiple
+                                            ? $$selectedVal
+                                            : $$selectedVal[0]
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "option",
+                                        { attrs: { disabled: "" } },
+                                        [_vm._v("Difficulté de la salle")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { selected: "", value: "1" } },
+                                        [_vm._v("1/5")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("option", { attrs: { value: "2" } }, [
+                                        _vm._v("2/5")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("option", { attrs: { value: "3" } }, [
+                                        _vm._v("3/5")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("option", { attrs: { value: "4" } }, [
+                                        _vm._v("4/5")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("option", { attrs: { value: "5" } }, [
+                                        _vm._v("5/5")
+                                      ])
+                                    ]
+                                  )
+                                ])
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
                             {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.room_url,
-                              expression: "room_url"
-                            }
-                          ],
-                          attrs: {
-                            type: "text",
-                            placeholder: "Url de la salle"
-                          },
-                          domProps: { value: _vm.room_url },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.room_url = $event.target.value
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("button", { attrs: { type: "submit" } }, [
-                          _vm._v("Créer")
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("img", {
-                      attrs: { src: _vm.room_image, alt: "Couverture de salle" }
-                    })
+                              staticClass: "row",
+                              staticStyle: { margin: "0" }
+                            },
+                            [
+                              _c("div", { staticClass: "col-12 col-md-8" }, [
+                                _vm._m(15),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "input-group" }, [
+                                  _vm._m(16),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.room_url,
+                                        expression: "room_url"
+                                      }
+                                    ],
+                                    staticClass: "input-bo",
+                                    attrs: {
+                                      type: "text",
+                                      placeholder: "Url de la salle"
+                                    },
+                                    domProps: { value: _vm.room_url },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.room_url = $event.target.value
+                                      }
+                                    }
+                                  })
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _vm._m(17)
+                            ]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "row", staticStyle: { margin: "0" } },
+                        [
+                          _c("div", { staticClass: "col-12" }, [
+                            _vm.errors.length
+                              ? _c(
+                                  "div",
+                                  {
+                                    staticClass: "login-modal-error",
+                                    staticStyle: { color: "darkred" }
+                                  },
+                                  [
+                                    _c(
+                                      "p",
+                                      { staticClass: "h-100" },
+                                      _vm._l(_vm.errors, function(error) {
+                                        return _c("span", [
+                                          _vm._v(
+                                            "\n                                        " +
+                                              _vm._s(error)
+                                          ),
+                                          _c("br")
+                                        ])
+                                      }),
+                                      0
+                                    )
+                                  ]
+                                )
+                              : _vm._e()
+                          ])
+                        ]
+                      )
+                    ])
                   ]
                 ),
                 _vm._v(" "),
-                _vm._m(1),
-                _vm._v(" "),
-                _c("div", {
-                  staticClass: "tab-pane fade",
-                  attrs: {
-                    id: "rooms-2",
-                    role: "tabpanel",
-                    "aria-labelledby": "rooms-tab-2"
-                  }
-                }),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "tab-pane fade",
-                    attrs: {
-                      id: "rooms-3",
-                      role: "tabpanel",
-                      "aria-labelledby": "rooms-tab-3"
-                    }
-                  },
-                  [_vm._v("...")]
-                )
-              ]
+                _vm._l(_vm.rooms, function(room, index) {
+                  return _c(
+                    "div",
+                    {
+                      staticClass: "tab-pane fade h-100",
+                      attrs: {
+                        id: "rooms-" + index,
+                        role: "tabpanel",
+                        "aria-labelledby": "rooms-tab-" + index
+                      }
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "breakout-admin-rooms-content" },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "bandeau-nouvelle-salle mb-3" },
+                            [
+                              _c("p", {
+                                domProps: { textContent: _vm._s(room.name) }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "row",
+                              staticStyle: { margin: "0" }
+                            },
+                            [
+                              _c("div", { staticClass: "col-12 col-md-4" }, [
+                                _c("div", { staticClass: "input-group" }, [
+                                  _vm._m(18, true),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    staticClass: "input-bo",
+                                    attrs: {
+                                      id: "test",
+                                      type: "text",
+                                      placeholder: "Nom de la salle"
+                                    },
+                                    domProps: { value: room.name },
+                                    on: {
+                                      change: function($event) {
+                                        _vm.room_name_update =
+                                          $event.target.value
+                                      }
+                                    }
+                                  })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "custom-file-upload d-flex",
+                                      attrs: { for: "updateimage" + index }
+                                    },
+                                    [
+                                      _c("p", { staticClass: "m-auto" }, [
+                                        _vm._v(
+                                          _vm._s(_vm.room_image_update_name)
+                                        )
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    ref: "file_image_update" + room.id,
+                                    refInFor: true,
+                                    staticClass: "d-none",
+                                    attrs: {
+                                      type: "file",
+                                      accept: "image/*",
+                                      id: "updateimage" + index
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        return _vm.getImageUpdate(room.id)
+                                      }
+                                    }
+                                  })
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-12 col-md-8" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "cadre-admin-image-salle" },
+                                  [
+                                    _c("img", {
+                                      attrs: {
+                                        src: [
+                                          _vm.room_image_update !== ""
+                                            ? _vm.room_image_update
+                                            : room.img_link
+                                        ]
+                                      }
+                                    })
+                                  ]
+                                )
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "row",
+                              staticStyle: { margin: "0" }
+                            },
+                            [
+                              _c("div", { staticClass: "col-12" }, [
+                                _vm._m(19, true),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c("textarea", {
+                                    staticClass: "textarea-bo",
+                                    domProps: { value: room.description },
+                                    on: {
+                                      change: function($event) {
+                                        _vm.room_description_update =
+                                          $event.target.value
+                                      }
+                                    }
+                                  })
+                                ])
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "row",
+                              staticStyle: { margin: "0" }
+                            },
+                            [
+                              _c("div", { staticClass: "col-12 col-md-4" }, [
+                                _vm._m(20, true),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "input-group" }, [
+                                  _vm._m(21, true),
+                                  _vm._v(" "),
+                                  _c(
+                                    "select",
+                                    {
+                                      staticClass: "custom-select input-bo",
+                                      on: {
+                                        change: function($event) {
+                                          _vm.room_players_update =
+                                            $event.target.value
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "option",
+                                        { attrs: { disabled: "" } },
+                                        [_vm._v("Nombre de joueurs")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "1" },
+                                          domProps: {
+                                            selected: room.players === 1
+                                          }
+                                        },
+                                        [_vm._v("1")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "2" },
+                                          domProps: {
+                                            selected: room.players === 2
+                                          }
+                                        },
+                                        [_vm._v("2")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "3" },
+                                          domProps: {
+                                            selected: room.players === 3
+                                          }
+                                        },
+                                        [_vm._v("3")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "4" },
+                                          domProps: {
+                                            selected: room.players === 4
+                                          }
+                                        },
+                                        [_vm._v("4")]
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-12 col-md-4" }, [
+                                _vm._m(22, true),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "input-group" }, [
+                                  _vm._m(23, true),
+                                  _vm._v(" "),
+                                  _c(
+                                    "select",
+                                    {
+                                      staticClass: "custom-select input-bo",
+                                      on: {
+                                        change: function($event) {
+                                          _vm.room_device_update =
+                                            $event.target.value
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "option",
+                                        { attrs: { disabled: "" } },
+                                        [_vm._v("Support")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "Desktop" },
+                                          domProps: {
+                                            selected: room.device === "Desktop"
+                                          }
+                                        },
+                                        [_vm._v("Desktop")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "Mobile" },
+                                          domProps: {
+                                            selected: room.device === "Mobile"
+                                          }
+                                        },
+                                        [_vm._v("Mobile")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "Tablette" },
+                                          domProps: {
+                                            selected: room.device === "Tablette"
+                                          }
+                                        },
+                                        [_vm._v("Tablette")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "All" },
+                                          domProps: {
+                                            selected: room.device === "All"
+                                          }
+                                        },
+                                        [_vm._v("Tous les appareils")]
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-12 col-md-4" }, [
+                                _vm._m(24, true),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "input-group" }, [
+                                  _vm._m(25, true),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    staticClass: "input-bo",
+                                    attrs: { type: "number" },
+                                    domProps: { value: room.riddles },
+                                    on: {
+                                      change: function($event) {
+                                        _vm.room_riddles_update =
+                                          $event.target.value
+                                      }
+                                    }
+                                  })
+                                ])
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "row",
+                              staticStyle: { margin: "0" }
+                            },
+                            [
+                              _c("div", { staticClass: "col-12 col-md-4" }, [
+                                _vm._m(26, true),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "input-group" }, [
+                                  _vm._m(27, true),
+                                  _vm._v(" "),
+                                  _c(
+                                    "select",
+                                    {
+                                      staticClass: "custom-select input-bo",
+                                      on: {
+                                        change: function($event) {
+                                          _vm.room_duration_update =
+                                            $event.target.value
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "option",
+                                        { attrs: { disabled: "" } },
+                                        [_vm._v("Durée estimée")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "15min" },
+                                          domProps: {
+                                            selected: room.duration === "15min"
+                                          }
+                                        },
+                                        [_vm._v("15 minutes")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "30min" },
+                                          domProps: {
+                                            selected: room.duration === "30min"
+                                          }
+                                        },
+                                        [_vm._v("30 minutes")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "45min" },
+                                          domProps: {
+                                            selected: room.duration === "45min"
+                                          }
+                                        },
+                                        [_vm._v("45 minutes")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "1h" },
+                                          domProps: {
+                                            selected: room.duration === "1h"
+                                          }
+                                        },
+                                        [_vm._v("1 heure")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "1h30" },
+                                          domProps: {
+                                            selected: room.duration === "1h30"
+                                          }
+                                        },
+                                        [_vm._v("1 heure 30")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "2h" },
+                                          domProps: {
+                                            selected: room.duration === "2h"
+                                          }
+                                        },
+                                        [_vm._v("2 heures")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "2h+" },
+                                          domProps: {
+                                            selected: room.duration === "2h+"
+                                          }
+                                        },
+                                        [_vm._v("Plus de 2 heures")]
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-12 col-md-4" }, [
+                                _vm._m(28, true),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "input-group" }, [
+                                  _vm._m(29, true),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    staticClass: "input-bo",
+                                    attrs: {
+                                      type: "text",
+                                      placeholder: "Prix de la salle"
+                                    },
+                                    domProps: { value: room.price },
+                                    on: {
+                                      change: function($event) {
+                                        _vm.room_price_update =
+                                          $event.target.value
+                                      }
+                                    }
+                                  })
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-12 col-md-4" }, [
+                                _vm._m(30, true),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "input-group" }, [
+                                  _vm._m(31, true),
+                                  _vm._v(" "),
+                                  _c(
+                                    "select",
+                                    {
+                                      staticClass: "custom-select input-bo",
+                                      on: {
+                                        change: function($event) {
+                                          _vm.room_difficulty_update =
+                                            $event.target.value
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "option",
+                                        { attrs: { disabled: "" } },
+                                        [_vm._v("Difficulté de la salle")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "1" },
+                                          domProps: {
+                                            selected: room.difficulty === 1
+                                          }
+                                        },
+                                        [_vm._v("1/5")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "2" },
+                                          domProps: {
+                                            selected: room.difficulty === 2
+                                          }
+                                        },
+                                        [_vm._v("2/5")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "3" },
+                                          domProps: {
+                                            selected: room.difficulty === 3
+                                          }
+                                        },
+                                        [_vm._v("3/5")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "4" },
+                                          domProps: {
+                                            selected: room.difficulty === 4
+                                          }
+                                        },
+                                        [_vm._v("4/5")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        {
+                                          attrs: { value: "5" },
+                                          domProps: {
+                                            selected: room.difficulty === 5
+                                          }
+                                        },
+                                        [_vm._v("5/5")]
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "row",
+                              staticStyle: { margin: "0" }
+                            },
+                            [
+                              _c("div", { staticClass: "col-12 col-md-8" }, [
+                                _vm._m(32, true),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "input-group" }, [
+                                  _vm._m(33, true),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    staticClass: "input-bo",
+                                    attrs: {
+                                      type: "text",
+                                      placeholder: "Url de la salle"
+                                    },
+                                    domProps: { value: _vm.room_url },
+                                    on: {
+                                      change: function($event) {
+                                        _vm.room_url_update =
+                                          $event.target.value
+                                      }
+                                    }
+                                  })
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-12 col-md-4" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "row",
+                                    staticStyle: { margin: "0" }
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "col-9",
+                                        staticStyle: { padding: "0 !important" }
+                                      },
+                                      [
+                                        _c(
+                                          "button",
+                                          {
+                                            staticClass: "create-room-button",
+                                            attrs: { type: "submit" },
+                                            on: {
+                                              click: function($event) {
+                                                $event.preventDefault()
+                                                return _vm.updateRoom(
+                                                  room.id,
+                                                  index
+                                                )
+                                              }
+                                            }
+                                          },
+                                          [_vm._v("Actualiser")]
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "col-3",
+                                        staticStyle: {
+                                          "padding-left": "10px",
+                                          "padding-right": "0 !important"
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "button",
+                                          {
+                                            staticClass: "delete-room-button",
+                                            on: {
+                                              click: function($event) {
+                                                $event.preventDefault()
+                                                return _vm.deleteRoom(
+                                                  room.id,
+                                                  index
+                                                )
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _c("i", {
+                                              staticClass: "fas fa-times"
+                                            })
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "row",
+                              staticStyle: { margin: "0" }
+                            },
+                            [
+                              _c("div", { staticClass: "col-12" }, [
+                                _vm.errors_update.length
+                                  ? _c(
+                                      "div",
+                                      {
+                                        staticClass: "login-modal-error",
+                                        staticStyle: { color: "darkred" }
+                                      },
+                                      [
+                                        _c(
+                                          "p",
+                                          { staticClass: "h-100" },
+                                          _vm._l(_vm.errors_update, function(
+                                            error
+                                          ) {
+                                            return _c("span", [
+                                              _vm._v(
+                                                "\n                                        " +
+                                                  _vm._s(error)
+                                              ),
+                                              _c("br")
+                                            ])
+                                          }),
+                                          0
+                                        )
+                                      ]
+                                    )
+                                  : _vm._e()
+                              ])
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                })
+              ],
+              2
             )
           ]
         )
@@ -42257,89 +43527,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "breakout-admin-rooms-left" }, [
-      _c(
-        "div",
-        {
-          staticClass: "nav flex-column nav-pills h-100",
-          attrs: {
-            id: "v-pills-tab",
-            role: "tablist",
-            "aria-orientation": "vertical"
-          }
-        },
-        [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link active",
-              attrs: {
-                id: "rooms-add-tab",
-                "data-toggle": "pill",
-                href: "#rooms-add",
-                role: "tab",
-                "aria-controls": "rooms-add",
-                "aria-selected": "true"
-              }
-            },
-            [_c("div", [_vm._v("Nouvelle salle")])]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "nav-link",
-              attrs: {
-                id: "rooms-tab-1",
-                "data-toggle": "pill",
-                href: "#rooms-1",
-                role: "tab",
-                "aria-controls": "rooms-1",
-                "aria-selected": "false"
-              }
-            },
-            [_c("div", [_vm._v("Salle 1")])]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "nav-link",
-              attrs: {
-                id: "rooms-tab-2",
-                "data-toggle": "pill",
-                href: "#rooms-2",
-                role: "tab",
-                "aria-controls": "rooms-2",
-                "aria-selected": "false"
-              }
-            },
-            [
-              _c("div", [
-                _vm._v(
-                  "\n                        Salle 2\n                    "
-                )
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "nav-link",
-              attrs: {
-                id: "rooms-tab-3",
-                "data-toggle": "pill",
-                href: "#rooms-3",
-                role: "tab",
-                "aria-controls": "v-pills-objets",
-                "aria-selected": "false"
-              }
-            },
-            [_c("div", [_vm._v("Salle 3")])]
-          )
-        ]
-      )
+    return _c("div", { staticClass: "input-group-prepend input-bo-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fab fa-quinscape" })
+      ])
     ])
   },
   function() {
@@ -42347,23 +43538,272 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "div",
-      {
-        staticClass: "tab-pane fade",
-        attrs: {
-          id: "rooms-1",
-          role: "tabpanel",
-          "aria-labelledby": "rooms-tab-1"
-        }
-      },
+      "label",
+      { staticClass: "custom-file-upload d-flex", attrs: { for: "newimage" } },
       [
-        _c("p", [_vm._v("image")]),
-        _vm._v(" "),
-        _c("p", [_vm._v("Description")]),
-        _vm._v(" "),
-        _c("p", [_vm._v("Temps, joueurs, etc")])
+        _c("p", { staticClass: "m-auto" }, [
+          _vm._v("Ajouter une image de couverture")
+        ])
       ]
     )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("label", [_vm._v("Description de la salle :")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("label", [_vm._v("Nombre de joueurs :")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend input-bo-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fas fa-user" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("label", [_vm._v("Support :")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend input-bo-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fas fa-desktop" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("label", [_vm._v("Nombre d'énigmes :")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend input-bo-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fas fa-question" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("label", [_vm._v("Durée de la partie :")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend input-bo-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fas fa-hourglass-half" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("label", [_vm._v("Prix en boutique :")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend input-bo-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fas fa-coins" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("label", [_vm._v("Niveau de difficulté :")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend input-bo-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fas fa-skull-crossbones" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("label", [_vm._v("Lien vers la salle:")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend input-bo-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fas fa-link" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-12 col-md-4" }, [
+      _c(
+        "button",
+        { staticClass: "create-room-button", attrs: { type: "submit" } },
+        [_vm._v("Créer")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend input-bo-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fab fa-quinscape" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("label", [_vm._v("Description de la salle :")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("label", [_vm._v("Nombre de joueurs :")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend input-bo-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fas fa-user" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("label", [_vm._v("Support :")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend input-bo-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fas fa-desktop" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("label", [_vm._v("Nombre d'énigmes :")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend input-bo-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fas fa-question" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("label", [_vm._v("Durée de la partie :")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend input-bo-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fas fa-hourglass-half" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("label", [_vm._v("Prix en boutique :")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend input-bo-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fas fa-coins" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("label", [_vm._v("Niveau de difficulté :")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend input-bo-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fas fa-skull-crossbones" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("label", [_vm._v("Lien vers la salle:")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend input-bo-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fas fa-link" })
+      ])
+    ])
   }
 ]
 render._withStripped = true

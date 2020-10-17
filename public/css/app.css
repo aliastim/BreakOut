@@ -12831,5 +12831,117 @@ footer > div {
   overflow: auto;
 }
 
+.cadre-admin-image-salle {
+  height: 290px;
+  width: 100%;
+  text-align: center;
+}
+
+.cadre-admin-image-salle > img {
+  border: 1px solid #c38414;
+  width: 100%;
+  height: 100%;
+}
+
+.breakout-admin-rooms-content {
+  height: 100%;
+  width: 100%;
+  border-left: 15px solid #5C4725;
+}
+
+.bandeau-nouvelle-salle {
+  width: 100%;
+  height: 50px;
+  background: #5C4725;
+  color: #c38414;
+  text-transform: uppercase;
+  font-family: "JosefinSans-Bold";
+  padding: 14px 20px;
+}
+
+.input-bo-prepend > span {
+  height: 37px;
+  width: 40px;
+  background-color: #5C4725;
+  border-color: #5C4725;
+  color: #f9ba48;
+}
+
+.input-bo {
+  height: 37px;
+  width: calc(100% - 40px);
+  border: 2px solid #5C4725;
+  padding-left: 10px;
+  padding-top: 3px;
+  color: #f9ba48;
+}
+
+.textarea-bo {
+  resize: none;
+  width: 100%;
+  height: 100px;
+  border: 2px solid #5C4725;
+  padding: 10px;
+  color: #f9ba48;
+}
+
+.custom-file-upload {
+  height: 230px;
+  width: 100%;
+  background: transparent;
+  font-family: "JosefinSans-Bold";
+  text-align: center;
+  color: #7B5B25;
+  font-size: 20px;
+  border: 3px dashed #7B5B25;
+  transition: 0.2s;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 0;
+}
+
+.custom-file-upload:hover {
+  background: #7B5B25;
+  color: white;
+  border: 3px solid #7B5B25;
+  border-radius: 10px;
+}
+
+.create-room-button {
+  width: 100%;
+  height: 37px;
+  margin-top: 31px;
+  background: transparent;
+  border: 2px solid #5C4725;
+  color: #5C4725;
+  font-family: "JosefinSans-Bold";
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.create-room-button:hover {
+  background: #7B5B25;
+  border: 2px solid #7B5B25;
+  color: white;
+}
+
+.delete-room-button {
+  width: 100%;
+  height: 37px;
+  margin-top: 31px;
+  background: transparent;
+  border: 2px solid #B3000F;
+  color: #B3000F;
+  font-family: "JosefinSans-Bold";
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.delete-room-button:hover {
+  background: #FF253D;
+  border: 2px solid #FF253D;
+  color: white;
+}
+
 /*----------FIN ADMIN----------*/
 

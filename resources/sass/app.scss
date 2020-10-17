@@ -2002,4 +2002,136 @@ footer>div
     //background: purple;
     overflow: auto;
 }
+
+.cadre-admin-image-salle
+{
+    height: 290px;
+    //width: calc(100% - 40px);
+    width: 100%;
+    //width: 60%; /*500px*/
+    text-align: center;
+}
+
+.cadre-admin-image-salle>img
+{
+    border: 1px solid $yellow_bo;
+    width: 100%;
+    height: 100%;
+}
+
+.breakout-admin-rooms-content
+{
+    //width: 60%;
+    //width: calc(100% - 40px);
+    //background: $yellow_bo;
+    //padding-bottom: 50px;
+    height: 100%;
+    width: 100%;
+    border-left: 15px solid $marron1;
+}
+
+.bandeau-nouvelle-salle
+{
+    width: 100%;
+    height: 50px;
+    background: $marron1;
+    color: $yellow_bo;
+    text-transform: uppercase;
+    font-family: "JosefinSans-Bold";
+    padding: 14px 20px;
+}
+
+.input-bo-prepend>span
+{
+    height: 37px;
+    width: 40px;
+    background-color: $marron1;
+    border-color: $marron1 ;
+    color: $yellow2;
+}
+
+.input-bo
+{
+    height: 37px;
+    width: calc(100% - 40px);
+    border: 2px solid $marron1;
+    padding-left: 10px;
+    padding-top: 3px;
+    color: $yellow2;
+}
+
+.textarea-bo
+{
+    resize: none;
+    width: 100%;
+    height: 100px;
+    border: 2px solid $marron1;
+    padding: 10px;
+    color: $yellow2;
+}
+
+.custom-file-upload
+{
+    height: 230px;
+    width: 100%;
+    background: transparent;
+    font-family: "JosefinSans-Bold";
+    text-align: center;
+    color: $marron2;
+    font-size: 20px;
+    border: 3px dashed $marron2;
+    transition: 0.2s;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 0;
+}
+
+
+.custom-file-upload:hover
+{
+    background: $marron2;
+    color: white;
+    border: 3px solid $marron2;
+    border-radius: 10px;
+}
+
+.create-room-button
+{
+    width: 100%;
+    height: 37px;
+    margin-top: 31px;
+    background: transparent;
+    border: 2px solid $marron1;
+    color: $marron1;
+    font-family: "JosefinSans-Bold";
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.create-room-button:hover
+{
+    background: $marron2;
+    border: 2px solid $marron2;
+    color: white;
+}
+
+.delete-room-button
+{
+    width: 100%;
+    height: 37px;
+    margin-top: 31px;
+    background: transparent;
+    border: 2px solid $red2;
+    color: $red2;
+    font-family: "JosefinSans-Bold";
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.delete-room-button:hover
+{
+    background: $red1;
+    border: 2px solid $red1;
+    color: white;
+}
 /*----------FIN ADMIN----------*/

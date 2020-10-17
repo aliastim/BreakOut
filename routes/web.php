@@ -35,4 +35,7 @@ Route::prefix('users')->group(function () {
 // Rooms
 Route::prefix('bo_rooms')->group(function () {
     Route::post('newroom', 'RoomsController@newRoom');
+    Route::post('loadall', 'RoomsController@loadAll');
+    Route::post('updateroom', 'RoomsController@updateRoom');
+    Route::delete('deleteroom/{id}', 'RoomsController@deleteRoom');
 });
