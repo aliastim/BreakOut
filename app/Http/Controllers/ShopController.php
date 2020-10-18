@@ -2,27 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use Cocur\Slugify\Slugify;
 use Illuminate\Http\Request;
+use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class ShopController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public function addGem()
     {
-        //$this->middleware('auth');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function index()
-    {
-        return view('shop');
+        $user = Auth::user();
+        if (isset($user) and !empty($user) ) {
+            $gemuser = User::find($user->id);
+            $gemuser->gem = $gemuser->gem + 1;
+            $user->gem = $user->gem + 1;
+            $gemuser->save();
+            return response("Et paf + 1 gemme !!");
+        } else
+        {
+            return response()->json(["error" => "L'utilisateur n'est pas connecté"], 401);
+        }
     }
 }

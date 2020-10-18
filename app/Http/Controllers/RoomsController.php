@@ -11,7 +11,6 @@ class RoomsController extends Controller
 {
     public function loadAll()
     {
-        //$user = User::where('email', $request->email)->first();
         $rooms = Rooms::all();
         return response()->json($rooms, 200);
     }

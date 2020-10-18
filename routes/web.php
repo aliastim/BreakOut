@@ -23,6 +23,10 @@ Route::prefix('auth')->group(function () {
     Route::post('logout', 'AppController@logout');
 });
 
+// Dashboard
+Route::prefix('bo_dashboard')->group(function () {
+
+});
 // Users
 Route::prefix('users')->group(function () {
     Route::post('loadall', 'UserController@loadAll');
@@ -38,4 +42,17 @@ Route::prefix('bo_rooms')->group(function () {
     Route::post('loadall', 'RoomsController@loadAll');
     Route::post('updateroom', 'RoomsController@updateRoom');
     Route::delete('deleteroom/{id}', 'RoomsController@deleteRoom');
+});
+
+// Items
+Route::prefix('bo_items')->group(function () {
+    Route::post('loadall', 'ItemsController@loadAll');
+    Route::post('newitem', 'ItemsController@newItem');
+    Route::post('updateitem', 'ItemsController@updateItem');
+    Route::delete('deleteitem/{id}', 'ItemsController@deleteItem');
+});
+
+// Shop
+Route::prefix('bo_shop')->group(function () {
+    Route::post('addgem', 'ShopController@addGem');
 });

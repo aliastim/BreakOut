@@ -1794,7 +1794,17 @@ footer>div
     height: 100vh;
 }
 
-.gemclicker-gemme {
+.gemclicker-cadre
+{
+    margin: auto;
+    height: 600px;
+    width: 600px;
+    position: relative;
+    display: flex;
+}
+
+.gemclicker-cadre .gemclicker-gemme
+{
     margin: auto;
     height: 500px;
     width: 500px;
@@ -1806,11 +1816,39 @@ footer>div
     cursor: pointer;
 }
 
-
-.gemclicker-gemme:active {
+.gemclicker-cadre:active .gemclicker-gemme {
     background-image: url("/img/Banque_graphique/Objets/gemmeclick_click.png") !important;
-    transform: scale(1.2);
+    //transform: scale(1.2);
+    height: 600px;
+    width: 600px;
     cursor: pointer;
+}
+
+.gemclicker-cadre:active .gemclicker-count:before {
+    content: '+1';
+    background: #394e63;
+    position: absolute;
+    top: -20px;
+    right: -14px;
+    padding: 0px 10px;
+    font-size: 22px;
+}
+
+.gemclicker-count
+{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    border: 3px solid #2C3741;
+    font-family: "JosefinSans-Bold";
+    color: $green_gem;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    border-radius: 8px;
+    //overflow: hidden;
 }
 
 /*------------ADMIN------------*/
@@ -1864,6 +1902,32 @@ footer>div
 {
     width: calc(100% - 200px) ;
     overflow: auto;
+}
+/*PARAMETERS*/
+.body-admin-parameters
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.cadre-admin-image-carousel
+{
+    height: 230px;
+    width: 100%;
+    text-align: center;
+}
+
+.cadre-admin-image-carousel>img
+{
+    border: 1px solid $yellow_bo;
+    width: 100%;
+    height: 100%;
 }
 /*USERS*/
 .body-admin-users-head
@@ -2133,5 +2197,124 @@ footer>div
     background: $red1;
     border: 2px solid $red1;
     color: white;
+}
+/*ITEMS*/
+.body-admin-items
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: calc(100% - 130px);
+    overflow: auto;
+}
+.footer-admin-items
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 130px;
+    background: $marron1;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+.admin-item-before
+{
+    min-height: 130px;
+    min-width: 130px;
+    display: flex;
+}
+
+.admin-item-before>.selected
+{
+    min-height: 110px !important;
+    min-width: 110px !important;
+    width: 110px !important;
+    height: 110px !important;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.admin-item
+{
+    min-height: 100px;
+    min-width: 100px;
+    height: 100px;
+    width: 100px;
+    box-shadow: 0 3px 6px $black_bo;
+    border-radius: 20px;
+    background: $bleu_bo;
+    margin: auto;
+    border: 3px solid $yellow_bo;
+    transition: 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.admin-item:hover
+{
+    min-height: 110px !important;
+    min-width: 110px !important;
+    background: #2C4E71;
+}
+
+.cadre-admin-image-item
+{
+    height: 210px;
+    width: 100%;
+    border: 1px solid $yellow_bo;
+    display: flex;
+    text-align: center;
+}
+
+.cadre-admin-image-item>img
+{
+    margin: auto;
+    width: auto;
+    height: 100%;
+    //max-height: 100%;
+}
+
+.admin-item-new
+{
+    text-align: center;
+    color: $yellow_bo;
+}
+
+.admin-item:hover>i
+{
+    font-size: 60px !important;
+}
+
+.admin-item-before>.selected>i
+{
+    font-size: 60px !important;
+}
+
+.admin-item-before>.admin-item-new>i
+{
+    font-size: 50px;
+    padding-top: 20px;
+    transition: 0.3s;
+}
+
+.admin-item>img
+{
+    margin: auto;
+    height: 80px;
+    width: auto;
+    transition: 0.3s;
+}
+
+.admin-item:hover>img
+{
+    height: 90px;
+}
+
+.admin-item-before>.selected>img
+{
+    height: 90px !important;
 }
 /*----------FIN ADMIN----------*/

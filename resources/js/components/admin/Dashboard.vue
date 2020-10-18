@@ -4,13 +4,13 @@
             <div class="w-100 row" style="margin: 0 !important;">
                 <div class="breakout-admin-left">
                     <div class="nav flex-column nav-pills h-100" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <a class="nav-link" id="v-pills-dashboard-tab" data-toggle="pill" href="#v-pills-dashboard" role="tab" aria-controls="v-pills-dashboard" aria-selected="true">
+                        <a class="nav-link active" id="v-pills-dashboard-tab" data-toggle="pill" href="#v-pills-dashboard" role="tab" aria-controls="v-pills-dashboard" aria-selected="true">
                             <div>Dashboard</div>
                         </a>
                         <a class="nav-link" id="v-pills-users-tab" data-toggle="pill" href="#v-pills-users" role="tab" aria-controls="v-pills-users" aria-selected="false">
                             <div>Utilisateurs</div>
                         </a>
-                        <a class="nav-link active" id="v-pills-rooms-tab" data-toggle="pill" href="#v-pills-rooms" role="tab" aria-controls="v-pills-rooms" aria-selected="false">
+                        <a class="nav-link" id="v-pills-rooms-tab" data-toggle="pill" href="#v-pills-rooms" role="tab" aria-controls="v-pills-rooms" aria-selected="false">
                             <div>
                                 Salles
                             </div>
@@ -22,10 +22,10 @@
                 </div>
                 <div class="breakout-admin-right position-relative">
                     <div class="tab-content h-100" id="v-pills-tabContent">
-                        <div class="tab-pane fade" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab"><Parameters :admin="this"></Parameters></div>
+                        <div class="tab-pane fade show active" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab"><Parameters :admin="this"></Parameters></div>
                         <div class="tab-pane fade" id="v-pills-users" role="tabpanel" aria-labelledby="v-pills-users-tab"><Users :admin="this"></Users></div>
-                        <div class="tab-pane fade h-100 show active" id="v-pills-rooms" role="tabpanel" aria-labelledby="v-pills-rooms-tab"><Rooms :admin="this"></Rooms></div>
-                        <div class="tab-pane fade" id="v-pills-objets" role="tabpanel" aria-labelledby="v-pills-objets-tab">...</div>
+                        <div class="tab-pane fade h-100" id="v-pills-rooms" role="tabpanel" aria-labelledby="v-pills-rooms-tab"><Rooms :admin="this"></Rooms></div>
+                        <div class="tab-pane fade" id="v-pills-objets" role="tabpanel" aria-labelledby="v-pills-objets-tab"><Items :admin="this"></Items></div>
                     </div>
                 </div>
             </div>
@@ -36,10 +36,11 @@
 import Users from "./Users";
 import Rooms from "./Rooms";
 import Parameters from "./Parameters";
+import Items from "./Items";
 export default {
     name: "Admin",
     props: ['app'],
-    components: {Users, Rooms, Parameters},
+    components: {Users, Rooms, Parameters, Items},
     data() {
         return {
             key: false,
