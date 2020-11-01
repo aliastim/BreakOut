@@ -2522,6 +2522,9 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     HomeCarousel: _carousel_HomeCarousel__WEBPACK_IMPORTED_MODULE_0__["default"],
     GlobalFooter: _layout_Footer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  mounted: function mounted() {
+    document.title = "Accueil";
   }
 });
 
@@ -2580,6 +2583,9 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     ShopBefore: _before_ShopBefore__WEBPACK_IMPORTED_MODULE_0__["default"],
     GlobalFooter: _layout_Footer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  mounted: function mounted() {
+    document.title = "Boutique";
   }
 });
 
@@ -2653,6 +2659,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   beforeMount: function beforeMount() {
     this.admin();
+  },
+  mounted: function mounted() {
+    document.title = "Administration";
   },
   computed: {
     userverif: function userverif() {
@@ -3269,15 +3278,208 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Parameters",
   props: ['admin'],
   data: function data() {
     return {
+      carousel: [],
       carousel_image_1: "",
       carousel_image_2: "",
-      carousel_image_3: ""
+      carousel_image_3: "",
+      room_1: 0,
+      room_2: 0,
+      room_3: 0,
+      rooms: [],
+      selected_rooms: [],
+      errors: [],
+      scrolling: ""
     };
+  },
+  mounted: function mounted() {
+    this.loadCarousel();
+    this.loadSelectedRooms();
+    this.loadRooms();
+    this.loadScrolling();
+  },
+  methods: {
+    getCarouselImageUpdate: function getCarouselImageUpdate(n) {
+      var ref = "carousel" + n;
+      var image = this.$refs[ref].files[0];
+      var itemreader = new FileReader();
+      var vm = this;
+      var carousel_image = "carousel_image_" + n;
+
+      itemreader.onload = function (e) {
+        vm[carousel_image] = e.target.result;
+      };
+
+      itemreader.readAsDataURL(image);
+    },
+    updateCarousel: function updateCarousel(n) {
+      var _this = this;
+
+      var carousel_image = "carousel_image_" + n; //console.log(this[carousel_image]);
+
+      var data = {
+        carousel_id: n,
+        carousel_img: this[carousel_image]
+      };
+      console.log(data);
+      this.admin.req.post('bo_dashboard/updatecarousel', data).then(function (response) {
+        console.log(response.data);
+      })["catch"](function (error) {
+        _this.errors.push(error.response.data.error);
+      });
+    },
+    loadCarousel: function loadCarousel() {
+      var _this2 = this;
+
+      this.admin.req.post('bo_dashboard/loadcarousel').then(function (response) {
+        _this2.carousel = response.data; //console.log(this.carousel);
+      })["catch"](function (error) {
+        _this2.errors.push(error.response.data.error);
+      });
+    },
+    loadRooms: function loadRooms() {
+      var _this3 = this;
+
+      this.admin.req.post('bo_rooms/loadall').then(function (response) {
+        _this3.rooms = response.data; //console.log(this.rooms);
+      })["catch"](function (error) {
+        _this3.errors.push(error.response.data.error);
+      });
+    },
+    loadSelectedRooms: function loadSelectedRooms() {
+      var _this4 = this;
+
+      this.admin.req.post('bo_dashboard/loadselectedrooms').then(function (response) {
+        _this4.selected_rooms = response.data;
+        _this4.room_1 = _this4.selected_rooms[0].id;
+        _this4.room_2 = _this4.selected_rooms[1].id;
+        _this4.room_3 = _this4.selected_rooms[2].id;
+      })["catch"](function (error) {
+        _this4.errors.push(error.response.data.error);
+      });
+    },
+    loadScrolling: function loadScrolling() {
+      var _this5 = this;
+
+      this.admin.req.post('bo_dashboard/loadscrolling').then(function (response) {
+        _this5.scrolling = response.data.scrolling;
+        console.log(_this5.scrolling);
+      })["catch"](function (error) {
+        _this5.errors.push(error.response.data.error);
+      });
+    },
+    updateScrolling: function updateScrolling() {
+      var _this6 = this;
+
+      var data = {
+        text_scrolling: this.scrolling
+      };
+      this.admin.req.post('bo_dashboard/updatescrolling', data).then(function (response) {
+        console.log(response.data);
+      })["catch"](function (error) {
+        _this6.errors.push(error.response.data.error);
+      });
+    }
   }
 });
 
@@ -43731,24 +43933,317 @@ var render = function() {
     _c("div", { staticClass: "row", staticStyle: { margin: "0 !important" } }, [
       _c("div", { staticClass: "col-12 col-md-4" }, [
         _c("div", { staticClass: "cadre-admin-image-carousel" }, [
-          _c("img", { attrs: { src: _vm.carousel_image_1 } })
+          _c("img", {
+            attrs: {
+              src: [
+                _vm.carousel_image_1 !== ""
+                  ? _vm.carousel_image_1
+                  : _vm.carousel[0].img
+              ]
+            }
+          })
         ]),
         _vm._v(" "),
-        _vm._m(0)
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-12 col-md-4" }, [
-        _c("div", { staticClass: "cadre-admin-image-carousel" }, [
-          _c("img", { attrs: { src: _vm.carousel_image_2 } })
+        _c("div", { staticClass: "d-flex sous-cadre-image-carousel" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "row ml-auto", staticStyle: { margin: "0" } },
+            [
+              _c("div", [
+                _vm._m(1),
+                _vm._v(" "),
+                _c("input", {
+                  ref: "carousel1",
+                  staticClass: "d-none",
+                  attrs: { type: "file", accept: "image/*", id: "carousel1" },
+                  on: {
+                    change: function($event) {
+                      return _vm.getCarouselImageUpdate(1)
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c(
+                  "button",
+                  {
+                    staticClass: "admin-carousel-btn-2",
+                    on: {
+                      click: function($event) {
+                        return _vm.updateCarousel(1)
+                      }
+                    }
+                  },
+                  [_vm._v("Sauvegarder")]
+                )
+              ])
+            ]
+          )
         ])
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-12 col-md-4" }, [
         _c("div", { staticClass: "cadre-admin-image-carousel" }, [
-          _c("img", { attrs: { src: _vm.carousel_image_3 } })
+          _c("img", {
+            attrs: {
+              src: [
+                _vm.carousel_image_2 !== ""
+                  ? _vm.carousel_image_2
+                  : _vm.carousel[1].img
+              ]
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "d-flex sous-cadre-image-carousel" }, [
+          _vm._m(2),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "row ml-auto", staticStyle: { margin: "0" } },
+            [
+              _c("div", [
+                _vm._m(3),
+                _vm._v(" "),
+                _c("input", {
+                  ref: "carousel2",
+                  staticClass: "d-none",
+                  attrs: { type: "file", accept: "image/*", id: "carousel2" },
+                  on: {
+                    change: function($event) {
+                      return _vm.getCarouselImageUpdate(2)
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c(
+                  "button",
+                  {
+                    staticClass: "admin-carousel-btn-2",
+                    on: {
+                      click: function($event) {
+                        return _vm.updateCarousel(2)
+                      }
+                    }
+                  },
+                  [_vm._v("Sauvegarder")]
+                )
+              ])
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-12 col-md-4" }, [
+        _c("div", { staticClass: "cadre-admin-image-carousel" }, [
+          _c("img", {
+            attrs: {
+              src: [
+                _vm.carousel_image_3 !== ""
+                  ? _vm.carousel_image_3
+                  : _vm.carousel[2].img
+              ]
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "d-flex sous-cadre-image-carousel" }, [
+          _vm._m(4),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "row ml-auto", staticStyle: { margin: "0" } },
+            [
+              _c("div", [
+                _vm._m(5),
+                _vm._v(" "),
+                _c("input", {
+                  ref: "carousel3",
+                  staticClass: "d-none",
+                  attrs: { type: "file", accept: "image/*", id: "carousel3" },
+                  on: {
+                    change: function($event) {
+                      return _vm.getCarouselImageUpdate(3)
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c(
+                  "button",
+                  {
+                    staticClass: "admin-carousel-btn-2",
+                    on: {
+                      click: function($event) {
+                        return _vm.updateCarousel(3)
+                      }
+                    }
+                  },
+                  [_vm._v("Sauvegarder")]
+                )
+              ])
+            ]
+          )
         ])
       ])
-    ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row", staticStyle: { margin: "0 !important" } }, [
+      _c("div", { staticClass: "col-12 col-md-4" }, [
+        _c("div", { staticClass: "cadre-admin-salles-vedette" }, [
+          _vm._v("\n                Salle 1\n                "),
+          _c(
+            "select",
+            {
+              staticClass: "custom-select input-bo",
+              staticStyle: { width: "100% !important" },
+              on: {
+                change: function($event) {
+                  _vm.room_1 = $event.target.value
+                }
+              }
+            },
+            [
+              _c("option", { attrs: { disabled: "" } }, [
+                _vm._v("Salle sélectionnée")
+              ]),
+              _vm._v(" "),
+              _vm._l(_vm.rooms, function(room) {
+                return _c(
+                  "option",
+                  {
+                    attrs: { value: "room.id" },
+                    domProps: { selected: room.id === _vm.room_1 }
+                  },
+                  [_vm._v(_vm._s(room.name))]
+                )
+              })
+            ],
+            2
+          ),
+          _vm._v(" "),
+          _c("button", [_vm._v("Modifiler la salle 1")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-12 col-md-4" }, [
+        _c("div", { staticClass: "cadre-admin-salles-vedette" }, [
+          _vm._v("\n                Salle 2\n                "),
+          _c(
+            "select",
+            {
+              staticClass: "custom-select input-bo",
+              staticStyle: { width: "100% !important" },
+              on: {
+                change: function($event) {
+                  _vm.room_2 = $event.target.value
+                }
+              }
+            },
+            [
+              _c("option", { attrs: { disabled: "" } }, [
+                _vm._v("Salle sélectionnée")
+              ]),
+              _vm._v(" "),
+              _vm._l(_vm.rooms, function(room) {
+                return _c(
+                  "option",
+                  {
+                    attrs: { value: "room.id" },
+                    domProps: { selected: room.id === _vm.room_2 }
+                  },
+                  [_vm._v(_vm._s(room.name))]
+                )
+              })
+            ],
+            2
+          ),
+          _vm._v(" "),
+          _c("button", [_vm._v("Modifiler la salle 2")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-12 col-md-4" }, [
+        _c("div", { staticClass: "cadre-admin-salles-vedette" }, [
+          _vm._v("\n                Salle 3\n                "),
+          _c(
+            "select",
+            {
+              staticClass: "custom-select input-bo",
+              staticStyle: { width: "100% !important" },
+              on: {
+                change: function($event) {
+                  _vm.room_3 = $event.target.value
+                }
+              }
+            },
+            [
+              _c("option", { attrs: { disabled: "" } }, [
+                _vm._v("Salle sélectionnée")
+              ]),
+              _vm._v(" "),
+              _vm._l(_vm.rooms, function(room) {
+                return _c(
+                  "option",
+                  {
+                    attrs: { value: "room.id" },
+                    domProps: { selected: room.id === _vm.room_3 }
+                  },
+                  [_vm._v(_vm._s(room.name))]
+                )
+              })
+            ],
+            2
+          ),
+          _vm._v(" "),
+          _c("button", [_vm._v("Modifiler la salle 3")])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row", staticStyle: { margin: "0 !important" } }, [
+      _c("div", { staticClass: "col-12" }, [
+        _c("div", { staticClass: "w-100 cadre-admin-scrolling" }, [
+          _c("div", { staticClass: "w-100" }, [
+            _c("div", { staticClass: "d-flex" }, [
+              _c("div", { staticClass: "mr-auto" }, [
+                _vm._v(
+                  "\n                            Phrase défilante\n                        "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("button", { on: { click: _vm.updateScrolling } }, [
+                  _vm._v("Modifier")
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "w-100" }, [
+            _c(
+              "textarea",
+              {
+                on: {
+                  change: function($event) {
+                    _vm.scrolling = $event.target.value
+                  }
+                }
+              },
+              [_vm._v(_vm._s(_vm.scrolling))]
+            )
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _vm._m(6)
   ])
 }
 var staticRenderFns = [
@@ -43756,13 +44251,66 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex" }, [
-      _c("div", [_c("p", [_vm._v("Image 1")])]),
-      _vm._v(" "),
-      _c("div", { staticClass: "ml-auto" }, [
-        _c("button", [_vm._v("Modifier")])
-      ])
-    ])
+    return _c("div", [_c("p", [_vm._v("Image 1")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      { staticClass: "admin-carousel-btn-1", attrs: { for: "carousel1" } },
+      [_c("p", [_vm._v("Modifier")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("p", [_vm._v("Image 2")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      { staticClass: "admin-carousel-btn-1", attrs: { for: "carousel2" } },
+      [_c("p", [_vm._v("Modifier")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("p", [_vm._v("Image 3")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      { staticClass: "admin-carousel-btn-1", attrs: { for: "carousel3" } },
+      [_c("p", [_vm._v("Modifier")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "row", staticStyle: { margin: "0 !important" } },
+      [
+        _c("div", { staticClass: "col-12 text-center" }, [
+          _c("button", { staticClass: "admin-btn-regenerate-items" }, [
+            _c("i", { staticClass: "fas fa-sync-alt" }),
+            _vm._v(" Régénérer les objets en vedette")
+          ])
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true

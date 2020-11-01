@@ -539,7 +539,10 @@ import HomeCarousel from "./carousel/HomeCarousel";
 import GlobalFooter from "./layout/Footer";
 export default {
     name: "Home",
-    components: {HomeCarousel, GlobalFooter}
+    components: {HomeCarousel, GlobalFooter},
+    mounted() {
+        document.title="Accueil";
+    }
 }
 </script>
 <style>

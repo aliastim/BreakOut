@@ -50,6 +50,9 @@ export default {
     beforeMount() {
         this.admin();
     },
+    mounted() {
+        document.title="Administration";
+    },
     computed: {
         userverif: function ()
         {

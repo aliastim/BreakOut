@@ -25,7 +25,11 @@ Route::prefix('auth')->group(function () {
 
 // Dashboard
 Route::prefix('bo_dashboard')->group(function () {
-
+    Route::post('updatecarousel', 'DashboardController@updateCarousel');
+    Route::post('loadcarousel', 'DashboardController@loadCarousel');
+    Route::post('loadselectedrooms', 'DashboardController@loadSelectedRooms');
+    Route::post('loadscrolling', 'DashboardController@loadScrolling');
+    Route::post('updatescrolling', 'DashboardController@updateScrolling');
 });
 // Users
 Route::prefix('users')->group(function () {

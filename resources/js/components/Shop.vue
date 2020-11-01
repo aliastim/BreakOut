@@ -11,7 +11,10 @@ import ShopBefore from "./before/ShopBefore";
 import GlobalFooter from "./layout/Footer";
 export default {
     name: "Shop",
-    components: {ShopBefore, GlobalFooter}
+    components: {ShopBefore, GlobalFooter},
+    mounted() {
+        document.title="Boutique";
+    }
 }
 </script>
 <style>
