@@ -223,6 +223,13 @@ main {
     }
 }
 
+@media screen and (max-width: 767px)
+{
+    .d-none-767 {
+        display: none !important;;
+    }
+}
+
 .josephin-bold
 {
     font-family: 'JosefinSans-Bold' !important;
@@ -1672,6 +1679,14 @@ footer>div
     }
 }
 
+@media screen and (max-width: 767px)
+{
+    .shop-barre-annonce
+    {
+        height: auto;
+    }
+}
+
 .boutique-bienvenue
 {
     position: absolute;
@@ -1749,9 +1764,10 @@ footer>div
 .shop-barre-annonce-description>div>div>div
 {
     position: relative;
-    max-width: 250px;
-    height: 40px;
+    max-width: 300px;
+    height: 50px;
     background: #1b4b72;
+    border-radius: 10px;
 }
 
 
@@ -1763,6 +1779,21 @@ footer>div
     bottom: 0;
     height: 100%;
     width: 60%;
+    background: $yellow2;
+    text-transform: uppercase;
+    font-family: "JosefinSans-Bold";
+    border: 3px solid $marron1;
+    font-size: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-top: 5px;
+    transition: 0.3s;
+}
+
+.shop-barre-annonce-description>div>div>div>button:hover
+{
+    font-size: 21px;
+    background: $yellow_bo;
 }
 
 .shop-barre-annonce-description>div>div>div>div
@@ -1776,11 +1807,515 @@ footer>div
     background: $main;
     display: flex;
     justify-content: center;
-    padding-top: 4px;
+    padding-top: 8px;
+    overflow: hidden;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 3px solid $marron1;
+    border-left: none;
+}
+
+.boutique-fond-1
+{
+    background: $sable;
+    padding: 50px 10px 10px 10px;
+    margin-top: -35px;
+}
+
+.boutique-fond-2
+{
+    background: $sable;
+    margin-top: 0;
+}
+
+.cadre-boutique-coffres
+{
+    width: 100%;
+    height: 200px;
+    background: #48453C;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px #48453C;
+}
+
+.cadre-boutique-coffres-header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+    background: $marron1;
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
     overflow: hidden;
 }
 
+.cadre-boutique-coffres-body
+{
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    display: flex;
+}
+
+.cadre-boutique-coffres-footer
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+}
+
+.cadre-boutique-coffres-footer>div:nth-child(1)
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 60%;
+    border-bottom-left-radius: 5px;
+}
+
+.cadre-boutique-coffres-footer>div:nth-child(2)
+{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 40%;
+    border-top: 4px solid #5A431B;
+    border-left: 2px solid #5A431B;
+    background: #394e63;
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+    overflow: hidden;
+    border-bottom-right-radius: 5px;
+}
+
+.cadre-boutique-coffres-footer>div:nth-child(1)>button
+{
+    width: 100%;
+    height: 100%;
+    font-family: "JosefinSans-Bold";
+    font-size: 14px;
+    background: $yellow2;
+    color: $black_bo;
+    border-top: 4px solid $marron1;
+    border-right: 2px solid $marron1;
+    border-bottom: none;
+    border-left: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 3px;
+    transition: 0.3s;
+    border-bottom-left-radius: 5px;
+}
+
+.cadre-boutique-coffres-footer>div:nth-child(1)>button:hover
+{
+    background: $green_gem;
+    font-size: 13px;
+}
+
+.cadre-boutique-coffres-header>h6
+{
+    font-family: "JosefinSans-Bold";
+    color: white;
+    text-transform: uppercase;
+}
+
+.cadre-boutique-coffres>img
+{
+    position: absolute;
+    width: 150px;
+    z-index: 2;
+    right: -30px;
+    top: -40px;
+}
+
+.cadre-boutique-coffres-body>img
+{
+    max-height: 100%;
+    width: auto;
+    text-align: center;
+    margin: auto;
+}
+
+@media screen and (max-width: 991px) {
+    .cadre-boutique-coffres>img
+    {
+        width: 100px;
+        right: -25px;
+        top: -25px;
+    }
+}
+
+.shop-sous-panneau
+{
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    .shop-sous-panneau
+    {
+        height: auto;
+    }
+}
+
+.shop-cadre-salle-unite
+{
+    position: relative;
+    background: $black_bo;
+    border: 4px solid $black_bo;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.shop-cadre-salle-unite-header
+{
+    position: absolute;
+    height: 25px;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.shop-cadre-salle-unite-body
+{
+    position: absolute;
+    height: calc(100% - 75px);
+    top: 25px;
+    left: 0;
+    right: 0;
+}
+
+.shop-cadre-salle-unite-footer
+{
+    position: absolute;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+.shop-cadre-salle-unite-body>div>div:nth-child(1)
+{
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.shop-cadre-salle-unite-body>div>div:nth-child(2)
+{
+    position: absolute;
+    z-index: 2;
+    background: linear-gradient(rgba(33,33,33,0.2) 0px, #212121 150px);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.shop-cadre-salle-unite-body>div>div:nth-child(2)>div:nth-child(1)
+{
+    height: 150px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    font-size: 20px;
+}
+.shop-cadre-salle-unite-body>div>div:nth-child(2)>div:nth-child(2)
+{
+    height: 70px;
+    margin-top: -10px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    overflow: auto;
+}
+
+.shop-cadre-salle-unite-footer>button
+{
+    margin: auto;
+    width: 80%;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-family: "JosefinSans-Bold";
+    background: none;
+    color: white;
+    font-size: 12px;
+    padding-top: 2px;
+    transition: 0.3s
+}
+
+.shop-cadre-salle-unite-footer>button:hover
+{
+    background: white;
+    font-size: 13px;
+    color: black;
+}
+
+.shop-cadre-items
+{
+    position: relative;
+    border: 4px solid $marron1;
+    width: 100%;
+    height: 350px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background: $gris_item;
+}
+
+.shop-cadre-items-header
+{
+    position: absolute;
+    height: 25px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $marron2;
+    text-align: center;
+    padding-top: 2px;
+    overflow: auto;
+    border-radius: 5px 5px 0 0;
+    color: white;
+    font-family: "JosefinSans-Bold";
+}
+
+.shop-cadre-items-body
+{
+    position: absolute;
+    height: calc(100% - 70px);
+    top: 25px;
+    left: 0;
+    right: 0;
+    background: rgba(33,33,33,0.5);
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.shop-cadre-items-footer
+{
+    position: absolute;
+    height: 35px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.shop-cadre-items-footer>div:nth-child(1)
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 60%;
+}
+
+.shop-cadre-items-footer>div:nth-child(2)
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 40%;
+    border-top: 4px solid #5A431B;
+    border-left: 2px solid #5A431B;
+    background: #394e63;
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+}
+
+.shop-cadre-items-footer>div:nth-child(1)>button
+{
+    width: 100%;
+    height: 100%;
+    font-family: "JosefinSans-Bold";
+    font-size: 14px;
+    background: #f9ba48;
+    color: #212121;
+    border-top: 4px solid #5A431B;
+    border-right: 2px solid #5A431B;
+    border-bottom: none;
+    border-left: none;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    padding-top: 3px;
+    transition: 0.3s;
+}
+
+
+.shop-cadre-items-footer>div:nth-child(1)>button:hover
+{
+    font-size: 13px;
+    background: $green_gem;
+}
+
+.shop-cadre-items-body>div:nth-child(1)
+{
+    position: absolute;
+    height: 60%;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+}
+
+.shop-cadre-items-body>div:nth-child(2)
+{
+    position: absolute;
+    height: 40%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $fond;
+    border-radius: 0 0 5px 5px;
+    font-size: 12px;
+    text-align: center;
+    overflow: auto;
+}
+
+.shop-cadre-items-body>div:nth-child(1)>img
+{
+    max-width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.shop-cadre-items-gem
+{
+    position: relative;
+    border: 4px solid $marron1;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background: $gris_item;
+}
+
+.shop-cadre-items-gem-header
+{
+    position: absolute;
+    height: 25px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $marron2;
+    text-align: center;
+    padding-top: 2px;
+    overflow: auto;
+    border-radius: 5px 5px 0 0;
+    color: white;
+    font-family: "JosefinSans-Bold";
+}
+
+.shop-cadre-items-gem-body
+{
+    position: absolute;
+    height: calc(100% - 65px);
+    top: 25px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.shop-cadre-items-gem-footer
+{
+    position: absolute;
+    height: 40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.shop-cadre-items-gem-footer>div:nth-child(1)
+{
+    height: 35px;
+    width: 80%;
+    text-align: center;
+    font-family: "JosefinSans-Bold";
+    border: 2px solid $black_bo;
+    color: $black_bo;
+    background: #959595;
+    text-transform: uppercase;
+    border-radius: 20px;
+    padding-top: 5px;
+    position: relative;
+    transition: 0.3s;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.shop-cadre-items-gem-footer>div:nth-child(1):hover
+{
+    font-size: 15px;
+}
+
+.shop-cadre-items-gem-footer>div:nth-child(2)
+{
+    position: absolute;
+    display: flex;
+    background: #1D2936;
+    right: 0;
+    top: -5px;
+    padding: 0 5px 0 5px;
+    border-radius: 20px;
+    color: $green_gem;
+    border: 2px solid $black_bo;
+}
+.div-gem
+{
+    height: 16px;
+    width: 16px;
+    background: url("/img/Banque_graphique/Objets/BOCoin_64.png") no-repeat center !important;
+    background-size: auto;
+    background-size: contain !important;
+    margin-left: 3px;
+    margin-top: 3px;
+}
+
+.shop-cadre-items-gem-body>img
+{
+    height: 100%;
+    width: auto;
+}
+
+.shop-cadre-items-gem-void
+{
+    border: 2px dashed $marron1;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
 /**********/
+/*------------GEMCLICKER------------*/
 .gemclicker-body
 {
     position: relative;
@@ -1850,7 +2385,6 @@ footer>div
     border-radius: 8px;
     //overflow: hidden;
 }
-
 /*------------ADMIN------------*/
 /*LEFT*/
 .breakout-admin-body

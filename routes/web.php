@@ -23,7 +23,7 @@ Route::prefix('auth')->group(function () {
     Route::post('logout', 'AppController@logout');
 });
 
-// Dashboard
+// Admin - Dashboard
 Route::prefix('bo_dashboard')->group(function () {
     Route::post('updatecarousel', 'DashboardController@updateCarousel');
     Route::post('loadcarousel', 'DashboardController@loadCarousel');
@@ -31,7 +31,7 @@ Route::prefix('bo_dashboard')->group(function () {
     Route::post('loadscrolling', 'DashboardController@loadScrolling');
     Route::post('updatescrolling', 'DashboardController@updateScrolling');
 });
-// Users
+// Admin - Users
 Route::prefix('users')->group(function () {
     Route::post('loadall', 'UserController@loadAll');
     Route::delete('userdelete/{id}', [UserController::class, 'userDelete']);
@@ -40,7 +40,7 @@ Route::prefix('users')->group(function () {
     Route::post('updatestatus', 'UserController@updateStatus');
 });
 
-// Rooms
+// Admin - Rooms
 Route::prefix('bo_rooms')->group(function () {
     Route::post('newroom', 'RoomsController@newRoom');
     Route::post('loadall', 'RoomsController@loadAll');
@@ -48,7 +48,7 @@ Route::prefix('bo_rooms')->group(function () {
     Route::delete('deleteroom/{id}', 'RoomsController@deleteRoom');
 });
 
-// Items
+// Admin - Items
 Route::prefix('bo_items')->group(function () {
     Route::post('loadall', 'ItemsController@loadAll');
     Route::post('newitem', 'ItemsController@newItem');

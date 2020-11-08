@@ -2469,52 +2469,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2523,8 +2477,49 @@ __webpack_require__.r(__webpack_exports__);
     HomeCarousel: _carousel_HomeCarousel__WEBPACK_IMPORTED_MODULE_0__["default"],
     GlobalFooter: _layout_Footer__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
+  props: ['app'],
+  data: function data() {
+    return {
+      homecarousel: [],
+      sentence: "",
+      homerooms: [],
+      errors: []
+    };
+  },
   mounted: function mounted() {
     document.title = "Accueil";
+    this.loadHomeCarousel();
+    this.loadScrolling();
+    this.loadRooms();
+  },
+  methods: {
+    loadHomeCarousel: function loadHomeCarousel() {
+      var _this = this;
+
+      this.app.req.post('bo_dashboard/loadcarousel').then(function (response) {
+        _this.homecarousel = response.data;
+      })["catch"](function (error) {
+        _this.errors.push(error.response.data.error);
+      });
+    },
+    loadScrolling: function loadScrolling() {
+      var _this2 = this;
+
+      this.app.req.post('bo_dashboard/loadscrolling').then(function (response) {
+        _this2.sentence = response.data.scrolling;
+      })["catch"](function (error) {
+        _this2.errors.push(error.response.data.error);
+      });
+    },
+    loadRooms: function loadRooms() {
+      var _this3 = this;
+
+      this.app.req.post('bo_rooms/loadall').then(function (response) {
+        _this3.homerooms = response.data;
+      })["catch"](function (error) {
+        _this3.errors.push(error.response.data.error);
+      });
+    }
   }
 });
 
@@ -2568,6 +2563,406 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _before_ShopBefore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./before/ShopBefore */ "./resources/js/components/before/ShopBefore.vue");
 /* harmony import */ var _layout_Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./layout/Footer */ "./resources/js/components/layout/Footer.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4406,6 +4801,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "HomeCarousel",
+  props: ['home'],
   components: {
     Carousel: _Carousel__WEBPACK_IMPORTED_MODULE_0__["default"],
     CarouselSlide: _CarouselSlide__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -41362,7 +41758,7 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("HomeCarousel"),
+      _c("HomeCarousel", { attrs: { home: this } }),
       _vm._v(" "),
       _c(
         "div",
@@ -41372,7 +41768,93 @@ var render = function() {
           _vm._v(" "),
           _vm._m(0),
           _vm._v(" "),
-          _vm._m(1),
+          _c("div", { staticClass: "container mt-3" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "row pb-5" },
+              _vm._l(_vm.homerooms, function(room) {
+                return _c(
+                  "div",
+                  { staticClass: "col-md-4 col-12 mt-3 text-center" },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "carre-salle-accueil",
+                        style: {
+                          "background-image": "url(" + room.img_link + ")"
+                        }
+                      },
+                      [
+                        _c(
+                          "div",
+                          { staticClass: "carre-salle-accueil-apres" },
+                          [
+                            _c(
+                              "div",
+                              { staticClass: "d-flex flex-column w-100" },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "w-100 d-flex",
+                                    staticStyle: { height: "calc(100% - 60px)" }
+                                  },
+                                  [
+                                    _c("div", { staticClass: "m-auto" }, [
+                                      _c("h2", [_vm._v(_vm._s(room.name))])
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _vm._m(2, true)
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "carre-salle-accueil-footer p-2" },
+                      [
+                        _c(
+                          "div",
+                          { staticClass: "d-flex justify-content-between" },
+                          [
+                            _c(
+                              "div",
+                              _vm._l(room.players, function(user) {
+                                return _c("i", { staticClass: "fas fa-user" }, [
+                                  _vm._v(" ")
+                                ])
+                              }),
+                              0
+                            ),
+                            _vm._v(" "),
+                            _c("div", [
+                              _c("i", { staticClass: "fas fa-hourglass-half" }),
+                              _c("small", [
+                                _vm._v(" ≃ " + _vm._s(room.duration))
+                              ])
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              }),
+              0
+            ),
+            _vm._v(" "),
+            _vm._m(3),
+            _vm._v(" "),
+            _vm._m(4)
+          ]),
           _vm._v(" "),
           _c("global-footer")
         ],
@@ -41402,1170 +41884,976 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-3" }, [
-      _c("div", { staticClass: "d-flex justify-content-between" }, [
-        _c("div", { staticClass: "panneau-accueil" }, [
-          _c("h3", [_vm._v("Nos dernières salles")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "d-none-991" }, [_vm._v("5 parties en cours")])
+    return _c("div", { staticClass: "d-flex justify-content-between" }, [
+      _c("div", { staticClass: "panneau-accueil" }, [
+        _c("h3", [_vm._v("Nos dernières salles")])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "row pb-5" }, [
-        _c("div", { staticClass: "col-md-4 col-12 mt-3 text-center" }, [
-          _c(
-            "div",
-            {
-              staticClass: "carre-salle-accueil",
-              staticStyle: {
-                background: "url('img/illustrations_salles/exemple1.jpg')"
-              }
-            },
-            [
-              _c("div", { staticClass: "carre-salle-accueil-apres" }, [
-                _c("div", { staticClass: "d-flex flex-column w-100" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "w-100 d-flex",
-                      staticStyle: { height: "calc(100% - 60px)" }
-                    },
-                    [
-                      _c("div", { staticClass: "m-auto" }, [
-                        _c("h2", [
-                          _vm._v("Le tombeau"),
-                          _c("br"),
-                          _vm._v(" d'agamemnon")
-                        ])
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "w-100", staticStyle: { height: "60px" } },
-                    [
-                      _c("div", { staticClass: "h-100" }, [
-                        _c("a", { attrs: { href: "" } }, [
-                          _c("button", [_vm._v("Jouer")])
-                        ])
-                      ])
-                    ]
-                  )
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "carre-salle-accueil-footer p-2" }, [
-            _c("div", { staticClass: "d-flex justify-content-between" }, [
-              _c("div", [
-                _c("i", { staticClass: "fas fa-user" }, [_vm._v(" ")]),
-                _c("i", { staticClass: "fas fa-user" }),
-                _vm._v(" "),
-                _c("i", { staticClass: "fas fa-user" })
-              ]),
-              _vm._v(" "),
-              _c("div", [
-                _c("i", { staticClass: "fas fa-hourglass-half" }),
-                _c("small", [_vm._v(" ≃ 30 min")])
-              ])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-4 col-12 mt-3 text-center" }, [
-          _c(
-            "div",
-            {
-              staticClass: "carre-salle-accueil",
-              staticStyle: {
-                background: "url('img/illustrations_salles/exemple2.png')"
-              }
-            },
-            [
-              _c("div", { staticClass: "carre-salle-accueil-apres" }, [
-                _c("div", { staticClass: "d-flex flex-column w-100" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "w-100 d-flex",
-                      staticStyle: { height: "calc(100% - 60px)" }
-                    },
-                    [
-                      _c("div", { staticClass: "m-auto" }, [
-                        _c("h2", [
-                          _vm._v("La forêt"),
-                          _c("br"),
-                          _vm._v(" d'esrael")
-                        ])
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "w-100", staticStyle: { height: "60px" } },
-                    [
-                      _c("div", { staticClass: "h-100" }, [
-                        _c("a", { attrs: { href: "" } }, [
-                          _c("button", [_vm._v("Jouer")])
-                        ])
-                      ])
-                    ]
-                  )
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "carre-salle-accueil-footer p-2" }, [
-            _c("div", { staticClass: "d-flex justify-content-between" }, [
-              _c("div", [
-                _c("i", { staticClass: "fas fa-user" }, [_vm._v(" ")]),
-                _c("i", { staticClass: "fas fa-user" }),
-                _vm._v(" "),
-                _c("i", { staticClass: "fas fa-user" })
-              ]),
-              _vm._v(" "),
-              _c("div", [
-                _c("i", { staticClass: "fas fa-hourglass-half" }),
-                _c("small", [_vm._v(" ≃ 30 min")])
-              ])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-4 col-12 mt-3 text-center" }, [
-          _c(
-            "div",
-            {
-              staticClass: "carre-salle-accueil",
-              staticStyle: {
-                background: "url('img/illustrations_salles/exemple3.png')"
-              }
-            },
-            [
-              _c("div", { staticClass: "carre-salle-accueil-apres" }, [
-                _c("div", { staticClass: "d-flex flex-column w-100" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "w-100 d-flex",
-                      staticStyle: { height: "calc(100% - 60px)" }
-                    },
-                    [
-                      _c("div", { staticClass: "m-auto" }, [
-                        _c("h2", [
-                          _vm._v("La prison"),
-                          _c("br"),
-                          _vm._v(" de pandragon")
-                        ])
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "w-100", staticStyle: { height: "60px" } },
-                    [
-                      _c("div", { staticClass: "h-100" }, [
-                        _c("a", { attrs: { href: "" } }, [
-                          _c("button", [_vm._v("Jouer")])
-                        ])
-                      ])
-                    ]
-                  )
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "carre-salle-accueil-footer p-2" }, [
-            _c("div", { staticClass: "d-flex justify-content-between" }, [
-              _c("div", [
-                _c("i", { staticClass: "fas fa-user" }, [_vm._v(" ")]),
-                _c("i", { staticClass: "fas fa-user" }),
-                _vm._v(" "),
-                _c("i", { staticClass: "fas fa-user" })
-              ]),
-              _vm._v(" "),
-              _c("div", [
-                _c("i", { staticClass: "fas fa-hourglass-half" }),
-                _c("small", [_vm._v(" ≃ 30 min")])
-              ])
-            ])
-          ])
+      _c("div", { staticClass: "d-none-991" }, [_vm._v("5 parties en cours")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "w-100", staticStyle: { height: "60px" } },
+      [
+        _c("div", { staticClass: "h-100" }, [
+          _c("a", { attrs: { href: "" } }, [_c("button", [_vm._v("Jouer")])])
         ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row pb-5" }, [
-        _c("div", { staticClass: "col-12" }, [
-          _c("div", { staticClass: "cadre-explications p-3" }, [
-            _c("div", { staticClass: "d-flex justify-content-center" }, [
-              _c("div", { staticClass: "cadre-explications-panneau" }, [
-                _c("h1", [_vm._v("BreakOut : L’escape game 100% virtuel")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "pt-1" }, [
-              _vm._v(
-                "Vous avez l’âme d’un enquêteur et êtes à l’affut du moindre indice ?\n                            Alors mettez vos acquittées à l’épreuve ! "
-              ),
-              _c(
-                "span",
-                {
-                  staticClass: "josephin-bold-italic",
-                  staticStyle: { color: "#B3000F !important" }
-                },
-                [
-                  _vm._v(
-                    "Choisissez une salle de jeu\n                        et relevez des énigmes"
-                  )
-                ]
-              ),
-              _vm._v(
-                " qui sauront mettre tous vos sens à l’épreuve !\n                        "
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "sous-cadre-explications" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-12" }, [
-                  _c("h3", [_vm._v("Vous devrez faire preuve")])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-6 col-md-3" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "d-flex flex-column text-center icones-explications-accueil"
-                    },
-                    [
-                      _c(
-                        "div",
-                        { staticClass: "w-100 d-flex justify-content-center" },
-                        [
-                          _c("div", [
-                            _c("img", {
-                              attrs: {
-                                src: "/img/icones/brain.png",
-                                height: "60px",
-                                width: "60px"
-                              }
-                            })
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "w-100 d-flex justify-content-center text-center"
-                        },
-                        [_c("div", [_c("p", [_vm._v("D'un esprit logique")])])]
-                      )
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-6 col-md-3" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "d-flex flex-column text-center icones-explications-accueil"
-                    },
-                    [
-                      _c(
-                        "div",
-                        { staticClass: "w-100 d-flex justify-content-center" },
-                        [
-                          _c("div", [
-                            _c("img", {
-                              attrs: {
-                                src: "/img/icones/vision.png",
-                                height: "60px",
-                                width: "60px"
-                              }
-                            })
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "w-100 d-flex justify-content-center text-center"
-                        },
-                        [
-                          _c("div", [
-                            _c("p", [_vm._v("D'une vue à tout épreuve")])
-                          ])
-                        ]
-                      )
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-6 col-md-3" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "d-flex flex-column text-center icones-explications-accueil"
-                    },
-                    [
-                      _c(
-                        "div",
-                        { staticClass: "w-100 d-flex justify-content-center" },
-                        [
-                          _c("div", [
-                            _c("img", {
-                              attrs: {
-                                src: "/img/icones/ear.png",
-                                height: "60px",
-                                width: "60px"
-                              }
-                            })
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "w-100 d-flex justify-content-center text-center"
-                        },
-                        [
-                          _c("div", [
-                            _c("p", [_vm._v("D'une oreille attentive")])
-                          ])
-                        ]
-                      )
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-6 col-md-3" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "d-flex flex-column text-center icones-explications-accueil"
-                    },
-                    [
-                      _c(
-                        "div",
-                        { staticClass: "w-100 d-flex justify-content-center" },
-                        [
-                          _c("div", [
-                            _c("img", {
-                              attrs: {
-                                src: "/img/icones/curious.png",
-                                height: "60px",
-                                width: "60px"
-                              }
-                            })
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "w-100 d-flex justify-content-center text-center"
-                        },
-                        [
-                          _c("div", [
-                            _c("p", [_vm._v("De beaucoup de curiosité")])
-                          ])
-                        ]
-                      )
-                    ]
-                  )
-                ])
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row mb-3" }, [
-        _c("div", { staticClass: "col-12 col-md-6" }, [
-          _c("div", { staticClass: "panneau-ligne-1 pb-3 padding-991" }, [
-            _c("hr"),
-            _vm._v(" "),
-            _c("div", { staticClass: "d-flex justify-content-center" }, [
-              _c("div", [_c("h2", [_vm._v("Top 3 joueurs")])])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row pb-5" }, [
+      _c("div", { staticClass: "col-12" }, [
+        _c("div", { staticClass: "cadre-explications p-3" }, [
+          _c("div", { staticClass: "d-flex justify-content-center" }, [
+            _c("div", { staticClass: "cadre-explications-panneau" }, [
+              _c("h1", [_vm._v("BreakOut : L’escape game 100% virtuel")])
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-12 col-xl-4" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "cadre-top-joueurs",
-                  staticStyle: { "margin-top": "20px" }
-                },
-                [
-                  _c("div", { staticClass: "d-flex justify-content-center" }, [
-                    _c("div", { staticClass: "top-medal-joueurs" }, [
-                      _c("img", {
-                        attrs: { src: "/img/icones/medal_silver.png" }
-                      })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "cadre-top-joueurs-header" }, [
+          _c("p", { staticClass: "pt-1" }, [
+            _vm._v(
+              "Vous avez l’âme d’un enquêteur et êtes à l’affut du moindre indice ?\n                            Alors mettez vos acquittées à l’épreuve ! "
+            ),
+            _c(
+              "span",
+              {
+                staticClass: "josephin-bold-italic",
+                staticStyle: { color: "#B3000F !important" }
+              },
+              [
+                _vm._v(
+                  "Choisissez une salle de jeu\n                        et relevez des énigmes"
+                )
+              ]
+            ),
+            _vm._v(
+              " qui sauront mettre tous vos sens à l’épreuve !\n                        "
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "sous-cadre-explications" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-12" }, [
+                _c("h3", [_vm._v("Vous devrez faire preuve")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-6 col-md-3" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "d-flex flex-column text-center icones-explications-accueil"
+                  },
+                  [
                     _c(
                       "div",
-                      { staticClass: "d-flex justify-content-center w-100" },
+                      { staticClass: "w-100 d-flex justify-content-center" },
                       [
-                        _c(
-                          "div",
-                          {
-                            staticClass: "w-100 d-flex flex-column text-center"
-                          },
-                          [
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "w-100 d-flex justify-content-center"
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticStyle: { color: "#E0E0E0 !important" }
-                                  },
-                                  [_vm._v("Pseudo")]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("p", [_vm._v("Inscrit depuis le 24/09/2020")])
-                          ]
-                        )
+                        _c("div", [
+                          _c("img", {
+                            attrs: {
+                              src: "/img/icones/brain.png",
+                              height: "60px",
+                              width: "60px"
+                            }
+                          })
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "w-100 d-flex justify-content-center text-center"
+                      },
+                      [_c("div", [_c("p", [_vm._v("D'un esprit logique")])])]
+                    )
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-6 col-md-3" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "d-flex flex-column text-center icones-explications-accueil"
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "w-100 d-flex justify-content-center" },
+                      [
+                        _c("div", [
+                          _c("img", {
+                            attrs: {
+                              src: "/img/icones/vision.png",
+                              height: "60px",
+                              width: "60px"
+                            }
+                          })
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "w-100 d-flex justify-content-center text-center"
+                      },
+                      [
+                        _c("div", [
+                          _c("p", [_vm._v("D'une vue à tout épreuve")])
+                        ])
                       ]
                     )
-                  ]),
-                  _vm._v(" "),
-                  _c("hr"),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "cadre-top-joueurs-coupe coupe-small" },
-                    [_c("i", { staticClass: "fas fa-trophy" })]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "cadre-top-joueurs-body text-center" },
-                    [
-                      _c("h6", [_vm._v("31 Victoires")]),
-                      _vm._v(" "),
-                      _c("div", [
-                        _c("p", [
-                          _c("i", { staticClass: "fas fa-gamepad" }),
-                          _c("br"),
-                          _vm._v(
-                            "\n                                            Parties jouées :\n                                            "
-                          ),
-                          _c("span", [_vm._v("31")])
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _c("i", { staticClass: "fas fa-hourglass-half" }),
-                          _c("br"),
-                          _vm._v(
-                            "\n                                            Meilleur temps :\n                                            "
-                          ),
-                          _c("span", [_vm._v("43 min")])
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _c("i", { staticClass: "fas fa-hourglass-half" }),
-                          _c("br"),
-                          _vm._v(
-                            "\n                                            Temps moyen :\n                                            "
-                          ),
-                          _c("span", [_vm._v("56 min")])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-6 col-md-3" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "d-flex flex-column text-center icones-explications-accueil"
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "w-100 d-flex justify-content-center" },
+                      [
+                        _c("div", [
+                          _c("img", {
+                            attrs: {
+                              src: "/img/icones/ear.png",
+                              height: "60px",
+                              width: "60px"
+                            }
+                          })
                         ])
-                      ])
-                    ]
-                  )
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-12 col-xl-4" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "cadre-top-joueurs cadre-top-joueurs-middle",
-                  staticStyle: { height: "440px" }
-                },
-                [
-                  _c("div", { staticClass: "d-flex justify-content-center" }, [
-                    _c("div", { staticClass: "top-medal-joueurs-middle" }, [
-                      _c("img", {
-                        attrs: { src: "/img/icones/medal_gold.png" }
-                      })
-                    ])
-                  ]),
-                  _vm._v(" "),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "w-100 d-flex justify-content-center text-center"
+                      },
+                      [
+                        _c("div", [
+                          _c("p", [_vm._v("D'une oreille attentive")])
+                        ])
+                      ]
+                    )
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-6 col-md-3" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "d-flex flex-column text-center icones-explications-accueil"
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "w-100 d-flex justify-content-center" },
+                      [
+                        _c("div", [
+                          _c("img", {
+                            attrs: {
+                              src: "/img/icones/curious.png",
+                              height: "60px",
+                              width: "60px"
+                            }
+                          })
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "w-100 d-flex justify-content-center text-center"
+                      },
+                      [
+                        _c("div", [
+                          _c("p", [_vm._v("De beaucoup de curiosité")])
+                        ])
+                      ]
+                    )
+                  ]
+                )
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row mb-3" }, [
+      _c("div", { staticClass: "col-12 col-md-6" }, [
+        _c("div", { staticClass: "panneau-ligne-1 pb-3 padding-991" }, [
+          _c("hr"),
+          _vm._v(" "),
+          _c("div", { staticClass: "d-flex justify-content-center" }, [
+            _c("div", [_c("h2", [_vm._v("Top 3 joueurs")])])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-12 col-xl-4" }, [
+            _c(
+              "div",
+              {
+                staticClass: "cadre-top-joueurs",
+                staticStyle: { "margin-top": "20px" }
+              },
+              [
+                _c("div", { staticClass: "d-flex justify-content-center" }, [
+                  _c("div", { staticClass: "top-medal-joueurs" }, [
+                    _c("img", {
+                      attrs: { src: "/img/icones/medal_silver.png" }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "cadre-top-joueurs-header" }, [
                   _c(
                     "div",
-                    { staticClass: "cadre-top-joueurs-header-middle" },
+                    { staticClass: "d-flex justify-content-center w-100" },
                     [
                       _c(
                         "div",
-                        { staticClass: "d-flex justify-content-center w-100" },
+                        { staticClass: "w-100 d-flex flex-column text-center" },
                         [
                           _c(
                             "div",
                             {
-                              staticClass:
-                                "w-100 d-flex flex-column text-center"
+                              staticClass: "w-100 d-flex justify-content-center"
                             },
                             [
                               _c(
                                 "div",
                                 {
-                                  staticClass:
-                                    "w-100 d-flex justify-content-center"
+                                  staticStyle: { color: "#E0E0E0 !important" }
                                 },
-                                [
-                                  _c(
-                                    "div",
-                                    { staticStyle: { color: "#FFE27A" } },
-                                    [_vm._v("Pseudo")]
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c("p", [_vm._v("Inscrit depuis le 24/09/2020")])
+                                [_vm._v("Pseudo")]
+                              )
                             ]
-                          )
+                          ),
+                          _vm._v(" "),
+                          _c("p", [_vm._v("Inscrit depuis le 24/09/2020")])
                         ]
                       )
                     ]
-                  ),
-                  _vm._v(" "),
-                  _c("hr"),
-                  _vm._v(" "),
+                  )
+                ]),
+                _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "cadre-top-joueurs-coupe coupe-small" },
+                  [_c("i", { staticClass: "fas fa-trophy" })]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "cadre-top-joueurs-body text-center" },
+                  [
+                    _c("h6", [_vm._v("31 Victoires")]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("p", [
+                        _c("i", { staticClass: "fas fa-gamepad" }),
+                        _c("br"),
+                        _vm._v(
+                          "\n                                            Parties jouées :\n                                            "
+                        ),
+                        _c("span", [_vm._v("31")])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("i", { staticClass: "fas fa-hourglass-half" }),
+                        _c("br"),
+                        _vm._v(
+                          "\n                                            Meilleur temps :\n                                            "
+                        ),
+                        _c("span", [_vm._v("43 min")])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("i", { staticClass: "fas fa-hourglass-half" }),
+                        _c("br"),
+                        _vm._v(
+                          "\n                                            Temps moyen :\n                                            "
+                        ),
+                        _c("span", [_vm._v("56 min")])
+                      ])
+                    ])
+                  ]
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12 col-xl-4" }, [
+            _c(
+              "div",
+              {
+                staticClass: "cadre-top-joueurs cadre-top-joueurs-middle",
+                staticStyle: { height: "440px" }
+              },
+              [
+                _c("div", { staticClass: "d-flex justify-content-center" }, [
+                  _c("div", { staticClass: "top-medal-joueurs-middle" }, [
+                    _c("img", { attrs: { src: "/img/icones/medal_gold.png" } })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "cadre-top-joueurs-header-middle" }, [
+                  _c(
+                    "div",
+                    { staticClass: "d-flex justify-content-center w-100" },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "w-100 d-flex flex-column text-center" },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass: "w-100 d-flex justify-content-center"
+                            },
+                            [
+                              _c("div", { staticStyle: { color: "#FFE27A" } }, [
+                                _vm._v("Pseudo")
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("p", [_vm._v("Inscrit depuis le 24/09/2020")])
+                        ]
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "cadre-top-joueurs-coupe coupe-big",
+                    staticStyle: {
+                      "margin-top": "-20px !important",
+                      "margin-bottom": "10px !important"
+                    }
+                  },
+                  [_c("i", { staticClass: "fas fa-trophy" })]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "cadre-top-joueurs-body text-center" },
+                  [
+                    _c("h6", [_vm._v("31 Victoires")]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("p", [
+                        _c("i", { staticClass: "fas fa-gamepad" }),
+                        _c("br"),
+                        _vm._v(
+                          "\n                                            Parties jouées :\n                                            "
+                        ),
+                        _c("span", [_vm._v("32")])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("i", { staticClass: "fas fa-hourglass-half" }),
+                        _c("br"),
+                        _vm._v(
+                          "\n                                            Meilleur temps :\n                                            "
+                        ),
+                        _c("span", [_vm._v("43 min")])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("i", { staticClass: "fas fa-hourglass-half" }),
+                        _c("br"),
+                        _vm._v(
+                          "\n                                            Temps moyen :\n                                            "
+                        ),
+                        _c("span", [_vm._v("56 min")])
+                      ])
+                    ])
+                  ]
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12 col-xl-4" }, [
+            _c(
+              "div",
+              {
+                staticClass: "cadre-top-joueurs bronze-991",
+                staticStyle: { "margin-top": "20px" }
+              },
+              [
+                _c("div", { staticClass: "d-flex justify-content-center" }, [
+                  _c("div", { staticClass: "top-medal-joueurs" }, [
+                    _c("img", {
+                      attrs: { src: "/img/icones/medal_bronze.png" }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "cadre-top-joueurs-header" }, [
+                  _c(
+                    "div",
+                    { staticClass: "d-flex justify-content-center w-100" },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "w-100 d-flex flex-column text-center" },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass: "w-100 d-flex justify-content-center"
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticStyle: { color: "#FF9838 !important" }
+                                },
+                                [_vm._v("Pseudo")]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("p", [_vm._v("Inscrit depuis le 24/09/2020")])
+                        ]
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "cadre-top-joueurs-coupe coupe-small" },
+                  [_c("i", { staticClass: "fas fa-trophy" })]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "cadre-top-joueurs-body text-center" },
+                  [
+                    _c("h6", [_vm._v("28 Victoires")]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("p", [
+                        _c("i", { staticClass: "fas fa-gamepad" }),
+                        _c("br"),
+                        _vm._v(
+                          "\n                                            Parties jouées :\n                                            "
+                        ),
+                        _c("span", [_vm._v("31")])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("i", { staticClass: "fas fa-hourglass-half" }),
+                        _c("br"),
+                        _vm._v(
+                          "\n                                            Meilleur temps :\n                                            "
+                        ),
+                        _c("span", [_vm._v("43 min")])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("i", { staticClass: "fas fa-hourglass-half" }),
+                        _c("br"),
+                        _vm._v(
+                          "\n                                            Temps moyen :\n                                            "
+                        ),
+                        _c("span", [_vm._v("56 min")])
+                      ])
+                    ])
+                  ]
+                )
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "w-100 text-center pt-4 pb-3" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _c("button", { staticClass: "btn-sous-top" }, [
+              _vm._v("Accéder au forum")
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-12 col-md-6 pb-5" }, [
+        _c("div", { staticClass: "panneau-ligne-1 pb-3 padding-991" }, [
+          _c("hr"),
+          _vm._v(" "),
+          _c("div", { staticClass: "d-flex justify-content-center" }, [
+            _c("div", [_c("h2", [_vm._v("Top 3 salles")])])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-12 col-xl-4" }, [
+            _c(
+              "div",
+              {
+                staticClass: "cadre-top-salles",
+                staticStyle: {
+                  background: "url('/img/illustrations_salles/exemple2.png')",
+                  "margin-top": "20px"
+                }
+              },
+              [
+                _c("div", { staticClass: "d-flex justify-content-center" }, [
                   _c(
                     "div",
                     {
-                      staticClass: "cadre-top-joueurs-coupe coupe-big",
-                      staticStyle: {
-                        "margin-top": "-20px !important",
-                        "margin-bottom": "10px !important"
-                      }
+                      staticClass: "top-medal-joueurs",
+                      staticStyle: { background: "#7B5B25 !important" }
                     },
-                    [_c("i", { staticClass: "fas fa-trophy" })]
-                  ),
+                    [
+                      _c("img", {
+                        attrs: { src: "/img/icones/medal_silver.png" }
+                      })
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "cadre-top-salles-apres" }, [
+                  _c("div", { staticClass: "d-flex w-100" }, [
+                    _c("div", { staticClass: "m-auto" }, [
+                      _c("h2", [
+                        _vm._v("La forêt"),
+                        _c("br"),
+                        _vm._v(" d'esrael")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "top-salles-stars" }, [
+                        _c("p", [
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _vm._v(" "),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _vm._v(" "),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _vm._v(" "),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _vm._v(" "),
+                          _c("i", { staticClass: "far fa-star" })
+                        ])
+                      ])
+                    ])
+                  ]),
                   _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "cadre-top-joueurs-body text-center" },
+                    { staticClass: "w-100 d-flex justify-content-center" },
                     [
-                      _c("h6", [_vm._v("31 Victoires")]),
-                      _vm._v(" "),
-                      _c("div", [
-                        _c("p", [
-                          _c("i", { staticClass: "fas fa-gamepad" }),
-                          _c("br"),
-                          _vm._v(
-                            "\n                                            Parties jouées :\n                                            "
-                          ),
-                          _c("span", [_vm._v("32")])
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _c("i", { staticClass: "fas fa-hourglass-half" }),
-                          _c("br"),
-                          _vm._v(
-                            "\n                                            Meilleur temps :\n                                            "
-                          ),
-                          _c("span", [_vm._v("43 min")])
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _c("i", { staticClass: "fas fa-hourglass-half" }),
-                          _c("br"),
-                          _vm._v(
-                            "\n                                            Temps moyen :\n                                            "
-                          ),
-                          _c("span", [_vm._v("56 min")])
-                        ])
+                      _c("button", [
+                        _vm._v(
+                          "\n                                            Jouer\n                                        "
+                        )
                       ])
                     ]
                   )
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-12 col-xl-4" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "cadre-top-joueurs bronze-991",
-                  staticStyle: { "margin-top": "20px" }
-                },
-                [
-                  _c("div", { staticClass: "d-flex justify-content-center" }, [
-                    _c("div", { staticClass: "top-medal-joueurs" }, [
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12 col-xl-4" }, [
+            _c(
+              "div",
+              {
+                staticClass: "cadre-top-salles cadre-top-joueurs-middle",
+                staticStyle: {
+                  background: "url('/img/illustrations_salles/exemple1.jpg')",
+                  height: "440px"
+                }
+              },
+              [
+                _c("div", { staticClass: "d-flex justify-content-center" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "top-medal-joueurs-middle",
+                      staticStyle: { background: "#7B5B25 !important" }
+                    },
+                    [
+                      _c("img", {
+                        attrs: { src: "/img/icones/medal_gold.png" }
+                      })
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "cadre-top-salles-apres" }, [
+                  _c("div", { staticClass: "d-flex w-100" }, [
+                    _c("div", { staticClass: "m-auto" }, [
+                      _c(
+                        "h2",
+                        {
+                          staticStyle: {
+                            "font-size": "18px",
+                            "font-family": "'JosefinSans-Bold'"
+                          }
+                        },
+                        [_vm._v("Le tombeau"), _c("br"), _vm._v(" d'agamemnon")]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "top-salles-stars" }, [
+                        _c("p", [
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _vm._v(" "),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _vm._v(" "),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _vm._v(" "),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _vm._v(" "),
+                          _c("i", { staticClass: "fas fa-star-half-alt" })
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "w-100 d-flex justify-content-center" },
+                    [
+                      _c("button", [
+                        _vm._v(
+                          "\n                                            Jouer\n                                        "
+                        )
+                      ])
+                    ]
+                  )
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12 col-xl-4" }, [
+            _c(
+              "div",
+              {
+                staticClass: "cadre-top-salles bronze-991",
+                staticStyle: {
+                  background: "url('/img/illustrations_salles/exemple3.png')",
+                  "margin-top": "20px"
+                }
+              },
+              [
+                _c("div", { staticClass: "d-flex justify-content-center" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "top-medal-joueurs",
+                      staticStyle: { background: "#7B5B25 !important" }
+                    },
+                    [
                       _c("img", {
                         attrs: { src: "/img/icones/medal_bronze.png" }
                       })
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "cadre-top-salles-apres" }, [
+                  _c("div", { staticClass: "d-flex w-100" }, [
+                    _c("div", { staticClass: "m-auto" }, [
+                      _c("h2", [
+                        _vm._v("La prison"),
+                        _c("br"),
+                        _vm._v(" de pandragon")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "top-salles-stars" }, [
+                        _c("p", [
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _vm._v(" "),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _vm._v(" "),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _vm._v(" "),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _vm._v(" "),
+                          _c("i", { staticClass: "far fa-star" })
+                        ])
+                      ])
                     ])
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "cadre-top-joueurs-header" }, [
-                    _c(
-                      "div",
-                      { staticClass: "d-flex justify-content-center w-100" },
-                      [
-                        _c(
-                          "div",
-                          {
-                            staticClass: "w-100 d-flex flex-column text-center"
-                          },
-                          [
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "w-100 d-flex justify-content-center"
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticStyle: { color: "#FF9838 !important" }
-                                  },
-                                  [_vm._v("Pseudo")]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("p", [_vm._v("Inscrit depuis le 24/09/2020")])
-                          ]
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("hr"),
-                  _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "cadre-top-joueurs-coupe coupe-small" },
-                    [_c("i", { staticClass: "fas fa-trophy" })]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "cadre-top-joueurs-body text-center" },
+                    { staticClass: "w-100 d-flex justify-content-center" },
                     [
-                      _c("h6", [_vm._v("28 Victoires")]),
-                      _vm._v(" "),
-                      _c("div", [
-                        _c("p", [
-                          _c("i", { staticClass: "fas fa-gamepad" }),
-                          _c("br"),
-                          _vm._v(
-                            "\n                                            Parties jouées :\n                                            "
-                          ),
-                          _c("span", [_vm._v("31")])
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _c("i", { staticClass: "fas fa-hourglass-half" }),
-                          _c("br"),
-                          _vm._v(
-                            "\n                                            Meilleur temps :\n                                            "
-                          ),
-                          _c("span", [_vm._v("43 min")])
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _c("i", { staticClass: "fas fa-hourglass-half" }),
-                          _c("br"),
-                          _vm._v(
-                            "\n                                            Temps moyen :\n                                            "
-                          ),
-                          _c("span", [_vm._v("56 min")])
-                        ])
+                      _c("button", [
+                        _vm._v(
+                          "\n                                            Jouer\n                                        "
+                        )
                       ])
                     ]
                   )
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "w-100 text-center pt-4 pb-3" }, [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("button", { staticClass: "btn-sous-top" }, [
-                _vm._v("Accéder au forum")
-              ])
-            ])
+                ])
+              ]
+            )
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-12 col-md-6 pb-5" }, [
-          _c("div", { staticClass: "panneau-ligne-1 pb-3 padding-991" }, [
-            _c("hr"),
-            _vm._v(" "),
-            _c("div", { staticClass: "d-flex justify-content-center" }, [
-              _c("div", [_c("h2", [_vm._v("Top 3 salles")])])
+        _c("div", { staticClass: "w-100 text-center pt-4 pb-3" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _c("button", { staticClass: "btn-sous-top" }, [
+              _vm._v("Voir toutes les salles")
             ])
-          ]),
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-12" }, [
+        _c("div", { staticClass: "panneau-ligne-1 pb-4" }, [
+          _c("hr"),
           _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-12 col-xl-4" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "cadre-top-salles",
-                  staticStyle: {
-                    background: "url('/img/illustrations_salles/exemple2.png')",
-                    "margin-top": "20px"
-                  }
-                },
-                [
-                  _c("div", { staticClass: "d-flex justify-content-center" }, [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "top-medal-joueurs",
-                        staticStyle: { background: "#7B5B25 !important" }
-                      },
-                      [
-                        _c("img", {
-                          attrs: { src: "/img/icones/medal_silver.png" }
-                        })
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "cadre-top-salles-apres" }, [
-                    _c("div", { staticClass: "d-flex w-100" }, [
-                      _c("div", { staticClass: "m-auto" }, [
-                        _c("h2", [
-                          _vm._v("La forêt"),
-                          _c("br"),
-                          _vm._v(" d'esrael")
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "top-salles-stars" }, [
-                          _c("p", [
-                            _c("i", { staticClass: "fas fa-star" }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "fas fa-star" }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "fas fa-star" }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "fas fa-star" }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "far fa-star" })
-                          ])
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "w-100 d-flex justify-content-center" },
-                      [
-                        _c("button", [
-                          _vm._v(
-                            "\n                                            Jouer\n                                        "
-                          )
-                        ])
-                      ]
-                    )
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-12 col-xl-4" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "cadre-top-salles cadre-top-joueurs-middle",
-                  staticStyle: {
-                    background: "url('/img/illustrations_salles/exemple1.jpg')",
-                    height: "440px"
-                  }
-                },
-                [
-                  _c("div", { staticClass: "d-flex justify-content-center" }, [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "top-medal-joueurs-middle",
-                        staticStyle: { background: "#7B5B25 !important" }
-                      },
-                      [
-                        _c("img", {
-                          attrs: { src: "/img/icones/medal_gold.png" }
-                        })
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "cadre-top-salles-apres" }, [
-                    _c("div", { staticClass: "d-flex w-100" }, [
-                      _c("div", { staticClass: "m-auto" }, [
-                        _c(
-                          "h2",
-                          {
-                            staticStyle: {
-                              "font-size": "18px",
-                              "font-family": "'JosefinSans-Bold'"
-                            }
-                          },
-                          [
-                            _vm._v("Le tombeau"),
-                            _c("br"),
-                            _vm._v(" d'agamemnon")
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "top-salles-stars" }, [
-                          _c("p", [
-                            _c("i", { staticClass: "fas fa-star" }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "fas fa-star" }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "fas fa-star" }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "fas fa-star" }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "fas fa-star-half-alt" })
-                          ])
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "w-100 d-flex justify-content-center" },
-                      [
-                        _c("button", [
-                          _vm._v(
-                            "\n                                            Jouer\n                                        "
-                          )
-                        ])
-                      ]
-                    )
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-12 col-xl-4" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "cadre-top-salles bronze-991",
-                  staticStyle: {
-                    background: "url('/img/illustrations_salles/exemple3.png')",
-                    "margin-top": "20px"
-                  }
-                },
-                [
-                  _c("div", { staticClass: "d-flex justify-content-center" }, [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "top-medal-joueurs",
-                        staticStyle: { background: "#7B5B25 !important" }
-                      },
-                      [
-                        _c("img", {
-                          attrs: { src: "/img/icones/medal_bronze.png" }
-                        })
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "cadre-top-salles-apres" }, [
-                    _c("div", { staticClass: "d-flex w-100" }, [
-                      _c("div", { staticClass: "m-auto" }, [
-                        _c("h2", [
-                          _vm._v("La prison"),
-                          _c("br"),
-                          _vm._v(" de pandragon")
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "top-salles-stars" }, [
-                          _c("p", [
-                            _c("i", { staticClass: "fas fa-star" }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "fas fa-star" }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "fas fa-star" }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "fas fa-star" }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "far fa-star" })
-                          ])
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "w-100 d-flex justify-content-center" },
-                      [
-                        _c("button", [
-                          _vm._v(
-                            "\n                                            Jouer\n                                        "
-                          )
-                        ])
-                      ]
-                    )
-                  ])
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "w-100 text-center pt-4 pb-3" }, [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("button", { staticClass: "btn-sous-top" }, [
-                _vm._v("Voir toutes les salles")
-              ])
-            ])
+          _c("div", { staticClass: "d-flex justify-content-left" }, [
+            _c("div", [_c("h2", [_vm._v("Objets hebdomadaires")])])
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-12" }, [
-          _c("div", { staticClass: "panneau-ligne-1 pb-4" }, [
-            _c("hr"),
-            _vm._v(" "),
-            _c("div", { staticClass: "d-flex justify-content-left" }, [
-              _c("div", [_c("h2", [_vm._v("Objets hebdomadaires")])])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-12 col-xl-4 pb-3" }, [
-              _c("div", { staticClass: "cadre-boutique-accueil" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-12 col-xl-4 pb-3" }, [
+            _c("div", { staticClass: "cadre-boutique-accueil" }, [
+              _c("div", [
                 _c("div", [
-                  _c("div", [
-                    _c("img", {
-                      attrs: {
-                        src: "img/Banque_graphique/Objets/Plot_Machine_256.png"
-                      }
-                    })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", [
-                  _c("div", [_c("h5", [_vm._v("Machine à sous")])]),
-                  _vm._v(" "),
-                  _c("div", [
-                    _c("p", [
-                      _vm._v(
-                        "\n                                            Tentez votre chance à la machine à sous ! Dépensez 20 pièces à chaque tirage et tentez de gagner des cadeaux mystères !\n                                        "
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", [
-                    _c("div", [_c("button", [_vm._v("Acheter")])]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("div", { staticClass: "div-price" }, [
-                        _vm._v(
-                          "\n                                                700\n                                            "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "div-gold" })
-                    ])
-                  ])
+                  _c("img", {
+                    attrs: {
+                      src: "img/Banque_graphique/Objets/Plot_Machine_256.png"
+                    }
+                  })
                 ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-12 col-xl-4 pb-3" }, [
-              _c("div", { staticClass: "cadre-boutique-accueil" }, [
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("div", [_c("h5", [_vm._v("Machine à sous")])]),
+                _vm._v(" "),
                 _c("div", [
-                  _c("div", [
-                    _c("img", {
-                      attrs: {
-                        src: "img/Banque_graphique/Objets/gemme_256.png"
-                      }
-                    })
+                  _c("p", [
+                    _vm._v(
+                      "\n                                            Tentez votre chance à la machine à sous ! Dépensez 20 pièces à chaque tirage et tentez de gagner des cadeaux mystères !\n                                        "
+                    )
                   ])
                 ]),
                 _vm._v(" "),
                 _c("div", [
-                  _c("div", [_c("h5", [_vm._v("Gemme de l'outre tombe")])]),
+                  _c("div", [_c("button", [_vm._v("Acheter")])]),
                   _vm._v(" "),
                   _c("div", [
-                    _c("p", [
+                    _c("div", { staticClass: "div-price" }, [
                       _vm._v(
-                        "\n                                            Vous vous perdez dans ses reflets profonds. Cette gemme vous offrira une seconde chance lorsque vous tomberez au combat.\n                                        "
+                        "\n                                                700\n                                            "
                       )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", [
-                    _c("div", [_c("button", [_vm._v("Acheter")])]),
+                    ]),
                     _vm._v(" "),
-                    _c("div", [
-                      _c("div", { staticClass: "div-price" }, [
-                        _vm._v(
-                          "\n                                                700\n                                            "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "div-gold" })
-                    ])
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-12 col-xl-4 pb-3" }, [
-              _c("div", { staticClass: "cadre-boutique-accueil" }, [
-                _c("div", [
-                  _c("div", [
-                    _c("img", {
-                      attrs: {
-                        src: "img/Banque_graphique/Objets/carte_256.png"
-                      }
-                    })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", [
-                  _c("div", [_c("h5", [_vm._v("Ancienne carte")])]),
-                  _vm._v(" "),
-                  _c("div", [
-                    _c("p", [
-                      _vm._v(
-                        "\n                                            Tout les pièces\n                                            (ou presque) sont représentées sur cette vieille carte.\n                                            Utilisez-la pour vous diriger\n                                            en partie.\n                                        "
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", [
-                    _c("div", [_c("button", [_vm._v("Acheter")])]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("div", { staticClass: "div-price" }, [
-                        _vm._v(
-                          "\n                                                700\n                                            "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "div-gold" })
-                    ])
+                    _c("div", { staticClass: "div-gold" })
                   ])
                 ])
               ])
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "w-100 d-flex pb-4" }, [
-            _c("div", { staticClass: "mr-auto" }),
-            _vm._v(" "),
-            _c("div", [
-              _c("a", { staticClass: "lien-simple", attrs: { href: "#" } }, [
-                _vm._v("Voir la boutique")
+          _c("div", { staticClass: "col-12 col-xl-4 pb-3" }, [
+            _c("div", { staticClass: "cadre-boutique-accueil" }, [
+              _c("div", [
+                _c("div", [
+                  _c("img", {
+                    attrs: { src: "img/Banque_graphique/Objets/gemme_256.png" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("div", [_c("h5", [_vm._v("Gemme de l'outre tombe")])]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("p", [
+                    _vm._v(
+                      "\n                                            Vous vous perdez dans ses reflets profonds. Cette gemme vous offrira une seconde chance lorsque vous tomberez au combat.\n                                        "
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("div", [_c("button", [_vm._v("Acheter")])]),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c("div", { staticClass: "div-price" }, [
+                      _vm._v(
+                        "\n                                                700\n                                            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "div-gold" })
+                  ])
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12 col-xl-4 pb-3" }, [
+            _c("div", { staticClass: "cadre-boutique-accueil" }, [
+              _c("div", [
+                _c("div", [
+                  _c("img", {
+                    attrs: { src: "img/Banque_graphique/Objets/carte_256.png" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("div", [_c("h5", [_vm._v("Ancienne carte")])]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("p", [
+                    _vm._v(
+                      "\n                                            Tout les pièces\n                                            (ou presque) sont représentées sur cette vieille carte.\n                                            Utilisez-la pour vous diriger\n                                            en partie.\n                                        "
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("div", [_c("button", [_vm._v("Acheter")])]),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c("div", { staticClass: "div-price" }, [
+                      _vm._v(
+                        "\n                                                700\n                                            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "div-gold" })
+                  ])
+                ])
               ])
             ])
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-12" }, [
-          _c("div", { staticClass: "panneau-ligne-1 pb-3" }, [
-            _c("hr"),
-            _vm._v(" "),
-            _c("div", { staticClass: "d-flex justify-content-center" }, [
-              _c("div", [_c("h2", [_vm._v("statistiques")])])
+        _c("div", { staticClass: "w-100 d-flex pb-4" }, [
+          _c("div", { staticClass: "mr-auto" }),
+          _vm._v(" "),
+          _c("div", [
+            _c("a", { staticClass: "lien-simple", attrs: { href: "#" } }, [
+              _vm._v("Voir la boutique")
             ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-12" }, [
+        _c("div", { staticClass: "panneau-ligne-1 pb-3" }, [
+          _c("hr"),
+          _vm._v(" "),
+          _c("div", { staticClass: "d-flex justify-content-center" }, [
+            _c("div", [_c("h2", [_vm._v("statistiques")])])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-6 col-md-3" }, [
+            _c(
+              "div",
+              { staticClass: "w-100 d-flex flex-column cadre-statistiques" },
+              [
+                _c("div", [_c("i", { staticClass: "fas fa-gamepad" })]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("p", [
+                    _c("span", [_vm._v("577")]),
+                    _vm._v(" Parties jouées")
+                  ])
+                ])
+              ]
+            )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-6 col-md-3" }, [
-              _c(
-                "div",
-                { staticClass: "w-100 d-flex flex-column cadre-statistiques" },
-                [
-                  _c("div", [_c("i", { staticClass: "fas fa-gamepad" })]),
-                  _vm._v(" "),
-                  _c("div", [
-                    _c("p", [
-                      _c("span", [_vm._v("577")]),
-                      _vm._v(" Parties jouées")
-                    ])
+          _c("div", { staticClass: "col-6 col-md-3 stats-left" }, [
+            _c(
+              "div",
+              { staticClass: "w-100 d-flex flex-column cadre-statistiques" },
+              [
+                _c("div", [_c("i", { staticClass: "fas fa-trophy" })]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("p", [_c("span", [_vm._v("436")]), _vm._v(" Victoires")])
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-6 col-md-3 stats-right" }, [
+            _c(
+              "div",
+              { staticClass: "w-100 d-flex flex-column cadre-statistiques" },
+              [
+                _c("div", [_c("i", { staticClass: "far fa-clock" })]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("p", [
+                    _vm._v("Durée moyenne : "),
+                    _c("span", [_vm._v("67 minutes")])
                   ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-6 col-md-3 stats-left" }, [
-              _c(
-                "div",
-                { staticClass: "w-100 d-flex flex-column cadre-statistiques" },
-                [
-                  _c("div", [_c("i", { staticClass: "fas fa-trophy" })]),
-                  _vm._v(" "),
-                  _c("div", [
-                    _c("p", [_c("span", [_vm._v("436")]), _vm._v(" Victoires")])
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-6 col-md-3 stats-right" }, [
-              _c(
-                "div",
-                { staticClass: "w-100 d-flex flex-column cadre-statistiques" },
-                [
-                  _c("div", [_c("i", { staticClass: "far fa-clock" })]),
-                  _vm._v(" "),
-                  _c("div", [
-                    _c("p", [
-                      _vm._v("Durée moyenne : "),
-                      _c("span", [_vm._v("67 minutes")])
-                    ])
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-6 col-md-3" }, [
-              _c(
-                "div",
-                { staticClass: "w-100 d-flex flex-column cadre-statistiques" },
-                [
-                  _c("div", [_c("i", { staticClass: "fas fa-users" })]),
-                  _vm._v(" "),
-                  _c("div", [
-                    _c("p", [_c("span", [_vm._v("123")]), _vm._v(" inscrits")])
-                  ])
-                ]
-              )
-            ])
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-6 col-md-3" }, [
+            _c(
+              "div",
+              { staticClass: "w-100 d-flex flex-column cadre-statistiques" },
+              [
+                _c("div", [_c("i", { staticClass: "fas fa-users" })]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("p", [_c("span", [_vm._v("123")]), _vm._v(" inscrits")])
+                ])
+              ]
+            )
           ])
         ])
       ])
@@ -42624,12 +42912,726 @@ var render = function() {
     [
       _c("shop-before"),
       _vm._v(" "),
-      _c("div", { staticClass: "breakout-body" }, [_c("global-footer")], 1)
+      _c(
+        "div",
+        { staticClass: "breakout-body" },
+        [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("global-footer")],
+        1
+      )
     ],
     1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-12 pt-4" }, [
+      _c(
+        "div",
+        {
+          staticClass: "panneau-ligne-1 pb-3",
+          staticStyle: { "z-index": "2" }
+        },
+        [
+          _c("hr"),
+          _vm._v(" "),
+          _c("div", { staticClass: "d-flex justify-content-center" }, [
+            _c("div", [_c("h2", [_vm._v("Nos coffres au trésor")])])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-12" }, [
+          _c("div", { staticClass: "boutique-fond-1" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-3 col-6" }, [
+                _c("div", { staticClass: "cadre-boutique-coffres mt-3" }, [
+                  _c("div", { staticClass: "cadre-boutique-coffres-header" }, [
+                    _c("h6", { staticClass: "text-center" }, [
+                      _vm._v("Coffre surpise")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cadre-boutique-coffres-body" }, [
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "img/Banque_graphique/Objets/BreakOut_Coffre_Surprise.png"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cadre-boutique-coffres-footer" }, [
+                    _c("div", [_c("button", [_vm._v("Acheter")])]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("div", { staticClass: "div-price" }, [
+                        _vm._v(
+                          "\n                                            700\n                                        "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "div-gold" })
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3 col-6" }, [
+                _c("div", { staticClass: "cadre-boutique-coffres mt-3" }, [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "img/Banque_graphique/Boutique/panneau_prix_or_1000.png"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cadre-boutique-coffres-header" }, [
+                    _c("h6", { staticClass: "text-left" }, [
+                      _vm._v("1000 Pièces d'or")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cadre-boutique-coffres-body" }, [
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "img/Banque_graphique/Objets/BreakOut_Coffre_Surprise.png"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cadre-boutique-coffres-footer" }, [
+                    _c("div", [_c("button", [_vm._v("Acheter")])]),
+                    _vm._v(" "),
+                    _c("div", { staticStyle: { background: "#0064B4" } }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "div-price",
+                          staticStyle: { color: "white" }
+                        },
+                        [
+                          _vm._v(
+                            "\n                                            2€50\n                                        "
+                          )
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3 col-6" }, [
+                _c("div", { staticClass: "cadre-boutique-coffres mt-3" }, [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "img/Banque_graphique/Boutique/panneau_prix_or_5000.png"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cadre-boutique-coffres-header" }, [
+                    _c("h6", { staticClass: "text-left" }, [
+                      _vm._v("5000 Pièces d'or")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cadre-boutique-coffres-body" }, [
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "img/Banque_graphique/Objets/BreakOut_Coffre_Surprise.png"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cadre-boutique-coffres-footer" }, [
+                    _c("div", [_c("button", [_vm._v("Acheter")])]),
+                    _vm._v(" "),
+                    _c("div", { staticStyle: { background: "#0064B4" } }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "div-price",
+                          staticStyle: { color: "white" }
+                        },
+                        [
+                          _vm._v(
+                            "\n                                            10€\n                                        "
+                          )
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3 col-6" }, [
+                _c("div", { staticClass: "cadre-boutique-coffres mt-3" }, [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "img/Banque_graphique/Boutique/panneau_prix_or_10000.png"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cadre-boutique-coffres-header" }, [
+                    _c("h6", { staticClass: "text-left" }, [
+                      _vm._v("10 000 Pièces d'or")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cadre-boutique-coffres-body" }, [
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "img/Banque_graphique/Objets/BreakOut_Coffre_Surprise.png"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cadre-boutique-coffres-footer" }, [
+                    _c("div", [_c("button", [_vm._v("Acheter")])]),
+                    _vm._v(" "),
+                    _c("div", { staticStyle: { background: "#0064B4" } }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "div-price",
+                          staticStyle: { color: "white" }
+                        },
+                        [
+                          _vm._v(
+                            "\n                                            16€\n                                        "
+                          )
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-12 pt-4" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-12 col-md-6 pb-3" }, [
+          _c("div", { staticClass: "boutique-fond-2" }, [
+            _c("div", { staticClass: "panneau-ligne-1 pb-3" }, [
+              _c("hr"),
+              _vm._v(" "),
+              _c("div", { staticClass: "d-flex justify-content-center" }, [
+                _c("div", [_c("h2", [_vm._v("Salles à l'unité")])])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "shop-sous-panneau" }, [
+              _vm._v(
+                "\n                            Découvrez nos derniers scénarios disponibles.\n                        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row p-1" }, [
+              _c("div", { staticClass: "col-12 col-md-6" }, [
+                _c("div", { staticClass: "shop-cadre-salle-unite mt-3" }, [
+                  _c("div", { staticClass: "shop-cadre-salle-unite-header" }, [
+                    _c("div", { staticClass: "d-flex w-100" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "mr-auto",
+                          staticStyle: { color: "white" }
+                        },
+                        [
+                          _c("i", { staticClass: "fas fa-user" }),
+                          _vm._v(" 3 "),
+                          _c("i", { staticClass: "fas fa-mobile-alt" }),
+                          _vm._v(" "),
+                          _c("i", { staticClass: "fas fa-desktop" })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "d-flex" }, [
+                        _c("div", { staticClass: "div-price" }, [
+                          _vm._v(
+                            "\n                                                    700\n                                                "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "div-gold" })
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "shop-cadre-salle-unite-body" }, [
+                    _c(
+                      "div",
+                      { staticClass: "w-100 h-100 position-relative" },
+                      [
+                        _c("div", {
+                          staticStyle: {
+                            "background-image":
+                              "url('img/illustrations_salles/exemple1.jpg')"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("div", [
+                          _c("div", [
+                            _c("div", { staticClass: "m-auto" }, [
+                              _vm._v("Le tombeau"),
+                              _c("br"),
+                              _vm._v("d'Agamemnon")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c("p", [
+                              _vm._v(
+                                "\n                                                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?\n                                                   "
+                              )
+                            ])
+                          ])
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "shop-cadre-salle-unite-footer" }, [
+                    _c("button", [_vm._v("Sélectionner")])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-12 col-md-6" }, [
+                _c("div", { staticClass: "shop-cadre-salle-unite mt-3" }, [
+                  _c("div", { staticClass: "shop-cadre-salle-unite-header" }, [
+                    _c("div", { staticClass: "d-flex w-100" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "mr-auto",
+                          staticStyle: { color: "white" }
+                        },
+                        [
+                          _c("i", { staticClass: "fas fa-user" }),
+                          _vm._v(" 2 "),
+                          _c("i", { staticClass: "fas fa-desktop" })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "d-flex" }, [
+                        _c("div", { staticClass: "div-price" }, [
+                          _vm._v(
+                            "\n                                                    1200\n                                                "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "div-gold" })
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "shop-cadre-salle-unite-body" }, [
+                    _c(
+                      "div",
+                      { staticClass: "w-100 h-100 position-relative" },
+                      [
+                        _c("div", {
+                          staticStyle: {
+                            "background-image":
+                              "url('img/illustrations_salles/exemple2.png')"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("div", [
+                          _c("div", [
+                            _c("div", { staticClass: "m-auto" }, [
+                              _vm._v("La forêt"),
+                              _c("br"),
+                              _vm._v("d'Esrael")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c("p", [
+                              _vm._v(
+                                "\n                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?\n                                                    "
+                              )
+                            ])
+                          ])
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "shop-cadre-salle-unite-footer" }, [
+                    _c("button", [_vm._v("Sélectionner")])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-12 col-md-6" }, [
+                _c("div", { staticClass: "shop-cadre-salle-unite mt-3" }, [
+                  _c("div", { staticClass: "shop-cadre-salle-unite-header" }, [
+                    _c("div", { staticClass: "d-flex w-100" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "mr-auto",
+                          staticStyle: { color: "white" }
+                        },
+                        [
+                          _c("i", { staticClass: "fas fa-user" }),
+                          _vm._v(" 1 "),
+                          _c("i", { staticClass: "fas fa-desktop" })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "d-flex" }, [
+                        _c("div", { staticClass: "div-price" }, [
+                          _vm._v(
+                            "\n                                                    600\n                                                "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "div-gold" })
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "shop-cadre-salle-unite-body" }, [
+                    _c(
+                      "div",
+                      { staticClass: "w-100 h-100 position-relative" },
+                      [
+                        _c("div", {
+                          staticStyle: {
+                            "background-image":
+                              "url('img/illustrations_salles/exemple3.png')"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("div", [
+                          _c("div", [
+                            _c("div", { staticClass: "m-auto" }, [
+                              _vm._v("La prison de"),
+                              _c("br"),
+                              _vm._v("Pandragon")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c("p", [
+                              _vm._v(
+                                "\n                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?\n                                                    "
+                              )
+                            ])
+                          ])
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "shop-cadre-salle-unite-footer" }, [
+                    _c("button", [_vm._v("Sélectionner")])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-12 col-md-6" }, [
+                _c("div", { staticClass: "shop-cadre-salle-unite mt-3" }, [
+                  _c("div", { staticClass: "shop-cadre-salle-unite-header" }, [
+                    _c("div", { staticClass: "d-flex w-100" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "mr-auto",
+                          staticStyle: { color: "white" }
+                        },
+                        [
+                          _c("i", { staticClass: "fas fa-user" }),
+                          _vm._v(" 2 "),
+                          _c("i", { staticClass: "fas fa-desktop" })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "d-flex" }, [
+                        _c("div", { staticClass: "div-price" }, [
+                          _vm._v(
+                            "\n                                                    1700\n                                                "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "div-gold" })
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "shop-cadre-salle-unite-body" }, [
+                    _c(
+                      "div",
+                      { staticClass: "w-100 h-100 position-relative" },
+                      [
+                        _c("div", {
+                          staticStyle: {
+                            "background-image":
+                              "url('img/illustrations_salles/exemple4.jpg')"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("div", [
+                          _c("div", [
+                            _c("div", { staticClass: "m-auto" }, [
+                              _vm._v("Le désert"),
+                              _c("br"),
+                              _vm._v("des dunes")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c("p", [
+                              _vm._v(
+                                "\n                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?\n                                                    "
+                              )
+                            ])
+                          ])
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "shop-cadre-salle-unite-footer" }, [
+                    _c("button", [_vm._v("Sélectionner")])
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-12 mt-5 mb-5 text-center" }, [
+                _c("a", { staticClass: "lien-simple", attrs: { href: "#" } }, [
+                  _vm._v("Voir toutes les salles")
+                ])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-12 col-md-6" }, [
+          _c("div", { staticClass: "boutique-fond-2" }, [
+            _c("div", { staticClass: "panneau-ligne-1 pb-3" }, [
+              _c("hr"),
+              _vm._v(" "),
+              _c("div", { staticClass: "d-flex justify-content-center" }, [
+                _c("div", [_c("h2", [_vm._v("Objets hebdomadaires")])])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "shop-sous-panneau" }, [
+              _vm._v(
+                "\n                            Chaque semaine, trois nouveaux objets aléatoires sont disponibles en vente à la boutique."
+              ),
+              _c("br"),
+              _c("strong", { staticClass: "josephin-bold" }, [
+                _vm._v("(Disponible pendant encore "),
+                _c("span", { staticStyle: { color: "#F9BA48" } }, [
+                  _vm._v("03:11:43:27")
+                ]),
+                _vm._v(")")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row p-1" }, [
+              _c("div", { staticClass: "col-12 col-md-4" }, [
+                _c("div", { staticClass: "shop-cadre-items mt-3" }, [
+                  _c("div", { staticClass: "shop-cadre-items-header" }, [
+                    _vm._v(
+                      "\n                                        Machine à sous\n                                    "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "shop-cadre-items-body" }, [
+                    _c("div", [
+                      _c("img", {
+                        attrs: {
+                          src:
+                            "img/Banque_graphique/Objets/Plot_Machine_256.png"
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("p", [
+                        _vm._v(
+                          "Tentez votre chance à la machine à sous ! Dépensez 20 pièces à chaque tirage et tentez de gagner des cadeaux mystères !"
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "shop-cadre-items-footer" }, [
+                    _c("div", [_c("button", [_vm._v("Acheter")])]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("div", { staticClass: "div-price" }, [
+                        _vm._v(
+                          "\n                                                770\n                                            "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "div-gold" })
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-12 col-md-4" }, [
+                _c("div", { staticClass: "shop-cadre-items mt-3" }, [
+                  _c("div", { staticClass: "shop-cadre-items-header" }, [
+                    _vm._v(
+                      "\n                                        Gemme de l'outre tombe\n                                    "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "shop-cadre-items-body" }, [
+                    _c("div", [
+                      _c("img", {
+                        attrs: {
+                          src: "img/Banque_graphique/Objets/gemme_256.png"
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("p", [
+                        _vm._v(
+                          "Vous vous perdez dans ses reflets profonds. Cette gemme vous offrira une seconde chance lorsque vous tomberez au combat."
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "shop-cadre-items-footer" }, [
+                    _c("div", [_c("button", [_vm._v("Acheter")])]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("div", { staticClass: "div-price" }, [
+                        _vm._v(
+                          "\n                                                770\n                                            "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "div-gold" })
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-12 col-md-4" }, [
+                _c("div", { staticClass: "shop-cadre-items mt-3" }, [
+                  _c("div", { staticClass: "shop-cadre-items-header" }, [
+                    _vm._v(
+                      "\n                                        Ancienne carte\n                                    "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "shop-cadre-items-body" }, [
+                    _c("div", [
+                      _c("img", {
+                        attrs: {
+                          src: "img/Banque_graphique/Objets/carte_256.png"
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("p", [
+                        _vm._v(
+                          "Tout les pièces (ou presque) sont représentées sur cette vieille carte.\n                                                Utilisez-la pour vous diriger en partie."
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "shop-cadre-items-footer" }, [
+                    _c("div", [_c("button", [_vm._v("Acheter")])]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("div", { staticClass: "div-price" }, [
+                        _vm._v(
+                          "\n                                                770\n                                            "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "div-gold" })
+                    ])
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "panneau-ligne-1 pb-3" }, [
+              _c("hr"),
+              _vm._v(" "),
+              _c("div", { staticClass: "d-flex justify-content-center" }, [
+                _c("div", [_c("h2", [_vm._v("Objets Spéciaux")])])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row p-1" }, [
+              _c("div", { staticClass: "col-12 col-md-4" }, [
+                _c("div", { staticClass: "shop-cadre-items-gem mt-3" }, [
+                  _c("div", { staticClass: "shop-cadre-items-gem-header" }, [
+                    _vm._v(
+                      "\n                                        Un morceau de clé\n                                    "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "shop-cadre-items-gem-body" }, [
+                    _c("img", {
+                      attrs: {
+                        src: "img/Banque_graphique/Objets/BOCoin_64.png"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "shop-cadre-items-gem-footer" }, [
+                    _c("div", [_vm._v("Acheter")]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("div", [_vm._v("50 ")]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "div-gem" })
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-12 col-md-4" }, [
+                _c("div", { staticClass: "shop-cadre-items-gem-void mt-3" })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-12 col-md-4" }, [
+                _c("div", { staticClass: "shop-cadre-items-gem-void mt-3" })
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -46377,7 +47379,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "row h-100" }, [
-          _c("div", { staticClass: "col-6 h-100" }, [
+          _c("div", { staticClass: "col-md-6 h-100 d-none-767" }, [
             _c(
               "div",
               { staticClass: "shop-barre-annonce-image d-flex h-100 w-100" },
@@ -46394,7 +47396,7 @@ var staticRenderFns = [
             )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-6 h-100" }, [
+          _c("div", { staticClass: "col-12 col-md-6 h-100" }, [
             _c(
               "div",
               {
@@ -46422,17 +47424,34 @@ var staticRenderFns = [
                   ]),
                   _vm._v(" "),
                   _c("div", [
-                    _c("div", [
+                    _c("div", { staticClass: "m-auto" }, [
                       _c("button", [_vm._v("Acheter")]),
                       _vm._v(" "),
                       _c("div", [
-                        _c("div", { staticClass: "div-price" }, [
-                          _vm._v(
-                            "\n                                        400\n                                    "
-                          )
-                        ]),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "div-price",
+                            staticStyle: {
+                              "font-size": "20px",
+                              "margin-top": "1px"
+                            }
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        400\n                                    "
+                            )
+                          ]
+                        ),
                         _vm._v(" "),
-                        _c("div", { staticClass: "div-gold" })
+                        _c("div", {
+                          staticClass: "div-gold",
+                          staticStyle: {
+                            "margin-top": "2px",
+                            height: "25px",
+                            width: "25px"
+                          }
+                        })
                       ])
                     ])
                   ])
@@ -46576,7 +47595,7 @@ var render = function() {
               }),
               _vm._v(" "),
               _c("img", {
-                attrs: { src: "img/Carousel_images/test.png", width: "100%" }
+                attrs: { src: _vm.home.homecarousel[0].img, width: "100%" }
               })
             ]),
             _vm._v(" "),
@@ -46593,7 +47612,7 @@ var render = function() {
               }),
               _vm._v(" "),
               _c("img", {
-                attrs: { src: "img/Carousel_images/test.png", width: "100%" }
+                attrs: { src: _vm.home.homecarousel[1].img, width: "100%" }
               })
             ]),
             _vm._v(" "),
@@ -46610,7 +47629,7 @@ var render = function() {
               }),
               _vm._v(" "),
               _c("img", {
-                attrs: { src: "img/Carousel_images/test.png", width: "100%" }
+                attrs: { src: _vm.home.homecarousel[2].img, width: "100%" }
               })
             ])
           ],
@@ -46621,7 +47640,7 @@ var render = function() {
     ),
     _vm._v(" "),
     _c("div", { staticClass: "breakout-body-before" }, [
-      _vm._v("\n            texte\n        ")
+      _vm._v("\n            " + _vm._s(_vm.home.sentence) + "\n        ")
     ])
   ])
 }

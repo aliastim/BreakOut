@@ -1,6 +1,6 @@
 <template>
     <div>
-        <HomeCarousel></HomeCarousel>
+        <HomeCarousel :home="this"></HomeCarousel>
             <div class="breakout-body">
             <hr class="liseret-rouge">
             <div class="d-flex justify-content-center">
@@ -12,13 +12,13 @@
                     <div class="d-none-991">5 parties en cours</div>
                 </div>
                 <div class="row pb-5">
-                    <div class="col-md-4 col-12 mt-3 text-center">
-                        <div class="carre-salle-accueil" style="background: url('img/illustrations_salles/exemple1.jpg')">
+                    <div class="col-md-4 col-12 mt-3 text-center" v-for="room in homerooms">
+                        <div class="carre-salle-accueil" :style="{'background-image': 'url(' + room.img_link + ')'}">
                             <div class="carre-salle-accueil-apres">
                                 <div class="d-flex flex-column w-100">
                                     <div class="w-100 d-flex" style="height: calc(100% - 60px);">
                                         <div class="m-auto">
-                                            <h2>Le tombeau<br> d'agamemnon</h2>
+                                            <h2>{{ room.name }}</h2>
                                         </div>
                                     </div>
                                     <div class="w-100" style="height: 60px;">
@@ -31,56 +31,10 @@
                         </div>
                         <div class="carre-salle-accueil-footer p-2">
                             <div class="d-flex justify-content-between">
-                                <div><i class="fas fa-user">&nbsp;</i><i class="fas fa-user"></i>&nbsp;<i class="fas fa-user"></i></div>
-                                <div><i class="fas fa-hourglass-half"></i><small> ≃ 30 min</small></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-12 mt-3 text-center">
-                        <div class="carre-salle-accueil" style="background: url('img/illustrations_salles/exemple2.png')">
-                            <div class="carre-salle-accueil-apres">
-                                <div class="d-flex flex-column w-100">
-                                    <div class="w-100 d-flex" style="height: calc(100% - 60px);">
-                                        <div class="m-auto">
-                                            <h2>La forêt<br> d'esrael</h2>
-                                        </div>
-                                    </div>
-                                    <div class="w-100" style="height: 60px;">
-                                        <div class="h-100">
-                                            <a href=""><button>Jouer</button></a>
-                                        </div>
-                                    </div>
+                                <div>
+                                    <i class="fas fa-user" v-for="user in room.players">&nbsp;</i>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="carre-salle-accueil-footer p-2">
-                            <div class="d-flex justify-content-between">
-                                <div><i class="fas fa-user">&nbsp;</i><i class="fas fa-user"></i>&nbsp;<i class="fas fa-user"></i></div>
-                                <div><i class="fas fa-hourglass-half"></i><small> ≃ 30 min</small></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-12 mt-3 text-center">
-                        <div class="carre-salle-accueil" style="background: url('img/illustrations_salles/exemple3.png')">
-                            <div class="carre-salle-accueil-apres">
-                                <div class="d-flex flex-column w-100">
-                                    <div class="w-100 d-flex" style="height: calc(100% - 60px);">
-                                        <div class="m-auto">
-                                            <h2>La prison<br> de pandragon</h2>
-                                        </div>
-                                    </div>
-                                    <div class="w-100" style="height: 60px;">
-                                        <div class="h-100">
-                                            <a href=""><button>Jouer</button></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carre-salle-accueil-footer p-2">
-                            <div class="d-flex justify-content-between">
-                                <div><i class="fas fa-user">&nbsp;</i><i class="fas fa-user"></i>&nbsp;<i class="fas fa-user"></i></div>
-                                <div><i class="fas fa-hourglass-half"></i><small> ≃ 30 min</small></div>
+                                <div><i class="fas fa-hourglass-half"></i><small> ≃ {{ room.duration }}</small></div>
                             </div>
                         </div>
                     </div>
@@ -540,8 +494,45 @@ import GlobalFooter from "./layout/Footer";
 export default {
     name: "Home",
     components: {HomeCarousel, GlobalFooter},
+    props: ['app'],
+    data() {
+        return {
+            homecarousel: [],
+            sentence: "",
+            homerooms: [],
+            errors: []
+        }
+    },
+
     mounted() {
         document.title="Accueil";
+        this.loadHomeCarousel();
+        this.loadScrolling();
+        this.loadRooms();
+    },
+    methods : {
+        loadHomeCarousel() {
+            this.app.req.post('bo_dashboard/loadcarousel').then(response => {
+                this.homecarousel = response.data;
+            }).catch(error => {
+                this.errors.push(error.response.data.error);
+            });
+        },
+        loadScrolling(){
+            this.app.req.post('bo_dashboard/loadscrolling').then(response => {
+                this.sentence = response.data.scrolling;
+            }).catch(error => {
+                this.errors.push(error.response.data.error);
+            });
+        },
+        loadRooms(){
+            this.app.req.post('bo_rooms/loadall').then(response => {
+                this.homerooms = response.data;
+
+            }).catch(error => {
+                this.errors.push(error.response.data.error);
+            });
+        },
     }
 }
 </script>
