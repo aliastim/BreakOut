@@ -22,12 +22,12 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
 
     <!-- Styles -->
-    {{--
+    
     <link rel="stylesheet" href="public/css/app.css">
-    <link rel="stylesheet" href="public/css/all.css">--}}
-
+    <link rel="stylesheet" href="public/css/all.css">
+{{--
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link rel="stylesheet" href="{{asset('css/all.css')}}" ><!-- FontAwesome -->
+    <link rel="stylesheet" href="{{asset('css/all.css')}}" >--}<!-- FontAwesome -->
 
 </head>
 <body>
