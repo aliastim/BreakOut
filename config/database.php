@@ -77,7 +77,9 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
             'schema' => 'public',
-            'sslmode' => 'prefer',
+            'sslmode' => 'verify-ca',
+            'ssl' => true,
+            'sslfactory' => 'org.postgresql.ssl.NonValidatingFactory',
         ],
 
         'sqlsrv' => [
