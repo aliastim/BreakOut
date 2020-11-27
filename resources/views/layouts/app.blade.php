@@ -18,11 +18,15 @@
     <!-- bootstrap est importé dans app.scss et se charge avec npm run watch -->
 
     <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="public/js/app.js"></script>
+    {{--<script src="{{ mix('js/app.js') }}" defer></script>--}}
 
     <!-- Styles -->
+    <link rel="stylesheet" href="public/css/app.css">
+    <link rel="stylesheet" href="public/css/all.css">
+    {{--
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link rel="stylesheet" href="{{asset('css/all.css')}}" > <!-- FontAwesome -->
+    <link rel="stylesheet" href="{{asset('css/all.css')}}" > --}}<!-- FontAwesome -->
 
 </head>
 <body>
