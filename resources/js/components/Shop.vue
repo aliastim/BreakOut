@@ -135,7 +135,7 @@
                                                    </div>
                                                    <div>
                                                        <p>
-                                                           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?
+                                                           Charles le plus beau. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?
                                                        </p>
                                                    </div>
                                                </div>

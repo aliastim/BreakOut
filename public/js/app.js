@@ -43424,7 +43424,7 @@ var staticRenderFns = [
                           _c("div", [
                             _c("p", [
                               _vm._v(
-                                "\n                                                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?\n                                                   "
+                                "\n                                                       Charles le plus beau. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?\n                                                   "
                               )
                             ])
                           ])
