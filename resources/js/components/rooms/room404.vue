@@ -4,6 +4,7 @@
         <div>
             <div class="container text-center mt-3">
                 <h1 style="font-size: 200px;">ROOM 404</h1>
+                <h2>Enigme 1</h2>
             </div>
         </div>
     </div>

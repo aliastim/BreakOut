@@ -5598,6 +5598,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "room404",
@@ -49610,7 +49611,9 @@ var staticRenderFns = [
       _c("div", { staticClass: "container text-center mt-3" }, [
         _c("h1", { staticStyle: { "font-size": "200px" } }, [
           _vm._v("ROOM 404")
-        ])
+        ]),
+        _vm._v(" "),
+        _c("h2", [_vm._v("Enigme 1")])
       ])
     ])
   }
