@@ -23,7 +23,7 @@
                                     </div>
                                     <div class="w-100" style="height: 60px;">
                                         <div class="h-100">
-                                            <a href="{{ room.url }}"><button>Jouer</button></a>
+                                            <a href=""><button>Jouer</button></a>
                                         </div>
                                     </div>
                                 </div>
