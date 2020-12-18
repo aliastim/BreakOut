@@ -23,7 +23,7 @@
                                     </div>
                                     <div class="w-100" style="height: 60px;">
                                         <div class="h-100">
-                                            <a href=""><button>Jouer</button></a>
+                                            <router-link :to="room.url"><button>Jouer</button></router-link>
                                         </div>
                                     </div>
                                 </div>
@@ -529,6 +529,12 @@ export default {
             this.app.req.post('bo_rooms/loadall').then(response => {
                 this.homerooms = response.data;
 
+            }).catch(error => {
+                this.errors.push(error.response.data.error);
+            });
+        },
+        letsplay(){
+            this.app.req.post('rooms/letsplay').then(response => {
             }).catch(error => {
                 this.errors.push(error.response.data.error);
             });

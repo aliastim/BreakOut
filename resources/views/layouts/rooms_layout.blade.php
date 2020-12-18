@@ -19,7 +19,7 @@
 </head>
 <body>
 <div id="app" class="app">
-    @yield('room')
+    @yield('app')
 </div>
 </body>
 </html>

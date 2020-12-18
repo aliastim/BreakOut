@@ -1,6 +1,6 @@
 <template>
     <div>
-        <navbar :app="this"></navbar>
+        <navbar v-if="navbool" :app="this"></navbar>
         <main>
             <router-view :app="this"></router-view>
         </main>
@@ -13,6 +13,7 @@ export default {
     components: {Navbar},
     data() {
         return {
+            navbool: true,
             carousel: false,
             /*Authentification*/
             user: null,

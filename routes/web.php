@@ -60,3 +60,10 @@ Route::prefix('bo_items')->group(function () {
 Route::prefix('bo_shop')->group(function () {
     Route::post('addgem', 'ShopController@addGem');
 });
+
+// Rooms
+Route::prefix('rooms')->group(function () {
+    //Route::post('letsplay', 'RomeOneController@index');
+    //Route::post('room404', 'RomeOneController@index');
+    //Route::view('/letsplay', 'scenarios/room_one_1');
+});
