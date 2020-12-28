@@ -185,6 +185,17 @@
                 <div class="login-modal-body">
                     <div class="">{{ app.user.name }} - Mon profil</div>
 
+                    <div style="float: left; width: 70px;">
+                        {{ getGold }}
+                        <div style="background-image: url('img/Banque_graphique/Objets/BOCoin_64.png'); background-repeat: no-repeat; background-size: contain; max-height: 20px !important; height: 20px; width: 20px; float: left;"></div>
+                        <p>&nbsp;: {{ gold }}</p>
+                    </div>
+
+                    <div>
+                        {{ getGem }}
+                        <div style="background-image: url('img/Banque_graphique/Objets/gemme96.png'); background-repeat: no-repeat; background-size: contain; max-height: 20px !important; height: 20px; width: 20px; float: left;"></div>
+                        <p>&nbsp;: {{ gem }}</p>
+                    </div>
                     <a href="#" @click="logout"><button class="btn-profile"><i class="fas fa-sign-out-alt"></i></button></a>
 
 
@@ -212,6 +223,9 @@ export default {
             name : "",
             password_verify : "",
             checked : false,
+            /* Content */
+            gold: 0,
+            gem: 0
             /*test:""*/
         }
     },
@@ -324,6 +338,18 @@ export default {
                 this.app.user=null;
                 this.modal = "#modalconnexion";
                 this.$router.push("/home");
+            });
+        }
+    },
+    computed: {
+        getGold: function () {
+            this.app.req.post("useritems/getgold").then(response => {
+                this.gold = response.data;
+            });
+        },
+        getGem: function () {
+            this.app.req.post("useritems/getgem").then(response => {
+                this.gem = response.data;
             });
         }
     }

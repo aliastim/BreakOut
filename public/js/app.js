@@ -2927,6 +2927,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2941,7 +2963,8 @@ __webpack_require__.r(__webpack_exports__);
       itemsgold: [],
       itemsgem: [],
       golderrors: [],
-      gemerrors: []
+      gemerrors: [],
+      purchase: []
     };
   },
   mounted: function mounted() {
@@ -2967,6 +2990,8 @@ __webpack_require__.r(__webpack_exports__);
     buyitem: function buyitem(id) {
       var _this3 = this;
 
+      this.golderrors = [];
+      this.gemerrors = [];
       var data = {
         id: id
       };
@@ -5145,6 +5170,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Navbar",
   props: ['app'],
@@ -5163,7 +5199,11 @@ __webpack_require__.r(__webpack_exports__);
       modal: "#modalconnexion",
       name: "",
       password_verify: "",
-      checked: false
+      checked: false,
+
+      /* Content */
+      gold: 0,
+      gem: 0
       /*test:""*/
 
     };
@@ -5276,6 +5316,22 @@ __webpack_require__.r(__webpack_exports__);
         _this3.modal = "#modalconnexion";
 
         _this3.$router.push("/home");
+      });
+    }
+  },
+  computed: {
+    getGold: function getGold() {
+      var _this4 = this;
+
+      this.app.req.post("useritems/getgold").then(function (response) {
+        _this4.gold = response.data;
+      });
+    },
+    getGem: function getGem() {
+      var _this5 = this;
+
+      this.app.req.post("useritems/getgem").then(function (response) {
+        _this5.gem = response.data;
       });
     }
   }
@@ -43217,6 +43273,11 @@ var render = function() {
                                   _c(
                                     "button",
                                     {
+                                      attrs: {
+                                        type: "button",
+                                        "data-toggle": "modal",
+                                        "data-target": "#modalpurchase"
+                                      },
                                       on: {
                                         click: function($event) {
                                           return _vm.buyitem(golditem.id)
@@ -43294,6 +43355,11 @@ var render = function() {
                                     _c(
                                       "div",
                                       {
+                                        attrs: {
+                                          type: "button",
+                                          "data-toggle": "modal",
+                                          "data-target": "#modalpurchase"
+                                        },
                                         on: {
                                           click: function($event) {
                                             return _vm.buyitem(gemitem.id)
@@ -43327,37 +43393,78 @@ var render = function() {
                       })
                     ],
                     2
-                  ),
-                  _vm._v(" "),
-                  _vm.gemerrors.length
-                    ? _c(
-                        "div",
-                        {
-                          staticClass: "login-modal-error",
-                          staticStyle: { color: "darkred" }
-                        },
-                        [
-                          _c(
-                            "p",
-                            { staticClass: "h-100 text-center" },
-                            _vm._l(_vm.gemerrors, function(error) {
-                              return _c("span", [
-                                _vm._v(
-                                  "\n                                    " +
-                                    _vm._s(error)
-                                ),
-                                _c("br")
-                              ])
-                            }),
-                            0
-                          )
-                        ]
-                      )
-                    : _vm._e()
+                  )
                 ])
               ])
             ])
           ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "modal fade",
+              attrs: {
+                id: "modalpurchase",
+                tabindex: "-1",
+                "aria-labelledby": "modalpurchase",
+                "aria-hidden": "true"
+              }
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "modal-dialog login-modal-dialog modal-dialog-centered",
+                  staticStyle: { "max-width": "600px !important" }
+                },
+                [
+                  _c("div", { staticClass: "login-modal-content" }, [
+                    _vm._m(5),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "login-modal-body p-4" }, [
+                      _vm.gemerrors.length
+                        ? _c(
+                            "div",
+                            {
+                              staticClass: "login-modal-error",
+                              staticStyle: { color: "darkred" }
+                            },
+                            [
+                              _c(
+                                "p",
+                                { staticClass: "h-100 text-center" },
+                                _vm._l(_vm.gemerrors, function(error) {
+                                  return _c(
+                                    "span",
+                                    [
+                                      _c("B", [_vm._v(_vm._s(error))]),
+                                      _c("br")
+                                    ],
+                                    1
+                                  )
+                                }),
+                                0
+                              )
+                            ]
+                          )
+                        : _c("div", [
+                            _c(
+                              "p",
+                              {
+                                staticClass: "text-center",
+                                staticStyle: { color: "limegreen" }
+                              },
+                              [_c("B", [_vm._v("Achat effectué !")])],
+                              1
+                            )
+                          ])
+                    ])
+                  ])
+                ]
+              )
+            ]
+          ),
           _vm._v(" "),
           _c("global-footer")
         ],
@@ -43883,6 +43990,35 @@ var staticRenderFns = [
       _c("div", { staticClass: "d-flex justify-content-center" }, [
         _c("div", [_c("h2", [_vm._v("Objets Spéciaux")])])
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "login-modal-header" }, [
+      _c("div", { staticClass: "josephin-bold color-white" }, [
+        _vm._v("Acheter un item")
+      ]),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          staticStyle: { opacity: "1 !important" },
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [
+          _c("div", {
+            staticClass: "modal-cross",
+            attrs: { "aria-hidden": "true" }
+          })
+        ]
+      )
     ])
   }
 ]
@@ -49110,6 +49246,54 @@ var render = function() {
                   _c("div", { staticClass: "login-modal-body" }, [
                     _c("div", {}, [
                       _vm._v(_vm._s(_vm.app.user.name) + " - Mon profil")
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticStyle: { float: "left", width: "70px" } },
+                      [
+                        _vm._v(
+                          "\n                    " +
+                            _vm._s(_vm.getGold) +
+                            "\n                    "
+                        ),
+                        _c("div", {
+                          staticStyle: {
+                            "background-image":
+                              "url('img/Banque_graphique/Objets/BOCoin_64.png')",
+                            "background-repeat": "no-repeat",
+                            "background-size": "contain",
+                            "max-height": "20px !important",
+                            height: "20px",
+                            width: "20px",
+                            float: "left"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("p", [_vm._v(" : " + _vm._s(_vm.gold))])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", [
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(_vm.getGem) +
+                          "\n                    "
+                      ),
+                      _c("div", {
+                        staticStyle: {
+                          "background-image":
+                            "url('img/Banque_graphique/Objets/gemme96.png')",
+                          "background-repeat": "no-repeat",
+                          "background-size": "contain",
+                          "max-height": "20px !important",
+                          height: "20px",
+                          width: "20px",
+                          float: "left"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v(" : " + _vm._s(_vm.gem))])
                     ]),
                     _vm._v(" "),
                     _c(
