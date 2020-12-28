@@ -52,4 +52,30 @@ class UserItemController extends Controller
 
 
     }
+
+    public function getGold()
+    {
+        $user = Auth::user();
+        //Vérifie que l'utilisateur est connecté
+        if (isset($user->id) and (!empty($user->id))) {
+            $gold = $user->gold;
+            return response()->json($gold, 200);
+        }  else
+        {
+            return response()->json("notconnected", 200);
+        }
+    }
+
+    public function getGem()
+    {
+        $user = Auth::user();
+        //Vérifie que l'utilisateur est connecté
+        if (isset($user->id) and (!empty($user->id))) {
+            $gem = $user->gem;
+            return response()->json($gem, 200);
+        }  else
+        {
+            return response()->json("notconnected", 200);
+        }
+    }
 }

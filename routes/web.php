@@ -67,6 +67,8 @@ Route::prefix('bo_shop')->group(function () {
 // User_items
 Route::prefix('useritems')->group(function () {
     Route::post('loaditem', 'UserItemController@loadItem');
+    Route::post('getgold', 'UserItemController@getGold');
+    Route::post('getgem', 'UserItemController@getGem');
 });
 
 // Rooms

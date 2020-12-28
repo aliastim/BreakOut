@@ -296,7 +296,7 @@
                                         </div>
                                         <div class="shop-cadre-items-footer">
                                             <div>
-                                                <button @click="buyitem(golditem.id)">Acheter</button>
+                                                <button @click="buyitem(golditem.id)" type="button" data-toggle="modal" data-target="#modalpurchase">Acheter</button>
                                             </div>
                                             <div>
                                                 <div class="div-price">
@@ -325,7 +325,7 @@
                                             <img :src="gemitem.img">
                                         </div>
                                         <div class="shop-cadre-items-gem-footer">
-                                            <div @click="buyitem(gemitem.id)">Acheter</div>
+                                            <div @click="buyitem(gemitem.id)" type="button" data-toggle="modal" data-target="#modalpurchase">Acheter</div>
                                             <div>
                                                 <div>{{ gemitem.price }}</div>
                                                 <div class="div-gem"></div>
@@ -338,14 +338,36 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Modal purchase -->
+            <div class="modal fade" id="modalpurchase" tabindex="-1" aria-labelledby="modalpurchase" aria-hidden="true">
+                <div class="modal-dialog login-modal-dialog modal-dialog-centered" style="max-width: 600px !important;">
+                    <div class="login-modal-content">
+                        <div class="login-modal-header">
+                            <div class="josephin-bold color-white">Acheter un item</div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="opacity: 1 !important;">
+                                <div aria-hidden="true" class="modal-cross"></div>
+                            </button>
+                        </div>
+                        <div class="login-modal-body p-4">
                             <div class="login-modal-error" v-if="gemerrors.length" style="color: darkred;">
                                 <p class="h-100 text-center">
                                     <span v-for="error in gemerrors">
-                                        {{ error }}<br>
+                                        <B>{{ error }}</B><br>
                                     </span>
                                 </p>
                             </div>
+                            <div v-else>
+                                <p class="text-center" style="color: limegreen;"><B>Achat effectué !</B></p>
+                            </div>
+
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -366,7 +388,8 @@ export default {
             itemsgold: [],
             itemsgem: [],
             golderrors: [],
-            gemerrors: []
+            gemerrors: [],
+            purchase : []
         }
     },
     mounted() {
@@ -389,6 +412,9 @@ export default {
     methods:
     {
         buyitem(id) {
+            this.golderrors = [];
+            this.gemerrors = [];
+
             const data = {
                 id: id,
             }
