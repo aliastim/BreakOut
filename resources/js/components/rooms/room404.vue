@@ -1,5 +1,6 @@
 <template>
     <div>
+        {{ key_verify }}
         <room-header :room="this"></room-header>
         <div>
             <div class="container text-center mt-3">
@@ -20,6 +21,25 @@ export default {
         return {
             timer: 45,
         }
+    },
+    computed : {
+        key_verify: function () {
+            const data = {
+                item_slug: "cle-mysterieuse",
+            }
+            this.app.req.post("useritems/loaditem", data).then(response => {
+                /*if(response.data.user == null) {
+                    console.log('Utilisateur non connecté');
+                    return false;
+                } else
+                {
+                    console.log('Accès au compte');
+                    this.connected = true;
+                    return true;
+                }*/
+                console.log(response.data);
+            });
+        },
     },
     mounted() {
         this.app.navbool = false;

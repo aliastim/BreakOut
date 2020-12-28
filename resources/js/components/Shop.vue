@@ -1,5 +1,7 @@
 <template>
     <div>
+        {{ gemitems }}
+        {{ golditems }}
         <shop-before></shop-before>
         <div class="breakout-body">
             <div class="col-12 pt-4">
@@ -278,84 +280,27 @@
                                 Chaque semaine, trois nouveaux objets aléatoires sont disponibles en vente à la boutique.<br><strong class="josephin-bold">(Disponible pendant encore <span style="color: #F9BA48;">03:11:43:27</span>)</strong>
                             </div>
                             <div class="row p-1">
-                                <!-- Objet 1 -->
-                                <div class="col-12 col-md-4">
+                                <!-- Objets -->
+                                <div class="col-12 col-md-4" v-for="golditem in itemsgold" :id="'item-'+golditem.id">
                                     <div class="shop-cadre-items mt-3">
                                         <div class="shop-cadre-items-header">
-                                            Machine à sous
+                                            {{ golditem.name }}
                                         </div>
                                         <div class="shop-cadre-items-body">
                                             <div>
-                                                <img src="img/Banque_graphique/Objets/Plot_Machine_256.png">
+                                                <img :src="golditem.img">
                                             </div>
                                             <div>
-                                                <p>Tentez votre chance à la machine à sous ! Dépensez 20 pièces à chaque tirage et tentez de gagner des cadeaux mystères !</p>
+                                                <p>{{ golditem.description }}</p>
                                             </div>
                                         </div>
                                         <div class="shop-cadre-items-footer">
                                             <div>
-                                                <button>Acheter</button>
+                                                <button @click="buyitem(golditem.id)">Acheter</button>
                                             </div>
                                             <div>
                                                 <div class="div-price">
-                                                    770
-                                                </div>
-                                                <div class="div-gold"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Objet 2 -->
-                                <div class="col-12 col-md-4">
-                                    <div class="shop-cadre-items mt-3">
-                                        <div class="shop-cadre-items-header">
-                                            Gemme de l'outre tombe
-                                        </div>
-                                        <div class="shop-cadre-items-body">
-                                            <div>
-                                                <img src="img/Banque_graphique/Objets/gemme_256.png">
-                                            </div>
-                                            <div>
-                                                <p>Vous vous perdez dans ses reflets profonds. Cette gemme vous offrira une seconde chance lorsque vous tomberez au combat.</p>
-                                            </div>
-                                        </div>
-                                        <div class="shop-cadre-items-footer">
-                                            <div>
-                                                <button>Acheter</button>
-                                            </div>
-                                            <div>
-                                                <div class="div-price">
-                                                    770
-                                                </div>
-                                                <div class="div-gold"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Objet 3 -->
-                                <div class="col-12 col-md-4">
-                                    <div class="shop-cadre-items mt-3">
-                                        <div class="shop-cadre-items-header">
-                                            Ancienne carte
-                                        </div>
-                                        <div class="shop-cadre-items-body">
-                                            <div>
-                                                <img src="img/Banque_graphique/Objets/carte_256.png">
-                                            </div>
-                                            <div>
-                                                <p>Tout les pièces (ou presque) sont représentées sur cette vieille carte.
-                                                    Utilisez-la pour vous diriger en partie.</p>
-                                            </div>
-                                        </div>
-                                        <div class="shop-cadre-items-footer">
-                                            <div>
-                                                <button>Acheter</button>
-                                            </div>
-                                            <div>
-                                                <div class="div-price">
-                                                    770
+                                                    {{ golditem.price }}
                                                 </div>
                                                 <div class="div-gold"></div>
                                             </div>
@@ -371,31 +316,34 @@
                                 </div>
                             </div>
                             <div class="row p-1">
-                                <div class="col-12 col-md-4">
+                                <div class="col-12 col-md-4" v-for="gemitem in itemsgem" :id="'item-'+gemitem.id" >
                                     <div class="shop-cadre-items-gem mt-3">
                                         <div class="shop-cadre-items-gem-header">
-                                            Un morceau de clé
+                                            {{ gemitem.name }}
                                         </div>
                                         <div class="shop-cadre-items-gem-body">
-                                            <img src="img/Banque_graphique/Objets/BOCoin_64.png">
+                                            <img :src="gemitem.img">
                                         </div>
                                         <div class="shop-cadre-items-gem-footer">
-                                            <div>Acheter</div>
+                                            <div @click="buyitem(gemitem.id)">Acheter</div>
                                             <div>
-                                                <div>50 </div>
+                                                <div>{{ gemitem.price }}</div>
                                                 <div class="div-gem"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4">
+                                <div class="col-12 col-md-4" v-for="voiditem in (3 - itemsgem.length)">
                                     <div class="shop-cadre-items-gem-void mt-3">
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="shop-cadre-items-gem-void mt-3">
-                                    </div>
-                                </div>
+                            </div>
+                            <div class="login-modal-error" v-if="gemerrors.length" style="color: darkred;">
+                                <p class="h-100 text-center">
+                                    <span v-for="error in gemerrors">
+                                        {{ error }}<br>
+                                    </span>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -411,10 +359,46 @@ import ShopBefore from "./before/ShopBefore";
 import GlobalFooter from "./layout/Footer";
 export default {
     name: "Shop",
+    props: ['app'],
     components: {ShopBefore, GlobalFooter},
+    data() {
+        return {
+            itemsgold: [],
+            itemsgem: [],
+            golderrors: [],
+            gemerrors: []
+        }
+    },
     mounted() {
         document.title="Boutique";
-    }
+    },
+    computed : {
+        golditems: function () {
+            this.app.req.post("bo_shop/loadallgolditem").then(response => {
+                this.itemsgold = response.data;
+                //console.log(response.data);
+            });
+        },
+        gemitems: function () {
+            this.app.req.post("bo_shop/loadallgemitem").then(response => {
+                this.itemsgem = response.data;
+                //console.log(response.data);
+            });
+        },
+    },
+    methods:
+    {
+        buyitem(id) {
+            const data = {
+                id: id,
+            }
+            this.app.req.post("bo_shop/buyitem", data).then(response => {
+                console.log(response.data);
+            }).catch(error => {
+                this.gemerrors.push(error.response.data.error);
+            });
+        }
+    },
 }
 </script>
 <style>
