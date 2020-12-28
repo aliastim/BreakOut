@@ -2927,68 +2927,55 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Shop",
+  props: ['app'],
   components: {
     ShopBefore: _before_ShopBefore__WEBPACK_IMPORTED_MODULE_0__["default"],
     GlobalFooter: _layout_Footer__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
+  data: function data() {
+    return {
+      itemsgold: [],
+      itemsgem: [],
+      golderrors: [],
+      gemerrors: []
+    };
+  },
   mounted: function mounted() {
     document.title = "Boutique";
+  },
+  computed: {
+    golditems: function golditems() {
+      var _this = this;
+
+      this.app.req.post("bo_shop/loadallgolditem").then(function (response) {
+        _this.itemsgold = response.data; //console.log(response.data);
+      });
+    },
+    gemitems: function gemitems() {
+      var _this2 = this;
+
+      this.app.req.post("bo_shop/loadallgemitem").then(function (response) {
+        _this2.itemsgem = response.data; //console.log(response.data);
+      });
+    }
+  },
+  methods: {
+    buyitem: function buyitem(id) {
+      var _this3 = this;
+
+      var data = {
+        id: id
+      };
+      this.app.req.post("bo_shop/buyitem", data).then(function (response) {
+        console.log(response.data);
+      })["catch"](function (error) {
+        _this3.gemerrors.push(error.response.data.error);
+      });
+    }
   }
 });
 
@@ -5599,6 +5586,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "room404",
@@ -5610,6 +5598,25 @@ __webpack_require__.r(__webpack_exports__);
     return {
       timer: 45
     };
+  },
+  computed: {
+    key_verify: function key_verify() {
+      var data = {
+        item_slug: "cle-mysterieuse"
+      };
+      this.app.req.post("useritems/loaditem", data).then(function (response) {
+        /*if(response.data.user == null) {
+            console.log('Utilisateur non connecté');
+            return false;
+        } else
+        {
+            console.log('Accès au compte');
+            this.connected = true;
+            return true;
+        }*/
+        console.log(response.data);
+      });
+    }
   },
   mounted: function mounted() {
     this.app.navbool = false;
@@ -43137,12 +43144,223 @@ var render = function() {
   return _c(
     "div",
     [
+      _vm._v(
+        "\n    " +
+          _vm._s(_vm.gemitems) +
+          "\n    " +
+          _vm._s(_vm.golditems) +
+          "\n    "
+      ),
       _c("shop-before"),
       _vm._v(" "),
       _c(
         "div",
         { staticClass: "breakout-body" },
-        [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("global-footer")],
+        [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12 pt-4" }, [
+            _c("div", { staticClass: "row" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-12 col-md-6" }, [
+                _c("div", { staticClass: "boutique-fond-2" }, [
+                  _vm._m(2),
+                  _vm._v(" "),
+                  _vm._m(3),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "row p-1" },
+                    _vm._l(_vm.itemsgold, function(golditem) {
+                      return _c(
+                        "div",
+                        {
+                          staticClass: "col-12 col-md-4",
+                          attrs: { id: "item-" + golditem.id }
+                        },
+                        [
+                          _c("div", { staticClass: "shop-cadre-items mt-3" }, [
+                            _c(
+                              "div",
+                              { staticClass: "shop-cadre-items-header" },
+                              [
+                                _vm._v(
+                                  "\n                                        " +
+                                    _vm._s(golditem.name) +
+                                    "\n                                    "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "shop-cadre-items-body" },
+                              [
+                                _c("div", [
+                                  _c("img", { attrs: { src: golditem.img } })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c("p", [
+                                    _vm._v(_vm._s(golditem.description))
+                                  ])
+                                ])
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "shop-cadre-items-footer" },
+                              [
+                                _c("div", [
+                                  _c(
+                                    "button",
+                                    {
+                                      on: {
+                                        click: function($event) {
+                                          return _vm.buyitem(golditem.id)
+                                        }
+                                      }
+                                    },
+                                    [_vm._v("Acheter")]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c("div", { staticClass: "div-price" }, [
+                                    _vm._v(
+                                      "\n                                                " +
+                                        _vm._s(golditem.price) +
+                                        "\n                                            "
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "div-gold" })
+                                ])
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    }),
+                    0
+                  ),
+                  _vm._v(" "),
+                  _vm._m(4),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "row p-1" },
+                    [
+                      _vm._l(_vm.itemsgem, function(gemitem) {
+                        return _c(
+                          "div",
+                          {
+                            staticClass: "col-12 col-md-4",
+                            attrs: { id: "item-" + gemitem.id }
+                          },
+                          [
+                            _c(
+                              "div",
+                              { staticClass: "shop-cadre-items-gem mt-3" },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "shop-cadre-items-gem-header"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                        " +
+                                        _vm._s(gemitem.name) +
+                                        "\n                                    "
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "shop-cadre-items-gem-body" },
+                                  [_c("img", { attrs: { src: gemitem.img } })]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "shop-cadre-items-gem-footer"
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      {
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.buyitem(gemitem.id)
+                                          }
+                                        }
+                                      },
+                                      [_vm._v("Acheter")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", [
+                                      _c("div", [
+                                        _vm._v(_vm._s(gemitem.price))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "div-gem" })
+                                    ])
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      }),
+                      _vm._v(" "),
+                      _vm._l(3 - _vm.itemsgem.length, function(voiditem) {
+                        return _c("div", { staticClass: "col-12 col-md-4" }, [
+                          _c("div", {
+                            staticClass: "shop-cadre-items-gem-void mt-3"
+                          })
+                        ])
+                      })
+                    ],
+                    2
+                  ),
+                  _vm._v(" "),
+                  _vm.gemerrors.length
+                    ? _c(
+                        "div",
+                        {
+                          staticClass: "login-modal-error",
+                          staticStyle: { color: "darkred" }
+                        },
+                        [
+                          _c(
+                            "p",
+                            { staticClass: "h-100 text-center" },
+                            _vm._l(_vm.gemerrors, function(error) {
+                              return _c("span", [
+                                _vm._v(
+                                  "\n                                    " +
+                                    _vm._s(error)
+                                ),
+                                _c("br")
+                              ])
+                            }),
+                            0
+                          )
+                        ]
+                      )
+                    : _vm._e()
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("global-footer")
+        ],
         1
       )
     ],
@@ -43351,510 +43569,319 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12 pt-4" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-12 col-md-6 pb-3" }, [
-          _c("div", { staticClass: "boutique-fond-2" }, [
-            _c("div", { staticClass: "panneau-ligne-1 pb-3" }, [
-              _c("hr"),
+    return _c("div", { staticClass: "col-12 col-md-6 pb-3" }, [
+      _c("div", { staticClass: "boutique-fond-2" }, [
+        _c("div", { staticClass: "panneau-ligne-1 pb-3" }, [
+          _c("hr"),
+          _vm._v(" "),
+          _c("div", { staticClass: "d-flex justify-content-center" }, [
+            _c("div", [_c("h2", [_vm._v("Salles à l'unité")])])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "shop-sous-panneau" }, [
+          _vm._v(
+            "\n                            Découvrez nos derniers scénarios disponibles.\n                        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row p-1" }, [
+          _c("div", { staticClass: "col-12 col-md-6" }, [
+            _c("div", { staticClass: "shop-cadre-salle-unite mt-3" }, [
+              _c("div", { staticClass: "shop-cadre-salle-unite-header" }, [
+                _c("div", { staticClass: "d-flex w-100" }, [
+                  _c(
+                    "div",
+                    { staticClass: "mr-auto", staticStyle: { color: "white" } },
+                    [
+                      _c("i", { staticClass: "fas fa-user" }),
+                      _vm._v(" 3 "),
+                      _c("i", { staticClass: "fas fa-mobile-alt" }),
+                      _vm._v(" "),
+                      _c("i", { staticClass: "fas fa-desktop" })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "d-flex" }, [
+                    _c("div", { staticClass: "div-price" }, [
+                      _vm._v(
+                        "\n                                                    700\n                                                "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "div-gold" })
+                  ])
+                ])
+              ]),
               _vm._v(" "),
-              _c("div", { staticClass: "d-flex justify-content-center" }, [
-                _c("div", [_c("h2", [_vm._v("Salles à l'unité")])])
+              _c("div", { staticClass: "shop-cadre-salle-unite-body" }, [
+                _c("div", { staticClass: "w-100 h-100 position-relative" }, [
+                  _c("div", {
+                    staticStyle: {
+                      "background-image":
+                        "url('img/illustrations_salles/exemple1.jpg')"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c("div", [
+                      _c("div", { staticClass: "m-auto" }, [
+                        _vm._v("Le tombeau"),
+                        _c("br"),
+                        _vm._v("d'Agamemnon")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("p", [
+                        _vm._v(
+                          "\n                                                       Charles le plus beau. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?\n                                                   "
+                        )
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "shop-cadre-salle-unite-footer" }, [
+                _c("button", [_vm._v("Sélectionner")])
               ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "shop-sous-panneau" }, [
-              _vm._v(
-                "\n                            Découvrez nos derniers scénarios disponibles.\n                        "
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row p-1" }, [
-              _c("div", { staticClass: "col-12 col-md-6" }, [
-                _c("div", { staticClass: "shop-cadre-salle-unite mt-3" }, [
-                  _c("div", { staticClass: "shop-cadre-salle-unite-header" }, [
-                    _c("div", { staticClass: "d-flex w-100" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "mr-auto",
-                          staticStyle: { color: "white" }
-                        },
-                        [
-                          _c("i", { staticClass: "fas fa-user" }),
-                          _vm._v(" 3 "),
-                          _c("i", { staticClass: "fas fa-mobile-alt" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "fas fa-desktop" })
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "d-flex" }, [
-                        _c("div", { staticClass: "div-price" }, [
-                          _vm._v(
-                            "\n                                                    700\n                                                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "div-gold" })
-                      ])
-                    ])
-                  ]),
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12 col-md-6" }, [
+            _c("div", { staticClass: "shop-cadre-salle-unite mt-3" }, [
+              _c("div", { staticClass: "shop-cadre-salle-unite-header" }, [
+                _c("div", { staticClass: "d-flex w-100" }, [
+                  _c(
+                    "div",
+                    { staticClass: "mr-auto", staticStyle: { color: "white" } },
+                    [
+                      _c("i", { staticClass: "fas fa-user" }),
+                      _vm._v(" 2 "),
+                      _c("i", { staticClass: "fas fa-desktop" })
+                    ]
+                  ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "shop-cadre-salle-unite-body" }, [
-                    _c(
-                      "div",
-                      { staticClass: "w-100 h-100 position-relative" },
-                      [
-                        _c("div", {
-                          staticStyle: {
-                            "background-image":
-                              "url('img/illustrations_salles/exemple1.jpg')"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("div", [
-                          _c("div", [
-                            _c("div", { staticClass: "m-auto" }, [
-                              _vm._v("Le tombeau"),
-                              _c("br"),
-                              _vm._v("d'Agamemnon")
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", [
-                            _c("p", [
-                              _vm._v(
-                                "\n                                                       Charles le plus beau. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?\n                                                   "
-                              )
-                            ])
-                          ])
-                        ])
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "shop-cadre-salle-unite-footer" }, [
-                    _c("button", [_vm._v("Sélectionner")])
+                  _c("div", { staticClass: "d-flex" }, [
+                    _c("div", { staticClass: "div-price" }, [
+                      _vm._v(
+                        "\n                                                    1200\n                                                "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "div-gold" })
                   ])
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-12 col-md-6" }, [
-                _c("div", { staticClass: "shop-cadre-salle-unite mt-3" }, [
-                  _c("div", { staticClass: "shop-cadre-salle-unite-header" }, [
-                    _c("div", { staticClass: "d-flex w-100" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "mr-auto",
-                          staticStyle: { color: "white" }
-                        },
-                        [
-                          _c("i", { staticClass: "fas fa-user" }),
-                          _vm._v(" 2 "),
-                          _c("i", { staticClass: "fas fa-desktop" })
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "d-flex" }, [
-                        _c("div", { staticClass: "div-price" }, [
-                          _vm._v(
-                            "\n                                                    1200\n                                                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "div-gold" })
+              _c("div", { staticClass: "shop-cadre-salle-unite-body" }, [
+                _c("div", { staticClass: "w-100 h-100 position-relative" }, [
+                  _c("div", {
+                    staticStyle: {
+                      "background-image":
+                        "url('img/illustrations_salles/exemple2.png')"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c("div", [
+                      _c("div", { staticClass: "m-auto" }, [
+                        _vm._v("La forêt"),
+                        _c("br"),
+                        _vm._v("d'Esrael")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("p", [
+                        _vm._v(
+                          "\n                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?\n                                                    "
+                        )
                       ])
                     ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "shop-cadre-salle-unite-body" }, [
-                    _c(
-                      "div",
-                      { staticClass: "w-100 h-100 position-relative" },
-                      [
-                        _c("div", {
-                          staticStyle: {
-                            "background-image":
-                              "url('img/illustrations_salles/exemple2.png')"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("div", [
-                          _c("div", [
-                            _c("div", { staticClass: "m-auto" }, [
-                              _vm._v("La forêt"),
-                              _c("br"),
-                              _vm._v("d'Esrael")
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", [
-                            _c("p", [
-                              _vm._v(
-                                "\n                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?\n                                                    "
-                              )
-                            ])
-                          ])
-                        ])
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "shop-cadre-salle-unite-footer" }, [
-                    _c("button", [_vm._v("Sélectionner")])
                   ])
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-12 col-md-6" }, [
-                _c("div", { staticClass: "shop-cadre-salle-unite mt-3" }, [
-                  _c("div", { staticClass: "shop-cadre-salle-unite-header" }, [
-                    _c("div", { staticClass: "d-flex w-100" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "mr-auto",
-                          staticStyle: { color: "white" }
-                        },
-                        [
-                          _c("i", { staticClass: "fas fa-user" }),
-                          _vm._v(" 1 "),
-                          _c("i", { staticClass: "fas fa-desktop" })
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "d-flex" }, [
-                        _c("div", { staticClass: "div-price" }, [
-                          _vm._v(
-                            "\n                                                    600\n                                                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "div-gold" })
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "shop-cadre-salle-unite-body" }, [
-                    _c(
-                      "div",
-                      { staticClass: "w-100 h-100 position-relative" },
-                      [
-                        _c("div", {
-                          staticStyle: {
-                            "background-image":
-                              "url('img/illustrations_salles/exemple3.png')"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("div", [
-                          _c("div", [
-                            _c("div", { staticClass: "m-auto" }, [
-                              _vm._v("La prison de"),
-                              _c("br"),
-                              _vm._v("Pandragon")
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", [
-                            _c("p", [
-                              _vm._v(
-                                "\n                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?\n                                                    "
-                              )
-                            ])
-                          ])
-                        ])
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "shop-cadre-salle-unite-footer" }, [
-                    _c("button", [_vm._v("Sélectionner")])
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-12 col-md-6" }, [
-                _c("div", { staticClass: "shop-cadre-salle-unite mt-3" }, [
-                  _c("div", { staticClass: "shop-cadre-salle-unite-header" }, [
-                    _c("div", { staticClass: "d-flex w-100" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "mr-auto",
-                          staticStyle: { color: "white" }
-                        },
-                        [
-                          _c("i", { staticClass: "fas fa-user" }),
-                          _vm._v(" 2 "),
-                          _c("i", { staticClass: "fas fa-desktop" })
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "d-flex" }, [
-                        _c("div", { staticClass: "div-price" }, [
-                          _vm._v(
-                            "\n                                                    1700\n                                                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "div-gold" })
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "shop-cadre-salle-unite-body" }, [
-                    _c(
-                      "div",
-                      { staticClass: "w-100 h-100 position-relative" },
-                      [
-                        _c("div", {
-                          staticStyle: {
-                            "background-image":
-                              "url('img/illustrations_salles/exemple4.jpg')"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("div", [
-                          _c("div", [
-                            _c("div", { staticClass: "m-auto" }, [
-                              _vm._v("Le désert"),
-                              _c("br"),
-                              _vm._v("des dunes")
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", [
-                            _c("p", [
-                              _vm._v(
-                                "\n                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?\n                                                    "
-                              )
-                            ])
-                          ])
-                        ])
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "shop-cadre-salle-unite-footer" }, [
-                    _c("button", [_vm._v("Sélectionner")])
-                  ])
-                ])
+              _c("div", { staticClass: "shop-cadre-salle-unite-footer" }, [
+                _c("button", [_vm._v("Sélectionner")])
               ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-12 mt-5 mb-5 text-center" }, [
-                _c("a", { staticClass: "lien-simple", attrs: { href: "#" } }, [
-                  _vm._v("Voir toutes les salles")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12 col-md-6" }, [
+            _c("div", { staticClass: "shop-cadre-salle-unite mt-3" }, [
+              _c("div", { staticClass: "shop-cadre-salle-unite-header" }, [
+                _c("div", { staticClass: "d-flex w-100" }, [
+                  _c(
+                    "div",
+                    { staticClass: "mr-auto", staticStyle: { color: "white" } },
+                    [
+                      _c("i", { staticClass: "fas fa-user" }),
+                      _vm._v(" 1 "),
+                      _c("i", { staticClass: "fas fa-desktop" })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "d-flex" }, [
+                    _c("div", { staticClass: "div-price" }, [
+                      _vm._v(
+                        "\n                                                    600\n                                                "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "div-gold" })
+                  ])
                 ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "shop-cadre-salle-unite-body" }, [
+                _c("div", { staticClass: "w-100 h-100 position-relative" }, [
+                  _c("div", {
+                    staticStyle: {
+                      "background-image":
+                        "url('img/illustrations_salles/exemple3.png')"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c("div", [
+                      _c("div", { staticClass: "m-auto" }, [
+                        _vm._v("La prison de"),
+                        _c("br"),
+                        _vm._v("Pandragon")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("p", [
+                        _vm._v(
+                          "\n                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?\n                                                    "
+                        )
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "shop-cadre-salle-unite-footer" }, [
+                _c("button", [_vm._v("Sélectionner")])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12 col-md-6" }, [
+            _c("div", { staticClass: "shop-cadre-salle-unite mt-3" }, [
+              _c("div", { staticClass: "shop-cadre-salle-unite-header" }, [
+                _c("div", { staticClass: "d-flex w-100" }, [
+                  _c(
+                    "div",
+                    { staticClass: "mr-auto", staticStyle: { color: "white" } },
+                    [
+                      _c("i", { staticClass: "fas fa-user" }),
+                      _vm._v(" 2 "),
+                      _c("i", { staticClass: "fas fa-desktop" })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "d-flex" }, [
+                    _c("div", { staticClass: "div-price" }, [
+                      _vm._v(
+                        "\n                                                    1700\n                                                "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "div-gold" })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "shop-cadre-salle-unite-body" }, [
+                _c("div", { staticClass: "w-100 h-100 position-relative" }, [
+                  _c("div", {
+                    staticStyle: {
+                      "background-image":
+                        "url('img/illustrations_salles/exemple4.jpg')"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c("div", [
+                      _c("div", { staticClass: "m-auto" }, [
+                        _vm._v("Le désert"),
+                        _c("br"),
+                        _vm._v("des dunes")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("p", [
+                        _vm._v(
+                          "\n                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?\n                                                    "
+                        )
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "shop-cadre-salle-unite-footer" }, [
+                _c("button", [_vm._v("Sélectionner")])
               ])
             ])
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-12 col-md-6" }, [
-          _c("div", { staticClass: "boutique-fond-2" }, [
-            _c("div", { staticClass: "panneau-ligne-1 pb-3" }, [
-              _c("hr"),
-              _vm._v(" "),
-              _c("div", { staticClass: "d-flex justify-content-center" }, [
-                _c("div", [_c("h2", [_vm._v("Objets hebdomadaires")])])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "shop-sous-panneau" }, [
-              _vm._v(
-                "\n                            Chaque semaine, trois nouveaux objets aléatoires sont disponibles en vente à la boutique."
-              ),
-              _c("br"),
-              _c("strong", { staticClass: "josephin-bold" }, [
-                _vm._v("(Disponible pendant encore "),
-                _c("span", { staticStyle: { color: "#F9BA48" } }, [
-                  _vm._v("03:11:43:27")
-                ]),
-                _vm._v(")")
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row p-1" }, [
-              _c("div", { staticClass: "col-12 col-md-4" }, [
-                _c("div", { staticClass: "shop-cadre-items mt-3" }, [
-                  _c("div", { staticClass: "shop-cadre-items-header" }, [
-                    _vm._v(
-                      "\n                                        Machine à sous\n                                    "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "shop-cadre-items-body" }, [
-                    _c("div", [
-                      _c("img", {
-                        attrs: {
-                          src:
-                            "img/Banque_graphique/Objets/Plot_Machine_256.png"
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("p", [
-                        _vm._v(
-                          "Tentez votre chance à la machine à sous ! Dépensez 20 pièces à chaque tirage et tentez de gagner des cadeaux mystères !"
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "shop-cadre-items-footer" }, [
-                    _c("div", [_c("button", [_vm._v("Acheter")])]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("div", { staticClass: "div-price" }, [
-                        _vm._v(
-                          "\n                                                770\n                                            "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "div-gold" })
-                    ])
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-12 col-md-4" }, [
-                _c("div", { staticClass: "shop-cadre-items mt-3" }, [
-                  _c("div", { staticClass: "shop-cadre-items-header" }, [
-                    _vm._v(
-                      "\n                                        Gemme de l'outre tombe\n                                    "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "shop-cadre-items-body" }, [
-                    _c("div", [
-                      _c("img", {
-                        attrs: {
-                          src: "img/Banque_graphique/Objets/gemme_256.png"
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("p", [
-                        _vm._v(
-                          "Vous vous perdez dans ses reflets profonds. Cette gemme vous offrira une seconde chance lorsque vous tomberez au combat."
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "shop-cadre-items-footer" }, [
-                    _c("div", [_c("button", [_vm._v("Acheter")])]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("div", { staticClass: "div-price" }, [
-                        _vm._v(
-                          "\n                                                770\n                                            "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "div-gold" })
-                    ])
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-12 col-md-4" }, [
-                _c("div", { staticClass: "shop-cadre-items mt-3" }, [
-                  _c("div", { staticClass: "shop-cadre-items-header" }, [
-                    _vm._v(
-                      "\n                                        Ancienne carte\n                                    "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "shop-cadre-items-body" }, [
-                    _c("div", [
-                      _c("img", {
-                        attrs: {
-                          src: "img/Banque_graphique/Objets/carte_256.png"
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("p", [
-                        _vm._v(
-                          "Tout les pièces (ou presque) sont représentées sur cette vieille carte.\n                                                Utilisez-la pour vous diriger en partie."
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "shop-cadre-items-footer" }, [
-                    _c("div", [_c("button", [_vm._v("Acheter")])]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("div", { staticClass: "div-price" }, [
-                        _vm._v(
-                          "\n                                                770\n                                            "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "div-gold" })
-                    ])
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "panneau-ligne-1 pb-3" }, [
-              _c("hr"),
-              _vm._v(" "),
-              _c("div", { staticClass: "d-flex justify-content-center" }, [
-                _c("div", [_c("h2", [_vm._v("Objets Spéciaux")])])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row p-1" }, [
-              _c("div", { staticClass: "col-12 col-md-4" }, [
-                _c("div", { staticClass: "shop-cadre-items-gem mt-3" }, [
-                  _c("div", { staticClass: "shop-cadre-items-gem-header" }, [
-                    _vm._v(
-                      "\n                                        Un morceau de clé\n                                    "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "shop-cadre-items-gem-body" }, [
-                    _c("img", {
-                      attrs: {
-                        src: "img/Banque_graphique/Objets/BOCoin_64.png"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "shop-cadre-items-gem-footer" }, [
-                    _c("div", [_vm._v("Acheter")]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("div", [_vm._v("50 ")]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "div-gem" })
-                    ])
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-12 col-md-4" }, [
-                _c("div", { staticClass: "shop-cadre-items-gem-void mt-3" })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-12 col-md-4" }, [
-                _c("div", { staticClass: "shop-cadre-items-gem-void mt-3" })
-              ])
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-12 mt-5 mb-5 text-center" }, [
+            _c("a", { staticClass: "lien-simple", attrs: { href: "#" } }, [
+              _vm._v("Voir toutes les salles")
             ])
           ])
         ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "panneau-ligne-1 pb-3" }, [
+      _c("hr"),
+      _vm._v(" "),
+      _c("div", { staticClass: "d-flex justify-content-center" }, [
+        _c("div", [_c("h2", [_vm._v("Objets hebdomadaires")])])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "shop-sous-panneau" }, [
+      _vm._v(
+        "\n                            Chaque semaine, trois nouveaux objets aléatoires sont disponibles en vente à la boutique."
+      ),
+      _c("br"),
+      _c("strong", { staticClass: "josephin-bold" }, [
+        _vm._v("(Disponible pendant encore "),
+        _c("span", { staticStyle: { color: "#F9BA48" } }, [
+          _vm._v("03:11:43:27")
+        ]),
+        _vm._v(")")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "panneau-ligne-1 pb-3" }, [
+      _c("hr"),
+      _vm._v(" "),
+      _c("div", { staticClass: "d-flex justify-content-center" }, [
+        _c("div", [_c("h2", [_vm._v("Objets Spéciaux")])])
       ])
     ])
   }
@@ -49598,7 +49625,12 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    [_c("room-header", { attrs: { room: this } }), _vm._v(" "), _vm._m(0)],
+    [
+      _vm._v("\n    " + _vm._s(_vm.key_verify) + "\n    "),
+      _c("room-header", { attrs: { room: this } }),
+      _vm._v(" "),
+      _vm._m(0)
+    ],
     1
   )
 }
