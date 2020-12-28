@@ -11,11 +11,10 @@
 <script>
 
 import RoomHeader from "../layout/RoomHeader";
-import Map from "infiniteCristal_components/map";
 export default {
     name: "infiniteCristal",
     props: ['app'],
-    components: {RoomHeader, Map},
+    components: {RoomHeader},
     data(){
         return {
             timer: 60,

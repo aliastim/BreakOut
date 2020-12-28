@@ -5636,7 +5636,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layout_RoomHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../layout/RoomHeader */ "./resources/js/components/layout/RoomHeader.vue");
-!(function webpackMissingModule() { var e = new Error("Cannot find module 'infiniteCristal_components/map'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 //
 //
 //
@@ -5647,14 +5646,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "infiniteCristal",
   props: ['app'],
   components: {
-    RoomHeader: _layout_RoomHeader__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Map: !(function webpackMissingModule() { var e = new Error("Cannot find module 'infiniteCristal_components/map'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+    RoomHeader: _layout_RoomHeader__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
@@ -67312,9 +67309,9 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/timotheecorrado/Desktop/Mes projets/BreakOut/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /Users/timotheecorrado/Desktop/Mes projets/BreakOut/resources/sass/app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! /Users/timotheecorrado/Desktop/Mes projets/BreakOut/resources/sass/room_one.scss */"./resources/sass/room_one.scss");
+__webpack_require__(/*! /Users/charles/PhpstormProjects/BreakOut/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Users/charles/PhpstormProjects/BreakOut/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /Users/charles/PhpstormProjects/BreakOut/resources/sass/room_one.scss */"./resources/sass/room_one.scss");
 
 
 /***/ })
