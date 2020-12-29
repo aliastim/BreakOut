@@ -5950,6 +5950,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "enigme1_2",
   props: ['room'],
@@ -5988,6 +5992,9 @@ __webpack_require__.r(__webpack_exports__);
         this.room.enigme = 2;
         this.room.phase = 0;
       }
+    },
+    retour: function retour() {
+      this.room.phase = 0;
     }
   }
 });
@@ -10586,7 +10593,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.corps[data-v-aec34d20]\n{\n    /*display: flex;\n    justify-content: left;\n    width: 80%;*/\n}\n.title-tab[data-v-aec34d20] {\n    height: 30px;\n    background: #1FF042;\n    padding: 2px 10px 2px 10px;\n    max-width: 180px\n}\n.title-tab > p[data-v-aec34d20] {\n    font-family: Courier-Bold, Roboto, monospace !important;\n    color : black;\n    font-size: 16px;\n    text-transform: uppercase;\n    font-weight: 300;\n}\n.sub-tab[data-v-aec34d20] {\n    font-family: Courier-Bold, Roboto, monospace !important;\n    color: #1FF042;\n    font-size: 20px;\n    text-transform: uppercase;\n    //border: 1px solid #1FF042;\n    background: none;\n}\n.sub-tab > table > tbody > tr > td[data-v-aec34d20]\n{\n    border: 1px solid #1FF042;\n    padding: 8px 16px;\n}\n.sub-text[data-v-aec34d20]\n{\n    font-family: Courier-Bold, Roboto, monospace !important;\n    color: #1FF042;\n    font-size: 16px;\n}\n.terminal-input-2[data-v-aec34d20]\n{\n    border: none;\n    border-bottom: 1.5px solid rgba(31, 240, 66, 1);\n    font-family: Courier-Bold, Roboto, monospace !important;\n    background: none;\n    color: #1FF042;\n    font-size: 20px;\n    width: 200px;\n    -webkit-animation: 1.2s press infinite;\n            animation: 1.2s press infinite;\n    text-align: center;\n    margin: 0px 10px 30px 10px;\n}\n.sommebtn[data-v-aec34d20]\n{\n    font-family: Courier-Bold, Roboto, monospace !important;\n    font-size: 20px;\n    background: #1FF042;\n    color: black;\n    width: 25px;\n    height: 25px;\n    border: none;\n}\n\n", ""]);
+exports.push([module.i, "\n.corps[data-v-aec34d20]\n{\n    /*display: flex;\n    justify-content: left;\n    width: 80%;*/\n}\n.title-tab[data-v-aec34d20] {\n    height: 30px;\n    background: #1FF042;\n    padding: 2px 10px 2px 10px;\n    max-width: 180px\n}\n.title-tab > p[data-v-aec34d20] {\n    font-family: Courier-Bold, Roboto, monospace !important;\n    color : black;\n    font-size: 16px;\n    text-transform: uppercase;\n    font-weight: 300;\n}\n.link-retour[data-v-aec34d20] {\n    font-family: Courier-Bold, Roboto, monospace !important;\n    color : #1FF042;\n    font-size: 14px;\n    text-transform: uppercase;\n    font-weight: 300;\n    cursor: pointer;\n}\n.sub-tab[data-v-aec34d20] {\n    font-family: Courier-Bold, Roboto, monospace !important;\n    color: #1FF042;\n    font-size: 20px;\n    text-transform: uppercase;\n    //border: 1px solid #1FF042;\n    background: none;\n}\n.sub-tab > table > tbody > tr > td[data-v-aec34d20]\n{\n    border: 1px solid #1FF042;\n    padding: 8px 16px;\n}\n.sub-text[data-v-aec34d20]\n{\n    font-family: Courier-Bold, Roboto, monospace !important;\n    color: #1FF042;\n    font-size: 16px;\n}\n.terminal-input-2[data-v-aec34d20]\n{\n    border: none;\n    border-bottom: 1.5px solid rgba(31, 240, 66, 1);\n    font-family: Courier-Bold, Roboto, monospace !important;\n    background: none;\n    color: #1FF042;\n    font-size: 20px;\n    width: 200px;\n    -webkit-animation: 1.2s press infinite;\n            animation: 1.2s press infinite;\n    text-align: center;\n    margin: 0px 10px 30px 10px;\n}\n.sommebtn[data-v-aec34d20]\n{\n    font-family: Courier-Bold, Roboto, monospace !important;\n    font-size: 20px;\n    background: #1FF042;\n    color: black;\n    width: 25px;\n    height: 25px;\n    border: none;\n}\n\n", ""]);
 
 // exports
 
@@ -50892,6 +50899,21 @@ var render = function() {
               }
             }
           })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-center w-100 mt-3" }, [
+          _c(
+            "a",
+            {
+              staticClass: "link-retour",
+              on: {
+                click: function($event) {
+                  return _vm.retour()
+                }
+              }
+            },
+            [_vm._v("Retour")]
+          )
         ])
       ])
     ]

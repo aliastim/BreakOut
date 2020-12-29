@@ -81,6 +81,10 @@
             <div class="d-flex justify-content-center pt-3">
                 <input class="terminal-input-2" type="text" v-model="resultat" @keyup="verify()">
             </div>
+
+            <div class="text-center w-100 mt-3">
+                <a class="link-retour" @click="retour()">Retour</a>
+            </div>
         </div>
 
     </div>
@@ -133,6 +137,10 @@ export default {
                 this.room.enigme = 2;
                 this.room.phase = 0;
             }
+        },
+        retour()
+        {
+            this.room.phase = 0;
         }
     }
 }
@@ -156,6 +164,15 @@ export default {
         font-size: 16px;
         text-transform: uppercase;
         font-weight: 300;
+    }
+
+    .link-retour {
+        font-family: Courier-Bold, Roboto, monospace !important;
+        color : #1FF042;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 300;
+        cursor: pointer;
     }
 
     .sub-tab {
