@@ -18,18 +18,18 @@
         <enigme4 :room="this" v-if="(enigme === 4 && phase ===0)"></enigme4>
         <enigme4_1 :room="this" v-if="(enigme === 4 && phase ===1)"></enigme4_1>
 
-        <!--
-        <enigme5></enigme5>
-        <enigme5_1></enigme5_1>
 
-        <enigme6></enigme6>
-        <enigme6_1></enigme6_1>
+        <enigme5 :room="this" v-if="(enigme === 5 && phase ===0)"></enigme5>
+        <enigme5_1 :room="this" v-if="(enigme === 5 && phase ===1)"></enigme5_1>
 
-        <enigme7></enigme7>
-        <enigme7_1></enigme7_1>
-        <enigme7_2></enigme7_2>
-        <enigme7_3></enigme7_3>
-        <enigme7_4></enigme7_4>-->
+        <enigme6 :room="this" v-if="(enigme === 6 && phase ===0)"></enigme6>
+        <enigme6_1 :room="this" v-if="(enigme === 6 && phase ===1)"></enigme6_1>
+
+        <enigme7 :room="this" v-if="(enigme === 7 && phase ===0)"></enigme7>
+        <enigme7_1 :room="this" v-if="(enigme === 7 && phase ===1)"></enigme7_1>
+        <enigme7_2 :room="this" v-if="(enigme === 7 && phase ===2)"></enigme7_2>
+        <enigme7_3 :room="this" v-if="(enigme === 7 && phase ===3)"></enigme7_3>
+        <enigme7_4 :room="this" v-if="(enigme === 6 && phase ===4)"></enigme7_4>
     </div>
 </template>
 <script>
@@ -76,6 +76,11 @@ export default {
 </script>
 <!--<style scoped src="css/room404.css"></style>-->
 <style>
+
+    @font-face {
+        font-family: "Montserrat";
+        src: url("/polices/montserrat/Montserrat-Regular.otf");
+    }
 
     @font-face {
         font-family: "Roboto";
