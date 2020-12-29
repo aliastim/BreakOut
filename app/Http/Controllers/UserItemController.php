@@ -29,7 +29,8 @@ class UserItemController extends Controller
                     // Vérifie que l'utilisateur possède au moins 1 item
                     if($item_verify->amount >= 1)
                     {
-                        return response()->json($item_verify, 200);
+                        /*return response()->json($item_verify, 200);*/
+                        return response()->json("itemok", 200);
                     } else
                     {
                         return response()->json("notitem", 200);
