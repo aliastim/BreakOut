@@ -5362,13 +5362,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RoomHeader",
-  props: ['room', 'Timer'],
-  data: function data() {
-    return {
-      timer: this.room.timer
-    };
-  },
-  methods: {}
+  components: {
+    Timer: _Timer__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
 });
 
 /***/ }),
@@ -5390,25 +5386,52 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: {
-    timeLeft: {
-      type: Number,
-      required: true
+  data: function data() {
+    return {
+      displayHours: 0,
+      displayMinutes: 0,
+      displaySeconds: 0
+    };
+  },
+  computed: {
+    _seconds: function _seconds() {
+      return 1000;
+    },
+    _minutes: function _minutes() {
+      return this._seconds * 60;
+    },
+    _hours: function _hours() {
+      return this._minutes * 60;
+    }
+  },
+  mounted: function mounted() {
+    this.showRemaining();
+  },
+  methods: {
+    formatNum: function formatNum(num) {
+      return num < 10 ? "0" + num : num;
+    },
+    showRemaining: function showRemaining() {
+      var _this = this;
+
+      var timer = setInterval(function () {
+        var now = new Date();
+        var end = new Date(2021, 4, 22, 10, 10, 10, 10);
+        var distance = end.getTime() - now.getTime();
+
+        if (distance < 0) {
+          clearInterval(timer);
+          return;
+        }
+
+        var hours = math.floor(distance / _this._hours);
+        var minutes = math.floor(distance % _this._hours / _this._minutes);
+        var seconds = math.floor(distance % _this._minutes / _this._seconds);
+        _this.displayMinutes = _this.formatNum(minutes);
+        _this.displaySeconds = _this.formatNum(seconds);
+        _this.displayHours = _this.formatNum(hours);
+      });
     }
   }
 });
@@ -5654,9 +5677,7 @@ __webpack_require__.r(__webpack_exports__);
     RoomHeader: _layout_RoomHeader__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
-    return {
-      timer: 60
-    };
+    return {};
   },
   mounted: function mounted() {
     this.app.navbool = false;
@@ -49662,11 +49683,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _vm._v("\n    test room header "),
-    _c("br"),
-    _vm._v("\n    timer : " + _vm._s(_vm.timer) + "\n\n")
-  ])
+  return _c(
+    "div",
+    [_vm._v("\n    test room header "), _c("br"), _vm._v(" "), _c("Timer")],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -49691,25 +49712,15 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "base-timer" }, [
-    _c(
-      "svg",
-      {
-        staticClass: "base-timer__svg",
-        attrs: { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }
-      },
-      [
-        _c("g", { staticClass: "base-timer__circle" }, [
-          _c("circle", {
-            staticClass: "base-timer__path-elapsed",
-            attrs: { cx: "50", cy: "50", r: "46.5" }
-          })
-        ])
-      ]
-    ),
-    _vm._v(" "),
-    _c("span", { staticClass: "base-timer__label" }, [
-      _vm._v("\n  " + _vm._s(_vm.formattedTimeLeft) + "\n")
-    ])
+    _vm._v(
+      "\n    " +
+        _vm._s(_vm.displayHours) +
+        "\n    " +
+        _vm._s(_vm.displayMinutes) +
+        "\n    " +
+        _vm._s(_vm.displaySeconds) +
+        "\n"
+    )
   ])
 }
 var staticRenderFns = []
@@ -66707,14 +66718,15 @@ __webpack_require__.r(__webpack_exports__);
 /*!**************************************************!*\
   !*** ./resources/js/components/layout/Timer.vue ***!
   \**************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Timer_vue_vue_type_template_id_4f447fcb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Timer.vue?vue&type=template&id=4f447fcb& */ "./resources/js/components/layout/Timer.vue?vue&type=template&id=4f447fcb&");
 /* harmony import */ var _Timer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Timer.vue?vue&type=script&lang=js& */ "./resources/js/components/layout/Timer.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Timer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Timer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -66744,7 +66756,7 @@ component.options.__file = "resources/js/components/layout/Timer.vue"
 /*!***************************************************************************!*\
   !*** ./resources/js/components/layout/Timer.vue?vue&type=script&lang=js& ***!
   \***************************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

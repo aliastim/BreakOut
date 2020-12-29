@@ -17,7 +17,7 @@ export default {
     components: {RoomHeader},
     data(){
         return {
-            timer: 60,
+
         }
     },
     mounted() {
