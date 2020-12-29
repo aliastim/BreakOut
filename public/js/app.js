@@ -5408,6 +5408,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -50371,7 +50374,8 @@ var render = function() {
       _c("br"),
       _vm._v(" "),
       _c("Timer", { attrs: { hours: 1, minutes: 0, seconds: 0 } }),
-      _vm._v("\n\n    timer : " + _vm._s(_vm.countDown) + "\n\n")
+      _vm._v(" "),
+      _c("Countdown", { attrs: { "count-down": _vm.countDown } })
     ],
     1
   )

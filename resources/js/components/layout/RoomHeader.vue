@@ -7,7 +7,10 @@
         :seconds="0"
         />
 
-        timer : {{countDown}}
+        <Countdown
+            :count-down="countDown"
+        />
+
 
     </div>
 </template>
