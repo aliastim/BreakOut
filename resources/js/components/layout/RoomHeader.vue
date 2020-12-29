@@ -22,7 +22,7 @@ export default {
     components: {Timer, Countdown},
     data(){
         return{
-            countDown: this.countDown,
+            countDown: this.room.countDown,
         }
     }
 }

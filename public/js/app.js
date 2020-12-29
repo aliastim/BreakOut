@@ -5420,7 +5420,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      countDown: this.countDown
+      countDown: this.room.countDown
     };
   }
 });
