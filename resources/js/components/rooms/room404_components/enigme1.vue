@@ -1,15 +1,17 @@
 <template>
     <div class="terminal-body">
-        <p class="terminal-text">
-            > ERROR ROOM UNLOCKED<br>
-            ><br>
-            > System Message<br>
-            > Select a choice :<br>
-            ><br>
-            > 1) Journal de bord<br>
-            > 2) Accès système<br>
-            > <input class="terminal-input" type="text" id="terminal-input" v-model="input" @keyup="inputverify()" autofocus>
-        </p>
+        <div class="body-c">
+            <p class="terminal-text">
+                > ERROR ROOM UNLOCKED<br>
+                ><br>
+                > System Message<br>
+                > Select a choice :<br>
+                ><br>
+                > 1) Journal de bord<br>
+                > 2) Accès système<br>
+                > <input class="terminal-input" type="text" id="terminal-input" v-model="input" @keyup="inputverify()" autofocus>
+            </p>
+        </div>
     </div>
 </template>
 
@@ -30,7 +32,13 @@ export default {
 
             } else if (this.input === "2")
             {
+                // Vraie réponse
                 this.room.phase = 2;
+
+                // Déplacement rapide
+                /*this.room.enigme = 3;
+                this.room.phase = 0;*/
+
             } else
             {
                 //console.log(this.input);
