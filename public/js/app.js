@@ -5408,12 +5408,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RoomHeader",
+  props: ['room', 'countDown'],
   components: {
     Timer: _Timer__WEBPACK_IMPORTED_MODULE_0__["default"],
     Countdown: _Countdown__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -50372,8 +50371,7 @@ var render = function() {
       _c("br"),
       _vm._v(" "),
       _c("Timer", { attrs: { hours: 1, minutes: 0, seconds: 0 } }),
-      _vm._v(" "),
-      _c("Countdown", { attrs: { "count-down": _vm.countDown } })
+      _vm._v("\n\n    timer : " + _vm._s(_vm.countDown) + "\n\n")
     ],
     1
   )

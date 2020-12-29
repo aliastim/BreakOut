@@ -7,9 +7,7 @@
         :seconds="0"
         />
 
-        <Countdown
-            :count-down="countDown"
-        />
+        timer : {{countDown}}
 
     </div>
 </template>
@@ -19,6 +17,7 @@ import Timer from './Timer'
 import Countdown from "./Countdown";
 export default {
     name: "RoomHeader",
+    props: ['room', 'countDown'],
     components: {Timer, Countdown},
     data(){
         return{
