@@ -17,7 +17,7 @@ export default {
     components: {RoomHeader},
     data(){
         return {
-
+            countDown: 60,
         }
     },
     mounted() {
