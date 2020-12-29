@@ -63,7 +63,7 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
     .e1-body{
         font-family: Montserrat;
     }
