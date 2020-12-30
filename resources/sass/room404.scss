@@ -1,6 +1,17 @@
-.r404-body
+.interrupteur72
 {
-    width: 200px;
-    height: 200px;
-    background: violet;
+    height: 100px;
+    width: 100px;
+    background-image: url(img/salles/room404/interrupteur_eteint.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    transition: 0.2s;
+    border: none;
+}
+.interrupteur72:hover
+{
+    background-image: url(img/salles/room404/interrupteur_allume.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 }

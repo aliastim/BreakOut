@@ -28,8 +28,15 @@
         <enigme7 :room="this" v-if="(enigme === 7 && phase ===0)"></enigme7>
         <enigme7_1 :room="this" v-if="(enigme === 7 && phase ===1)"></enigme7_1>
         <enigme7_2 :room="this" v-if="(enigme === 7 && phase ===2)"></enigme7_2>
+
+        <!--Victoire-->
         <enigme7_3 :room="this" v-if="(enigme === 7 && phase ===3)"></enigme7_3>
-        <enigme7_4 :room="this" v-if="(enigme === 6 && phase ===4)"></enigme7_4>
+
+        <!--Défaite-->
+        <enigme7_4 :room="this" v-if="(enigme === 7 && phase ===4)"></enigme7_4>
+
+        <!--Final - Trésor-->
+        <enigme7_5 :room="this" v-if="(enigme === 7 && phase ===5)"></enigme7_5>
     </div>
 </template>
 <script>
@@ -54,10 +61,11 @@ import Enigme7_1 from "./room404_components/enigme7_1";
 import Enigme7_2 from "./room404_components/enigme7_2";
 import Enigme7_3 from "./room404_components/enigme7_3";
 import Enigme7_4 from "./room404_components/enigme7_4";
+import Enigme7_5 from "./room404_components/enigme7_5";
 export default {
     name: "room404",
     props: ['app'],
-    components: {RoomHeader, Enigme0, Enigme1, Enigme1_1, Enigme1_2, Enigme2, Enigme2_1, Enigme3, Enigme3_1, Enigme4, Enigme4_1, Enigme5, Enigme5_1, Enigme6, Enigme6_1, Enigme7, Enigme7_1, Enigme7_2, Enigme7_3, Enigme7_4},
+    components: {RoomHeader, Enigme0, Enigme1, Enigme1_1, Enigme1_2, Enigme2, Enigme2_1, Enigme3, Enigme3_1, Enigme4, Enigme4_1, Enigme5, Enigme5_1, Enigme6, Enigme6_1, Enigme7, Enigme7_1, Enigme7_2, Enigme7_3, Enigme7_4, Enigme7_5},
     data(){
         return {
             timer: 45,
