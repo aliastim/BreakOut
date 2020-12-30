@@ -2,7 +2,7 @@
     <div class="terminal-body text-center">
         <div class="body-c">
             <p class="terminal-text">
-                Vous êtes assez malin, je dois bien le reconnaitre.<br><br>
+                Vous êtes assez malin, je dois bien le reconnaître.<br><br>
 
                 Mais celle-ci était facile !<br><br>
 
@@ -11,7 +11,7 @@
                 la réponse au sens de la vie ? Qu’en pensez-vous ?<br>
 
                 Personnellement, cette question me tracasse.<br>
-                En tout cas, ce nombre pourrait etre une partie de la réponse pour cette nouvelle énigme.<br><br><br>
+                En tout cas, ce nombre pourrait être une partie de la réponse pour cette nouvelle énigme.<br><br><br>
 
 
 

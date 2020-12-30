@@ -36,8 +36,8 @@ export default {
                 this.room.phase = 2;
 
                 // Déplacement rapide
-                /*this.room.enigme = 6;
-                this.room.phase = 0;*/
+                /*this.room.enigme = 7;
+                this.room.phase = 2;*/
 
             } else
             {

@@ -1,6 +1,17 @@
-.r404-body {
-  width: 200px;
-  height: 200px;
-  background: violet;
+.interrupteur72 {
+  height: 100px;
+  width: 100px;
+  background-image: url(/images/interrupteur_eteint.png?80b988821116baf7bfc92a39bbdebc18);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  transition: 0.2s;
+  border: none;
+}
+
+.interrupteur72:hover {
+  background-image: url(/images/interrupteur_allume.png?bf0ff0932cf7ca6d7f947b13001b66fe);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 

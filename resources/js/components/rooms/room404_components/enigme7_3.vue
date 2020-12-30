@@ -30,7 +30,7 @@ export default {
     },
     methods: {
         suivant() {
-            this.room.phase = 4;
+            this.room.phase = 5;
         }
     }
 }
