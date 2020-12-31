@@ -33,6 +33,9 @@ export default {
             input: ""
         }
     },
+    mounted() {
+        document.title="Breakout - ROOM404";
+    },
     methods: {
         inputverify() {
             if(this.input === "0")

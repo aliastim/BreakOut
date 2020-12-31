@@ -3,9 +3,21 @@
         <div class="body-c text-center">
             <div>
                 <p class="terminal-text">
-                    Perdu<br>
+                    ACTIVATION DES OGIVES NUCLÉAIRES !<br>
+                    ---------------------------------------------------------------------------<br>
                 </p>
-                <img class="nuc" src="img/salles/room404/nuc.png">
+                <img class="nuc" src="img/salles/room404/nuc.gif">
+                <p class="terminal-text" style="font-size: 14px;">
+                    Malheureusement, vous n'avez pas réussi à venir à bout des pirates.<br><br>
+                    La pression et le manque de temps auront eu raison de vous,<br>
+                    la Terre n'est dorénavant plus qu'une vaste boule de poussières radiocatives<br><br>
+
+                    Votre prouesse n'a pour autant pas été vaine !<br>
+                    N'hésitez pas à faire face de nouveau à la ROOM404 !<br><br>
+
+                    À TRÈS BIENTÔT !
+                </p>
+
             </div>
 
             <button class="btn-enigme" @click="home()">Retour à l'accueil</button>
@@ -21,6 +33,9 @@ export default {
         return {
 
         }
+    },
+    mounted() {
+        document.title="Breakout - ROOM404";
     },
     methods: {
         home() {

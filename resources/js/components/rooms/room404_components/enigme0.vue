@@ -30,6 +30,9 @@ export default {
             errors: []
         }
     },
+    mounted() {
+        document.title="Breakout - ROOM404";
+    },
     computed : {
         key_verify: function () {
             const data = {

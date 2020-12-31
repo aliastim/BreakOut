@@ -19,6 +19,9 @@ export default {
             response:"",
         }
     },
+    mounted() {
+        document.title="Breakout - ROOM404";
+    },
     methods: {
         responseverify(){
             if((this.response).toUpperCase() === "PX30")

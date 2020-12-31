@@ -47,6 +47,9 @@ export default {
             face43: "FACE43"
         }
     },
+    mounted() {
+        document.title="Breakout - ROOM404";
+    },
     methods: {
         verifyf34()
         {
