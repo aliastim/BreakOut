@@ -79,4 +79,22 @@ class UserItemController extends Controller
             return response()->json("notconnected", 200);
         }
     }
+
+    public function addGold(Request $request)
+    {
+        $user = Auth::user();
+        //Vérifie que l'utilisateur est connecté
+        if (isset($user->id) and (!empty($user->id))) {
+
+            $gold = $request->gold;
+
+            $golduser = User::find($user->id);
+            $golduser->gold = $golduser->gold + $gold;
+            $golduser->save();
+            return response()->json($gold . " pièces d'or ont été ajoutées au compte", 200);
+        } else
+        {
+            return response()->json(["error" => "L'utilisateur n'est pas connecté"], 401);
+        }
+    }
 }

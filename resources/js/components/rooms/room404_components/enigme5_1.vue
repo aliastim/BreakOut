@@ -29,6 +29,9 @@ export default {
             result: ""
         }
     },
+    mounted() {
+        document.title="Breakout - ROOM404";
+    },
     methods: {
         testzero(){
             this.result = this.result + this.zero;

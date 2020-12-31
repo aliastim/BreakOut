@@ -107,6 +107,9 @@ export default {
 
         }
     },
+    mounted() {
+        document.title="Breakout - ROOM404";
+    },
     methods: {
         puissance() {
             this.puissanceresponse = parseInt(this.puissanceinput, 16);

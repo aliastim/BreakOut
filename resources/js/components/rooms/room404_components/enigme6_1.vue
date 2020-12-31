@@ -34,6 +34,9 @@ export default {
             triangle: 0,
         }
     },
+    mounted() {
+        document.title="Breakout - ROOM404";
+    },
     methods: {
         responseverify()
         {

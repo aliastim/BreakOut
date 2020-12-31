@@ -32,6 +32,9 @@ export default {
 
         }
     },
+    mounted() {
+        document.title="Breakout - ROOM404";
+    },
     methods: {
         suivant() {
             this.room.phase = 1;

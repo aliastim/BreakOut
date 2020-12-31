@@ -113,6 +113,9 @@ export default {
             case64: "",
         }
     },
+    mounted() {
+        document.title="Breakout - ROOM404";
+    },
     methods: {
         verify(){
             if(Number.isInteger(parseInt(this.case11)) && Number.isInteger(parseInt(this.case12)) && Number.isInteger(parseInt(this.case13)) && Number.isInteger(parseInt(this.case14)) && Number.isInteger(parseInt(this.case21)) && Number.isInteger(parseInt(this.case22)) && Number.isInteger(parseInt(this.case23)) && Number.isInteger(parseInt(this.case24)) && Number.isInteger(parseInt(this.case31)) && Number.isInteger(parseInt(this.case32)) && Number.isInteger(parseInt(this.case33)) && Number.isInteger(parseInt(this.case34)) && Number.isInteger(parseInt(this.case41)) && Number.isInteger(parseInt(this.case42)) && Number.isInteger(parseInt(this.case43)) && Number.isInteger(parseInt(this.case44)) && Number.isInteger(parseInt(this.case51)) && Number.isInteger(parseInt(this.case52)) && Number.isInteger(parseInt(this.case53)) && Number.isInteger(parseInt(this.case54)) && Number.isInteger(parseInt(this.case61)) && Number.isInteger(parseInt(this.case62)) && Number.isInteger(parseInt(this.case63)) && Number.isInteger(parseInt(this.case64))){

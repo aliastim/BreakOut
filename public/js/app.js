@@ -5794,6 +5794,9 @@ __webpack_require__.r(__webpack_exports__);
       errors: []
     };
   },
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
+  },
   computed: {
     key_verify: function key_verify() {
       var _this = this;
@@ -5859,6 +5862,9 @@ __webpack_require__.r(__webpack_exports__);
       input: ""
     };
   },
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
+  },
   methods: {
     inputverify: function inputverify() {
       if (this.input === "1") {
@@ -5867,8 +5873,8 @@ __webpack_require__.r(__webpack_exports__);
         // Vraie réponse
         this.room.phase = 2; // Déplacement rapide
 
-        /*this.room.enigme = 7;
-        this.room.phase = 2;*/
+        /*this.room.enigme = 6;
+        this.room.phase = 0;*/
       } else {
         //console.log(this.input);
         this.input = "";
@@ -5921,6 +5927,9 @@ __webpack_require__.r(__webpack_exports__);
     return {
       input: ""
     };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
   },
   methods: {
     inputverify: function inputverify() {
@@ -6051,6 +6060,9 @@ __webpack_require__.r(__webpack_exports__);
       resultat: ""
     };
   },
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
+  },
   methods: {
     puissance: function puissance() {
       this.puissanceresponse = parseInt(this.puissanceinput, 16);
@@ -6124,6 +6136,9 @@ __webpack_require__.r(__webpack_exports__);
   props: ['room'],
   data: function data() {
     return {};
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
   },
   methods: {
     suivant: function suivant() {
@@ -6252,6 +6267,9 @@ __webpack_require__.r(__webpack_exports__);
       case64: ""
     };
   },
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
+  },
   methods: {
     verify: function verify() {
       if (Number.isInteger(parseInt(this.case11)) && Number.isInteger(parseInt(this.case12)) && Number.isInteger(parseInt(this.case13)) && Number.isInteger(parseInt(this.case14)) && Number.isInteger(parseInt(this.case21)) && Number.isInteger(parseInt(this.case22)) && Number.isInteger(parseInt(this.case23)) && Number.isInteger(parseInt(this.case24)) && Number.isInteger(parseInt(this.case31)) && Number.isInteger(parseInt(this.case32)) && Number.isInteger(parseInt(this.case33)) && Number.isInteger(parseInt(this.case34)) && Number.isInteger(parseInt(this.case41)) && Number.isInteger(parseInt(this.case42)) && Number.isInteger(parseInt(this.case43)) && Number.isInteger(parseInt(this.case44)) && Number.isInteger(parseInt(this.case51)) && Number.isInteger(parseInt(this.case52)) && Number.isInteger(parseInt(this.case53)) && Number.isInteger(parseInt(this.case54)) && Number.isInteger(parseInt(this.case61)) && Number.isInteger(parseInt(this.case62)) && Number.isInteger(parseInt(this.case63)) && Number.isInteger(parseInt(this.case64))) {
@@ -6316,6 +6334,9 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {};
   },
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
+  },
   methods: {
     suivant: function suivant() {
       this.room.phase = 1;
@@ -6373,6 +6394,9 @@ __webpack_require__.r(__webpack_exports__);
       ve: "E",
       result: ""
     };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
   },
   methods: {
     responseverify: function responseverify() {
@@ -6454,6 +6478,9 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {};
   },
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
+  },
   methods: {
     suivant: function suivant() {
       this.room.phase = 1;
@@ -6491,6 +6518,9 @@ __webpack_require__.r(__webpack_exports__);
     return {
       response: ""
     };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
   },
   methods: {
     responseverify: function responseverify() {
@@ -6533,6 +6563,9 @@ __webpack_require__.r(__webpack_exports__);
   props: ['room'],
   data: function data() {
     return {};
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
   },
   methods: {
     suivant: function suivant() {
@@ -6581,6 +6614,9 @@ __webpack_require__.r(__webpack_exports__);
       un: "1",
       result: ""
     };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
   },
   methods: {
     testzero: function testzero() {
@@ -6646,6 +6682,9 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {};
   },
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
+  },
   methods: {
     suivant: function suivant() {
       this.room.phase = 1;
@@ -6699,6 +6738,9 @@ __webpack_require__.r(__webpack_exports__);
       triangle: 0
     };
   },
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
+  },
   methods: {
     responseverify: function responseverify() {
       if (parseInt(this.carre) === 7 && parseInt(this.triangle) === 4) {
@@ -6743,6 +6785,9 @@ __webpack_require__.r(__webpack_exports__);
   props: ['room'],
   data: function data() {
     return {};
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
   },
   methods: {
     suivant: function suivant() {
@@ -6913,6 +6958,9 @@ __webpack_require__.r(__webpack_exports__);
       face43: "FACE43"
     };
   },
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
+  },
   methods: {
     verifyf34: function verifyf34() {
       //Bonne réponse
@@ -6971,6 +7019,9 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {};
   },
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
+  },
   methods: {
     suivant: function suivant() {
       this.room.phase = 5;
@@ -7004,11 +7055,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "enigme7_4",
   props: ['room'],
   data: function data() {
     return {};
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
   },
   methods: {
     home: function home() {
@@ -7043,13 +7109,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "enigme7_5",
   props: ['room'],
   data: function data() {
     return {};
   },
-  methods: {}
+  mounted: function mounted() {
+    document.title = "Breakout - ROOM404";
+  },
+  methods: {
+    home: function home() {
+      window.location.href = '/home';
+    }
+  },
+  computed: {
+    gold: function gold() {
+      var data = {
+        gold: 500
+      };
+      this.room.app.req.post("useritems/addgold", data).then(function (response) {
+        console.log(response.data);
+      }); //console.log("gold");
+    }
+  }
 });
 
 /***/ }),
@@ -54610,14 +54697,49 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", [
       _c("p", { staticClass: "terminal-text" }, [
-        _vm._v("\n                Perdu"),
+        _vm._v("\n                ACTIVATION DES OGIVES NUCLÉAIRES !"),
+        _c("br"),
+        _vm._v(
+          "\n                ---------------------------------------------------------------------------"
+        ),
         _c("br")
       ]),
       _vm._v(" "),
       _c("img", {
         staticClass: "nuc",
-        attrs: { src: "img/salles/room404/nuc.png" }
-      })
+        attrs: { src: "img/salles/room404/nuc.gif" }
+      }),
+      _vm._v(" "),
+      _c(
+        "p",
+        { staticClass: "terminal-text", staticStyle: { "font-size": "14px" } },
+        [
+          _vm._v(
+            "\n                Malheureusement, vous n'avez pas réussi à venir à bout des pirates."
+          ),
+          _c("br"),
+          _c("br"),
+          _vm._v(
+            "\n                La pression et le manque de temps auront eu raison de vous,"
+          ),
+          _c("br"),
+          _vm._v(
+            "\n                la Terre n'est dorénavant plus qu'une vaste boule de poussières radiocatives"
+          ),
+          _c("br"),
+          _c("br"),
+          _vm._v(
+            "\n\n                Votre prouesse n'a pour autant pas été vaine !"
+          ),
+          _c("br"),
+          _vm._v(
+            "\n                N'hésitez pas à faire face de nouveau à la ROOM404 !"
+          ),
+          _c("br"),
+          _c("br"),
+          _vm._v("\n\n                À TRÈS BIENTÔT !\n            ")
+        ]
+      )
     ])
   }
 ]
@@ -54642,31 +54764,63 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c text-center" }, [
+      _vm._v("\n        " + _vm._s(_vm.gold) + "\n        "),
+      _c(
+        "p",
+        {
+          staticClass: "terminal-text",
+          staticStyle: { "font-size": "30px", "font-weight": "900" }
+        },
+        [_vm._v("VICTOIRE")]
+      ),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "p",
+        { staticClass: "terminal-text" },
+        [
+          _c("br"),
+          _vm._v("Pour vous récompenser de vos prouesses,"),
+          _c("br"),
+          _vm._v(" "),
+          _c("B", [_vm._v("500")]),
+          _vm._v(" pièces d'or on été ajoutées à votre compte !"),
+          _c("br"),
+          _c("br")
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "btn-enigme",
+          on: {
+            click: function($event) {
+              return _vm.home()
+            }
+          }
+        },
+        [_vm._v("Retour à l'accueil")]
+      )
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "terminal-body text-center" }, [
-      _c("div", { staticClass: "body-c text-center" }, [
-        _c("p", [_vm._v("Vos trésors")]),
-        _vm._v(" "),
-        _c("div", [
-          _c("img", {
-            staticClass: "coffre",
-            attrs: {
-              src: "img/Banque_graphique/Objets/BreakOut_Coffre_Surprise.png"
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v("\n            Vous gagnez 500 pièces d'or !"),
-          _c("br")
-        ])
-      ])
+    return _c("div", [
+      _c("img", {
+        staticClass: "coffre",
+        attrs: {
+          src: "img/Banque_graphique/Objets/BreakOut_Coffre_Surprise.png"
+        }
+      })
     ])
   }
 ]

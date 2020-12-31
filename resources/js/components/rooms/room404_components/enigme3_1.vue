@@ -41,6 +41,9 @@ export default {
             result: "",
         }
     },
+    mounted() {
+        document.title="Breakout - ROOM404";
+    },
     methods: {
         responseverify(){
             if(this.response === "42")
