@@ -71,13 +71,28 @@ export default {
             timer: 45,
             enigme: 0,
             phase: 0,
+
+            hour: "00",
+            minute: "45",
+            second: "00",
+
+            losted: false,
         }
     },
     mounted() {
         this.app.navbool = false;
     },
     methods : {
+        lost()
+        {
+            if(this.losted === false)
+            {
+                this.losted = true
+                this.enigme = 7;
+                this.phase = 4;
+            }
 
+        }
     },
 }
 
@@ -103,6 +118,37 @@ export default {
     @font-face {
         font-family: "Courier-Bold";
         src: url("/polices/Courier-Bold.ttf");
+    }
+
+    .timer
+    {
+        font-family: Roboto, monospace !important;
+        border-color : #1FF042;
+        background: none;
+        color : #1FF042;
+        text-transform: uppercase;
+        box-shadow: 0 0 8px #1FF042;
+    }
+
+    .modalingame
+    {
+        font-family: Roboto, monospace !important;
+        border: 1px solid #1FF042;
+        background: none;
+        color : #1FF042;
+        text-transform: uppercase;
+        padding: 4px 20px;
+        font-size: 20px;
+        box-shadow: 0 0 8px #1FF042;
+        transition: 0.3s;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .modalingame:hover
+    {
+        background: #1FF042;
+        color: #232323;
     }
 
     .r404-body
