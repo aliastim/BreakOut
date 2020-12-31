@@ -1,15 +1,48 @@
 <template>
     <div>
-        <div class="row justify-content-center">
-            <input type="text" id="symb_1" v-model="symb_1" class="form-control">
-            <input type="text" id="symb_2" v-model="symb_2" class="form-control">
-            <input type="text" id="symb_3" v-model="symb_3" class="form-control">
-        </div>
-        <div class="row justify-content-center">
-            <button v-on:click="checkForm" class="btn-primary">Valider</button>
-        </div>
-        <div class="row justify-content-center">
-            <button v-if="success === true" v-on:click="unlock">Etape suivante</button>
+        <div class="row">
+            <div class="col-md-2">
+                <img :src="'/images/crystal_infini/alphabet_elfique.gif'" alt="">
+            </div>
+            <div class="col-md-9">
+                <div class="row justify-content-center">
+                    <input type="text" id="symb_1" v-model="symb_1" class="form-control">
+                    <input type="text" id="symb_2" v-model="symb_2" class="form-control">
+                    <input type="text" id="symb_3" v-model="symb_3" class="form-control">
+                </div>
+                <div class="row justify-content-center">
+                    <button v-on:click="checkForm" class="btn-primary">Valider</button>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="row">
+                        <div class="col-md-6">
+
+                        </div>
+                        <div class="col-md-6">
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <button v-if="success === true" v-on:click="unlock">Etape suivante</button>
+                </div>
+            </div>
         </div>
     </div>
 </template>

@@ -5790,6 +5790,39 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "enigma_1",
   props: ['room'],
@@ -52272,92 +52305,121 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "row justify-content-center" }, [
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.symb_1,
-            expression: "symb_1"
-          }
-        ],
-        staticClass: "form-control",
-        attrs: { type: "text", id: "symb_1" },
-        domProps: { value: _vm.symb_1 },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.symb_1 = $event.target.value
-          }
-        }
-      }),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-2" }, [
+        _c("img", {
+          attrs: { src: "/images/crystal_infini/alphabet_elfique.gif", alt: "" }
+        })
+      ]),
       _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.symb_2,
-            expression: "symb_2"
-          }
-        ],
-        staticClass: "form-control",
-        attrs: { type: "text", id: "symb_2" },
-        domProps: { value: _vm.symb_2 },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
+      _c("div", { staticClass: "col-md-9" }, [
+        _c("div", { staticClass: "row justify-content-center" }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.symb_1,
+                expression: "symb_1"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: { type: "text", id: "symb_1" },
+            domProps: { value: _vm.symb_1 },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.symb_1 = $event.target.value
+              }
             }
-            _vm.symb_2 = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.symb_3,
-            expression: "symb_3"
-          }
-        ],
-        staticClass: "form-control",
-        attrs: { type: "text", id: "symb_3" },
-        domProps: { value: _vm.symb_3 },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
+          }),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.symb_2,
+                expression: "symb_2"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: { type: "text", id: "symb_2" },
+            domProps: { value: _vm.symb_2 },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.symb_2 = $event.target.value
+              }
             }
-            _vm.symb_3 = $event.target.value
-          }
-        }
-      })
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row justify-content-center" }, [
-      _c(
-        "button",
-        { staticClass: "btn-primary", on: { click: _vm.checkForm } },
-        [_vm._v("Valider")]
-      )
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row justify-content-center" }, [
-      _vm.success === true
-        ? _c("button", { on: { click: _vm.unlock } }, [
-            _vm._v("Etape suivante")
-          ])
-        : _vm._e()
+          }),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.symb_3,
+                expression: "symb_3"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: { type: "text", id: "symb_3" },
+            domProps: { value: _vm.symb_3 },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.symb_3 = $event.target.value
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row justify-content-center" }, [
+          _c(
+            "button",
+            { staticClass: "btn-primary", on: { click: _vm.checkForm } },
+            [_vm._v("Valider")]
+          )
+        ]),
+        _vm._v(" "),
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "row justify-content-center" }, [
+          _vm.success === true
+            ? _c("button", { on: { click: _vm.unlock } }, [
+                _vm._v("Etape suivante")
+              ])
+            : _vm._e()
+        ])
+      ])
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-6" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-6" })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [_c("div"), _vm._v(" "), _c("div")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [_c("div"), _vm._v(" "), _c("div")])
+    ])
+  }
+]
 render._withStripped = true
 
 
