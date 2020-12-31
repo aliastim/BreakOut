@@ -10,7 +10,7 @@
             </div>
         </div>
 
-        <audio id="morse" src="audio/rooms/morse404.mp3" loop autoplay></audio>
+        <audio id="morse" src="audio/rooms/room404/morse404.mp3" loop autoplay></audio>
         <!--<script type="application/javascript">
             var player = document.querySelector('#morse');
             player.play();
