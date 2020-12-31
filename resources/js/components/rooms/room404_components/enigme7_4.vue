@@ -1,6 +1,7 @@
 <template>
     <div class="terminal-body text-center">
         <div class="body-c text-center">
+            <audio id="music" src="audio/rooms/room404/defeat.mp3" loop autoplay></audio>
             <div>
                 <p class="terminal-text">
                     ACTIVATION DES OGIVES NUCLÉAIRES !<br>

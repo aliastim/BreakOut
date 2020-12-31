@@ -1,6 +1,7 @@
 <template>
     <div class="terminal-body text-center">
         <div class="body-c">
+            <audio id="music" src="audio/rooms/room404/3.mp3" loop autoplay></audio>
             <div class="text-center">
                 <p class="terminal-text">Votre réponse :</p>
                 <input class="terminal-input" type="text" v-model="response" @keyup="responseverify()">

@@ -1,6 +1,7 @@
 <template>
     <div class="terminal-body text-center">
         <div class="body-c">
+            <audio id="music" src="audio/rooms/room404/2.mp3" loop autoplay></audio>
             <div class="cadre-reponse m-auto">
                 Mot de passe de l’énigme 1 :<B style="font-weight: 900;">16372593</B>
             </div>
