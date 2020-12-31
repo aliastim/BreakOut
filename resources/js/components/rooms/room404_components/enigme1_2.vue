@@ -1,6 +1,7 @@
 <template>
     <div class="terminal-body d-flex justify-content-center">
         <div class="body-c">
+            <audio id="music" src="audio/rooms/room404/1.mp3" loop autoplay></audio>
             <div class="corps">
                 <div class="title-tab">
                     <p>Matrice Base 16</p>

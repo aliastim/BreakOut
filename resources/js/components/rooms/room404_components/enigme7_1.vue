@@ -1,6 +1,7 @@
 <template>
     <div class="terminal-body text-center">
         <div class="body-c">
+            <audio id="music" src="audio/rooms/room404/7.mp3" loop autoplay></audio>
             <div class="w-100 text-center">
                 <p class="terminal-text">Activez les interrupteurs dans l'ordre :</p>
             </div>
