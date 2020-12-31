@@ -11,6 +11,8 @@
             :count-down="countDown"
         />
 
+        {{countDown}}
+
 
     </div>
 </template>
