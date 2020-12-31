@@ -5755,6 +5755,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "enigma_1",
   props: ['room'],
@@ -5763,12 +5770,23 @@ __webpack_require__.r(__webpack_exports__);
       symb_1: null,
       symb_2: null,
       symb_3: null,
-      success: false
+      success: false,
+      opacity: false
     };
   },
   mounted: function mounted() {
     this.checkForm();
     this.unlock();
+    this.changeOpacity();
+  },
+  created: function created() {},
+  computed: {
+    myClass: function myClass() {
+      return {
+        fullOpacity: this.opacity,
+        noOpacity: !this.opacity
+      };
+    }
   },
   methods: {
     checkForm: function checkForm() {
@@ -5782,6 +5800,14 @@ __webpack_require__.r(__webpack_exports__);
         this.room.enigma = 2;
         console.log(this.room.enigma);
       }
+    },
+    randomNumber: function randomNumber(min, max) {
+      return Math.random() * (max - min) + min;
+    },
+    changeOpacity: function changeOpacity() {
+      setInterval(function () {
+        this.opacity = !this.opacity;
+      }.bind(this), this.randomNumber(1000, 5000));
     }
   }
 });
@@ -11844,7 +11870,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\ninput[data-v-b67d88f2]{\n    border-radius: 4px;\n    height: 80px;\n    width: 80px;\n    margin: 25px;\n    text-align: center;\n    font-size: 20px;\n}\n.input-true[data-v-b67d88f2]{\n    border-color: green;\n}\n.input-false[data-v-b67d88f2]{\n    border-color: red;\n}\n.btn-primary[data-v-b67d88f2]{\n    font-size: 20px;\n}\n\n", ""]);
+exports.push([module.i, "\ninput[data-v-b67d88f2] {\n    border-radius: 4px;\n    height: 80px;\n    width: 80px;\n    margin: 25px;\n    text-align: center;\n    font-size: 20px;\n}\n.input-true[data-v-b67d88f2] {\n    border-color: green;\n}\n.input-false[data-v-b67d88f2] {\n    border-color: red;\n}\n.btn-primary[data-v-b67d88f2] {\n    font-size: 20px;\n}\n.elfic-letter[data-v-b67d88f2] {\n    height: 20px;\n    width: auto;\n}\n.hint-row[data-v-b67d88f2]{\n    margin-top: 20px;\n}\n.fullOpacity[data-v-b67d88f2]{\n    height: 20px;\n    width: auto;\n    transition: opacity 3s;\n    opacity: 100%;\n}\n.noOpacity[data-v-b67d88f2]{\n    height: 20px;\n    width: auto;\n    transition: opacity 3s;\n    opacity: 0;\n}\n\n", ""]);
 
 // exports
 
@@ -52360,101 +52386,150 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-2" }, [
-        _c("img", {
-          attrs: { src: "/images/crystal_infini/alphabet_elfique.gif", alt: "" }
+  return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "col-md-9" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.symb_1,
+              expression: "symb_1"
+            }
+          ],
+          staticClass: "form-control",
+          attrs: { type: "text", id: "symb_1" },
+          domProps: { value: _vm.symb_1 },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.symb_1 = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.symb_2,
+              expression: "symb_2"
+            }
+          ],
+          staticClass: "form-control",
+          attrs: { type: "text", id: "symb_2" },
+          domProps: { value: _vm.symb_2 },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.symb_2 = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.symb_3,
+              expression: "symb_3"
+            }
+          ],
+          staticClass: "form-control",
+          attrs: { type: "text", id: "symb_3" },
+          domProps: { value: _vm.symb_3 },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.symb_3 = $event.target.value
+            }
+          }
         })
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-9" }, [
-        _c("div", { staticClass: "row justify-content-center" }, [
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.symb_1,
-                expression: "symb_1"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: { type: "text", id: "symb_1" },
-            domProps: { value: _vm.symb_1 },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.symb_1 = $event.target.value
-              }
-            }
-          }),
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c(
+          "button",
+          { staticClass: "btn-primary", on: { click: _vm.checkForm } },
+          [_vm._v("Valider")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("div", { staticClass: "row justify-content-center hint-row" }, [
+            _c("div", { staticClass: "col-md-3" }, [
+              _c("img", {
+                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
+                attrs: { src: "/images/crystal_infini/C.png", alt: "" }
+              }),
+              _vm._v(" "),
+              _c("img", {
+                class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
+                attrs: { src: "/images/crystal_infini/R.png", alt: "" }
+              }),
+              _vm._v(" "),
+              _c("img", {
+                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
+                attrs: { src: "/images/crystal_infini/I.png", alt: "" }
+              }),
+              _vm._v(" "),
+              _c("img", {
+                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
+                attrs: { src: "/images/crystal_infini/S.png", alt: "" }
+              }),
+              _vm._v(" "),
+              _c("img", {
+                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
+                attrs: { src: "/images/crystal_infini/T.png", alt: "" }
+              }),
+              _vm._v(" "),
+              _c("img", {
+                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
+                attrs: { src: "/images/crystal_infini/A.png", alt: "" }
+              }),
+              _vm._v(" "),
+              _c("img", {
+                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
+                attrs: { src: "/images/crystal_infini/L.png", alt: "" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-2" }, [
+              _vm._v(
+                "\n                        Pierre précieuse\n                    "
+              )
+            ])
+          ]),
           _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.symb_2,
-                expression: "symb_2"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: { type: "text", id: "symb_2" },
-            domProps: { value: _vm.symb_2 },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.symb_2 = $event.target.value
-              }
-            }
-          }),
+          _vm._m(0),
           _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.symb_3,
-                expression: "symb_3"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: { type: "text", id: "symb_3" },
-            domProps: { value: _vm.symb_3 },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.symb_3 = $event.target.value
-              }
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row justify-content-center" }, [
-          _c(
-            "button",
-            { staticClass: "btn-primary", on: { click: _vm.checkForm } },
-            [_vm._v("Valider")]
-          )
-        ]),
-        _vm._v(" "),
-        _vm._m(0),
-        _vm._v(" "),
-        _c("div", { staticClass: "row justify-content-center" }, [
-          _vm.success === true
-            ? _c("button", { on: { click: _vm.unlock } }, [
-                _vm._v("Etape suivante")
-              ])
-            : _vm._e()
+          _vm._m(1)
         ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _vm.success === true
+          ? _c("button", { on: { click: _vm.unlock } }, [
+              _vm._v("Etape suivante")
+            ])
+          : _vm._e()
       ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "col-md-2" }, [
+      _c("img", {
+        attrs: { src: "/images/crystal_infini/alphabet_elfique.gif", alt: "" }
+      })
     ])
   ])
 }
@@ -52463,16 +52538,20 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-6" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-6" })
-      ]),
+    return _c("div", { staticClass: "row" }, [
+      _c("div"),
       _vm._v(" "),
-      _c("div", { staticClass: "row" }, [_c("div"), _vm._v(" "), _c("div")]),
+      _c("div")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div"),
       _vm._v(" "),
-      _c("div", { staticClass: "row" }, [_c("div"), _vm._v(" "), _c("div")])
+      _c("div")
     ])
   }
 ]
@@ -74578,10 +74657,10 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/timotheecorrado/Desktop/Mes projets/BreakOut/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /Users/timotheecorrado/Desktop/Mes projets/BreakOut/resources/sass/app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! /Users/timotheecorrado/Desktop/Mes projets/BreakOut/resources/sass/room_one.scss */"./resources/sass/room_one.scss");
-module.exports = __webpack_require__(/*! /Users/timotheecorrado/Desktop/Mes projets/BreakOut/resources/sass/room404.scss */"./resources/sass/room404.scss");
+__webpack_require__(/*! /Users/charles/PhpstormProjects/BreakOut/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Users/charles/PhpstormProjects/BreakOut/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/charles/PhpstormProjects/BreakOut/resources/sass/room_one.scss */"./resources/sass/room_one.scss");
+module.exports = __webpack_require__(/*! /Users/charles/PhpstormProjects/BreakOut/resources/sass/room404.scss */"./resources/sass/room404.scss");
 
 
 /***/ })
