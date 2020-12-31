@@ -1,92 +1,93 @@
 <template>
     <div class="terminal-body d-flex justify-content-center">
-        <div class="corps">
-            <div class="title-tab">
-                <p>Matrice Base 16</p>
-            </div>
-            <div class="sub-tab">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>A</td>
-                            <td>B</td>
-                            <td>C</td>
-                            <td>D</td>
-                            <td>E</td>
-                            <td>F</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <div class="body-c">
+            <div class="corps">
+                <div class="title-tab">
+                    <p>Matrice Base 16</p>
+                </div>
+                <div class="sub-tab">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>A</td>
+                                <td>B</td>
+                                <td>C</td>
+                                <td>D</td>
+                                <td>E</td>
+                                <td>F</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-            <div class="title-tab mt-3">
-                <p>Exemples</p>
-            </div>
-            <div class="sub-text">
-                <p class="pt-3">
-                    12F = 1 x 16² + 2 x 16¹ + 15 x 16⁰ = 303<br>
-                    9A12 = 9 x 16³ + 10 x 16² + 16¹ + 2 x 16⁰ = 39442
-                </p>
-            </div>
+                <div class="title-tab mt-3">
+                    <p>Exemples</p>
+                </div>
+                <div class="sub-text">
+                    <p class="pt-3">
+                        12F = 1 x 16² + 2 x 16¹ + 15 x 16⁰ = 303<br>
+                        9A12 = 9 x 16³ + 10 x 16² + 16¹ + 2 x 16⁰ = 39442
+                    </p>
+                </div>
 
-            <div class="title-tab mt-3">
-                <p>Convertisseur</p>
-            </div>
-            <div class="sub-text">
-                <p class="pt-3">
-                    Entrez une puissance (entre 0 et F) pour obtenir la valeur en exadecimale.
-                </p>
-            </div>
-            <div class="d-flex justify-content-center">
-                <!--<p class="terminal-text">16 puissances </p>-->
-                <input class="terminal-input-2" type="text" v-model="puissanceinput" @keyup="puissance()">
-                <p class="terminal-text"> = </p>
-                <input class="terminal-input-2" type="text" v-model="puissanceresponse" readonly>
-            </div>
+                <div class="title-tab mt-3">
+                    <p>Convertisseur</p>
+                </div>
+                <div class="sub-text">
+                    <p class="pt-3">
+                        Entrez une puissance (entre 0 et F) pour obtenir la valeur en exadecimale.
+                    </p>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <!--<p class="terminal-text">16 puissances </p>-->
+                    <input class="terminal-input-2" type="text" v-model="puissanceinput" @keyup="puissance()">
+                    <p class="terminal-text"> = </p>
+                    <input class="terminal-input-2" type="text" v-model="puissanceresponse" readonly>
+                </div>
 
-            <div class="title-tab mt-3">
-                <p>Sécurité</p>
-            </div>
-            <div class="sub-text">
-                <p class="pt-3">
-                    ATTENTION, une sécurité a été ajouté au mot de passe. Celui-ci doit etre déduit de <B>FAC3</B>.
-                </p>
-            </div>
+                <div class="title-tab mt-3">
+                    <p>Sécurité</p>
+                </div>
+                <div class="sub-text">
+                    <p class="pt-3">
+                        ATTENTION, une sécurité a été ajouté au mot de passe. Celui-ci doit etre déduit de <B>FAC3</B>.
+                    </p>
+                </div>
 
-            <div class="title-tab mt-3">
-                <p>Calculateur</p>
-            </div>
-            <div class="d-flex justify-content-center pt-3">
-                <!--<p class="terminal-text">16 puissances </p>-->
-                <input class="terminal-input-2" type="text" v-model="sommeinput1">
-                <button class="sommebtn" @click="somme()" style="margin-right: 5px;">+</button>
-                <button class="sommebtn" @click="soustraction()">-</button>
-                <input class="terminal-input-2" type="text" v-model="sommeinput2">
-                <p class="terminal-text"> = </p>
-                <input class="terminal-input-2" type="text" v-model="sommeresponse" readonly>
-            </div>
+                <div class="title-tab mt-3">
+                    <p>Calculateur</p>
+                </div>
+                <div class="d-flex justify-content-center pt-3">
+                    <!--<p class="terminal-text">16 puissances </p>-->
+                    <input class="terminal-input-2" type="text" v-model="sommeinput1">
+                    <button class="sommebtn" @click="somme()" style="margin-right: 5px;">+</button>
+                    <button class="sommebtn" @click="soustraction()">-</button>
+                    <input class="terminal-input-2" type="text" v-model="sommeinput2">
+                    <p class="terminal-text"> = </p>
+                    <input class="terminal-input-2" type="text" v-model="sommeresponse" readonly>
+                </div>
 
-            <div class="title-tab mt-3">
-                <p>Mot de passe</p>
-            </div>
-            <div class="d-flex justify-content-center pt-3">
-                <input class="terminal-input-2" type="text" v-model="resultat" @keyup="verify()">
-            </div>
+                <div class="title-tab mt-3">
+                    <p>Mot de passe</p>
+                </div>
+                <div class="d-flex justify-content-center pt-3">
+                    <input class="terminal-input-2" type="text" v-model="resultat" @keyup="verify()">
+                </div>
 
-            <div class="text-center w-100 mt-3">
-                <a class="link-retour" @click="retour()">Retour</a>
+                <div class="text-center w-100 mt-3">
+                    <a class="link-retour" @click="retour()">Retour</a>
+                </div>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -105,6 +106,9 @@ export default {
             resultat: "",
 
         }
+    },
+    mounted() {
+        document.title="Breakout - ROOM404";
     },
     methods: {
         puissance() {

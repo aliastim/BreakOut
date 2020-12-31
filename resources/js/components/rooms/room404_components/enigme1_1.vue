@@ -1,24 +1,26 @@
 <template>
     <div class="terminal-body">
-        <p class="terminal-text">
-            //////////////JOURNAL_DE_BORD<br>
-            > Last Message (22:38:09) :<br>
-            ALERTE, CECI EST UN MESSAGE URGENT !!!<br>
-            LE SYSTÈME DE MISE À FEU DES OGIVES NUCLÉAIRES A ÉTÉ ACTIVÉ.<br>
-            NOUS NE SAVONS PAS COMMENT IL A PU SE DÉCLENCHER !!<br>
-            NOUS N’AVONS AUCUN MOYEN DE DÉSACTIVER LE SYSTÈME NOUS-MÊMES,<br>
-            IL EST NÉCESSAIRE D’ÊTRE CONNECTÉ À L'ORDINATEUR DE BORD<br>
-            ET DE RENTRER LES CODES DE DÉSACTIVATION.<br>
-            SI VOUS VOYEZ CE MESSAGE, ALORS VOUS ÊTES LE SEUL ESPOIR<br>
-            POUR ÉVITER UNE CATASTROPHE NUCLÉAIRE MONDIALE.<br>
-            LE SYSTÈME DÉCOMPTE UNE HEURE AVANT LE LANCEMENT DES MISSILES,<br>
-            LE TEMPS QUE VOUS LISIEZ CE MESSAGE, UNE PARTIE DU TEMPS SE SERA DÉJÀ ÉCOULÉE, NE PERDEZ PLUS DE TEMPS.<br>
-            LE CODE DE DÉSACTIVATION EST : FACE34.<br>
-            BONNE CHANCE, LE MONDE COMPTE SUR VOUS !<br>
-            ><br>
-            > Tapez 0 pour revenir<br>
-            > <input class="terminal-input" type="text" id="terminal-input" v-model="input" @keyup="inputverify()" autofocus>
-        </p>
+        <div class="body-c">
+            <p class="terminal-text">
+                //////////////JOURNAL_DE_BORD<br>
+                > Last Message (22:38:09) :<br>
+                ALERTE, CECI EST UN MESSAGE URGENT !!!<br>
+                LE SYSTÈME DE MISE À FEU DES OGIVES NUCLÉAIRES A ÉTÉ ACTIVÉ.<br>
+                NOUS NE SAVONS PAS COMMENT IL A PU SE DÉCLENCHER !!<br>
+                NOUS N’AVONS AUCUN MOYEN DE DÉSACTIVER LE SYSTÈME NOUS-MÊMES,<br>
+                IL EST NÉCESSAIRE D’ÊTRE CONNECTÉ À L'ORDINATEUR DE BORD<br>
+                ET DE RENTRER LES CODES DE DÉSACTIVATION.<br>
+                SI VOUS VOYEZ CE MESSAGE, ALORS VOUS ÊTES LE SEUL ESPOIR<br>
+                POUR ÉVITER UNE CATASTROPHE NUCLÉAIRE MONDIALE.<br>
+                LE SYSTÈME DÉCOMPTE UNE HEURE AVANT LE LANCEMENT DES MISSILES,<br>
+                LE TEMPS QUE VOUS LISIEZ CE MESSAGE, UNE PARTIE DU TEMPS SE SERA DÉJÀ ÉCOULÉE, NE PERDEZ PLUS DE TEMPS.<br>
+                LE CODE DE DÉSACTIVATION EST : FACE34.<br>
+                BONNE CHANCE, LE MONDE COMPTE SUR VOUS !<br>
+                ><br>
+                > Tapez 0 pour revenir<br>
+                > <input class="terminal-input" type="text" id="terminal-input" v-model="input" @keyup="inputverify()" autofocus>
+            </p>
+        </div>
     </div>
 </template>
 
@@ -30,6 +32,9 @@ export default {
         return {
             input: ""
         }
+    },
+    mounted() {
+        document.title="Breakout - ROOM404";
     },
     methods: {
         inputverify() {
