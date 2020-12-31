@@ -1,6 +1,7 @@
 <template>
     <div class="terminal-body text-center">
         <div class="body-c">
+            <audio id="music" src="audio/rooms/room404/victory.mp3" loop autoplay></audio>
             <h1 class="terminal-title">AUTHORIZED</h1><br><br>
             <p class="terminal-text">
                 DÉSACTIVATION DES OGIVES NUCLÉAIRES...<br><br>

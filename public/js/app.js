@@ -6000,6 +6000,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "enigme1",
   props: ['room'],
@@ -6019,7 +6020,7 @@ __webpack_require__.r(__webpack_exports__);
         // Vraie réponse
         this.room.phase = 2; // Déplacement rapide
 
-        /*this.room.enigme = 5;
+        /*this.room.enigme = 7;
         this.room.phase = 1;*/
       } else {
         //console.log(this.input);
@@ -6100,6 +6101,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -6277,6 +6279,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "enigme2",
   props: ['room'],
@@ -6304,6 +6307,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -6474,6 +6478,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "enigme3",
   props: ['room'],
@@ -6501,6 +6506,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -6618,6 +6624,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "enigme4",
   props: ['room'],
@@ -6645,6 +6652,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -6690,6 +6698,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -6822,6 +6831,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "enigme6",
   props: ['room'],
@@ -6849,6 +6859,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -6926,6 +6937,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "enigme7",
   props: ['room'],
@@ -6953,6 +6965,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -7093,6 +7106,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "enigme7_2",
   props: ['room'],
@@ -7159,6 +7173,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "enigme7_3",
   props: ['room'],
@@ -7186,6 +7201,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -52609,6 +52625,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "terminal-body" }, [
     _c("div", { staticClass: "body-c" }, [
+      _c("audio", {
+        attrs: {
+          id: "music",
+          src: "audio/rooms/room404/0.mp3",
+          loop: "",
+          autoplay: ""
+        }
+      }),
+      _vm._v(" "),
       _c("p", { staticClass: "terminal-text" }, [
         _vm._v("\n            > ERROR ROOM UNLOCKED"),
         _c("br"),
@@ -52780,6 +52805,15 @@ var render = function() {
     { staticClass: "terminal-body d-flex justify-content-center" },
     [
       _c("div", { staticClass: "body-c" }, [
+        _c("audio", {
+          attrs: {
+            id: "music",
+            src: "audio/rooms/room404/1.mp3",
+            loop: "",
+            autoplay: ""
+          }
+        }),
+        _vm._v(" "),
         _c("div", { staticClass: "corps" }, [
           _vm._m(0),
           _vm._v(" "),
@@ -53151,6 +53185,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "terminal-body text-center" }, [
     _c("div", { staticClass: "body-c" }, [
+      _c("audio", {
+        attrs: {
+          id: "music",
+          src: "audio/rooms/room404/0.mp3",
+          loop: "",
+          autoplay: ""
+        }
+      }),
+      _vm._v(" "),
       _c("h1", { staticClass: "terminal-title" }, [_vm._v("ACCESS DENIED")]),
       _c("br"),
       _c("br"),
@@ -53237,6 +53280,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "terminal-body text-center" }, [
     _c("div", { staticClass: "body-c" }, [
+      _c("audio", {
+        attrs: {
+          id: "music",
+          src: "audio/rooms/room404/2.mp3",
+          loop: "",
+          autoplay: ""
+        }
+      }),
+      _vm._v(" "),
       _c(
         "div",
         { staticClass: "cadre-reponse m-auto" },
@@ -53946,6 +53998,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "terminal-body text-center" }, [
     _c("div", { staticClass: "body-c" }, [
+      _c("audio", {
+        attrs: {
+          id: "music",
+          src: "audio/rooms/room404/0.mp3",
+          loop: "",
+          autoplay: ""
+        }
+      }),
+      _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
       _c(
@@ -54028,6 +54089,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "terminal-body text-center" }, [
     _c("div", { staticClass: "body-c" }, [
+      _c("audio", {
+        attrs: {
+          id: "music",
+          src: "audio/rooms/room404/3.mp3",
+          loop: "",
+          autoplay: ""
+        }
+      }),
+      _vm._v(" "),
       _c("div", { staticClass: "text-center" }, [
         _c("p", { staticClass: "terminal-text" }, [_vm._v("Votre réponse :")]),
         _vm._v(" "),
@@ -54240,6 +54310,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "terminal-body text-center" }, [
     _c("div", { staticClass: "body-c" }, [
+      _c("audio", {
+        attrs: {
+          id: "music",
+          src: "audio/rooms/room404/0.mp3",
+          loop: "",
+          autoplay: ""
+        }
+      }),
+      _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
       _c(
@@ -54297,6 +54376,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "terminal-body text-center" }, [
     _c("div", { staticClass: "body-c" }, [
+      _c("audio", {
+        attrs: {
+          id: "music",
+          src: "audio/rooms/room404/4.mp3",
+          loop: "",
+          autoplay: ""
+        }
+      }),
+      _vm._v(" "),
       _c("div", { staticClass: "text-center" }, [
         _c("p", { staticClass: "terminal-text" }, [
           _vm._v("Entrez le mot de passe :")
@@ -54356,6 +54444,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "terminal-body text-center" }, [
     _c("div", { staticClass: "body-c" }, [
+      _c("audio", {
+        attrs: {
+          id: "music",
+          src: "audio/rooms/room404/0.mp3",
+          loop: "",
+          autoplay: ""
+        }
+      }),
+      _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
       _c(
@@ -54507,6 +54604,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "terminal-body text-center" }, [
     _c("div", { staticClass: "body-c" }, [
+      _c("audio", {
+        attrs: {
+          id: "music",
+          src: "audio/rooms/room404/0.mp3",
+          loop: "",
+          autoplay: ""
+        }
+      }),
+      _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
       _c(
@@ -54579,6 +54685,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "terminal-body text-center" }, [
     _c("div", { staticClass: "body-c" }, [
+      _c("audio", {
+        attrs: {
+          id: "music",
+          src: "audio/rooms/room404/6.mp3",
+          loop: "",
+          autoplay: ""
+        }
+      }),
+      _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
@@ -54689,6 +54804,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "terminal-body text-center" }, [
     _c("div", { staticClass: "body-c" }, [
+      _c("audio", {
+        attrs: {
+          id: "music",
+          src: "audio/rooms/room404/0.mp3",
+          loop: "",
+          autoplay: ""
+        }
+      }),
+      _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
       _c(
@@ -54754,6 +54878,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "terminal-body text-center" }, [
     _c("div", { staticClass: "body-c" }, [
+      _c("audio", {
+        attrs: {
+          id: "music",
+          src: "audio/rooms/room404/7.mp3",
+          loop: "",
+          autoplay: ""
+        }
+      }),
+      _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "d-flex justify-content-center text-center" }, [
@@ -54929,6 +55062,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "terminal-body text-center" }, [
     _c("div", { staticClass: "body-c" }, [
+      _c("audio", {
+        attrs: {
+          id: "music",
+          src: "audio/rooms/room404/72.mp3",
+          loop: "",
+          autoplay: ""
+        }
+      }),
+      _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "d-flex justify-content-center text-center" }, [
@@ -55065,6 +55207,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "terminal-body text-center" }, [
     _c("div", { staticClass: "body-c" }, [
+      _c("audio", {
+        attrs: {
+          id: "music",
+          src: "audio/rooms/room404/victory.mp3",
+          loop: "",
+          autoplay: ""
+        }
+      }),
+      _vm._v(" "),
       _c("h1", { staticClass: "terminal-title" }, [_vm._v("AUTHORIZED")]),
       _c("br"),
       _c("br"),
@@ -55140,6 +55291,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "terminal-body text-center" }, [
     _c("div", { staticClass: "body-c text-center" }, [
+      _c("audio", {
+        attrs: {
+          id: "music",
+          src: "audio/rooms/room404/defeat.mp3",
+          loop: "",
+          autoplay: ""
+        }
+      }),
+      _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
       _c(

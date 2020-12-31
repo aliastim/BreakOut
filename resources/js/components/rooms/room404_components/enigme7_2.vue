@@ -1,6 +1,7 @@
 <template>
     <div class="terminal-body text-center">
         <div class="body-c">
+            <audio id="music" src="audio/rooms/room404/72.mp3" loop autoplay></audio>
             <p class="terminal-text">
                 Je vous ai quand meme gardé une toute petite surprise,<br>
                 il vous reste à cliquer sur le dernier interrupteur pour dévérouiller les ogives !<br><br>

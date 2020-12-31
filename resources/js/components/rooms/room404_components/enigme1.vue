@@ -1,6 +1,7 @@
 <template>
     <div class="terminal-body">
         <div class="body-c">
+            <audio id="music" src="audio/rooms/room404/0.mp3" loop autoplay></audio>
             <p class="terminal-text">
                 > ERROR ROOM UNLOCKED<br>
                 ><br>
@@ -39,7 +40,7 @@ export default {
                 this.room.phase = 2;
 
                 // Déplacement rapide
-                /*this.room.enigme = 5;
+                /*this.room.enigme = 7;
                 this.room.phase = 1;*/
 
             } else

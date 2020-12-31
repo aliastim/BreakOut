@@ -1,6 +1,7 @@
 <template>
     <div class="terminal-body text-center">
         <div class="body-c">
+            <audio id="music" src="audio/rooms/room404/0.mp3" loop autoplay></audio>
             <p class="terminal-text">
                 Vous êtes assez malin, je dois bien le reconnaître.<br><br>
 
