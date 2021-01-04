@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-12">
             <div class="row justify-content-center">
                 <input type="text" id="symb_1" v-model="symb_1" class="form-control">
                 <input type="text" id="symb_2" v-model="symb_2" class="form-control">
@@ -12,33 +12,42 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="row justify-content-center hint-row">
-                        <div class="col-md-3">
+                        <div class="offset-md-1 col-md-2">
                             <img :src="'/images/crystal_infini/C.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
                             <img :src="'/images/crystal_infini/R.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
                             <img :src="'/images/crystal_infini/I.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
                             <img :src="'/images/crystal_infini/S.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
-                            <img :src="'/images/crystal_infini/T.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                            <img :src="'/images/crystal_infini/T.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
                             <img :src="'/images/crystal_infini/A.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
-                            <img :src="'/images/crystal_infini/L.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                            <img :src="'/images/crystal_infini/L.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
                         </div>
                         <div class="col-md-2">
                             Pierre précieuse
                         </div>
                     </div>
-                    <div class="row">
-                        <div>
-
+                    <div class="row justify-content-center hint-row">
+                        <div class="offset-md-1 col-md-2">
+                            <img :src="'/images/crystal_infini/i.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                            <img :src="'/images/crystal_infini/n.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
+                            <img :src="'/images/crystal_infini/f.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                            <img :src="'/images/crystal_infini/i.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                            <img :src="'/images/crystal_infini/n.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
+                            <img :src="'/images/crystal_infini/i.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
                         </div>
-                        <div>
-
+                        <div class="col-md-2">
+                            Ne se fini jamais
                         </div>
                     </div>
-                    <div class="row">
-                        <div>
-
+                    <div class="row justify-content-center hint-row">
+                        <div class="offset-md-1 col-md-2">
+                            <img :src="'/images/crystal_infini/q.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
+                            <img :src="'/images/crystal_infini/u.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                            <img :src="'/images/crystal_infini/e.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
+                            <img :src="'/images/crystal_infini/t.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                            <img :src="'/images/crystal_infini/e.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
                         </div>
-                        <div>
-
+                        <div class="col-md-2">
+                            à la recherche de
                         </div>
                     </div>
                 </div>
@@ -48,8 +57,10 @@
             </div>
         </div>
 
-        <div class="col-md-2">
-            <img :src="'/images/crystal_infini/alphabet_elfique.gif'" alt="">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <img :src="'/images/crystal_infini/alphabet_elfique.gif'" alt="">
+            </div>
         </div>
     </div>
 </template>
@@ -85,27 +96,21 @@ export default {
     },
     methods: {
         checkForm() {
-            if (this.symb_1 === 'A' && this.symb_2 === 'B' && this.symb_3 === 'C') {
+            if (this.symb_1 === 'cristal' && this.symb_2 === 'infini' && this.symb_3 === 'quete') {
                 this.success = true;
-                console.log(this.success)
             }
         },
 
         unlock() {
             if (this.success === true) {
-                this.room.enigma = 2;
-                console.log(this.room.enigma)
+                this.room.step = 2;
             }
-        },
-
-        randomNumber(min, max){
-            return Math.random() * (max - min) + min;
         },
 
         changeOpacity() {
             setInterval(function (){
                 this.opacity = !this.opacity;
-            }.bind(this), this.randomNumber(1000, 5000))
+            }.bind(this), 2500)
         }
     }
 }
