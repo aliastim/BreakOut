@@ -22,32 +22,32 @@
                             <img :src="'/images/crystal_infini/L.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
                         </div>
                         <div class="col-md-2">
-                            Pierre précieuse
+                            <p class="text-white">Pierre précieuse</p>
                         </div>
                     </div>
                     <div class="row justify-content-center hint-row">
                         <div class="offset-md-1 col-md-2">
-                            <img :src="'/images/crystal_infini/i.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
-                            <img :src="'/images/crystal_infini/n.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
-                            <img :src="'/images/crystal_infini/f.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
-                            <img :src="'/images/crystal_infini/i.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
-                            <img :src="'/images/crystal_infini/n.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
-                            <img :src="'/images/crystal_infini/i.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                            <img :src="'/images/crystal_infini/I.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                            <img :src="'/images/crystal_infini/N.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
+                            <img :src="'/images/crystal_infini/F.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                            <img :src="'/images/crystal_infini/I.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                            <img :src="'/images/crystal_infini/N.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
+                            <img :src="'/images/crystal_infini/I.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
                         </div>
                         <div class="col-md-2">
-                            Ne se fini jamais
+                            <p class="text-white">Ne se fini jamais</p>
                         </div>
                     </div>
                     <div class="row justify-content-center hint-row">
                         <div class="offset-md-1 col-md-2">
-                            <img :src="'/images/crystal_infini/q.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
-                            <img :src="'/images/crystal_infini/u.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
-                            <img :src="'/images/crystal_infini/e.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
-                            <img :src="'/images/crystal_infini/t.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
-                            <img :src="'/images/crystal_infini/e.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                            <img :src="'/images/crystal_infini/Q.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
+                            <img :src="'/images/crystal_infini/U.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                            <img :src="'/images/crystal_infini/E.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
+                            <img :src="'/images/crystal_infini/T.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                            <img :src="'/images/crystal_infini/E.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
                         </div>
                         <div class="col-md-2">
-                            à la recherche de
+                            <p class="text-white">à la recherche de</p>
                         </div>
                     </div>
                 </div>

@@ -52612,86 +52612,74 @@ var render = function() {
               })
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-md-2" }, [
-              _vm._v(
-                "\n                        Pierre précieuse\n                    "
-              )
-            ])
+            _vm._m(0)
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row justify-content-center hint-row" }, [
             _c("div", { staticClass: "offset-md-1 col-md-2" }, [
               _c("img", {
                 class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/i.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/I.png", alt: "" }
               }),
               _vm._v(" "),
               _c("img", {
                 class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/n.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/N.png", alt: "" }
               }),
               _vm._v(" "),
               _c("img", {
                 class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/f.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/F.png", alt: "" }
               }),
               _vm._v(" "),
               _c("img", {
                 class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/i.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/I.png", alt: "" }
               }),
               _vm._v(" "),
               _c("img", {
                 class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/n.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/N.png", alt: "" }
               }),
               _vm._v(" "),
               _c("img", {
                 class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/i.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/I.png", alt: "" }
               })
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-md-2" }, [
-              _vm._v(
-                "\n                        Ne se fini jamais\n                    "
-              )
-            ])
+            _vm._m(1)
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row justify-content-center hint-row" }, [
             _c("div", { staticClass: "offset-md-1 col-md-2" }, [
               _c("img", {
                 class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/q.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/Q.png", alt: "" }
               }),
               _vm._v(" "),
               _c("img", {
                 class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/u.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/U.png", alt: "" }
               }),
               _vm._v(" "),
               _c("img", {
                 class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/e.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/E.png", alt: "" }
               }),
               _vm._v(" "),
               _c("img", {
                 class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/t.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/T.png", alt: "" }
               }),
               _vm._v(" "),
               _c("img", {
                 class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/e.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/E.png", alt: "" }
               })
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-md-2" }, [
-              _vm._v(
-                "\n                        à la recherche de\n                    "
-              )
-            ])
+            _vm._m(2)
           ])
         ])
       ]),
@@ -52714,7 +52702,32 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-2" }, [
+      _c("p", { staticClass: "text-white" }, [_vm._v("Pierre précieuse")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-2" }, [
+      _c("p", { staticClass: "text-white" }, [_vm._v("Ne se fini jamais")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-2" }, [
+      _c("p", { staticClass: "text-white" }, [_vm._v("à la recherche de")])
+    ])
+  }
+]
 render._withStripped = true
 
 
