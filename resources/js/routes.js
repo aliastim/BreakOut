@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Home from './components/Home.vue'
 import Shop from './components/Shop';
 import Rooms from "./components/Rooms";
+import Forum from './components/Forum';
 
 //Vue utilisateur
 import Account from './components/parameters/Account';
@@ -26,6 +27,7 @@ const router = new VueRouter({
         { path: '/home', component: Home},
         { path: '/admin', component: Admin_dashboard},
         { path: '/rooms', component: Rooms},
+        { path: '/forum', component: Forum},
         { path: '/shop', component: Shop},
         { path: '/account', component: Account},
         { path: '/avatar', component: Avatar},
