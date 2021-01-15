@@ -11985,7 +11985,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\nbody{\n    background: #373B44;  /* fallback for old browsers */\n    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */\n    background: radial-gradient(circle, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\n\n    height: 100vh;\n    width: 100vw;\n    overflow: hidden;\n}\n", ""]);
+exports.push([module.i, "\nbody{\n    background: #373B44;  /* fallback for old browsers */\n    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */\n    background: radial-gradient(circle, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\n\n    height: 100vh;\n    width: 100vw;\n}\n", ""]);
 
 // exports
 
