@@ -4,7 +4,7 @@
             <audio id="music" src="audio/rooms/room404/72.mp3" loop autoplay></audio>
             <p class="terminal-text">
                 Je vous ai quand meme gardé une toute petite surprise,<br>
-                il vous reste à cliquer sur le dernier interrupteur pour dévérouiller les ogives !<br><br>
+                il vous reste à cliquer sur le dernier interrupteur pour déverouiller les ogives !<br><br>
 
                 Encore faut-il savoir duquel il s’agit...<br><br>
 

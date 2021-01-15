@@ -7,7 +7,7 @@
 
                 Comme promis, nous arrivons au moment que vous attendiez tant, les ogives !<br><br>
 
-                Je dois avouer que je suis impatient de savoir si vous allez réussir à les dévérouiller à temps.<br><br>
+                Je dois avouer que je suis impatient de savoir si vous allez réussir à les déverouiller à temps.<br><br>
 
                 Bonne chance !
             </p>
