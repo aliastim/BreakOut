@@ -1,9 +1,10 @@
 <template>
     <div class="row justify-content-center">
+        <h1>A la recherche du cristal d'infini</h1>
         <div class="col-md-auto">
-            <button v-on:click="enigma1">Enigme 1</button>
-            <button v-on:click="enigma2">Enigme 2</button>
-            <button>Enigme 3</button>
+            <button v-on:click="enigme(1)">Enigme 1</button>
+            <button v-on:click="enigme(2)">Enigme 2</button>
+            <button v-on:click="enigme(3)">Enigme 3</button>
             <button>Enigme 4</button>
             <button>Enigme 5</button>
             <button>Enigme 6</button>
@@ -23,12 +24,9 @@ export default {
 
     },
     methods: {
-        enigma1() {
-            this.room.step = 1;
+        enigme(x) {
+            this.room.step = x;
         },
-        enigma2() {
-            this.room.step = 2;
-        }
     }
 }
 </script>

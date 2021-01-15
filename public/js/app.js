@@ -5679,13 +5679,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -5709,7 +5702,10 @@ __webpack_require__.r(__webpack_exports__);
       enigma_4: false,
       enigma_5: false,
       enigma_6: false,
-      enigma_7: false
+      enigma_7: false,
+      hour: 24,
+      minute: 0,
+      second: 0
     };
   },
   mounted: function mounted() {
@@ -5743,6 +5739,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Map",
   props: ['room'],
@@ -5751,11 +5748,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {},
   methods: {
-    enigma1: function enigma1() {
-      this.room.step = 1;
-    },
-    enigma2: function enigma2() {
-      this.room.step = 2;
+    enigme: function enigme(x) {
+      this.room.step = x;
     }
   }
 });
@@ -11985,7 +11979,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\nbody{\n    background: #373B44;  /* fallback for old browsers */\n    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */\n    background: radial-gradient(circle, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\n\n    height: 100vh;\n    width: 100vw;\n}\n", ""]);
+exports.push([module.i, "\n.crystal-body {\n    background: #373B44; /* fallback for old browsers */\n    background: -webkit-linear-gradient(to right, #4286f4, #373B44); /* Chrome 10-25, Safari 5.1-6 */\n    background: radial-gradient(circle, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\n    overflow: hidden;\n    color: white;\n    height: 100vh;\n    width: 100vw;\n}\n.timer {\n    font-family: Roboto, monospace !important;\n    border-color: #1FF042;\n    background: none;\n    color: #1FF042;\n    text-transform: uppercase;\n    box-shadow: 0 0 8px #1FF042;\n}\n", ""]);
 
 // exports
 
@@ -52548,54 +52542,44 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "crystal-body" }, [
-    _c("div", [_c("room-header", { attrs: { room: this } })], 1),
-    _vm._v(" "),
-    _vm._m(0),
-    _vm._v(" "),
-    _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          { staticClass: "col-md-9" },
-          [
-            _vm.step === 0 ? _c("Map", { attrs: { room: this } }) : _vm._e(),
-            _vm._v(" "),
-            _vm.step === 1
-              ? _c("Enigma_1", { attrs: { room: this } })
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.step === 2
-              ? _c("div", { attrs: { room: this } }, [_vm._v("enigme 2")])
-              : _vm._e()
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "col-md-3" },
-          [_c("inventory", { attrs: { room: this } })],
-          1
-        )
-      ])
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "container text-center mt-3" }, [
-        _c("h1", { staticStyle: { "font-size": "50px" } }, [
-          _vm._v("A la recherche du crystal d'infini")
+  return _c(
+    "div",
+    { staticClass: "crystal-body" },
+    [
+      _c("room-header", { attrs: { room: this } }),
+      _vm._v(" "),
+      _c("div", { staticClass: "a" }, [
+        _c("div", { staticClass: "row" }, [
+          _c(
+            "div",
+            { staticClass: "col-md-9" },
+            [
+              _vm.step === 0 ? _c("Map", { attrs: { room: this } }) : _vm._e(),
+              _vm._v(" "),
+              _vm.step === 1
+                ? _c("Enigma_1", { attrs: { room: this } })
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.step === 2
+                ? _c("div", { attrs: { room: this } }, [_vm._v("enigme 2")])
+                : _vm._e()
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "col-md-3" },
+            [_c("inventory", { attrs: { room: this } })],
+            1
+          )
         ])
       ])
-    ])
-  }
-]
+    ],
+    1
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -52618,12 +52602,44 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row justify-content-center" }, [
+    _c("h1", [_vm._v("A la recherche du cristal d'infini")]),
+    _vm._v(" "),
     _c("div", { staticClass: "col-md-auto" }, [
-      _c("button", { on: { click: _vm.enigma1 } }, [_vm._v("Enigme 1")]),
+      _c(
+        "button",
+        {
+          on: {
+            click: function($event) {
+              return _vm.enigme(1)
+            }
+          }
+        },
+        [_vm._v("Enigme 1")]
+      ),
       _vm._v(" "),
-      _c("button", { on: { click: _vm.enigma2 } }, [_vm._v("Enigme 2")]),
+      _c(
+        "button",
+        {
+          on: {
+            click: function($event) {
+              return _vm.enigme(2)
+            }
+          }
+        },
+        [_vm._v("Enigme 2")]
+      ),
       _vm._v(" "),
-      _c("button", [_vm._v("Enigme 3")]),
+      _c(
+        "button",
+        {
+          on: {
+            click: function($event) {
+              return _vm.enigme(3)
+            }
+          }
+        },
+        [_vm._v("Enigme 3")]
+      ),
       _vm._v(" "),
       _c("button", [_vm._v("Enigme 4")]),
       _vm._v(" "),
