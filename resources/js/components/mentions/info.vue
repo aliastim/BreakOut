@@ -6,16 +6,16 @@
         <div class="breakout-body">
             <hr class="liseret-rouge">
             <div class="container text-center pt-4">
-                <h1>Forum </h1>
+                <h1>Page Info</h1>
             </div>
             <global-footer></global-footer>
         </div>
     </div>
 </template>
 <script>
-import GlobalFooter from "./layout/Footer";
+import GlobalFooter from "../layout/Footer";
 export default {
-    name: "Forum",
+    name: "Infos",
     components: {GlobalFooter},
     props: ['app'],
     data() {

@@ -4,6 +4,9 @@ import Home from './components/Home.vue'
 import Shop from './components/Shop';
 import Rooms from "./components/Rooms";
 import Forum from './components/Forum';
+import Mentions from './components/mentions/mentions_legales';
+import Infos from './components/mentions/info';
+import DonneesPerso from './components/mentions/donnees_personelles';
 
 //Vue utilisateur
 import Account from './components/parameters/Account';
@@ -34,6 +37,9 @@ const router = new VueRouter({
         { path: '/inventory', component: Inventory},
         { path: '/myrooms', component: Myrooms},
         { path: '/gemclicker', component: Gemclicker},
+        { path: '/mentions_legales', component: Mentions},
+        { path: '/infos', component: Infos},
+        { path: '/donnees_personnelles', component: DonneesPerso},
 
         { path: '/rooms/room404', component: Room404},
         { path: '/rooms/room404/play', component: Room404},

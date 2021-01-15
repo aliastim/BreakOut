@@ -1,6 +1,7 @@
 <template>
     <div class="terminal-body text-center">
         <div class="body-c">
+            <audio id="morse" src="audio/rooms/room404/morse404.mp3" loop autoplay></audio>
             <div>
                 <button class="btn-console" @click="testzero()" v-model="zero">•</button>
                 <button class="btn-console" @click="testun()" v-model="un">-</button>
@@ -10,7 +11,6 @@
             </div>
         </div>
 
-        <audio id="morse" src="audio/rooms/room404/morse404.mp3" loop autoplay></audio>
         <!--<script type="application/javascript">
             var player = document.querySelector('#morse');
             player.play();

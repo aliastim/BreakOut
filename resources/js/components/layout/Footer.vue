@@ -21,9 +21,9 @@
                 <div class="d-flex h-100">
                     <div class="d-flex flex-column text-center pt-2 pb-2 m-auto">
                         <div>
-                            <a href="#" class="texte-footer">Mentions légales</a><br>
-                            <a href="#" class="texte-footer">Utilisation des données personnelles</a><br>
-                            <a href="#" class="texte-footer">Support</a><br>
+                            <router-link to="/mentions_legales"><a href="#" class="texte-footer">Mentions légales</a></router-link><br>
+                            <router-link to="/donnees_personnelles"><a href="#" class="texte-footer">Utilisation des données personnelles</a></router-link><br>
+                            <router-link to="/infos"><a href="#" class="texte-footer">Support</a></router-link><br>
                             <a href="#" class="texte-footer">Plan du site</a><br>
                             <router-link to="/gemclicker" class="texte-footer">Gemclicker</router-link>
                         </div>
