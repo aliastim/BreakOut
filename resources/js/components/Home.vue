@@ -242,7 +242,9 @@
                         </div>
                         <div class="w-100 text-center pt-4 pb-3">
                             <a href="#">
-                                <button class="btn-sous-top">Accéder au forum</button>
+                                <router-link class="" to="/forum">
+                                    <button class="btn-sous-top">Accéder au forum</button>
+                                </router-link>
                             </a>
                         </div>
                     </div>
@@ -347,7 +349,9 @@
                         </div>
                         <div class="w-100 text-center pt-4 pb-3">
                             <a href="#">
-                                <button class="btn-sous-top">Voir toutes les salles</button>
+                                <router-link class="" to="/rooms">
+                                    <button class="btn-sous-top">Voir toutes les salles</button>
+                                </router-link>
                             </a>
                         </div>
                     </div>
@@ -443,7 +447,11 @@
                         </div>
                         <div class="w-100 d-flex pb-4">
                             <div class="mr-auto"></div>
-                            <div><a href="#" class="lien-simple">Voir la boutique</a></div>
+                            <div>
+                                <router-link class="" to="/shop">
+                                    <a href="#" class="lien-simple">Voir la boutique</a>
+                                </router-link>
+                            </div>
                         </div>
                     </div>
 

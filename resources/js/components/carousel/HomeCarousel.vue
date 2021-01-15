@@ -18,7 +18,7 @@
                 </carousel>
             </div>
             <div class="breakout-body-before">
-                {{ home.sentence }}
+                <marquee>{{ home.sentence }}</marquee>
             </div>
     </div>
 </template>
