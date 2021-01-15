@@ -17,9 +17,7 @@ export default {
     name: "Map",
     props: ['room'],
     data() {
-        return {
-
-        }
+        return {}
     },
     mounted() {
 

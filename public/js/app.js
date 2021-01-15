@@ -5378,7 +5378,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RoomHeader",
   props: ['room'],
@@ -5662,6 +5661,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layout_RoomHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../layout/RoomHeader */ "./resources/js/components/layout/RoomHeader.vue");
 /* harmony import */ var _infiniteCristal_components_enigma_1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./infiniteCristal_components/enigma_1 */ "./resources/js/components/rooms/infiniteCristal_components/enigma_1.vue");
 /* harmony import */ var _infiniteCristal_components_Map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./infiniteCristal_components/Map */ "./resources/js/components/rooms/infiniteCristal_components/Map.vue");
+/* harmony import */ var _infiniteCristal_components_inventory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./infiniteCristal_components/inventory */ "./resources/js/components/rooms/infiniteCristal_components/inventory.vue");
 //
 //
 //
@@ -5676,6 +5676,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -5685,7 +5696,8 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     RoomHeader: _layout_RoomHeader__WEBPACK_IMPORTED_MODULE_0__["default"],
     Enigma_1: _infiniteCristal_components_enigma_1__WEBPACK_IMPORTED_MODULE_1__["default"],
-    Map: _infiniteCristal_components_Map__WEBPACK_IMPORTED_MODULE_2__["default"]
+    Map: _infiniteCristal_components_Map__WEBPACK_IMPORTED_MODULE_2__["default"],
+    inventory: _infiniteCristal_components_inventory__WEBPACK_IMPORTED_MODULE_3__["default"]
   },
   data: function data() {
     return {
@@ -5702,13 +5714,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.app.navbool = false;
-    console.log(this.enigma);
   },
-  methods: {
-    toMap: function toMap() {
-      this.step = 0;
-    }
-  }
+  methods: {}
 });
 
 /***/ }),
@@ -5831,6 +5838,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "enigma_1",
   props: ['room'],
@@ -5859,19 +5871,58 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     checkForm: function checkForm() {
-      if (this.symb_1 === 'cristal' && this.symb_2 === 'infini' && this.symb_3 === 'quete') {
+      if (this.symb_1 === 5 && this.symb_2 === 6 && this.symb_3 === 8) {
         this.success = true;
       }
     },
     unlock: function unlock() {
       if (this.success === true) {
         this.room.step = 2;
+        this.room.enigma_1 = true;
       }
     },
     changeOpacity: function changeOpacity() {
       setInterval(function () {
         this.opacity = !this.opacity;
       }.bind(this), 2500);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "inventory",
+  props: ['room'],
+  data: function data() {
+    return {};
+  },
+  mounted: function mounted() {},
+  methods: {
+    toMap: function toMap() {
+      this.room.step = 0;
     }
   }
 });
@@ -11922,6 +11973,25 @@ exports.push([module.i, "\n.timer\n{\n    width: 170px;\n    border: 1px solid w
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal.vue?vue&type=style&index=0&lang=css&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/infiniteCristal.vue?vue&type=style&index=0&lang=css& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\nbody{\n    background: #373B44;  /* fallback for old browsers */\n    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */\n    background: radial-gradient(circle, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\n\n    height: 100vh;\n    width: 100vw;\n    overflow: hidden;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal_components/enigma_1.vue?vue&type=style&index=0&id=b67d88f2&scoped=true&lang=css&":
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/infiniteCristal_components/enigma_1.vue?vue&type=style&index=0&id=b67d88f2&scoped=true&lang=css& ***!
@@ -11934,7 +12004,26 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\ninput[data-v-b67d88f2] {\n    border-radius: 4px;\n    height: 80px;\n    width: 80px;\n    margin: 25px;\n    text-align: center;\n    font-size: 20px;\n}\n.input-true[data-v-b67d88f2] {\n    border-color: green;\n}\n.input-false[data-v-b67d88f2] {\n    border-color: red;\n}\n.btn-primary[data-v-b67d88f2] {\n    font-size: 20px;\n}\n.elfic-letter[data-v-b67d88f2] {\n    height: 20px;\n    width: auto;\n}\n.hint-row[data-v-b67d88f2]{\n    margin-top: 20px;\n}\n.fullOpacity[data-v-b67d88f2]{\n    height: 20px;\n    width: auto;\n    transition: opacity 3s;\n    opacity: 100%;\n}\n.noOpacity[data-v-b67d88f2]{\n    height: 20px;\n    width: auto;\n    transition: opacity 3s;\n    opacity: 0;\n}\n\n", ""]);
+exports.push([module.i, "\ninput[data-v-b67d88f2] {\n    border-radius: 4px;\n    height: 80px;\n    width: 80px;\n    margin: 25px;\n    text-align: center;\n    font-size: 20px;\n}\n.input-true[data-v-b67d88f2] {\n    border-color: green;\n}\n.input-false[data-v-b67d88f2] {\n    border-color: red;\n}\n.btn-primary[data-v-b67d88f2] {\n    font-size: 20px;\n}\n.hint-row[data-v-b67d88f2]{\n    margin-top: 20px;\n}\n.fullOpacity[data-v-b67d88f2]{\n    height: 20px;\n    width: auto;\n    transition: opacity 3s;\n    opacity: 100%;\n}\n.noOpacity[data-v-b67d88f2]{\n    height: 20px;\n    width: auto;\n    transition: opacity 3s;\n    opacity: 0;\n}\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=style&index=0&id=5fc62712&scoped=true&lang=css&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=style&index=0&id=5fc62712&scoped=true&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.inventory-body[data-v-5fc62712] {\n    background-color: #1b1e21;\n    height: 80vh;\n    color: white;\n}\n", ""]);
 
 // exports
 
@@ -43486,6 +43575,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal.vue?vue&type=style&index=0&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/infiniteCristal.vue?vue&type=style&index=0&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--8-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--8-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./infiniteCristal.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal_components/enigma_1.vue?vue&type=style&index=0&id=b67d88f2&scoped=true&lang=css&":
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/infiniteCristal_components/enigma_1.vue?vue&type=style&index=0&id=b67d88f2&scoped=true&lang=css& ***!
@@ -43495,6 +43614,36 @@ if(false) {}
 
 
 var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--8-1!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../node_modules/vue-loader/lib??vue-loader-options!./enigma_1.vue?vue&type=style&index=0&id=b67d88f2&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal_components/enigma_1.vue?vue&type=style&index=0&id=b67d88f2&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=style&index=0&id=5fc62712&scoped=true&lang=css&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=style&index=0&id=5fc62712&scoped=true&lang=css& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--8-1!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../node_modules/vue-loader/lib??vue-loader-options!./inventory.vue?vue&type=style&index=0&id=5fc62712&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=style&index=0&id=5fc62712&scoped=true&lang=css&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -52399,36 +52548,50 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("room-header", { attrs: { room: this } }),
-      _vm._v(" "),
-      _c("div", [
-        _vm._m(0),
+  return _c("div", { staticClass: "crystal-body" }, [
+    _c("div", [_c("room-header", { attrs: { room: this } })], 1),
+    _vm._v(" "),
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row" }, [
+        _c(
+          "div",
+          { staticClass: "col-md-9" },
+          [
+            _vm.step === 0 ? _c("Map", { attrs: { room: this } }) : _vm._e(),
+            _vm._v(" "),
+            _vm.step === 1
+              ? _c("Enigma_1", { attrs: { room: this } })
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.step === 2
+              ? _c("div", { attrs: { room: this } }, [_vm._v("enigme 2")])
+              : _vm._e()
+          ],
+          1
+        ),
         _vm._v(" "),
-        _c("button", { on: { click: _vm.toMap } }, [_vm._v("Carte")])
-      ]),
-      _vm._v(" "),
-      _vm.step === 0 ? _c("Map", { attrs: { room: this } }) : _vm._e(),
-      _vm._v(" "),
-      _vm.step === 1 ? _c("Enigma_1", { attrs: { room: this } }) : _vm._e(),
-      _vm._v(" "),
-      _vm.step === 2
-        ? _c("div", { attrs: { room: this } }, [_vm._v("enigme 2")])
-        : _vm._e()
-    ],
-    1
-  )
+        _c(
+          "div",
+          { staticClass: "col-md-3" },
+          [_c("inventory", { attrs: { room: this } })],
+          1
+        )
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container text-center mt-3" }, [
-      _c("h1", { staticStyle: { "font-size": "50px" } }, [
-        _vm._v("A la recherche du crystal d'infini")
+    return _c("div", [
+      _c("div", { staticClass: "container text-center mt-3" }, [
+        _c("h1", { staticStyle: { "font-size": "50px" } }, [
+          _vm._v("A la recherche du crystal d'infini")
+        ])
       ])
     ])
   }
@@ -52578,37 +52741,17 @@ var render = function() {
             _c("div", { staticClass: "offset-md-1 col-md-2" }, [
               _c("img", {
                 class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/C.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/1.png", alt: "" }
               }),
               _vm._v(" "),
               _c("img", {
                 class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/R.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/2.png", alt: "" }
               }),
               _vm._v(" "),
               _c("img", {
                 class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/I.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/S.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/T.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/A.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/L.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/3.png", alt: "" }
               })
             ]),
             _vm._v(" "),
@@ -52619,32 +52762,17 @@ var render = function() {
             _c("div", { staticClass: "offset-md-1 col-md-2" }, [
               _c("img", {
                 class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/I.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/6.png", alt: "" }
               }),
               _vm._v(" "),
               _c("img", {
                 class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/N.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/1.png", alt: "" }
               }),
               _vm._v(" "),
               _c("img", {
                 class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/F.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/I.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/N.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/I.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/2.png", alt: "" }
               })
             ]),
             _vm._v(" "),
@@ -52655,31 +52783,63 @@ var render = function() {
             _c("div", { staticClass: "offset-md-1 col-md-2" }, [
               _c("img", {
                 class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/Q.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/4.png", alt: "" }
               }),
               _vm._v(" "),
               _c("img", {
                 class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/U.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/5.png", alt: "" }
               }),
               _vm._v(" "),
               _c("img", {
                 class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/E.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/T.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/E.png", alt: "" }
+                attrs: { src: "/images/crystal_infini/6.png", alt: "" }
               })
             ]),
             _vm._v(" "),
             _vm._m(2)
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row justify-content-center hint-row" }, [
+            _c("div", { staticClass: "offset-md-1 col-md-2" }, [
+              _c("img", {
+                class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
+                attrs: { src: "/images/crystal_infini/1.png", alt: "" }
+              }),
+              _vm._v(" "),
+              _c("img", {
+                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
+                attrs: { src: "/images/crystal_infini/5.png", alt: "" }
+              }),
+              _vm._v(" "),
+              _c("img", {
+                class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
+                attrs: { src: "/images/crystal_infini/8.png", alt: "" }
+              })
+            ]),
+            _vm._v(" "),
+            _vm._m(3)
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row justify-content-center hint-row" }, [
+            _c("div", { staticClass: "offset-md-1 col-md-2" }, [
+              _c("img", {
+                class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
+                attrs: { src: "/images/crystal_infini/8.png", alt: "" }
+              }),
+              _vm._v(" "),
+              _c("img", {
+                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
+                attrs: { src: "/images/crystal_infini/3.png", alt: "" }
+              }),
+              _vm._v(" "),
+              _c("img", {
+                class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
+                attrs: { src: "/images/crystal_infini/4.png", alt: "" }
+              })
+            ]),
+            _vm._v(" "),
+            _vm._m(4)
           ])
         ])
       ]),
@@ -52691,14 +52851,6 @@ var render = function() {
             ])
           : _vm._e()
       ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-6" }, [
-        _c("img", {
-          attrs: { src: "/images/crystal_infini/alphabet_elfique.gif", alt: "" }
-        })
-      ])
     ])
   ])
 }
@@ -52708,7 +52860,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-2" }, [
-      _c("p", { staticClass: "text-white" }, [_vm._v("Pierre précieuse")])
+      _c("p", { staticClass: "text-white" }, [_vm._v("Rien n'est juste")])
     ])
   },
   function() {
@@ -52716,7 +52868,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-2" }, [
-      _c("p", { staticClass: "text-white" }, [_vm._v("Ne se fini jamais")])
+      _c("p", { staticClass: "text-white" }, [
+        _vm._v("Un chiffre est juste mal placé")
+      ])
     ])
   },
   function() {
@@ -52724,10 +52878,68 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-2" }, [
-      _c("p", { staticClass: "text-white" }, [_vm._v("à la recherche de")])
+      _c("p", { staticClass: "text-white" }, [
+        _vm._v("Un chiffre est juste mal placé")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-2" }, [
+      _c("p", { staticClass: "text-white" }, [
+        _vm._v(
+          "Un chiffre est juste et bien placé, un chiffre est juste mais mal placé"
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-2" }, [
+      _c("p", { staticClass: "text-white" }, [
+        _vm._v("Un chiffre est juste mais mal placé")
+      ])
     ])
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=template&id=5fc62712&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=template&id=5fc62712&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container inventory-body" }, [
+    _c("div", { staticClass: "row justify-content-center pt-3" }, [
+      _c("div", { staticClass: "md-6" }, [
+        _vm._v("\n            INVENTAIRE\n        ")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-6" }, [
+        _c("button", { on: { click: _vm.toMap } }, [_vm._v("Carte")])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -72850,7 +73062,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _infiniteCristal_vue_vue_type_template_id_c375cac0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./infiniteCristal.vue?vue&type=template&id=c375cac0& */ "./resources/js/components/rooms/infiniteCristal.vue?vue&type=template&id=c375cac0&");
 /* harmony import */ var _infiniteCristal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./infiniteCristal.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/infiniteCristal.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _infiniteCristal_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./infiniteCristal.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/rooms/infiniteCristal.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -72858,7 +73072,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _infiniteCristal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _infiniteCristal_vue_vue_type_template_id_c375cac0___WEBPACK_IMPORTED_MODULE_0__["render"],
   _infiniteCristal_vue_vue_type_template_id_c375cac0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -72887,6 +73101,22 @@ component.options.__file = "resources/js/components/rooms/infiniteCristal.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_infiniteCristal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./infiniteCristal.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_infiniteCristal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/infiniteCristal.vue?vue&type=style&index=0&lang=css&":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/components/rooms/infiniteCristal.vue?vue&type=style&index=0&lang=css& ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_infiniteCristal_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--8-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--8-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./infiniteCristal.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_infiniteCristal_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_infiniteCristal_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_infiniteCristal_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_infiniteCristal_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_infiniteCristal_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -73059,6 +73289,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_enigma_1_vue_vue_type_template_id_b67d88f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_enigma_1_vue_vue_type_template_id_b67d88f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/infiniteCristal_components/inventory.vue":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/rooms/infiniteCristal_components/inventory.vue ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _inventory_vue_vue_type_template_id_5fc62712_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./inventory.vue?vue&type=template&id=5fc62712&scoped=true& */ "./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=template&id=5fc62712&scoped=true&");
+/* harmony import */ var _inventory_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./inventory.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _inventory_vue_vue_type_style_index_0_id_5fc62712_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./inventory.vue?vue&type=style&index=0&id=5fc62712&scoped=true&lang=css& */ "./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=style&index=0&id=5fc62712&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _inventory_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _inventory_vue_vue_type_template_id_5fc62712_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _inventory_vue_vue_type_template_id_5fc62712_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "5fc62712",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/infiniteCristal_components/inventory.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_inventory_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./inventory.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_inventory_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=style&index=0&id=5fc62712&scoped=true&lang=css&":
+/*!*****************************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=style&index=0&id=5fc62712&scoped=true&lang=css& ***!
+  \*****************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_inventory_vue_vue_type_style_index_0_id_5fc62712_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader!../../../../../node_modules/css-loader??ref--8-1!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../node_modules/vue-loader/lib??vue-loader-options!./inventory.vue?vue&type=style&index=0&id=5fc62712&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=style&index=0&id=5fc62712&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_inventory_vue_vue_type_style_index_0_id_5fc62712_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_inventory_vue_vue_type_style_index_0_id_5fc62712_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_inventory_vue_vue_type_style_index_0_id_5fc62712_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_inventory_vue_vue_type_style_index_0_id_5fc62712_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_inventory_vue_vue_type_style_index_0_id_5fc62712_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=template&id=5fc62712&scoped=true&":
+/*!***************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=template&id=5fc62712&scoped=true& ***!
+  \***************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_inventory_vue_vue_type_template_id_5fc62712_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./inventory.vue?vue&type=template&id=5fc62712&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=template&id=5fc62712&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_inventory_vue_vue_type_template_id_5fc62712_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_inventory_vue_vue_type_template_id_5fc62712_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
