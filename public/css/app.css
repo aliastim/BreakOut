@@ -13732,3 +13732,60 @@ footer > div {
 
 /*----------FIN ADMIN----------*/
 
+/*------------FORUM------------*/
+
+.table-BO > thead > tr > th {
+  background: #212121;
+  color: white;
+  text-transform: uppercase;
+  border: none !important;
+  font-family: JosefinSans-Regular;
+  font-size: 14px;
+}
+
+.table-BO > tbody > tr > td {
+  border: none !important;
+  font-family: JosefinSans-Regular;
+  font-size: 14px;
+}
+
+.table-BO > tbody > tr {
+  background-color: #E2D2A1;
+}
+
+.table-BO > tbody > tr:nth-child(2n+1) {
+  background-color: #CBBE97 !important;
+}
+
+.table-BO > tbody > tr:hover,
+.table-BO > tbody > tr:nth-child(2n+1):hover {
+  cursor: pointer;
+  background-color: #d6c287 !important;
+}
+
+.title-BO {
+  font-family: JosefinSans-Bold;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.button-plus {
+  color: #f9ba48;
+  font-size: 35px;
+  padding-top: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  background: none;
+  height: 40px;
+  width: 60px;
+  text-align: right;
+}
+
+.button-plus:hover {
+  color: #c38414;
+  font-size: 35px;
+}
+
+/*----------FIN FORUM----------*/
+
