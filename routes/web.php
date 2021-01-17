@@ -78,3 +78,10 @@ Route::prefix('rooms')->group(function () {
     //Route::post('room404', 'RomeOneController@index');
     //Route::view('/letsplay', 'scenarios/room_one_1');
 });
+
+// Forum
+Route::prefix('forum')->group(function () {
+    Route::post('addpost', 'ForumController@addPost');
+    Route::post('loadpost', 'ForumController@loadPost');
+    Route::post('loadonepost/{id}', 'ForumController@loadOnePost');
+});

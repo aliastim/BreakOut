@@ -1979,6 +1979,84 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layout_Footer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./layout/Footer */ "./resources/js/components/layout/Footer.vue");
+/* harmony import */ var _forum_ForumPublication__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./forum/ForumPublication */ "./resources/js/components/forum/ForumPublication.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1994,20 +2072,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Forum",
   components: {
+    ForumPublication: _forum_ForumPublication__WEBPACK_IMPORTED_MODULE_1__["default"],
     GlobalFooter: _layout_Footer__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   props: ['app'],
   data: function data() {
     return {
-      sentence: ""
+      sentence: "",
+      publication: false,
+      posts: [],
+      post_id: null,
+      subject: "",
+      message: "",
+      img: "",
+      errors: []
     };
   },
   mounted: function mounted() {
-    document.title = "BreakOut - Page Info";
+    document.title = "BreakOut - Forum";
     this.loadScrolling();
+    this.loadPost();
   },
   methods: {
     loadScrolling: function loadScrolling() {
@@ -2018,7 +2106,48 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         _this.errors.push(error.response.data.error);
       });
-    }
+    },
+    loadPost: function loadPost() {
+      var _this2 = this;
+
+      this.app.req.post('forum/loadpost').then(function (response) {
+        _this2.posts = response.data; //If message
+        //Alors on va vers la page message et on envoie l'id du message en paramètre
+      })["catch"](function (error) {
+        _this2.errors.push(error.response.data.error);
+      });
+    },
+    addPost: function addPost() {
+      var _this3 = this;
+
+      this.errors = [];
+      var data = {
+        subject: this.subject,
+        message: this.message,
+        img: this.img
+      };
+      this.app.req.post('forum/addpost', data).then(function (response) {
+        console.log(response.data); //If message
+        //Alors on va vers la page message et on envoie l'id du message en paramètre
+      })["catch"](function (error) {
+        _this3.errors.push(error.response.data.error);
+      });
+    },
+    goTo: function goTo(id) {
+      this.publication = true;
+      this.post_id = id;
+      /*const data = {
+          messageId : n,
+      };
+      this.app.req.post('forum/loadscrolling', data).then(response => {
+          console.log(response.data);
+          //If message
+          //Alors on va vers la page message et on envoie l'id du message en paramètre
+      }).catch(error => {
+          this.errors.push(error.response.data.error);
+      });*/
+    },
+    page: function page() {}
   }
 });
 
@@ -4946,6 +5075,67 @@ __webpack_require__.r(__webpack_exports__);
   name: "PageNotFound",
   components: {
     GlobalFooter: _layout_Footer__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/forum/ForumPublication.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/forum/ForumPublication.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _layout_Footer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../layout/Footer */ "./resources/js/components/layout/Footer.vue");
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "ForumPublication",
+  components: {
+    GlobalFooter: _layout_Footer__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: ['forum'],
+  data: function data() {
+    return {
+      post: [],
+      comments: [],
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "BreakOut - Forum";
+    this.loadOnePost(this.forum.post_id);
+  },
+  methods: {
+    loadOnePost: function loadOnePost(id) {
+      var _this = this;
+
+      this.forum.app.req.post('forum/loadonepost/' + id).then(function (response) {
+        _this.post = response.data;
+        console.log(_this.post); //If message
+        //Alors on va vers la page message et on envoie l'id du message en paramètre
+      })["catch"](function (error) {
+        _this.errors.push(error.response.data.error);
+      });
+    },
+    loadComments: function loadComments(id) {
+      var _this2 = this;
+
+      this.forum.app.req.post('forum/loadcomments' + id).then(function (response) {
+        _this2.comments = response.data; //If message
+        //Alors on va vers la page message et on envoie l'id du message en paramètre
+      })["catch"](function (error) {
+        _this2.errors.push(error.response.data.error);
+      });
+    }
   }
 });
 
@@ -45107,7 +45297,264 @@ var render = function() {
       [
         _c("hr", { staticClass: "liseret-rouge" }),
         _vm._v(" "),
-        _vm._m(0),
+        _c("div", { staticClass: "container text-center pt-4" }, [
+          _c("div", { staticClass: "w-100 d-flex" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", [
+              _vm.publication === false
+                ? _c(
+                    "button",
+                    {
+                      staticClass: "button-plus",
+                      attrs: {
+                        type: "button",
+                        "data-toggle": "modal",
+                        "data-target": "#modaladdpost"
+                      }
+                    },
+                    [_c("i", { staticClass: "fas fa-plus-circle" })]
+                  )
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "w-100" },
+            [
+              _vm.publication === false
+                ? _c("table", { staticClass: "table table-BO" }, [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.posts, function(post, index2) {
+                        return _c("tr", { attrs: { index2: index2 } }, [
+                          _c("td", [
+                            _c("p", {
+                              domProps: { textContent: _vm._s(post.id) }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c(
+                              "button",
+                              {
+                                on: {
+                                  click: function($event) {
+                                    return _vm.goTo(post.id)
+                                  }
+                                }
+                              },
+                              [_vm._v("Voir")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("p", {
+                              domProps: { textContent: _vm._s(post.subject) }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("p", {
+                              domProps: { textContent: _vm._s(post.comments) }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("p", {
+                              domProps: { textContent: _vm._s(post.created_at) }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            post.closed === 0
+                              ? _c("p", [_vm._v("OUVERT")])
+                              : _vm._e(),
+                            _vm._v(" "),
+                            post.closed === 1
+                              ? _c("p", [_vm._v("FERMÉ")])
+                              : _vm._e()
+                          ])
+                        ])
+                      }),
+                      0
+                    )
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.publication === true
+                ? _c("forum-publication", { attrs: { forum: this } })
+                : _vm._e()
+            ],
+            1
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "modal fade",
+            attrs: {
+              id: "modaladdpost",
+              tabindex: "-1",
+              "aria-labelledby": "modaladdpost",
+              "aria-hidden": "true"
+            }
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "modal-dialog login-modal-dialog modal-dialog-centered",
+                staticStyle: { "max-width": "600px !important" }
+              },
+              [
+                _c("div", { staticClass: "login-modal-content" }, [
+                  _vm._m(2),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "login-modal-body p-4" }, [
+                    _c("div", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.subject,
+                            expression: "subject"
+                          }
+                        ],
+                        staticClass: "form-control input-bo mb-3",
+                        staticStyle: { width: "100% !important" },
+                        attrs: {
+                          type: "text",
+                          placeholder: "Saisir un titre ici",
+                          maxlength: "50"
+                        },
+                        domProps: { value: _vm.subject },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.subject = $event.target.value
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("textarea", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.message,
+                            expression: "message"
+                          }
+                        ],
+                        staticClass: "textarea-bo",
+                        staticStyle: { "border-radius": "0.25rem" },
+                        attrs: { placeholder: "Tapez votre texte ici" },
+                        domProps: { value: _vm.message },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.message = $event.target.value
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "w-100 d-flex mt-2" }, [
+                        _c("div", { staticClass: "mr-auto" }, [
+                          _c(
+                            "p",
+                            {
+                              staticClass: "josephin-regular",
+                              staticStyle: {
+                                color: "white",
+                                "font-size": "10px"
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\n                                        *En postant cette publication, je reconnais avoir pris connaissances des "
+                              ),
+                              _c(
+                                "a",
+                                { attrs: { href: "/mentions_legales" } },
+                                [
+                                  _c(
+                                    "B",
+                                    {
+                                      staticClass: "josephin-bold",
+                                      staticStyle: {
+                                        color: "#f9ba48",
+                                        cursor: "pointer"
+                                      }
+                                    },
+                                    [_vm._v("conditions du forum")]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(
+                                " et à les respecter\n                                    "
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", [
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn-submit-register",
+                              staticStyle: { width: "120px !important" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.addPost()
+                                }
+                              }
+                            },
+                            [_vm._v("Publier")]
+                          )
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _vm.errors.length
+                      ? _c(
+                          "div",
+                          {
+                            staticClass: "login-modal-error mt-3",
+                            staticStyle: { color: "darkred" }
+                          },
+                          [
+                            _c(
+                              "p",
+                              { staticClass: "h-100 text-center" },
+                              _vm._l(_vm.errors, function(error) {
+                                return _c(
+                                  "span",
+                                  [_c("B", [_vm._v(_vm._s(error))]), _c("br")],
+                                  1
+                                )
+                              }),
+                              0
+                            )
+                          ]
+                        )
+                      : _vm._e()
+                  ])
+                ])
+              ]
+            )
+          ]
+        ),
         _vm._v(" "),
         _c("global-footer")
       ],
@@ -45120,8 +45567,71 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container text-center pt-4" }, [
-      _c("h1", [_vm._v("Forum ")])
+    return _c("div", { staticClass: "mr-auto" }, [
+      _c("h1", { staticClass: "title-BO" }, [_vm._v("Forum BreakOut")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c(
+          "th",
+          {
+            staticStyle: { "border-top-left-radius": "10px" },
+            attrs: { scope: "col" }
+          },
+          [_vm._v("#")]
+        ),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Sujet")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Réponses")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Date de publication")]),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticStyle: { "border-top-right-radius": "10px" },
+            attrs: { scope: "col" }
+          },
+          [_vm._v("Cloturé ?")]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "login-modal-header" }, [
+      _c("div", { staticClass: "josephin-bold color-white" }, [
+        _vm._v("Publier sur le forum")
+      ]),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          staticStyle: { opacity: "1 !important" },
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [
+          _c("div", {
+            staticClass: "modal-cross",
+            attrs: { "aria-hidden": "true" }
+          })
+        ]
+      )
     ])
   }
 ]
@@ -51227,6 +51737,34 @@ var staticRenderFns = [
     ])
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/forum/ForumPublication.vue?vue&type=template&id=4ae04524&":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/forum/ForumPublication.vue?vue&type=template&id=4ae04524& ***!
+  \*************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("p", [_vm._v(_vm._s(_vm.post.subject))]),
+    _vm._v(" "),
+    _c("p", [_vm._v(_vm._s(_vm.post.message))])
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -73400,6 +73938,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PageNotFound_vue_vue_type_template_id_27c2d167___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PageNotFound_vue_vue_type_template_id_27c2d167___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/forum/ForumPublication.vue":
+/*!************************************************************!*\
+  !*** ./resources/js/components/forum/ForumPublication.vue ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ForumPublication_vue_vue_type_template_id_4ae04524___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ForumPublication.vue?vue&type=template&id=4ae04524& */ "./resources/js/components/forum/ForumPublication.vue?vue&type=template&id=4ae04524&");
+/* harmony import */ var _ForumPublication_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ForumPublication.vue?vue&type=script&lang=js& */ "./resources/js/components/forum/ForumPublication.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ForumPublication_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ForumPublication_vue_vue_type_template_id_4ae04524___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ForumPublication_vue_vue_type_template_id_4ae04524___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/forum/ForumPublication.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/forum/ForumPublication.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/forum/ForumPublication.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ForumPublication_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./ForumPublication.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/forum/ForumPublication.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ForumPublication_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/forum/ForumPublication.vue?vue&type=template&id=4ae04524&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/components/forum/ForumPublication.vue?vue&type=template&id=4ae04524& ***!
+  \*******************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ForumPublication_vue_vue_type_template_id_4ae04524___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./ForumPublication.vue?vue&type=template&id=4ae04524& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/forum/ForumPublication.vue?vue&type=template&id=4ae04524&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ForumPublication_vue_vue_type_template_id_4ae04524___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ForumPublication_vue_vue_type_template_id_4ae04524___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
