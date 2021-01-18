@@ -74,4 +74,43 @@ class ForumController extends Controller
             return response()->json(["error" => "L'utilisateur n'est pas connecté"], 401);
         }
     }
+
+    public function deletePost($id)
+    {
+        $admin = Auth::user();
+
+        if (isset($admin->admin) and ($admin->admin === 1) ) {
+            $post = Forum_post::find($id);
+            $post->delete();
+            return response("La publication a bien été supprimée");
+        } else
+        {
+            return response()->json(["error" => "L'utilisateur connecté n'est pas administrateur"], 401);
+        }
+
+    }
+
+    public function lockPost($id)
+    {
+        $admin = Auth::user();
+
+        if (isset($admin->admin) and ($admin->admin === 1) ) {
+            $post = Forum_post::find($id);
+
+            if($post->closed === 0)
+            {
+                $post->closed = 1;
+            } else
+            {
+                $post->closed = 0;
+            }
+
+            $post->save();
+            return response("La publication a bien été supprimée");
+        } else
+        {
+            return response()->json(["error" => "L'utilisateur connecté n'est pas administrateur"], 401);
+        }
+
+    }
 }
