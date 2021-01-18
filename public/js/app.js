@@ -5660,8 +5660,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layout_RoomHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../layout/RoomHeader */ "./resources/js/components/layout/RoomHeader.vue");
 /* harmony import */ var _infiniteCristal_components_enigma_1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./infiniteCristal_components/enigma_1 */ "./resources/js/components/rooms/infiniteCristal_components/enigma_1.vue");
-/* harmony import */ var _infiniteCristal_components_Map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./infiniteCristal_components/Map */ "./resources/js/components/rooms/infiniteCristal_components/Map.vue");
-/* harmony import */ var _infiniteCristal_components_inventory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./infiniteCristal_components/inventory */ "./resources/js/components/rooms/infiniteCristal_components/inventory.vue");
+/* harmony import */ var _infiniteCristal_components_enigma_2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./infiniteCristal_components/enigma_2 */ "./resources/js/components/rooms/infiniteCristal_components/enigma_2.vue");
+/* harmony import */ var _infiniteCristal_components_Map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./infiniteCristal_components/Map */ "./resources/js/components/rooms/infiniteCristal_components/Map.vue");
+/* harmony import */ var _infiniteCristal_components_inventory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./infiniteCristal_components/inventory */ "./resources/js/components/rooms/infiniteCristal_components/inventory.vue");
 //
 //
 //
@@ -5679,6 +5680,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+
 
 
 
@@ -5689,8 +5693,9 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     RoomHeader: _layout_RoomHeader__WEBPACK_IMPORTED_MODULE_0__["default"],
     Enigma_1: _infiniteCristal_components_enigma_1__WEBPACK_IMPORTED_MODULE_1__["default"],
-    Map: _infiniteCristal_components_Map__WEBPACK_IMPORTED_MODULE_2__["default"],
-    inventory: _infiniteCristal_components_inventory__WEBPACK_IMPORTED_MODULE_3__["default"]
+    Map: _infiniteCristal_components_Map__WEBPACK_IMPORTED_MODULE_3__["default"],
+    Inventory: _infiniteCristal_components_inventory__WEBPACK_IMPORTED_MODULE_4__["default"],
+    Enigma_2: _infiniteCristal_components_enigma_2__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   data: function data() {
     return {
@@ -5725,6 +5730,12 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5850,8 +5861,6 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    this.checkForm();
-    this.unlock();
     this.changeOpacity();
   },
   created: function created() {},
@@ -5865,7 +5874,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     checkForm: function checkForm() {
-      if (this.symb_1 === 5 && this.symb_2 === 6 && this.symb_3 === 8) {
+      if (this.symb_1 === "5" && this.symb_2 === "6" && this.symb_3 === "8") {
         this.success = true;
       }
     },
@@ -5885,6 +5894,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal_components/enigma_2.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/infiniteCristal_components/enigma_2.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigma_2"
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/infiniteCristal_components/inventory.vue?vue&type=script&lang=js& ***!
@@ -5894,6 +5929,33 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -11979,7 +12041,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.crystal-body {\n    background: #373B44; /* fallback for old browsers */\n    background: -webkit-linear-gradient(to right, #4286f4, #373B44); /* Chrome 10-25, Safari 5.1-6 */\n    background: radial-gradient(circle, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\n    overflow: hidden;\n    color: white;\n    height: 100vh;\n    width: 100vw;\n}\n.timer {\n    font-family: Roboto, monospace !important;\n    border-color: #1FF042;\n    background: none;\n    color: #1FF042;\n    text-transform: uppercase;\n    box-shadow: 0 0 8px #1FF042;\n}\n", ""]);
+exports.push([module.i, "\n.crystal-body {\n    background: #373B44; /* fallback for old browsers */\n    background: -webkit-linear-gradient(to right, #4286f4, #373B44); /* Chrome 10-25, Safari 5.1-6 */\n    background: radial-gradient(circle, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\n    overflow: hidden;\n    color: white;\n    height: 100vh;\n    width: 100vw;\n}\n.timer {\n    font-family: Roboto, monospace !important;\n    border-color: #1FF042;\n    background: none;\n    color: #1FF042;\n    text-transform: uppercase;\n    box-shadow: 0 0 8px #1FF042;\n}\n.body-bis {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    display: flex;\n    justify-content: center;\n}\n.body-ter {\n    position: absolute;\n    top: 50%; /* poussé de la moitié de hauteur du référent */\n    transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */\n}\n", ""]);
 
 // exports
 
@@ -11998,7 +12060,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\ninput[data-v-b67d88f2] {\n    border-radius: 4px;\n    height: 80px;\n    width: 80px;\n    margin: 25px;\n    text-align: center;\n    font-size: 20px;\n}\n.input-true[data-v-b67d88f2] {\n    border-color: green;\n}\n.input-false[data-v-b67d88f2] {\n    border-color: red;\n}\n.btn-primary[data-v-b67d88f2] {\n    font-size: 20px;\n}\n.hint-row[data-v-b67d88f2]{\n    margin-top: 20px;\n}\n.fullOpacity[data-v-b67d88f2]{\n    height: 20px;\n    width: auto;\n    transition: opacity 3s;\n    opacity: 100%;\n}\n.noOpacity[data-v-b67d88f2]{\n    height: 20px;\n    width: auto;\n    transition: opacity 3s;\n    opacity: 0;\n}\n\n", ""]);
+exports.push([module.i, "\ninput[data-v-b67d88f2] {\n    border-radius: 4px;\n    height: 80px;\n    width: 80px;\n    margin: 25px;\n    text-align: center;\n    font-size: 20px;\n}\n.input-true[data-v-b67d88f2] {\n    border-color: green;\n}\n.input-false[data-v-b67d88f2] {\n    border-color: red;\n}\n.btn-primary[data-v-b67d88f2] {\n    font-size: 20px;\n}\n.hint-row[data-v-b67d88f2] {\n    margin-top: 20px;\n}\n.fullOpacity[data-v-b67d88f2] {\n    height: 50px;\n    width: auto;\n    transition: opacity 3s;\n    opacity: 100%;\n}\n.noOpacity[data-v-b67d88f2] {\n    height: 50px;\n    width: auto;\n    transition: opacity 3s;\n    opacity: 0;\n}\n\n", ""]);
 
 // exports
 
@@ -52542,42 +52604,46 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "crystal-body" },
-    [
-      _c("room-header", { attrs: { room: this } }),
-      _vm._v(" "),
-      _c("div", { staticClass: "a" }, [
-        _c("div", { staticClass: "row" }, [
-          _c(
-            "div",
-            { staticClass: "col-md-9" },
-            [
-              _vm.step === 0 ? _c("Map", { attrs: { room: this } }) : _vm._e(),
-              _vm._v(" "),
-              _vm.step === 1
-                ? _c("Enigma_1", { attrs: { room: this } })
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.step === 2
-                ? _c("div", { attrs: { room: this } }, [_vm._v("enigme 2")])
-                : _vm._e()
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "col-md-3" },
-            [_c("inventory", { attrs: { room: this } })],
-            1
-          )
-        ])
+  return _c("div", [
+    _c(
+      "div",
+      [
+        _c("room-header", {
+          staticStyle: { position: "relative" },
+          attrs: { room: this }
+        })
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row pt-5" }, [
+        _c(
+          "div",
+          { staticClass: "col-md-9" },
+          [
+            _vm.step === 0 ? _c("Map", { attrs: { room: this } }) : _vm._e(),
+            _vm._v(" "),
+            _vm.step === 1
+              ? _c("Enigma_1", { attrs: { room: this } })
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.step === 2
+              ? _c("Enigma_2", { attrs: { room: this } })
+              : _vm._e()
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "col-md-3" },
+          [_c("Inventory", { attrs: { room: this } })],
+          1
+        )
       ])
-    ],
-    1
-  )
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -52601,57 +52667,110 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "row justify-content-center" }, [
-    _c("h1", [_vm._v("A la recherche du cristal d'infini")]),
+  return _c("div", [
+    _vm._m(0),
     _vm._v(" "),
-    _c("div", { staticClass: "col-md-auto" }, [
-      _c(
-        "button",
-        {
-          on: {
-            click: function($event) {
-              return _vm.enigme(1)
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-auto" }, [
+        _c(
+          "button",
+          {
+            on: {
+              click: function($event) {
+                return _vm.enigme(1)
+              }
             }
-          }
-        },
-        [_vm._v("Enigme 1")]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          on: {
-            click: function($event) {
-              return _vm.enigme(2)
+          },
+          [_vm._v("Enigme 1")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            on: {
+              click: function($event) {
+                return _vm.enigme(2)
+              }
             }
-          }
-        },
-        [_vm._v("Enigme 2")]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          on: {
-            click: function($event) {
-              return _vm.enigme(3)
+          },
+          [_vm._v("Enigme 2")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            on: {
+              click: function($event) {
+                return _vm.enigme(3)
+              }
             }
-          }
-        },
-        [_vm._v("Enigme 3")]
-      ),
-      _vm._v(" "),
-      _c("button", [_vm._v("Enigme 4")]),
-      _vm._v(" "),
-      _c("button", [_vm._v("Enigme 5")]),
-      _vm._v(" "),
-      _c("button", [_vm._v("Enigme 6")]),
-      _vm._v(" "),
-      _c("button", [_vm._v("Enigme 7")])
+          },
+          [_vm._v("Enigme 3")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            on: {
+              click: function($event) {
+                return _vm.enigme(4)
+              }
+            }
+          },
+          [_vm._v("Enigme 4")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            on: {
+              click: function($event) {
+                return _vm.enigme(5)
+              }
+            }
+          },
+          [_vm._v("Enigme 5")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            on: {
+              click: function($event) {
+                return _vm.enigme(6)
+              }
+            }
+          },
+          [_vm._v("Enigme 6")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            on: {
+              click: function($event) {
+                return _vm.enigme(7)
+              }
+            }
+          },
+          [_vm._v("Enigme 7")]
+        )
+      ])
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-auto" }, [
+        _c("h1", [_vm._v("A la recherche du cristal d'infini")])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -52673,199 +52792,201 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "row" }, [
-    _c("div", { staticClass: "col-md-12" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.symb_1,
-              expression: "symb_1"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: { type: "text", id: "symb_1" },
-          domProps: { value: _vm.symb_1 },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.symb_1 = $event.target.value
-            }
+  return _c("div", [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.symb_1,
+            expression: "symb_1"
           }
-        }),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.symb_2,
-              expression: "symb_2"
+        ],
+        attrs: { type: "text", id: "symb_1" },
+        domProps: { value: _vm.symb_1 },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
             }
-          ],
-          staticClass: "form-control",
-          attrs: { type: "text", id: "symb_2" },
-          domProps: { value: _vm.symb_2 },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.symb_2 = $event.target.value
-            }
+            _vm.symb_1 = $event.target.value
           }
-        }),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.symb_3,
-              expression: "symb_3"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: { type: "text", id: "symb_3" },
-          domProps: { value: _vm.symb_3 },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.symb_3 = $event.target.value
-            }
-          }
-        })
-      ]),
+        }
+      }),
       _vm._v(" "),
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c(
-          "button",
-          { staticClass: "btn-primary", on: { click: _vm.checkForm } },
-          [_vm._v("Valider")]
-        )
-      ]),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.symb_2,
+            expression: "symb_2"
+          }
+        ],
+        attrs: { type: "text", id: "symb_2" },
+        domProps: { value: _vm.symb_2 },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.symb_2 = $event.target.value
+          }
+        }
+      }),
       _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-12" }, [
-          _c("div", { staticClass: "row justify-content-center hint-row" }, [
-            _c("div", { staticClass: "offset-md-1 col-md-2" }, [
-              _c("img", {
-                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/1.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/2.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/3.png", alt: "" }
-              })
-            ]),
-            _vm._v(" "),
-            _vm._m(0)
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row justify-content-center hint-row" }, [
-            _c("div", { staticClass: "offset-md-1 col-md-2" }, [
-              _c("img", {
-                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/6.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/1.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/2.png", alt: "" }
-              })
-            ]),
-            _vm._v(" "),
-            _vm._m(1)
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row justify-content-center hint-row" }, [
-            _c("div", { staticClass: "offset-md-1 col-md-2" }, [
-              _c("img", {
-                class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/4.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/5.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/6.png", alt: "" }
-              })
-            ]),
-            _vm._v(" "),
-            _vm._m(2)
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row justify-content-center hint-row" }, [
-            _c("div", { staticClass: "offset-md-1 col-md-2" }, [
-              _c("img", {
-                class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/1.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/5.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/8.png", alt: "" }
-              })
-            ]),
-            _vm._v(" "),
-            _vm._m(3)
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row justify-content-center hint-row" }, [
-            _c("div", { staticClass: "offset-md-1 col-md-2" }, [
-              _c("img", {
-                class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/8.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
-                attrs: { src: "/images/crystal_infini/3.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _c("img", {
-                class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
-                attrs: { src: "/images/crystal_infini/4.png", alt: "" }
-              })
-            ]),
-            _vm._v(" "),
-            _vm._m(4)
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.symb_3,
+            expression: "symb_3"
+          }
+        ],
+        attrs: { type: "text", id: "symb_3" },
+        domProps: { value: _vm.symb_3 },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.symb_3 = $event.target.value
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn-primary",
+          on: {
+            click: function($event) {
+              return _vm.checkForm()
+            }
+          }
+        },
+        [_vm._v("Valider")]
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _vm.success === true
+        ? _c("button", { on: { click: _vm.unlock } }, [
+            _vm._v("Etape suivante")
           ])
+        : _vm._e()
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "row justify-content-center hint-row" }, [
+          _c("div", { staticClass: "offset-md-1 col-md-2" }, [
+            _c("img", {
+              class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
+              attrs: { src: "/images/crystal_infini/1.png", alt: "" }
+            }),
+            _vm._v(" "),
+            _c("img", {
+              class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
+              attrs: { src: "/images/crystal_infini/2.png", alt: "" }
+            }),
+            _vm._v(" "),
+            _c("img", {
+              class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
+              attrs: { src: "/images/crystal_infini/3.png", alt: "" }
+            })
+          ]),
+          _vm._v(" "),
+          _vm._m(0)
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row justify-content-center hint-row" }, [
+          _c("div", { staticClass: "offset-md-1 col-md-2" }, [
+            _c("img", {
+              class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
+              attrs: { src: "/images/crystal_infini/6.png", alt: "" }
+            }),
+            _vm._v(" "),
+            _c("img", {
+              class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
+              attrs: { src: "/images/crystal_infini/1.png", alt: "" }
+            }),
+            _vm._v(" "),
+            _c("img", {
+              class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
+              attrs: { src: "/images/crystal_infini/2.png", alt: "" }
+            })
+          ]),
+          _vm._v(" "),
+          _vm._m(1)
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row justify-content-center hint-row" }, [
+          _c("div", { staticClass: "offset-md-1 col-md-2" }, [
+            _c("img", {
+              class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
+              attrs: { src: "/images/crystal_infini/4.png", alt: "" }
+            }),
+            _vm._v(" "),
+            _c("img", {
+              class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
+              attrs: { src: "/images/crystal_infini/5.png", alt: "" }
+            }),
+            _vm._v(" "),
+            _c("img", {
+              class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
+              attrs: { src: "/images/crystal_infini/6.png", alt: "" }
+            })
+          ]),
+          _vm._v(" "),
+          _vm._m(2)
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row justify-content-center hint-row" }, [
+          _c("div", { staticClass: "offset-md-1 col-md-2" }, [
+            _c("img", {
+              class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
+              attrs: { src: "/images/crystal_infini/1.png", alt: "" }
+            }),
+            _vm._v(" "),
+            _c("img", {
+              class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
+              attrs: { src: "/images/crystal_infini/5.png", alt: "" }
+            }),
+            _vm._v(" "),
+            _c("img", {
+              class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
+              attrs: { src: "/images/crystal_infini/8.png", alt: "" }
+            })
+          ]),
+          _vm._v(" "),
+          _vm._m(3)
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row justify-content-center hint-row" }, [
+          _c("div", { staticClass: "offset-md-1 col-md-2" }, [
+            _c("img", {
+              class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
+              attrs: { src: "/images/crystal_infini/8.png", alt: "" }
+            }),
+            _vm._v(" "),
+            _c("img", {
+              class: [_vm.opacity ? "fullOpacity" : "noOpacity"],
+              attrs: { src: "/images/crystal_infini/3.png", alt: "" }
+            }),
+            _vm._v(" "),
+            _c("img", {
+              class: [_vm.opacity ? "noOpacity" : "fullOpacity"],
+              attrs: { src: "/images/crystal_infini/4.png", alt: "" }
+            })
+          ]),
+          _vm._v(" "),
+          _vm._m(4)
         ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _vm.success === true
-          ? _c("button", { on: { click: _vm.unlock } }, [
-              _vm._v("Etape suivante")
-            ])
-          : _vm._e()
       ])
     ])
   ])
@@ -52906,7 +53027,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "col-md-2" }, [
       _c("p", { staticClass: "text-white" }, [
         _vm._v(
-          "Un chiffre est juste et bien placé, un chiffre est juste mais mal placé"
+          "Un chiffre est juste et bien placé, un chiffre est juste mais mal\n                        placé"
         )
       ])
     ])
@@ -52918,6 +53039,43 @@ var staticRenderFns = [
     return _c("div", { staticClass: "col-md-2" }, [
       _c("p", { staticClass: "text-white" }, [
         _vm._v("Un chiffre est juste mais mal placé")
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal_components/enigma_2.vue?vue&type=template&id=b66159f0&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/infiniteCristal_components/enigma_2.vue?vue&type=template&id=b66159f0&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row justify-content-center" }, [
+      _c("h1", [_vm._v("Enigme 2")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", [_vm._v("\n            test\n        ")])
       ])
     ])
   }
@@ -52944,13 +53102,70 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container inventory-body" }, [
-    _c("div", { staticClass: "row justify-content-center pt-3" }, [
-      _c("div", { staticClass: "md-6" }, [
-        _vm._v("\n            INVENTAIRE\n        ")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-6" }, [
-        _c("button", { on: { click: _vm.toMap } }, [_vm._v("Carte")])
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-10 offset-1" }, [
+        _c("div", { staticClass: "row justify-content-center pt-3" }, [
+          _c("div", { staticClass: "md-6" }, [
+            _vm._v("\n                    INVENTAIRE\n                ")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("button", { on: { click: _vm.toMap } }, [_vm._v("Carte")])
+          ])
+        ]),
+        _vm._v(" "),
+        this.room.step === 1
+          ? _c("div", [
+              _c("div", { staticClass: "row" }, [
+                _vm._v("\n                    1 : "),
+                _c("img", {
+                  attrs: { src: "/images/crystal_infini/1.png", alt: "" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _vm._v("\n                    2 : "),
+                _c("img", {
+                  attrs: { src: "/images/crystal_infini/2.png", alt: "" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _vm._v("\n                    3 : "),
+                _c("img", {
+                  attrs: { src: "/images/crystal_infini/3.png", alt: "" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _vm._v("\n                    4 : "),
+                _c("img", {
+                  attrs: { src: "/images/crystal_infini/4.png", alt: "" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _vm._v("\n                    5 : "),
+                _c("img", {
+                  attrs: { src: "/images/crystal_infini/5.png", alt: "" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _vm._v("\n                    6 : "),
+                _c("img", {
+                  attrs: { src: "/images/crystal_infini/6.png", alt: "" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _vm._v("\n                    7 : "),
+                _c("img", {
+                  attrs: { src: "/images/crystal_infini/7.png", alt: "" }
+                })
+              ])
+            ])
+          : _vm._e()
       ])
     ])
   ])
@@ -73305,6 +73520,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_enigma_1_vue_vue_type_template_id_b67d88f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_enigma_1_vue_vue_type_template_id_b67d88f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/infiniteCristal_components/enigma_2.vue":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/rooms/infiniteCristal_components/enigma_2.vue ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _enigma_2_vue_vue_type_template_id_b66159f0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./enigma_2.vue?vue&type=template&id=b66159f0&scoped=true& */ "./resources/js/components/rooms/infiniteCristal_components/enigma_2.vue?vue&type=template&id=b66159f0&scoped=true&");
+/* harmony import */ var _enigma_2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./enigma_2.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/infiniteCristal_components/enigma_2.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _enigma_2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _enigma_2_vue_vue_type_template_id_b66159f0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _enigma_2_vue_vue_type_template_id_b66159f0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "b66159f0",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/infiniteCristal_components/enigma_2.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/infiniteCristal_components/enigma_2.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/infiniteCristal_components/enigma_2.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_enigma_2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./enigma_2.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal_components/enigma_2.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_enigma_2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/infiniteCristal_components/enigma_2.vue?vue&type=template&id=b66159f0&scoped=true&":
+/*!**************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/infiniteCristal_components/enigma_2.vue?vue&type=template&id=b66159f0&scoped=true& ***!
+  \**************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_enigma_2_vue_vue_type_template_id_b66159f0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./enigma_2.vue?vue&type=template&id=b66159f0&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal_components/enigma_2.vue?vue&type=template&id=b66159f0&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_enigma_2_vue_vue_type_template_id_b66159f0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_enigma_2_vue_vue_type_template_id_b66159f0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
