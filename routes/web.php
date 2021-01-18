@@ -84,4 +84,6 @@ Route::prefix('forum')->group(function () {
     Route::post('addpost', 'ForumController@addPost');
     Route::post('loadpost', 'ForumController@loadPost');
     Route::post('loadonepost/{id}', 'ForumController@loadOnePost');
+    Route::post('deletepost/{id}', 'ForumController@deletePost');
+    Route::post('lockpost/{id}', 'ForumController@LockPost');
 });
