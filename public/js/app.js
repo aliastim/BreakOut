@@ -5152,6 +5152,105 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ForumPublication",
@@ -5163,12 +5262,16 @@ __webpack_require__.r(__webpack_exports__);
     return {
       post: [],
       comments: [],
+      publish: false,
+      comment_message: "",
+      comment_img: "",
       errors: []
     };
   },
   mounted: function mounted() {
     document.title = "BreakOut - Forum";
     this.loadOnePost(this.forum.post_id);
+    this.loadComments(this.forum.post_id);
   },
   methods: {
     loadOnePost: function loadOnePost(id) {
@@ -5182,14 +5285,41 @@ __webpack_require__.r(__webpack_exports__);
         _this.errors.push(error.response.data.error);
       });
     },
-    loadComments: function loadComments(id) {
+    loadComments: function loadComments(post_id) {
       var _this2 = this;
 
-      this.forum.app.req.post('forum/loadcomments' + id).then(function (response) {
-        _this2.comments = response.data; //If message
-        //Alors on va vers la page message et on envoie l'id du message en paramètre
+      this.forum.app.req.post('forum/loadcomments/' + post_id).then(function (response) {
+        _this2.comments = response.data;
+        console.log(response.data);
       })["catch"](function (error) {
         _this2.errors.push(error.response.data.error);
+      });
+    },
+    addComment: function addComment(post_id) {
+      var _this3 = this;
+
+      this.errors = [];
+      var data = {
+        post_id: post_id,
+        message: this.comment_message,
+        img: this.comment_img
+      };
+      this.forum.app.req.post('forum/addcomment', data).then(function (response) {
+        console.log(response.data);
+        _this3.publish = true;
+        _this3.post.comments = _this3.post.comments + 1;
+      })["catch"](function (error) {
+        _this3.errors.push(error.response.data.error);
+      });
+    },
+    deleteComment: function deleteComment(id) {
+      var _this4 = this;
+
+      this.errors = [];
+      this.forum.app.req.post('forum/deletecomment/' + id).then(function (response) {
+        console.log(response.data);
+      })["catch"](function (error) {
+        _this4.errors.push(error.response.data.error);
       });
     }
   }
@@ -12538,6 +12668,25 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, "\n.slide-right-enter-active{\n    -webkit-animation: slideRightIn 0.5s;\n            animation: slideRightIn 0.5s;\n}\n.slide-right-leave-active {\n    -webkit-animation: slideRightOut 0.5s;\n            animation: slideRightOut 0.5s;\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    width: 100%;\n}\n@-webkit-keyframes slideRightIn {\nfrom { transform: translateX(100%);\n}\nto { transform: translateX(0);\n}\n}\n@keyframes slideRightIn {\nfrom { transform: translateX(100%);\n}\nto { transform: translateX(0);\n}\n}\n@-webkit-keyframes slideRightOut {\nfrom { transform: translateX(0);\n}\nto { transform: translateX(-100%);\n}\n}\n@keyframes slideRightOut {\nfrom { transform: translateX(0);\n}\nto { transform: translateX(-100%);\n}\n}\n.slide-left-enter-active{\n    -webkit-animation: slideLeftIn 0.5s;\n            animation: slideLeftIn 0.5s;\n}\n.slide-left-leave-active {\n    -webkit-animation: slideLeftOut 0.5s;\n            animation: slideLeftOut 0.5s;\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    width: 100%;\n}\n@-webkit-keyframes slideLeftIn {\nfrom { transform: translateX(-100%);\n}\nto { transform: translateX(0);\n}\n}\n@keyframes slideLeftIn {\nfrom { transform: translateX(-100%);\n}\nto { transform: translateX(0);\n}\n}\n@-webkit-keyframes slideLeftOut {\nfrom { transform: translateX(0);\n}\nto { transform: translateX(100%);\n}\n}\n@keyframes slideLeftOut {\nfrom { transform: translateX(0);\n}\nto { transform: translateX(100%);\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/forum/ForumPublication.vue?vue&type=style&index=0&lang=css&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/forum/ForumPublication.vue?vue&type=style&index=0&lang=css& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.bandeau-publication-left\n{\n    display: flex;\n    background: #212121;\n    height: 30px;\n    width: 100%;\n    border-radius: 3px;\n    box-shadow: 0 5px 0 #212121;\n    padding: 10px;\n}\n.bandeau-publication-right\n{\n    display: flex;\n}\n.bandeau-publication-right>div>p\n{\n    margin: 0 !important;\n    padding-top: 6px;\n}\n.fenetre-publication\n{\n    margin-top: 20px;\n    border-radius: 5px;\n    border: 1px solid #394E63;\n}\n.fenetre-publication-header\n{\n    display: flex;\n    padding: 6px;\n    width: 100%;\n    height: 30px;\n    color: white;\n    background: #394E63;\n}\n.fenetre-publication-header>div>p\n{\n    margin: 0 !important;\n}\n.fenetre-publication-body\n{\n    color: #212121;\n    background: whitesmoke;\n    width: 100%;\n    max-height: 300px;\n    padding: 10px;\n    border-bottom-left-radius: 5px;\n    border-bottom-right-radius: 5px;\n    overflow: auto;\n}\n.zone-commentaires\n{\n    margin-top: 20px;\n    border-radius: 5px;\n    width: 100%;\n    background: #E2D2A1;\n    padding: 1px 20px 20px 20px;\n}\n.fenetre-commentaire\n{\n    border-radius: 5px;\n    border: 1px solid #394E63;\n    box-shadow: 0 3px 6px rgba(0,0,0,0.16);\n    margin-top: 20px\n}\n.fenetre-commentaire-header\n{\n    display: flex;\n    padding: 6px;\n    width: 100%;\n    height: 30px;\n    color: white;\n    background: #394E63;\n}\n.fenetre-commentaire-header>div>p\n{\n    margin: 0 !important;\n}\n.fenetre-commentaire-body\n{\n    color: #212121;\n    background: whitesmoke;\n    width: 100%;\n    max-height: 200px;\n    padding: 10px;\n    border-bottom-left-radius: 5px;\n    border-bottom-right-radius: 5px;\n    overflow: auto;\n}\n.fenetre-commenter\n{\n    margin-top: 20px;\n    border-radius: 5px;\n    width: 100%;\n    background: #E2D2A1;\n    padding: 20px;\n    text-align: left !important;\n}\n.fenetre-commenter>h4\n{\n    color: black;\n    font-size: 16px;\n}\n\n", ""]);
 
 // exports
 
@@ -65755,6 +65904,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/forum/ForumPublication.vue?vue&type=style&index=0&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/forum/ForumPublication.vue?vue&type=style&index=0&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--8-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--8-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./ForumPublication.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/forum/ForumPublication.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/layout/RoomHeader.vue?vue&type=style&index=0&lang=css&":
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/layout/RoomHeader.vue?vue&type=style&index=0&lang=css& ***!
@@ -73531,13 +73710,324 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("p", [_vm._v(_vm._s(_vm.post.subject))]),
+  return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "col-12 col-md-6" }, [
+      _c("div", { staticClass: "bandeau-publication-left" }, [
+        _c("div", { staticClass: "mr-auto" }, [
+          _c(
+            "h1",
+            {
+              staticClass: "josephin-bold",
+              staticStyle: {
+                color: "#F9BA48",
+                "font-size": "16px",
+                "margin-top": "0"
+              }
+            },
+            [_vm._v(_vm._s(_vm.post.subject))]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _vm.post.closed === 0
+            ? _c("p", { staticClass: "open-status" }, [_vm._v("OUVERT")])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.post.closed === 1
+            ? _c("p", { staticClass: "close-status" }, [_vm._v("FERMÉ")])
+            : _vm._e()
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "fenetre-publication" }, [
+        _c("div", { staticClass: "fenetre-publication-header" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", [
+            _c("p", {
+              domProps: {
+                textContent: _vm._s(_vm.forum.date(_vm.post.created_at))
+              }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "fenetre-publication-body" }, [
+          _c("p", [_vm._v(_vm._s(_vm.post.message))]),
+          _vm._v(" "),
+          _vm.post.img
+            ? _c("img", {
+                attrs: {
+                  src: "/img/icones/brain.png",
+                  height: "60px",
+                  width: "60px"
+                }
+              })
+            : _vm._e()
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "fenetre-commenter" }, [
+        _c("h4", { staticClass: "josephin-bold" }, [
+          _vm._v("Laisser un commentaire")
+        ]),
+        _vm._v(" "),
+        _vm.post.closed === 0
+          ? _c("div", [
+              _vm.publish === false
+                ? _c("div", [
+                    _c("textarea", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.comment_message,
+                          expression: "comment_message"
+                        }
+                      ],
+                      staticClass: "textarea-bo",
+                      staticStyle: { "border-radius": "0.25rem" },
+                      attrs: { placeholder: "Tapez votre texte ici" },
+                      domProps: { value: _vm.comment_message },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.comment_message = $event.target.value
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "w-100 d-flex mt-2" }, [
+                      _c("div", { staticClass: "mr-auto" }, [
+                        _c(
+                          "p",
+                          {
+                            staticClass: "josephin-regular",
+                            staticStyle: { color: "white", "font-size": "10px" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                                *En postant cette publication, je reconnais avoir pris connaissances des "
+                            ),
+                            _c(
+                              "a",
+                              { attrs: { href: "/mentions_legales" } },
+                              [
+                                _c(
+                                  "B",
+                                  {
+                                    staticClass: "josephin-bold",
+                                    staticStyle: {
+                                      color: "#f9ba48",
+                                      cursor: "pointer"
+                                    }
+                                  },
+                                  [_vm._v("conditions du forum")]
+                                )
+                              ],
+                              1
+                            ),
+                            _vm._v(
+                              " et à les respecter\n                            "
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn-submit-register",
+                            staticStyle: { width: "120px !important" },
+                            on: {
+                              click: function($event) {
+                                return _vm.addComment(_vm.post.id)
+                              }
+                            }
+                          },
+                          [_vm._v("Publier")]
+                        )
+                      ])
+                    ])
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.publish === true
+                ? _c("div", { staticStyle: { color: "limegreen" } }, [
+                    _c(
+                      "p",
+                      { staticClass: "h-100 text-center josephin-bold" },
+                      [
+                        _c("B", [
+                          _vm._v("Votre commentaire a bien été publié !")
+                        ]),
+                        _c("br")
+                      ],
+                      1
+                    )
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.errors.length
+                ? _c(
+                    "div",
+                    {
+                      staticClass: "login-modal-error mt-3",
+                      staticStyle: { color: "darkred" }
+                    },
+                    [
+                      _c(
+                        "p",
+                        { staticClass: "h-100 text-center" },
+                        _vm._l(_vm.errors, function(error) {
+                          return _c(
+                            "span",
+                            [_c("B", [_vm._v(_vm._s(error))]), _c("br")],
+                            1
+                          )
+                        }),
+                        0
+                      )
+                    ]
+                  )
+                : _vm._e()
+            ])
+          : _c("div", [_vm._m(1)])
+      ])
+    ]),
     _vm._v(" "),
-    _c("p", [_vm._v(_vm._s(_vm.post.message))])
+    _c("div", { staticClass: "col-12 col-md-6" }, [
+      _c("div", { staticClass: "bandeau-publication-right" }, [
+        _c("div", { staticClass: "mr-auto" }, [
+          _c("p", { staticStyle: { "font-size": "16px", color: "#212121" } }, [
+            _vm._v(_vm._s(_vm.post.comments) + " commentaires")
+          ])
+        ]),
+        _vm._v(" "),
+        _vm._m(2)
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "zone-commentaires" },
+        _vm._l(_vm.comments.slice().reverse(), function(comment, index) {
+          return _c(
+            "div",
+            { staticClass: "fenetre-commentaire", attrs: { index: index } },
+            [
+              _c("div", { staticClass: "fenetre-commentaire-header" }, [
+                _vm._m(3, true),
+                _vm._v(" "),
+                _c("div", [
+                  _c("div", { staticClass: "d-flex" }, [
+                    _c("div", { staticClass: "mr-auto" }, [
+                      _c("p", {
+                        domProps: {
+                          textContent: _vm._s(
+                            _vm.forum.date(comment.created_at)
+                          )
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _vm.forum.admin === true
+                      ? _c("div", { staticStyle: { "padding-left": "7px" } }, [
+                          _c(
+                            "button",
+                            {
+                              staticClass: "delete-post",
+                              on: {
+                                click: function($event) {
+                                  return _vm.deleteComment(comment.id)
+                                }
+                              }
+                            },
+                            [_c("i", { staticClass: "fas fa-ban" })]
+                          )
+                        ])
+                      : _vm._e()
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "fenetre-commentaire-body" }, [
+                _c("p", [_vm._v(_vm._s(comment.message))]),
+                _vm._v(" "),
+                comment.img
+                  ? _c("img", {
+                      attrs: {
+                        src: "/img/icones/brain.png",
+                        height: "60px",
+                        width: "60px"
+                      }
+                    })
+                  : _vm._e()
+              ])
+            ]
+          )
+        }),
+        0
+      )
+    ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mr-auto" }, [
+      _c("p", { staticClass: "josephin-bold" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "mt-3", staticStyle: { color: "darkred" } },
+      [
+        _c("p", { staticClass: "h-100 text-center" }, [
+          _vm._v(
+            "\n                        Le sujet a été clôturé par un administrateur."
+          ),
+          _c("br"),
+          _vm._v(
+            "Il n'est plus possible de laisser de commentaires pour ce sujet.\n                    "
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c(
+        "a",
+        {
+          staticClass: "josephin-bold",
+          staticStyle: { color: "#F9BA48", cursor: "pointer" },
+          attrs: { href: "/forum" }
+        },
+        [_vm._v("Retourner au forum")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mr-auto" }, [
+      _c("p", { staticClass: "josephin-bold" })
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -95745,7 +96235,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ForumPublication_vue_vue_type_template_id_4ae04524___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ForumPublication.vue?vue&type=template&id=4ae04524& */ "./resources/js/components/forum/ForumPublication.vue?vue&type=template&id=4ae04524&");
 /* harmony import */ var _ForumPublication_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ForumPublication.vue?vue&type=script&lang=js& */ "./resources/js/components/forum/ForumPublication.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _ForumPublication_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ForumPublication.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/forum/ForumPublication.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -95753,7 +96245,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _ForumPublication_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _ForumPublication_vue_vue_type_template_id_4ae04524___WEBPACK_IMPORTED_MODULE_0__["render"],
   _ForumPublication_vue_vue_type_template_id_4ae04524___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -95782,6 +96274,22 @@ component.options.__file = "resources/js/components/forum/ForumPublication.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ForumPublication_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./ForumPublication.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/forum/ForumPublication.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ForumPublication_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/forum/ForumPublication.vue?vue&type=style&index=0&lang=css&":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/components/forum/ForumPublication.vue?vue&type=style&index=0&lang=css& ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ForumPublication_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--8-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--8-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./ForumPublication.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/forum/ForumPublication.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ForumPublication_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ForumPublication_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ForumPublication_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ForumPublication_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ForumPublication_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 

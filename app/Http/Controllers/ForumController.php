@@ -64,11 +64,52 @@ class ForumController extends Controller
         }
     }
 
-    public function addComment() {
+    public function loadComments($post_id)
+    {
+        $comments = Forum_comment::where('post_id', $post_id)->get();
+        return response()->json($comments, 200);
+    }
+
+    public function addComment(Request $request) {
         $user = Auth::user();
         if (isset($user) and !empty($user) ) {
 
-            return response("ok");
+            $post = Forum_post::find($request->post_id);
+            if($post->closed === 0)
+            {
+                $comment = new Forum_comment();
+
+                if(isset($request->message) and !empty($request->message))
+                {
+                    $comment->message = $request->message;
+
+                } else
+                {
+                    return response()->json(["error" => "Vous devez ajouter un message à votre publication"], 401);
+                }
+
+                if(isset($request->img) and !empty($request->img))
+                {
+                    $comment->isImg = true;
+                    $comment->img = $request->img;
+                }
+
+                $comment->user_id = $user->id;
+                $comment->post_id = $request->post_id;
+                $comment->save();
+
+                /*Incrémenter le nombre de commentaire sur l'article*/
+
+                $post->comments++;
+                $post->save();
+
+                return response()->json($comment, 200);
+            } else
+            {
+                return response()->json(["error" => "La publication est fermée, vous ne pouvez pas poster de commentaire"], 401);
+            }
+
+
         } else
         {
             return response()->json(["error" => "L'utilisateur n'est pas connecté"], 401);
@@ -107,6 +148,24 @@ class ForumController extends Controller
 
             $post->save();
             return response("La publication a bien été supprimée");
+        } else
+        {
+            return response()->json(["error" => "L'utilisateur connecté n'est pas administrateur"], 401);
+        }
+
+    }
+
+    public function deleteComment($id)
+    {
+        $admin = Auth::user();
+
+        if (isset($admin->admin) and ($admin->admin === 1) ) {
+            $comment = Forum_comment::find($id);
+            $post = Forum_post::find($comment->post_id);
+            $post->comments--;
+            $post->save();
+            $comment->delete();
+            return response("Le commentaire a bien été supprimé");
         } else
         {
             return response()->json(["error" => "L'utilisateur connecté n'est pas administrateur"], 401);
