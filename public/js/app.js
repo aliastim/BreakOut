@@ -6356,6 +6356,2038 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _layout_RoomHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../layout/RoomHeader */ "./resources/js/components/layout/RoomHeader.vue");
+/* harmony import */ var _anubisRiddle_components_enigme0__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./anubisRiddle_components/enigme0 */ "./resources/js/components/rooms/anubisRiddle_components/enigme0.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme1__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme1 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme1_1__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme1_1 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1_1.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme2 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme2_1__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme2_1 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2_1.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme3__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme3 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme3_1__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme3_1 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme4__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme4 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme4_1__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme4_1 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme5__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme5 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme5_1__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme5_1 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme6__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme6 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme6_1__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme6_1 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme7__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme7 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme7_1__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme7_1 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme8__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme8 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme8_1__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme8_1 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme9__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme9 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme9_1__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme9_1 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme10__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme10 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10.vue");
+/* harmony import */ var _anubisRiddle_components_joueur1_J1_enigme10_1__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./anubisRiddle_components/joueur1/J1_enigme10_1 */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue");
+/* harmony import */ var _anubisRiddle_components_lost__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./anubisRiddle_components/lost */ "./resources/js/components/rooms/anubisRiddle_components/lost.vue");
+/* harmony import */ var _anubisRiddle_components_victory__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./anubisRiddle_components/victory */ "./resources/js/components/rooms/anubisRiddle_components/victory.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* Joueur 1 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "anubisRiddle.vue",
+  props: ['app'],
+  components: {
+    RoomHeader: _layout_RoomHeader__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Enigme0: _anubisRiddle_components_enigme0__WEBPACK_IMPORTED_MODULE_1__["default"],
+    J1_enigme1: _anubisRiddle_components_joueur1_J1_enigme1__WEBPACK_IMPORTED_MODULE_2__["default"],
+    J1_enigme1_1: _anubisRiddle_components_joueur1_J1_enigme1_1__WEBPACK_IMPORTED_MODULE_3__["default"],
+    J1_enigme2: _anubisRiddle_components_joueur1_J1_enigme2__WEBPACK_IMPORTED_MODULE_4__["default"],
+    J1_enigme2_1: _anubisRiddle_components_joueur1_J1_enigme2_1__WEBPACK_IMPORTED_MODULE_5__["default"],
+    J1_enigme3: _anubisRiddle_components_joueur1_J1_enigme3__WEBPACK_IMPORTED_MODULE_6__["default"],
+    J1_enigme3_1: _anubisRiddle_components_joueur1_J1_enigme3_1__WEBPACK_IMPORTED_MODULE_7__["default"],
+    J1_enigme4: _anubisRiddle_components_joueur1_J1_enigme4__WEBPACK_IMPORTED_MODULE_8__["default"],
+    J1_enigme4_1: _anubisRiddle_components_joueur1_J1_enigme4_1__WEBPACK_IMPORTED_MODULE_9__["default"],
+    J1_enigme5: _anubisRiddle_components_joueur1_J1_enigme5__WEBPACK_IMPORTED_MODULE_10__["default"],
+    J1_enigme5_1: _anubisRiddle_components_joueur1_J1_enigme5_1__WEBPACK_IMPORTED_MODULE_11__["default"],
+    J1_enigme6: _anubisRiddle_components_joueur1_J1_enigme6__WEBPACK_IMPORTED_MODULE_12__["default"],
+    J1_enigme6_1: _anubisRiddle_components_joueur1_J1_enigme6_1__WEBPACK_IMPORTED_MODULE_13__["default"],
+    J1_enigme7: _anubisRiddle_components_joueur1_J1_enigme7__WEBPACK_IMPORTED_MODULE_14__["default"],
+    J1_enigme7_1: _anubisRiddle_components_joueur1_J1_enigme7_1__WEBPACK_IMPORTED_MODULE_15__["default"],
+    J1_enigme8: _anubisRiddle_components_joueur1_J1_enigme8__WEBPACK_IMPORTED_MODULE_16__["default"],
+    J1_enigme8_1: _anubisRiddle_components_joueur1_J1_enigme8_1__WEBPACK_IMPORTED_MODULE_17__["default"],
+    J1_enigme9: _anubisRiddle_components_joueur1_J1_enigme9__WEBPACK_IMPORTED_MODULE_18__["default"],
+    J1_enigme9_1: _anubisRiddle_components_joueur1_J1_enigme9_1__WEBPACK_IMPORTED_MODULE_19__["default"],
+    J1_enigme10: _anubisRiddle_components_joueur1_J1_enigme10__WEBPACK_IMPORTED_MODULE_20__["default"],
+    J1_enigme10_1: _anubisRiddle_components_joueur1_J1_enigme10_1__WEBPACK_IMPORTED_MODULE_21__["default"],
+    lost: _anubisRiddle_components_lost__WEBPACK_IMPORTED_MODULE_22__["default"],
+    victory: _anubisRiddle_components_victory__WEBPACK_IMPORTED_MODULE_23__["default"]
+  },
+  data: function data() {
+    return {
+      enigme: 1,
+      phase: 0,
+      hour: "01",
+      minute: "00",
+      second: "00",
+      player: 0,
+      losted: false
+    };
+  },
+  mounted: function mounted() {
+    this.app.navbool = false;
+  },
+  methods: {
+    lost: function lost() {
+      if (this.losted === false) {
+        this.losted = true;
+        this.player = 0;
+        this.enigme = 0;
+        this.phase = 0;
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme0",
+  props: ['room'],
+  data: function data() {
+    return {
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    joueur_un: function joueur_un() {
+      this.room.player = 1;
+      /*Passe-muraille*/
+
+      /*this.room.enigme= 10;
+      this.room.phase= 1;*/
+    },
+    joueur_deux: function joueur_deux() {
+      this.room.player = 2;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme1",
+  props: ['room'],
+  data: function data() {
+    return {
+      show: false,
+      show_etape: 0,
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    suite: function suite() {
+      this.room.phase = 1;
+    }
+  },
+  computed: {
+    fade: function fade() {
+      var _this = this;
+
+      this.$interval = setInterval(function () {
+        _this.show = true;
+        _this.$interval = setInterval(function () {
+          _this.show_etape++;
+        }, 1000);
+      }, 1000);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme10",
+  props: ['room'],
+  data: function data() {
+    return {
+      show: false,
+      show_etape: 0,
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    suite: function suite() {
+      this.room.phase = 1;
+    }
+  },
+  computed: {
+    fade: function fade() {
+      var _this = this;
+
+      this.$interval = setInterval(function () {
+        _this.show = true;
+        _this.$interval = setInterval(function () {
+          _this.show_etape++;
+        }, 1000);
+      }, 1000);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme10",
+  props: ['room'],
+  data: function data() {
+    return {
+      password: "",
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    lost: function lost() {
+      this.room.player = 0;
+      this.room.enigme = 0;
+      this.room.phase = 0;
+    },
+    victory: function victory() {
+      this.room.player = 0;
+      this.room.enigme = 0;
+      this.room.phase = 1;
+    }
+  },
+  computed: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1_1.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1_1.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme1",
+  props: ['room'],
+  data: function data() {
+    return {
+      password: "",
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    lettre: function lettre(n) {
+      this.password = this.password + n;
+      this.verify();
+    },
+    verify: function verify() {
+      if (this.password === "INVERSER") {
+        this.room.enigme = 2;
+        this.room.phase = 0;
+      }
+    },
+    effacer: function effacer() {
+      this.password = "";
+    }
+  },
+  computed: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme2",
+  props: ['room'],
+  data: function data() {
+    return {
+      show: false,
+      show_etape: 0,
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    suite: function suite() {
+      this.room.phase = 1;
+    }
+  },
+  computed: {
+    fade: function fade() {
+      var _this = this;
+
+      this.$interval = setInterval(function () {
+        _this.show = true;
+        _this.$interval = setInterval(function () {
+          _this.show_etape++;
+        }, 1000);
+      }, 1000);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2_1.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2_1.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme2",
+  props: ['room'],
+  data: function data() {
+    return {
+      password: "",
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    lettre: function lettre(n) {
+      this.password = this.password + n;
+      this.verify();
+    },
+    verify: function verify() {
+      if (this.password === "TOMBE") {
+        this.room.enigme = 3;
+        this.room.phase = 0;
+      }
+    },
+    effacer: function effacer() {
+      this.password = "";
+    }
+  },
+  computed: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme3",
+  props: ['room'],
+  data: function data() {
+    return {
+      show: false,
+      show_etape: 0,
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    suite: function suite() {
+      this.room.phase = 1;
+    }
+  },
+  computed: {
+    fade: function fade() {
+      var _this = this;
+
+      this.$interval = setInterval(function () {
+        _this.show = true;
+        _this.$interval = setInterval(function () {
+          _this.show_etape++;
+        }, 1000);
+      }, 1000);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme3",
+  props: ['room'],
+  data: function data() {
+    return {
+      password: "",
+      indice: false,
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    verify: function verify() {
+      if (this.password.toUpperCase() === "EBMOT") {
+        this.room.enigme = 4;
+        this.room.phase = 0;
+      }
+    },
+    effacer: function effacer() {
+      this.password = "";
+    }
+  },
+  computed: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme4",
+  props: ['room'],
+  data: function data() {
+    return {
+      show: false,
+      show_etape: 0,
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    suite: function suite() {
+      this.room.phase = 1;
+    }
+  },
+  computed: {
+    fade: function fade() {
+      var _this = this;
+
+      this.$interval = setInterval(function () {
+        _this.show = true;
+        _this.$interval = setInterval(function () {
+          _this.show_etape++;
+        }, 1000);
+      }, 1000);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme4",
+  props: ['room'],
+  data: function data() {
+    return {
+      password: "",
+      interval: null,
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    audio_do: function audio_do() {
+      var audio = this.$refs.player_do;
+      audio.play();
+      this.note("Do");
+    },
+    audio_re: function audio_re() {
+      var audio = this.$refs.player_re;
+      audio.play();
+      this.note("Re");
+    },
+    audio_mi: function audio_mi() {
+      var audio = this.$refs.player_mi;
+      audio.play();
+      this.note("Mi");
+    },
+    audio_fa: function audio_fa() {
+      var audio = this.$refs.player_fa;
+      audio.play();
+      this.note("Fa");
+    },
+    audio_sol: function audio_sol() {
+      var audio = this.$refs.player_sol;
+      audio.play();
+      this.note("Sol");
+    },
+    audio_la: function audio_la() {
+      var audio = this.$refs.player_la;
+      audio.play();
+      this.note("La");
+    },
+    audio_si: function audio_si() {
+      var audio = this.$refs.player_si;
+      audio.play();
+      this.note("Si");
+    },
+    audio_do2: function audio_do2() {
+      var audio = this.$refs.player_do2;
+      audio.play();
+      this.note("Do2");
+    },
+    note: function note(n) {
+      this.password = this.password + n.toUpperCase();
+      console.log(this.password);
+      this.verify();
+    },
+    verify: function verify() {
+      var _this = this;
+
+      if (this.password === "RESOLLADO2") {
+        var audio = this.$refs.player_melodie;
+        audio.play();
+        this.interval = setInterval(function () {
+          _this.room.enigme = 5;
+          _this.room.phase = 0;
+          console.log('test');
+        }, 3000);
+      }
+    },
+    effacer: function effacer() {
+      this.password = "";
+    }
+  },
+  beforeDestroy: function beforeDestroy() {
+    clearInterval(this.interval);
+  },
+  computed: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme5",
+  props: ['room'],
+  data: function data() {
+    return {
+      show: false,
+      show_etape: 0,
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    suite: function suite() {
+      this.room.phase = 1;
+    }
+  },
+  computed: {
+    fade: function fade() {
+      var _this = this;
+
+      this.$interval = setInterval(function () {
+        _this.show = true;
+        _this.$interval = setInterval(function () {
+          _this.show_etape++;
+        }, 1000);
+      }, 1000);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme5",
+  props: ['room'],
+  data: function data() {
+    return {
+      password: "",
+      counter: 0,
+      interval: null,
+      red: false,
+      blue: false,
+      orange: false,
+      violet: false,
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    color_red: function color_red() {
+      if (this.red !== true) {
+        this.counter++;
+        this.red = true;
+        this.verify();
+      }
+    },
+    color_blue: function color_blue() {
+      if (this.blue !== true) {
+        this.counter++;
+        this.blue = true;
+        this.verify();
+      }
+    },
+    color_orange: function color_orange() {
+      if (this.orange !== true) {
+        this.counter++;
+        this.orange = true;
+        this.verify();
+      }
+    },
+    color_violet: function color_violet() {
+      if (this.violet !== true) {
+        this.counter++;
+        this.violet = true;
+        this.verify();
+      }
+    },
+    verify: function verify() {
+      var _this = this;
+
+      if (this.counter === 4) {
+        this.interval = setInterval(function () {
+          _this.room.enigme = 6;
+          _this.room.phase = 0;
+          console.log('test');
+        }, 1000);
+      }
+    }
+  },
+  beforeDestroy: function beforeDestroy() {
+    clearInterval(this.interval);
+  },
+  computed: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme6",
+  props: ['room'],
+  data: function data() {
+    return {
+      show: false,
+      show_etape: 0,
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    suite: function suite() {
+      this.room.phase = 1;
+    }
+  },
+  computed: {
+    fade: function fade() {
+      var _this = this;
+
+      this.$interval = setInterval(function () {
+        _this.show = true;
+        _this.$interval = setInterval(function () {
+          _this.show_etape++;
+        }, 1000);
+      }, 1000);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme6",
+  props: ['room'],
+  data: function data() {
+    return {
+      interval: null,
+      a_true: true,
+      anim: 1,
+      anim1: true,
+      anim2: false,
+      anim3: false,
+      btn1: false,
+      btn2: false,
+      btn3: false,
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+    this.b6_animation();
+  },
+  methods: {
+    b6_animation: function b6_animation() {
+      var _this = this;
+
+      this.interval = setInterval(function () {
+        switch (_this.anim) {
+          case 1:
+            _this.anim1 = false;
+            _this.anim2 = true;
+            _this.anim3 = false;
+            _this.anim = 2;
+            console.log("2");
+            break;
+
+          case 2:
+            _this.anim1 = false;
+            _this.anim2 = false;
+            _this.anim3 = true;
+            _this.anim = 3;
+            console.log("3");
+            break;
+
+          case 3:
+            _this.anim1 = true;
+            _this.anim2 = false;
+            _this.anim3 = false;
+            _this.anim = 1;
+            console.log("1");
+            break;
+        }
+      }, 1000);
+    },
+    choice: function choice(n) {
+      if (n === 'A') {
+        this.btn1 = true;
+        this.verify();
+      }
+
+      if (n === 'B') {
+        this.btn2 = true;
+        this.verify();
+      }
+
+      if (n === 'C') {
+        this.btn3 = true;
+        this.verify();
+      }
+    },
+    verify: function verify() {
+      if (this.btn1 === true && this.btn2 === true && this.btn3 === true) {
+        this.room.enigme = 7;
+        this.room.phase = 0;
+      }
+    }
+  },
+  beforeDestroy: function beforeDestroy() {
+    clearInterval(this.interval);
+  },
+  computed: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme7",
+  props: ['room'],
+  data: function data() {
+    return {
+      show: false,
+      show_etape: 0,
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    suite: function suite() {
+      this.room.phase = 1;
+    }
+  },
+  computed: {
+    fade: function fade() {
+      var _this = this;
+
+      this.$interval = setInterval(function () {
+        _this.show = true;
+        _this.$interval = setInterval(function () {
+          _this.show_etape++;
+        }, 1000);
+      }, 1000);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme7",
+  props: ['room'],
+  data: function data() {
+    return {
+      password: "",
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    verify: function verify() {
+      if (this.password.toUpperCase() === "CROCODILE") {
+        this.room.enigme = 8;
+        this.room.phase = 0;
+      }
+    }
+  },
+  computed: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme8",
+  props: ['room'],
+  data: function data() {
+    return {
+      show: false,
+      show_etape: 0,
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    suite: function suite() {
+      this.room.phase = 1;
+    }
+  },
+  computed: {
+    fade: function fade() {
+      var _this = this;
+
+      this.$interval = setInterval(function () {
+        _this.show = true;
+        _this.$interval = setInterval(function () {
+          _this.show_etape++;
+        }, 1000);
+      }, 1000);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme8",
+  props: ['room'],
+  data: function data() {
+    return {
+      A1: "",
+      A2: "",
+      A3: "",
+      B1: "",
+      B2: "",
+      B3: "",
+      C1: "",
+      C2: "",
+      C3: "3",
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    verify: function verify() {
+      if (Number(this.A1) === 0 && Number(this.A2) === 2 && Number(this.A3) === 1 && Number(this.B1) === 1 && Number(this.B2) === 1 && Number(this.B3) === 1 && Number(this.C1) === 2 && Number(this.C2) === 1 && Number(this.C3) === 3) {
+        this.room.enigme = 9;
+        this.room.phase = 0;
+      }
+    }
+  },
+  computed: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme9",
+  props: ['room'],
+  data: function data() {
+    return {
+      show: false,
+      show_etape: 0,
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    suite: function suite() {
+      this.room.phase = 1;
+    }
+  },
+  computed: {
+    fade: function fade() {
+      var _this = this;
+
+      this.$interval = setInterval(function () {
+        _this.show = true;
+        _this.$interval = setInterval(function () {
+          _this.show_etape++;
+        }, 1000);
+      }, 1000);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "enigme9",
+  props: ['room'],
+  data: function data() {
+    return {
+      password: "",
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    verify: function verify() {
+      if (Number(this.password) === 75) {
+        /*
+            triangle = 7
+            carré = 10
+            rond = 2
+            triangle inversé = 5
+             Réponse : 75
+         */
+        this.room.enigme = 10;
+        this.room.phase = 0;
+      }
+    }
+  },
+  computed: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Lost",
+  props: ['room'],
+  data: function data() {
+    return {
+      show: false,
+      show_etape: 0,
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    home: function home() {
+      window.location.href = '/home';
+    }
+  },
+  computed: {
+    fade: function fade() {
+      var _this = this;
+
+      this.$interval = setInterval(function () {
+        _this.show = true;
+        _this.$interval = setInterval(function () {
+          _this.show_etape++;
+        }, 1000);
+      }, 1000);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Victory",
+  props: ['room'],
+  data: function data() {
+    return {
+      show: false,
+      show_etape: 0,
+      errors: []
+    };
+  },
+  mounted: function mounted() {
+    document.title = "Breakout - Anubis Riddle";
+  },
+  methods: {
+    home: function home() {
+      window.location.href = '/home';
+    }
+  },
+  computed: {
+    fade: function fade() {
+      var _this = this;
+
+      this.$interval = setInterval(function () {
+        _this.show = true;
+        _this.$interval = setInterval(function () {
+          _this.show_etape++;
+        }, 1000);
+      }, 1000);
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal.vue?vue&type=script&lang=js&":
 /*!********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/infiniteCristal.vue?vue&type=script&lang=js& ***!
@@ -12725,6 +14757,234 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, "\n.title-mentions {\n    font-size: 20px;\n    color: #f9ba48;\n    margin-top: 6px;\n    text-transform: uppercase;\n    text-align: center;\n}\n.text-mentions\n{\n    text-align: justify;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle.vue?vue&type=style&index=0&lang=css&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle.vue?vue&type=style&index=0&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n@font-face {\n    font-family: \"hieroglyphes\";\n    src: url(\"/polices/anubis/hieroglyphes.ttf\");\n}\n@font-face {\n    font-family: \"Volte\";\n    src: url(\"/polices/anubis/Volte-Regular.otf\");\n}\n@font-face {\n    font-family: \"Volte_bold\";\n    src: url(\"/polices/anubis/Volte-Bold.ttf\");\n}\n@font-face {\n    font-family: \"Trajan\";\n    src: url(\"/polices/anubis/TrajanPro3-Regular.otf\");\n}\n@font-face {\n    font-family: \"Trajan_bold\";\n    src: url(\"/polices/anubis/TrajanPro3-Bold.otf\");\n}\n.timer\n{\n    font-family: Trajan, monospace !important;\n    border-color : #f7aa1d;\n    background: none;\n    color : #f7aa1d;\n    text-transform: uppercase;\n    box-shadow: 0 0 8px #2e4157;\n    border-style: outset;\n    font-size: 19px;\n    padding-top: 5px !important;\n}\n.modalingame\n{\n    font-family: Trajan, monospace !important;\n    border: 1px outset #f7aa1d;\n    background: none;\n    color : #f7aa1d;\n    text-transform: uppercase;\n    padding: 4px 20px;\n    font-size: 20px;\n    box-shadow: 0 0 8px #2e4157;\n    transition: 0.3s;\n    cursor: pointer;\n    border-radius: 4px;\n    font-size: 19px;\n    padding-top: 8px !important;\n}\n.modalingame:hover\n{\n    background: #f7aa1d;\n    color: #232323;\n}\n.anubis-body\n{\n    color: white;\n    height: 100vh;\n    width: 100vw;\n    overflow: auto;\n    /*background: url(/img/salles/anubis_riddle/fond.gif) center no-repeat;*/\n    background: url(/img/salles/anubis_riddle/fond.png) center no-repeat;\n    background-size: cover;\n}\n.general-body{\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    display: flex;\n    justify-content: center;\n}\n.body-c {\n    position: absolute;\n    top: 50%; /* poussé de la moitié de hauteur du référent */\n    transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */\n}\n\n/*CSS Pour les transitions*/\n.fade-enter-active, .fade-leave-active {\n    transition: opacity 1s;\n}\n.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {\n    opacity: 0;\n}\n.texte-intro\n{\n    font-family: Trajan;\n    font-size: 35px;\n    color: white;\n}\n.button_egypte\n{\n    background-image: url(/img/salles/anubis_riddle/boutton_normal.png);\n    border: none;\n    background-size: 150%;\n    background-position: center;\n    border-radius: 8px;\n    padding: 5px 20px;\n    font-size: 20px;\n    color: white;\n    font-family: Volte;\n}\n.button_egypte:hover\n{\n    background-image: url(/img/salles/anubis_riddle/boutton_hover.png);\n}\n.button_egypte:active\n{\n    background-image: url(/img/salles/anubis_riddle/boutton_click.png);\n}\n.btn_hiero {\n    font-family: hieroglyphes;\n    width: 50px;\n    height: 50px;\n    font-size: 40px;\n    color: white;\n    border: none;\n    margin-top: 10px;\n    background-image: url(/img/salles/anubis_riddle/boutton_normal.png);\n    background-size: 150%;\n    background-position: center;\n    border-radius: 8px;\n}\n.btn_hiero:hover {\n    background-image: url(/img/salles/anubis_riddle/boutton_hover.png);\n}\n.btn_hiero:active\n{\n    background-image: url(/img/salles/anubis_riddle/boutton_click.png);\n}\n.title-egypte\n{\n    text-align: center;\n    color: white;\n    font-family: Volte;\n    font-size: 2.5rem;\n}\n.sous-texte\n{\n    font-family: Trajan;\n    color: white;\n    text-align: center;\n    margin-top: 50px;\n    font-size: 15px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=style&index=0&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=style&index=0&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.logo\n{\n    max-height: 300px;\n}\n.buttons-players\n{\n    max-width: 500px;\n    padding-top: 50px;\n    margin: auto;\n}\n.buttons-players>div>button\n{\n   /*padding: 15px 20px;*/\n   padding-top: 15px;\n   padding-bottom: 15px;\n   width: 200px;\n   border: 1px outset #f7aa1d;\n   border-radius: 5px;\n   color: #f7aa1d;\n   font-family: Trajan;\n   background: none;\n   transition: 0.3s;\n   cursor: pointer;\n}\n.buttons-players>div>button:hover\n{\n    font-family: Trajan_bold;\n    color: #2e4157;\n    background: #E3B05C;\n    box-shadow: 0 0 7px #E3B05C;\n}\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=style&index=0&id=720602d8&scoped=true&lang=css&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=style&index=0&id=720602d8&scoped=true&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.imgchoix[data-v-720602d8]\n{\n    margin-top: 100px;\n    max-width: 1100px;\n    position: relative;\n}\n.image-diff>img[data-v-720602d8]\n{\n    width: 100%;\n}\n.btn-tuer[data-v-720602d8]\n{\n    position: absolute;\n    top: 43%;\n    left: 31%;\n    width: 17%;\n    height: 18%;\n    background: none;\n    border: #F8AA22 1px solid;\n    border-radius: 40px 0 0 40px;\n    text-align: center;\n    font-family: Volte;\n    font-size: 22px;\n    color: #F8AA22;\n    text-transform: uppercase;\n    transition: 0.3s;\n    cursor: pointer;\n}\n.btn-sacrifice[data-v-720602d8]\n{\n    position: absolute;\n    top: 43%;\n    right: 31%;\n    width: 17%;\n    height: 18%;\n    background: none;\n    border: #F8AA22 1px solid;\n    border-radius: 0 40px 40px 0;\n    text-align: center;\n    font-family: Volte;\n    font-size: 22px;\n    color: #F8AA22;\n    text-transform: uppercase;\n    transition: 0.3s;\n    cursor: pointer;\n}\n.btn-tuer[data-v-720602d8]:hover\n{\n    background: #F8AA22;\n    color: white;\n}\n.btn-sacrifice[data-v-720602d8]:hover\n{\n    background: #F8AA22;\n    color: white;\n}\n@media screen and (max-width: 1200px){\n.imgchoix[data-v-720602d8]\n    {\n        margin-top: 100px;\n        max-width: 800px;\n        position: relative;\n}\n.btn-tuer[data-v-720602d8]\n    {\n        font-size: 15px;\n}\n.btn-sacrifice[data-v-720602d8]\n    {\n        font-size: 15px;\n}\n}\n@media screen and (max-width: 767px){\n.btn-tuer[data-v-720602d8]\n    {\n        font-size: 10px !important;\n}\n.btn-sacrifice[data-v-720602d8]\n    {\n        font-size: 10px !important;\n}\n}\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=style&index=0&id=1e3e16ae&scoped=true&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=style&index=0&id=1e3e16ae&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.img-pyramide[data-v-1e3e16ae]\n{\n    height: 80px;\n    margin-bottom: -195px;\n}\n.inputrecopie[data-v-1e3e16ae]\n{\n    width: 100%;\n    margin-top: 50px;\n    font-family: hieroglyphes;\n    font-size: 50px;\n    border-radius: 20px 20px 20px 20px;\n    border: 1px solid white;\n    background: rgba(255,255,255,0.1);\n    color: #F8AA22;\n}\n.btn-EN3[data-v-1e3e16ae]\n{\n    font-family: Trajan;\n    color: #F8AA22;\n    font-size: 40px;\n    border-radius: 100px;\n    width: 50px;\n    height: 50px;\n    background: none;\n    border: 1px solid #F8AA22;\n    margin-top: 50px;\n    padding-top: 5px;\n}\n.btn-EN3[data-v-1e3e16ae]:hover\n{\n    color: white;\n    background-image: url(/img/salles/anubis_riddle/boutton_click.png);\n    background-size: 150%;\n    background-position: center;\n    cursor: pointer;\n}\n.aide[data-v-1e3e16ae]\n{\n    font-family: Trajan;\n    color: #F8AA22;\n    font-size: 15px;\n    margin-top: 20px;\n    margin-bottom: -20px;\n    bottom: -20px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=style&index=0&id=532451ef&scoped=true&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=style&index=0&id=532451ef&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.btn_meldodie[data-v-532451ef]\n{\n    font-family: Volte;\n    width: 50px;\n    height: 100px;\n    font-size: 20px;\n    color: black;\n    background: white;\n    border-radius: 40px 40px 40px 40px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=style&index=0&id=efeae5a0&scoped=true&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=style&index=0&id=efeae5a0&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.image-diff[data-v-efeae5a0]\n{\n    margin-top: 100px;\n    max-width: 600px;\n    position: relative;\n}\n@media screen and (max-width: 1000px){\n.image-diff[data-v-efeae5a0]\n    {\n        margin-top: 100px;\n        max-width: 400px;\n        position: relative;\n}\n}\n.image-diff>img[data-v-efeae5a0]\n{\n    width: 100%;\n}\n.counter[data-v-efeae5a0]\n{\n    position: absolute;\n    top: 0;\n    left: 45%;\n    width: 10%;\n    height: 10%;\n}\n.counter > p[data-v-efeae5a0]\n{\n    color: white;\n    font-size: 50px;\n    font-family: Trajan;\n    text-align: center;\n}\n.boutons-diffs[data-v-efeae5a0]\n{\n    background: none;\n    border: none;\n    border-radius: 100%;\n}\n.boutons-diffs[data-v-efeae5a0]:active\n{\n    background: #f7aa1d;\n    opacity: 0.7;\n    -webkit-animation: lightbox-loading-data-v-efeae5a0 0.5s ease infinite;\n            animation: lightbox-loading-data-v-efeae5a0 0.5s ease infinite;\n}\n.bouton-diff1[data-v-efeae5a0]\n{\n    position: absolute;\n    top: 3%;\n    left: 0;\n    width: 26%;\n    height: 32%;\n}\n.bouton-diff2[data-v-efeae5a0]\n{\n    position: absolute;\n    bottom: 20%;\n    left: 15%;\n    width: 21%;\n    height: 18%;\n}\n.bouton-diff3[data-v-efeae5a0]\n{\n    position: absolute;\n    bottom: 20%;\n    right: 15%;\n    width: 21%;\n    height: 18%;\n}\n.bouton-diff4[data-v-efeae5a0]\n{\n    position: absolute;\n    top: 24%;\n    left: 45%;\n    width: 10%;\n    height: 15%;\n}\n.bouton-diff5[data-v-efeae5a0]\n{\n    position: absolute;\n    top: 72%;\n    left: 45%;\n    width: 10%;\n    height: 9%;\n}\n@-webkit-keyframes lightbox-loading-data-v-efeae5a0 {\n0%{\n        opacity: 0.3;\n        transform: scale(0.75);\n}\n50%{\n        opacity: 0.7;\n        transform: scale(1);\n}\n100% {\n        opacity: 0.3;\n        transform: scale(0.75);\n}\n}\n@keyframes lightbox-loading-data-v-efeae5a0 {\n0%{\n        opacity: 0.3;\n        transform: scale(0.75);\n}\n50%{\n        opacity: 0.7;\n        transform: scale(1);\n}\n100% {\n        opacity: 0.3;\n        transform: scale(0.75);\n}\n}\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=style&index=0&id=861e6f1e&scoped=true&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=style&index=0&id=861e6f1e&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.button-6[data-v-861e6f1e]\n{\n    margin: 30px 20px;\n    height: 70px;\n    width: 70px;\n    background-image: url(/img/salles/anubis_riddle/boutton_normal.png);\n    background-size: 150%;\n    background-position: center;\n    border-radius: 10px;\n    border: none;\n}\n.button-6[data-v-861e6f1e]:hover {\n    background-image: url(/img/salles/anubis_riddle/boutton_hover.png);\n}\n.button-6[data-v-861e6f1e]:active\n{\n    background-image: url(/img/salles/anubis_riddle/boutton_click.png);\n}\n.b6-animation[data-v-861e6f1e]\n{\n    -webkit-animation: lightbox-loading-data-v-861e6f1e 1s ease infinite;\n            animation: lightbox-loading-data-v-861e6f1e 1s ease infinite;\n}\n@-webkit-keyframes lightbox-loading-data-v-861e6f1e {\n0%{\n        opacity: 1;\n}\n50%{\n        opacity: 0.5;\n}\n100% {\n        opacity: 1;\n}\n}\n@keyframes lightbox-loading-data-v-861e6f1e {\n0%{\n        opacity: 1;\n}\n50%{\n        opacity: 0.5;\n}\n100% {\n        opacity: 1;\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=style&index=0&id=1c51f89c&scoped=true&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=style&index=0&id=1c51f89c&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.inpt-sculpure[data-v-1c51f89c]\n{\n    margin-top: 50px;\n    border-radius: 20px 20px 20px 20px;\n    text-align: center;\n    font-family: Volte;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=style&index=0&id=26bd3ef3&scoped=true&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=style&index=0&id=26bd3ef3&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.inptCA[data-v-26bd3ef3] {\n    width: 170px;\n    height: 170px;\n    font-size: 150px;\n    text-align: center;\n    font-family: Volte;\n}\n.qua1[data-v-26bd3ef3]\n{\n    display: flex;\n    justify-content: center;\n    width: 510px;\n}\n@media screen and (max-width: 767px){\n.qua1[data-v-26bd3ef3]\n    {\n        display: flex;\n        justify-content: center;\n        width: 309px;\n}\n.inptCA[data-v-26bd3ef3] {\n        width: 103px;\n        height: 103px;\n        font-size: 100px;\n        text-align: center;\n}\n}\n.qua2[data-v-26bd3ef3] {\n    padding-left: 0px;\n    padding-right: 0px;\n    width: 33.333333%;\n}\n.in1[data-v-26bd3ef3] {\n    background: none;\n    border-top: none;\n    border-left: none;\n    border-right: white 1px solid;\n    border-bottom: white 1px solid;\n    color: white;\n}\n.in2[data-v-26bd3ef3] {\n    background: none;\n    border-top: none;\n    border-left: white 1px solid;\n    border-right: white 1px solid;\n    border-bottom: white 1px solid;\n    color: white;\n}\n.in3[data-v-26bd3ef3] {\n    background: none;\n    border-top: none;\n    border-left: white 1px solid;\n    border-right: none;\n    border-bottom: white 1px solid;\n    color: white;\n}\n.in4[data-v-26bd3ef3] {\n    background: none;\n    border-top: white 1px solid;\n    border-left: none;\n    border-right: white 1px solid;\n    border-bottom: white 1px solid;\n    color: white;\n}\n.in5[data-v-26bd3ef3] {\n    background: none;\n    border-top: white 1px solid;\n    border-left: white 1px solid;\n    border-right: white 1px solid;\n    border-bottom: white 1px solid;\n    color: white;\n}\n.in6[data-v-26bd3ef3] {\n    background: none;\n    border-top: white 1px solid;\n    border-left: white 1px solid;\n    border-right: none;\n    border-bottom: white 1px solid;\n    color: white;\n}\n.in7[data-v-26bd3ef3] {\n    background: none;\n    border-top: white 1px solid;\n    border-left: none;\n    border-right: white 1px solid;\n    border-bottom: none;\n    color: white;\n}\n.in8[data-v-26bd3ef3] {\n    background: none;\n    border-top: white 1px solid;\n    border-left: white 1px solid;\n    border-right: white 1px solid;\n    border-bottom: none;\n    color: white;\n}\n.in9[data-v-26bd3ef3] {\n    background: none;\n    border-top: white 1px solid;\n    border-left: white 1px solid;\n    border-right: none;\n    border-bottom: none;\n    color: white;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=style&index=0&id=5ba37a34&scoped=true&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=style&index=0&id=5ba37a34&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.equationimg[data-v-5ba37a34] {\n    max-height: 100px;\n}\n.equal[data-v-5ba37a34]\n{\n    font-family: Volte;\n    font-size: 150px;\n    color: white;\n    margin-top: -20px !important;\n    height: 130px;\n}\n.inpt-equation[data-v-5ba37a34]\n{\n    margin-top: 50px;\n    border-radius: 20px 20px 20px 20px;\n    text-align: center;\n    font-family: Volte;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=style&index=0&id=2f9766f4&scoped=true&lang=css&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=style&index=0&id=2f9766f4&scoped=true&lang=css& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.texte-fin[data-v-2f9766f4]\n{\n    font-family: Volte;\n    font-size: 2.5rem;\n    color: rgb(248, 170, 34);\n    margin-bottom: 50px;\n}\n.balance[data-v-2f9766f4]\n{\n    max-height: 300px;\n}\n.btn-enigme[data-v-2f9766f4]\n{\n    margin-top: 50px;\n    padding: 10px 20px;\n    font-family: Volte;\n    color: rgb(248, 170, 34);\n    background: none;\n    border: 1px solid rgb(248, 170, 34);\n    border-radius: 2px;\n    border-radius: 4px;\n    text-transform: uppercase;\n    transition: 0.3s;\n    cursor: pointer;\n}\n.btn-enigme[data-v-2f9766f4]:hover\n{\n    color: #2e4157;\n    background:  rgb(248, 170, 34);\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=style&index=0&id=7e87f972&scoped=true&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=style&index=0&id=7e87f972&scoped=true&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.texte-fin[data-v-7e87f972]\n{\n    font-family: Volte;\n    font-size: 2.5rem;\n    color: rgb(248, 170, 34);\n    margin-bottom: 50px;\n}\n.balance[data-v-7e87f972]\n{\n    max-height: 300px;\n}\n.btn-enigme[data-v-7e87f972]\n{\n    margin-top: 50px;\n    padding: 10px 20px;\n    font-family: Volte;\n    color: rgb(248, 170, 34);\n    background: none;\n    border: 1px solid rgb(248, 170, 34);\n    border-radius: 2px;\n    border-radius: 4px;\n    text-transform: uppercase;\n    transition: 0.3s;\n    cursor: pointer;\n}\n.btn-enigme[data-v-7e87f972]:hover\n{\n    color: #2e4157;\n    background:  rgb(248, 170, 34);\n}\n\n", ""]);
 
 // exports
 
@@ -65994,6 +68254,366 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle.vue?vue&type=style&index=0&lang=css&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle.vue?vue&type=style&index=0&lang=css& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--8-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--8-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./anubisRiddle.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=style&index=0&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=style&index=0&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--8-1!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../node_modules/vue-loader/lib??vue-loader-options!./enigme0.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=style&index=0&id=720602d8&scoped=true&lang=css&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=style&index=0&id=720602d8&scoped=true&lang=css& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader??ref--8-1!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme10_1.vue?vue&type=style&index=0&id=720602d8&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=style&index=0&id=720602d8&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=style&index=0&id=1e3e16ae&scoped=true&lang=css&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=style&index=0&id=1e3e16ae&scoped=true&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader??ref--8-1!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme3_1.vue?vue&type=style&index=0&id=1e3e16ae&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=style&index=0&id=1e3e16ae&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=style&index=0&id=532451ef&scoped=true&lang=css&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=style&index=0&id=532451ef&scoped=true&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader??ref--8-1!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme4_1.vue?vue&type=style&index=0&id=532451ef&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=style&index=0&id=532451ef&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=style&index=0&id=efeae5a0&scoped=true&lang=css&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=style&index=0&id=efeae5a0&scoped=true&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader??ref--8-1!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme5_1.vue?vue&type=style&index=0&id=efeae5a0&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=style&index=0&id=efeae5a0&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=style&index=0&id=861e6f1e&scoped=true&lang=css&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=style&index=0&id=861e6f1e&scoped=true&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader??ref--8-1!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme6_1.vue?vue&type=style&index=0&id=861e6f1e&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=style&index=0&id=861e6f1e&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=style&index=0&id=1c51f89c&scoped=true&lang=css&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=style&index=0&id=1c51f89c&scoped=true&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader??ref--8-1!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme7_1.vue?vue&type=style&index=0&id=1c51f89c&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=style&index=0&id=1c51f89c&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=style&index=0&id=26bd3ef3&scoped=true&lang=css&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=style&index=0&id=26bd3ef3&scoped=true&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader??ref--8-1!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme8_1.vue?vue&type=style&index=0&id=26bd3ef3&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=style&index=0&id=26bd3ef3&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=style&index=0&id=5ba37a34&scoped=true&lang=css&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=style&index=0&id=5ba37a34&scoped=true&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader??ref--8-1!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme9_1.vue?vue&type=style&index=0&id=5ba37a34&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=style&index=0&id=5ba37a34&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=style&index=0&id=2f9766f4&scoped=true&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=style&index=0&id=2f9766f4&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--8-1!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../node_modules/vue-loader/lib??vue-loader-options!./lost.vue?vue&type=style&index=0&id=2f9766f4&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=style&index=0&id=2f9766f4&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=style&index=0&id=7e87f972&scoped=true&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=style&index=0&id=7e87f972&scoped=true&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--8-1!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../node_modules/vue-loader/lib??vue-loader-options!./victory.vue?vue&type=style&index=0&id=7e87f972&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=style&index=0&id=7e87f972&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/infiniteCristal.vue?vue&type=style&index=0&lang=css&":
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--8-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/infiniteCristal.vue?vue&type=style&index=0&lang=css& ***!
@@ -76161,6 +78781,3734 @@ var staticRenderFns = [
     ])
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle.vue?vue&type=template&id=e3656c94&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle.vue?vue&type=template&id=e3656c94& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "anubis-body" },
+    [
+      _c("room-header", { attrs: { room: this } }),
+      _vm._v(" "),
+      _vm.player === 0 && _vm.enigme === 1 && _vm.phase === 0
+        ? _c("enigme0", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 1 && _vm.phase === 0
+        ? _c("j1_enigme1", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 1 && _vm.phase === 1
+        ? _c("j1_enigme1_1", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 2 && _vm.phase === 0
+        ? _c("j1_enigme2", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 2 && _vm.phase === 1
+        ? _c("j1_enigme2_1", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 3 && _vm.phase === 0
+        ? _c("J1_enigme3", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 3 && _vm.phase === 1
+        ? _c("J1_enigme3_1", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 4 && _vm.phase === 0
+        ? _c("J1_enigme4", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 4 && _vm.phase === 1
+        ? _c("J1_enigme4_1", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 5 && _vm.phase === 0
+        ? _c("J1_enigme5", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 5 && _vm.phase === 1
+        ? _c("J1_enigme5_1", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 6 && _vm.phase === 0
+        ? _c("J1_enigme6", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 6 && _vm.phase === 1
+        ? _c("J1_enigme6_1", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 7 && _vm.phase === 0
+        ? _c("J1_enigme7", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 7 && _vm.phase === 1
+        ? _c("J1_enigme7_1", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 8 && _vm.phase === 0
+        ? _c("J1_enigme8", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 8 && _vm.phase === 1
+        ? _c("J1_enigme8_1", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 9 && _vm.phase === 0
+        ? _c("J1_enigme9", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 9 && _vm.phase === 1
+        ? _c("J1_enigme9_1", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 10 && _vm.phase === 0
+        ? _c("J1_enigme10", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 1 && _vm.enigme === 10 && _vm.phase === 1
+        ? _c("J1_enigme10_1", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 0 && _vm.enigme === 0 && _vm.phase === 0
+        ? _c("lost", { attrs: { room: this } })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.player === 0 && _vm.enigme === 0 && _vm.phase === 1
+        ? _c("victory", { attrs: { room: this } })
+        : _vm._e()
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=template&id=0ff27891&":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=template&id=0ff27891& ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _c("div", { staticClass: "container text-center mt-3" }, [
+        _c("div", { staticStyle: { "margin-top": "-50px" } }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("hr", {
+              staticStyle: {
+                border: "0.5px solid #E3B05C",
+                "max-width": "200px"
+              }
+            }),
+            _vm._v(" "),
+            _c(
+              "p",
+              {
+                staticClass: "texte-intro",
+                staticStyle: { "font-size": "16px" }
+              },
+              [
+                _c("span", [
+                  _vm._v(
+                    "Vous aurez besoin de communiquer pour pouvoir avancer dans le jeu"
+                  )
+                ]),
+                _c("br"),
+                _vm._v(" "),
+                _c("B", { staticStyle: { color: "orangered" } }, [
+                  _vm._v(
+                    "Attention, pensez à bien conserver vos réponses, vous en aurez sans doute besoin à plusieurs reprises..."
+                  )
+                ])
+              ],
+              1
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "buttons-players d-flex" }, [
+            _c("div", { staticClass: "mr-auto" }, [
+              _c(
+                "button",
+                {
+                  on: {
+                    click: function($event) {
+                      return _vm.joueur_un()
+                    }
+                  }
+                },
+                [_vm._v("Je suis le joueur 1")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _c(
+                "button",
+                {
+                  on: {
+                    click: function($event) {
+                      return _vm.joueur_deux()
+                    }
+                  }
+                },
+                [_vm._v("Je suis le joueur 2")]
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("img", {
+        staticClass: "logo img-fluid",
+        attrs: { src: "/img/salles/anubis_riddle/logo.png" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "p",
+      { staticClass: "texte-intro", staticStyle: { "font-size": "16px" } },
+      [
+        _c(
+          "span",
+          {
+            staticStyle: {
+              color: "#f7aa1d",
+              "font-family": "Trajan_bold",
+              "font-size": "13px"
+            }
+          },
+          [_vm._v("Cette salle se joue à deux joueurs")]
+        ),
+        _c("br")
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1.vue?vue&type=template&id=178c0dfa&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1.vue?vue&type=template&id=178c0dfa&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._v("\n        " + _vm._s(_vm.fade) + "\n        "),
+      _c("div", { staticClass: "container text-center mt-3" }, [
+        _c(
+          "div",
+          [
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v("Vous rentrez dans le lieu où se")
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show === true && _vm.show_etape >= 1
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v("déroulera la première énigme, vous devez")
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show === true && _vm.show_etape >= 2
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v("résoudre le mystère du sarcophage d’Anubis.")
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show === true && _vm.show_etape >= 4
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v("Arriverez vous à résoudre cette énigme ?!")
+                  ])
+                : _vm._e()
+            ])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-center" }, [
+          _c(
+            "div",
+            { staticClass: "mt-5" },
+            [
+              _c("transition", { attrs: { name: "fade" } }, [
+                _vm.show === true && _vm.show_etape >= 8
+                  ? _c(
+                      "button",
+                      {
+                        staticClass: "button_egypte",
+                        on: {
+                          click: function($event) {
+                            return _vm.suite()
+                          }
+                        }
+                      },
+                      [_vm._v("Enigme 1")]
+                    )
+                  : _vm._e()
+              ])
+            ],
+            1
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10.vue?vue&type=template&id=4c1da8b4&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10.vue?vue&type=template&id=4c1da8b4&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._v("\n        " + _vm._s(_vm.fade) + "\n        "),
+      _c("div", { staticClass: "container text-center mt-3" }, [
+        _c(
+          "div",
+          [
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v("\n                        Bien joué voyageur !"),
+                    _c("br"),
+                    _vm._v(
+                      "\n                        Vous pouvez vous féliciter d’être parvenu jusqu’ici,\n                        mais la pyramide souhaite vous soumettre à un dernier dilemme.\n                        Choisirez vous de vivre et d'abandonner votre partenaire\n                        ou bien de vous sacrifier pour lui laisser la vie ?\n                    "
+                    )
+                  ])
+                : _vm._e()
+            ])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-center" }, [
+          _c(
+            "div",
+            { staticClass: "mt-5" },
+            [
+              _c("transition", { attrs: { name: "fade" } }, [
+                _vm.show === true && _vm.show_etape >= 1
+                  ? _c(
+                      "button",
+                      {
+                        staticClass: "button_egypte",
+                        on: {
+                          click: function($event) {
+                            return _vm.suite()
+                          }
+                        }
+                      },
+                      [_vm._v("Dilemme")]
+                    )
+                  : _vm._e()
+              ])
+            ],
+            1
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=template&id=720602d8&scoped=true&":
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=template&id=720602d8&scoped=true& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "row", staticStyle: { margin: "0" } }, [
+        _c("div", { staticClass: "mx-auto imgchoix" }, [
+          _c("img", {
+            staticClass: "img-fluid w-100",
+            attrs: { src: "/img/salles/anubis_riddle/boutons_choix.png" }
+          }),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn-tuer",
+              on: {
+                click: function($event) {
+                  return _vm.lost()
+                }
+              }
+            },
+            [_vm._v("Tuer votre partenaire")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn-sacrifice",
+              on: {
+                click: function($event) {
+                  return _vm.victory()
+                }
+              }
+            },
+            [_vm._v("Vous"), _c("br"), _vm._v("sacrifier")]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(1)
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "w-100", staticStyle: { "margin-bottom": "-150px" } },
+      [
+        _c(
+          "h1",
+          {
+            staticClass: "title-egypte",
+            staticStyle: {
+              "margin-bottom": "50px",
+              opacity: "1",
+              transform: "matrix(1, 0, 0, 1, 0, 0)"
+            }
+          },
+          [_vm._v("ENIGME 10")]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row", staticStyle: { margin: "0" } }, [
+      _c(
+        "div",
+        {
+          staticClass: "col-md-4 mx-auto",
+          staticStyle: { "margin-top": "20px" }
+        },
+        [
+          _c(
+            "p",
+            {
+              staticClass: "sous-texte",
+              staticStyle: { "margin-top": "20px" }
+            },
+            [
+              _vm._v(
+                "\n                    Ton partenaire est bloqué à l'énigme 9 :"
+              ),
+              _c("br"),
+              _vm._v(
+                '\n                    "Touche deux fois Anubis pour accéder au savoir,'
+              ),
+              _c("br"),
+              _vm._v(
+                '\n                    puis touche le symbole !"\n                '
+              )
+            ]
+          )
+        ]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1_1.vue?vue&type=template&id=971cbfa8&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1_1.vue?vue&type=template&id=971cbfa8&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "row", staticStyle: { margin: "0" } }, [
+        _c("div", { staticClass: "col-6 col-lg-12" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("A")
+                }
+              }
+            },
+            [_vm._v("A")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("B")
+                }
+              }
+            },
+            [_vm._v("B")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("C")
+                }
+              }
+            },
+            [_vm._v("C")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("D")
+                }
+              }
+            },
+            [_vm._v("D")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("E")
+                }
+              }
+            },
+            [_vm._v("E")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("F")
+                }
+              }
+            },
+            [_vm._v("F")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("G")
+                }
+              }
+            },
+            [_vm._v("G")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("H")
+                }
+              }
+            },
+            [_vm._v("H")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("I")
+                }
+              }
+            },
+            [_vm._v("I")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("J")
+                }
+              }
+            },
+            [_vm._v("J")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("K")
+                }
+              }
+            },
+            [_vm._v("K")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("L")
+                }
+              }
+            },
+            [_vm._v("L")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("M")
+                }
+              }
+            },
+            [_vm._v("M")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-6 col-lg-12" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("N")
+                }
+              }
+            },
+            [_vm._v("N")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("O")
+                }
+              }
+            },
+            [_vm._v("O")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("P")
+                }
+              }
+            },
+            [_vm._v("P")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("Q")
+                }
+              }
+            },
+            [_vm._v("Q")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("R")
+                }
+              }
+            },
+            [_vm._v("R")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("S")
+                }
+              }
+            },
+            [_vm._v("S")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("T")
+                }
+              }
+            },
+            [_vm._v("T")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("U")
+                }
+              }
+            },
+            [_vm._v("U")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("V")
+                }
+              }
+            },
+            [_vm._v("V")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("W")
+                }
+              }
+            },
+            [_vm._v("W")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("X")
+                }
+              }
+            },
+            [_vm._v("X")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("Y")
+                }
+              }
+            },
+            [_vm._v("Y")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("Z")
+                }
+              }
+            },
+            [_vm._v("Z")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-12 col-md-6 col-lg-4 mx-auto" }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.password,
+                expression: "password"
+              }
+            ],
+            staticStyle: {
+              width: "100%",
+              "margin-top": "50px",
+              "font-family": "hieroglyphes",
+              "font-size": "50px",
+              color: "black",
+              "border-radius": "20px 20px 20px 20px"
+            },
+            attrs: { disabled: "" },
+            domProps: { value: _vm.password },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.password = $event.target.value
+              }
+            }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "col-md-4 mx-auto",
+          staticStyle: { "margin-top": "20px" }
+        },
+        [
+          _c(
+            "button",
+            {
+              staticClass: "button_egypte",
+              on: {
+                click: function($event) {
+                  return _vm.effacer()
+                }
+              }
+            },
+            [_vm._v("EFFACER")]
+          )
+        ]
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-100" }, [
+      _c(
+        "h1",
+        {
+          staticClass: "title-egypte",
+          staticStyle: {
+            "margin-bottom": "50px",
+            opacity: "1",
+            transform: "matrix(1, 0, 0, 1, 0, 0)"
+          }
+        },
+        [_vm._v("ENIGME 1")]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2.vue?vue&type=template&id=179a257b&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2.vue?vue&type=template&id=179a257b&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._v("\n        " + _vm._s(_vm.fade) + "\n        "),
+      _c("div", { staticClass: "container text-center mt-3" }, [
+        _c(
+          "div",
+          [
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v(
+                      "La porte de l’épreuve suivante s’ouvre et vous voilà maintenant face à un ancien texte égyptien,\n                        à vous de le traduire."
+                    )
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show === true && _vm.show_etape >= 1
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v('Il est inscrit le mot "TOMBE"')
+                  ])
+                : _vm._e()
+            ])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-center" }, [
+          _c(
+            "div",
+            { staticClass: "mt-5" },
+            [
+              _c("transition", { attrs: { name: "fade" } }, [
+                _vm.show === true && _vm.show_etape >= 2
+                  ? _c(
+                      "button",
+                      {
+                        staticClass: "button_egypte",
+                        on: {
+                          click: function($event) {
+                            return _vm.suite()
+                          }
+                        }
+                      },
+                      [_vm._v("Enigme 2")]
+                    )
+                  : _vm._e()
+              ])
+            ],
+            1
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2_1.vue?vue&type=template&id=2d504926&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2_1.vue?vue&type=template&id=2d504926&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "row", staticStyle: { margin: "0" } }, [
+        _c("div", { staticClass: "col-6 col-lg-12" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("T")
+                }
+              }
+            },
+            [_vm._v("T")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("C")
+                }
+              }
+            },
+            [_vm._v("C")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("Z")
+                }
+              }
+            },
+            [_vm._v("Z")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("R")
+                }
+              }
+            },
+            [_vm._v("R")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("Y")
+                }
+              }
+            },
+            [_vm._v("Y")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("A")
+                }
+              }
+            },
+            [_vm._v("A")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("E")
+                }
+              }
+            },
+            [_vm._v("E")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("G")
+                }
+              }
+            },
+            [_vm._v("G")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("B")
+                }
+              }
+            },
+            [_vm._v("B")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("W")
+                }
+              }
+            },
+            [_vm._v("W")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("H")
+                }
+              }
+            },
+            [_vm._v("H")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("I")
+                }
+              }
+            },
+            [_vm._v("I")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("J")
+                }
+              }
+            },
+            [_vm._v("J")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-6 col-lg-12" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("Q")
+                }
+              }
+            },
+            [_vm._v("Q")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("F")
+                }
+              }
+            },
+            [_vm._v("F")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("P")
+                }
+              }
+            },
+            [_vm._v("P")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("L")
+                }
+              }
+            },
+            [_vm._v("L")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("X")
+                }
+              }
+            },
+            [_vm._v("X")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("M")
+                }
+              }
+            },
+            [_vm._v("M")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("U")
+                }
+              }
+            },
+            [_vm._v("U")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("N")
+                }
+              }
+            },
+            [_vm._v("N")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("O")
+                }
+              }
+            },
+            [_vm._v("O")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("S")
+                }
+              }
+            },
+            [_vm._v("S")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("V")
+                }
+              }
+            },
+            [_vm._v("V")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("K")
+                }
+              }
+            },
+            [_vm._v("K")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn_hiero",
+              on: {
+                click: function($event) {
+                  return _vm.lettre("D")
+                }
+              }
+            },
+            [_vm._v("D")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-12 col-md-6 col-lg-4 mx-auto" }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.password,
+                expression: "password"
+              }
+            ],
+            staticStyle: {
+              width: "100%",
+              "margin-top": "50px",
+              "font-family": "hieroglyphes",
+              "font-size": "50px",
+              color: "black",
+              "border-radius": "20px 20px 20px 20px"
+            },
+            attrs: { disabled: "" },
+            domProps: { value: _vm.password },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.password = $event.target.value
+              }
+            }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "col-md-4 mx-auto",
+          staticStyle: { "margin-top": "20px" }
+        },
+        [
+          _c(
+            "button",
+            {
+              staticClass: "button_egypte",
+              on: {
+                click: function($event) {
+                  return _vm.effacer()
+                }
+              }
+            },
+            [_vm._v("EFFACER")]
+          ),
+          _vm._v(" "),
+          _vm._m(1)
+        ]
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-100" }, [
+      _c(
+        "h1",
+        {
+          staticClass: "title-egypte",
+          staticStyle: {
+            "margin-bottom": "50px",
+            opacity: "1",
+            transform: "matrix(1, 0, 0, 1, 0, 0)"
+          }
+        },
+        [_vm._v("ENIGME 2")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "p",
+      { staticClass: "sous-texte", staticStyle: { "margin-top": "20px" } },
+      [
+        _vm._v("\n                Ton partenaire est bloqué à l'énigme 1 :"),
+        _c("br"),
+        _vm._v('\n                "Donne la vue au sarcophage"\n            ')
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3.vue?vue&type=template&id=17a83cfc&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3.vue?vue&type=template&id=17a83cfc&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._v("\n        " + _vm._s(_vm.fade) + "\n        "),
+      _c("div", { staticClass: "container text-center mt-3" }, [
+        _c(
+          "div",
+          [
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v(
+                      "Vous avancez mais la traduction n’est pas finie,\n                        faites donc attention aux détails et méfiez-vous !"
+                    )
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show === true && _vm.show_etape >= 1
+                ? _c(
+                    "p",
+                    {
+                      staticClass: "texte-intro",
+                      staticStyle: { "margin-top": "50px" }
+                    },
+                    [_vm._v("(Aucune information ne vous a été donnée)")]
+                  )
+                : _vm._e()
+            ])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-center" }, [
+          _c(
+            "div",
+            { staticClass: "mt-5" },
+            [
+              _c("transition", { attrs: { name: "fade" } }, [
+                _vm.show === true && _vm.show_etape >= 2
+                  ? _c(
+                      "button",
+                      {
+                        staticClass: "button_egypte",
+                        on: {
+                          click: function($event) {
+                            return _vm.suite()
+                          }
+                        }
+                      },
+                      [_vm._v("Enigme 3")]
+                    )
+                  : _vm._e()
+              ])
+            ],
+            1
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=template&id=1e3e16ae&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=template&id=1e3e16ae&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("img", {
+        staticClass: "img-fluid img-pyramide",
+        attrs: { src: "/img/salles/anubis_riddle/PYRAMIDE.png" }
+      }),
+      _vm._v(" "),
+      _c("div", { staticClass: "row", staticStyle: { margin: "0" } }, [
+        _c("div", { staticClass: "col-12 col-md-6 col-lg-4 mx-auto" }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.password,
+                expression: "password"
+              }
+            ],
+            staticStyle: {
+              width: "100%",
+              "margin-top": "50px",
+              "font-family": "Volte",
+              "font-size": "50px",
+              color: "black",
+              "border-radius": "20px 20px 20px 20px"
+            },
+            attrs: { id: "texte" },
+            domProps: { value: _vm.password },
+            on: {
+              keyup: _vm.verify,
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.password = $event.target.value
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-12 col-md-6 col-lg-4 mx-auto" }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.password,
+                expression: "password"
+              }
+            ],
+            staticClass: "inputrecopie",
+            attrs: { id: "copie", disabled: "" },
+            domProps: { value: _vm.password },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.password = $event.target.value
+              }
+            }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "col-md-4 mx-auto",
+          staticStyle: { "margin-top": "100px" }
+        },
+        [
+          _c(
+            "button",
+            {
+              staticClass: "button_egypte",
+              staticStyle: { padding: "5px 100px" },
+              on: {
+                click: function($event) {
+                  return _vm.effacer()
+                }
+              }
+            },
+            [_vm._v("EFFACER")]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "position-relative d-flex justify-content-center" },
+        [
+          _c(
+            "button",
+            {
+              staticClass: "btn-EN3",
+              on: {
+                mouseover: function($event) {
+                  _vm.indice = !_vm.indice
+                },
+                mouseleave: function($event) {
+                  _vm.indice = !_vm.indice
+                }
+              }
+            },
+            [_vm._v("?")]
+          ),
+          _vm._v(" "),
+          _c(
+            "p",
+            {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: _vm.indice,
+                  expression: "indice"
+                }
+              ],
+              staticClass: "position-absolute aide"
+            },
+            [
+              _vm._v(
+                "\n                Le pharaon (se) retourne dans sa tombe\n            "
+              )
+            ]
+          )
+        ]
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "w-100", staticStyle: { "margin-bottom": "-30px" } },
+      [
+        _c(
+          "h1",
+          {
+            staticClass: "title-egypte",
+            staticStyle: {
+              "margin-bottom": "50px",
+              opacity: "1",
+              transform: "matrix(1, 0, 0, 1, 0, 0)"
+            }
+          },
+          [_vm._v("ENIGME 3")]
+        )
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4.vue?vue&type=template&id=17b6547d&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4.vue?vue&type=template&id=17b6547d&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._v("\n        " + _vm._s(_vm.fade) + "\n        "),
+      _c("div", { staticClass: "container text-center mt-3" }, [
+        _c(
+          "div",
+          [
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v("Vous arrivez enfin à la salle suivante")
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show === true && _vm.show_etape >= 1
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v("qui mettra en valeur vos talents de musicien,")
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show === true && _vm.show_etape >= 2
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v("à vous de jouer la mélodie.")
+                  ])
+                : _vm._e()
+            ])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-center" }, [
+          _c(
+            "div",
+            { staticClass: "mt-5" },
+            [
+              _c("transition", { attrs: { name: "fade" } }, [
+                _vm.show === true && _vm.show_etape >= 4
+                  ? _c(
+                      "button",
+                      {
+                        staticClass: "button_egypte",
+                        on: {
+                          click: function($event) {
+                            return _vm.suite()
+                          }
+                        }
+                      },
+                      [_vm._v("Enigme 4")]
+                    )
+                  : _vm._e()
+              ])
+            ],
+            1
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=template&id=532451ef&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=template&id=532451ef&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "row", staticStyle: { margin: "0" } }, [
+        _c("audio", { ref: "player_do", staticStyle: { display: "none" } }, [
+          _c("source", {
+            attrs: {
+              src: "/audio/rooms/anubisriddle/melodie/Do.wav",
+              type: "audio/mpeg"
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("audio", { ref: "player_re", staticStyle: { display: "none" } }, [
+          _c("source", {
+            attrs: {
+              src: "/audio/rooms/anubisriddle/melodie/Re.wav",
+              type: "audio/mpeg"
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("audio", { ref: "player_mi", staticStyle: { display: "none" } }, [
+          _c("source", {
+            attrs: {
+              src: "/audio/rooms/anubisriddle/melodie/Mi.wav",
+              type: "audio/mpeg"
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("audio", { ref: "player_fa", staticStyle: { display: "none" } }, [
+          _c("source", {
+            attrs: {
+              src: "/audio/rooms/anubisriddle/melodie/Fa.wav",
+              type: "audio/mpeg"
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("audio", { ref: "player_sol", staticStyle: { display: "none" } }, [
+          _c("source", {
+            attrs: {
+              src: "/audio/rooms/anubisriddle/melodie/Sol.wav",
+              type: "audio/mpeg"
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("audio", { ref: "player_la", staticStyle: { display: "none" } }, [
+          _c("source", {
+            attrs: {
+              src: "/audio/rooms/anubisriddle/melodie/La.wav",
+              type: "audio/mpeg"
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("audio", { ref: "player_si", staticStyle: { display: "none" } }, [
+          _c("source", {
+            attrs: {
+              src: "/audio/rooms/anubisriddle/melodie/Si.wav",
+              type: "audio/mpeg"
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("audio", { ref: "player_do2", staticStyle: { display: "none" } }, [
+          _c("source", {
+            attrs: {
+              src: "/audio/rooms/anubisriddle/melodie/Do2.wav",
+              type: "audio/mpeg"
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c(
+          "audio",
+          { ref: "player_melodie", staticStyle: { display: "none" } },
+          [
+            _c("source", {
+              attrs: {
+                src: "/audio/rooms/anubisriddle/melodie/Melodie.wav",
+                type: "audio/mpeg"
+              }
+            })
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "col-md-12 text-center",
+            staticStyle: { "margin-top": "50px" }
+          },
+          [
+            _c(
+              "button",
+              {
+                staticClass: "btn_meldodie",
+                on: {
+                  click: function($event) {
+                    return _vm.audio_do()
+                  }
+                }
+              },
+              [_vm._v("Do")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn_meldodie",
+                on: {
+                  click: function($event) {
+                    return _vm.audio_re()
+                  }
+                }
+              },
+              [_vm._v("Re")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn_meldodie",
+                on: {
+                  click: function($event) {
+                    return _vm.audio_mi()
+                  }
+                }
+              },
+              [_vm._v("Mi")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn_meldodie",
+                on: {
+                  click: function($event) {
+                    return _vm.audio_fa()
+                  }
+                }
+              },
+              [_vm._v("Fa")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn_meldodie",
+                on: {
+                  click: function($event) {
+                    return _vm.audio_sol()
+                  }
+                }
+              },
+              [_vm._v("Sol")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn_meldodie",
+                on: {
+                  click: function($event) {
+                    return _vm.audio_la()
+                  }
+                }
+              },
+              [_vm._v("La")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn_meldodie",
+                on: {
+                  click: function($event) {
+                    return _vm.audio_si()
+                  }
+                }
+              },
+              [_vm._v("Si")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn_meldodie",
+                on: {
+                  click: function($event) {
+                    return _vm.audio_do2()
+                  }
+                }
+              },
+              [_vm._v("Do")]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-12" }, [
+          _c(
+            "button",
+            {
+              staticClass: "button_egypte mt-5",
+              staticStyle: { padding: "5px 100px" },
+              on: {
+                click: function($event) {
+                  return _vm.effacer()
+                }
+              }
+            },
+            [_vm._v("RECOMMENCER")]
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "w-100",
+        staticStyle: { "margin-bottom": "-50px", "margin-top": "-100px" }
+      },
+      [
+        _c(
+          "h1",
+          {
+            staticClass: "title-egypte",
+            staticStyle: {
+              "margin-bottom": "50px",
+              opacity: "1",
+              transform: "matrix(1, 0, 0, 1, 0, 0)"
+            }
+          },
+          [_vm._v("ENIGME 4")]
+        )
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5.vue?vue&type=template&id=17c46bfe&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5.vue?vue&type=template&id=17c46bfe&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._v("\n        " + _vm._s(_vm.fade) + "\n        "),
+      _c("div", { staticClass: "container text-center mt-3" }, [
+        _c(
+          "div",
+          [
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v("Félicitations ! Vous êtes à moitié chemin,")
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show === true && _vm.show_etape >= 1
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v("mais la suite risque de vous surprendre")
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show === true && _vm.show_etape >= 2
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v("nous allons voir si vous avez le sens du détail !")
+                  ])
+                : _vm._e()
+            ])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-center" }, [
+          _c(
+            "div",
+            { staticClass: "mt-5" },
+            [
+              _c("transition", { attrs: { name: "fade" } }, [
+                _vm.show === true && _vm.show_etape >= 4
+                  ? _c(
+                      "button",
+                      {
+                        staticClass: "button_egypte",
+                        on: {
+                          click: function($event) {
+                            return _vm.suite()
+                          }
+                        }
+                      },
+                      [_vm._v("Enigme 5")]
+                    )
+                  : _vm._e()
+              ])
+            ],
+            1
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=template&id=efeae5a0&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=template&id=efeae5a0&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "row", staticStyle: { margin: "0" } }, [
+        _c("div", { staticClass: "mx-auto image-diff" }, [
+          _c("img", {
+            attrs: { src: "/img/salles/anubis_riddle/difference1.png" }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "counter" }, [
+            _c("p", {
+              staticClass: "counter-title",
+              domProps: { textContent: _vm._s(_vm.counter) }
+            })
+          ]),
+          _vm._v(" "),
+          _c("button", {
+            staticClass: "boutons-diffs bouton-diff1",
+            staticStyle: { "/*background": "red" },
+            on: {
+              click: function($event) {
+                return _vm.color_red()
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("button", {
+            staticClass: "boutons-diffs bouton-diff2",
+            staticStyle: { "/*background": "blue" },
+            on: {
+              click: function($event) {
+                return _vm.color_blue()
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("button", {
+            staticClass: "boutons-diffs bouton-diff3",
+            staticStyle: { "/*background": "blue" },
+            on: {
+              click: function($event) {
+                return _vm.color_blue()
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("button", {
+            staticClass: "boutons-diffs bouton-diff4",
+            staticStyle: { "/*background": "orange" },
+            on: {
+              click: function($event) {
+                return _vm.color_orange()
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("button", {
+            staticClass: "boutons-diffs bouton-diff5",
+            staticStyle: { "/*background": "blueviolet" },
+            on: {
+              click: function($event) {
+                return _vm.color_violet()
+              }
+            }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(1)
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "w-100", staticStyle: { "margin-bottom": "-100px" } },
+      [
+        _c(
+          "h1",
+          {
+            staticClass: "title-egypte",
+            staticStyle: {
+              "margin-bottom": "50px",
+              opacity: "1",
+              transform: "matrix(1, 0, 0, 1, 0, 0)"
+            }
+          },
+          [_vm._v("ENIGME 5")]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row", staticStyle: { margin: "0" } }, [
+      _c(
+        "div",
+        {
+          staticClass: "col-md-4 mx-auto",
+          staticStyle: { "margin-top": "20px" }
+        },
+        [
+          _c(
+            "p",
+            {
+              staticClass: "sous-texte",
+              staticStyle: { "margin-top": "20px" }
+            },
+            [
+              _vm._v(
+                "\n                    Ton partenaire est bloqué à l'énigme 4 :"
+              ),
+              _c("br"),
+              _vm._v(
+                '\n                    "Clique en haut à gauche puis en haut à droite"\n                '
+              )
+            ]
+          )
+        ]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6.vue?vue&type=template&id=17d2837f&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6.vue?vue&type=template&id=17d2837f&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._v("\n        " + _vm._s(_vm.fade) + "\n        "),
+      _c("div", { staticClass: "container text-center mt-3" }, [
+        _c(
+          "div",
+          [
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v("Maintenant, vous allez devoir faire")
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show === true && _vm.show_etape >= 1
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v("face à un code mais encore faut-il faut comprendre")
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show === true && _vm.show_etape >= 2
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v(
+                      "à quoi il sert et comment l’utiliser, réfléchissez !"
+                    )
+                  ])
+                : _vm._e()
+            ])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-center" }, [
+          _c(
+            "div",
+            { staticClass: "mt-5" },
+            [
+              _c("transition", { attrs: { name: "fade" } }, [
+                _vm.show === true && _vm.show_etape >= 4
+                  ? _c(
+                      "button",
+                      {
+                        staticClass: "button_egypte",
+                        on: {
+                          click: function($event) {
+                            return _vm.suite()
+                          }
+                        }
+                      },
+                      [_vm._v("Enigme 6")]
+                    )
+                  : _vm._e()
+              ])
+            ],
+            1
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=template&id=861e6f1e&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=template&id=861e6f1e&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", {}, [
+        _c("div", { staticClass: "d-flex justify-content-center" }, [
+          _c("div", {}, [
+            _c("div", { staticClass: "d-flex flex-row" }, [
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim1, "button-6": _vm.a_true }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim2, "button-6": _vm.a_true },
+                  on: {
+                    click: function($event) {
+                      return _vm.choice("C")
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim3, "button-6": _vm.a_true }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim1, "button-6": _vm.a_true }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim2, "button-6": _vm.a_true }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex flex-row" }, [
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim3, "button-6": _vm.a_true }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim1, "button-6": _vm.a_true }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim2, "button-6": _vm.a_true }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim3, "button-6": _vm.a_true }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim1, "button-6": _vm.a_true }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex flex-row" }, [
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim2, "button-6": _vm.a_true }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim1, "button-6": _vm.a_true }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim2, "button-6": _vm.a_true }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim3, "button-6": _vm.a_true },
+                  on: {
+                    click: function($event) {
+                      return _vm.choice("B")
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim3, "button-6": _vm.a_true }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex flex-row" }, [
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim3, "button-6": _vm.a_true }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim2, "button-6": _vm.a_true },
+                  on: {
+                    click: function($event) {
+                      return _vm.choice("A")
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim1, "button-6": _vm.a_true }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim3, "button-6": _vm.a_true }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("button", {
+                  class: { "b6-animation": _vm.anim2, "button-6": _vm.a_true }
+                })
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(1)
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "w-100", staticStyle: { "margin-bottom": "-30px" } },
+      [
+        _c(
+          "h1",
+          {
+            staticClass: "title-egypte",
+            staticStyle: {
+              "margin-bottom": "50px",
+              opacity: "1",
+              transform: "matrix(1, 0, 0, 1, 0, 0)"
+            }
+          },
+          [_vm._v("ENIGME 6")]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row", staticStyle: { margin: "0" } }, [
+      _c(
+        "div",
+        {
+          staticClass: "col-md-4 mx-auto",
+          staticStyle: { "margin-top": "20px" }
+        },
+        [
+          _c(
+            "p",
+            {
+              staticClass: "sous-texte",
+              staticStyle: { "margin-top": "20px" }
+            },
+            [
+              _vm._v(
+                "\n                    Ton partenaire est bloqué à l'énigme 5 :"
+              ),
+              _c("br"),
+              _vm._v(
+                '\n                    "Ose toucher la mort 3 fois !"\n                '
+              )
+            ]
+          )
+        ]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7.vue?vue&type=template&id=17e09b00&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7.vue?vue&type=template&id=17e09b00&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._v("\n        " + _vm._s(_vm.fade) + "\n        "),
+      _c("div", { staticClass: "container text-center mt-3" }, [
+        _c(
+          "div",
+          [
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v(
+                      "\n                        Vous trouvez une étrange statue au centre d’un"
+                    ),
+                    _c("br"),
+                    _vm._v(
+                      "\n                        mystère lié aux dieux, celle-ci semble"
+                    ),
+                    _c("br"),
+                    _vm._v(
+                      "\n                        pouvoir vous être utile pour cette énigme."
+                    ),
+                    _c("br"),
+                    _c("br")
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show === true && _vm.show_etape >= 1
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v("(De quoi peut-il bien s'agir ?)")
+                  ])
+                : _vm._e()
+            ])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-center" }, [
+          _c(
+            "div",
+            { staticClass: "mt-5" },
+            [
+              _c("transition", { attrs: { name: "fade" } }, [
+                _vm.show === true && _vm.show_etape >= 2
+                  ? _c(
+                      "button",
+                      {
+                        staticClass: "button_egypte",
+                        on: {
+                          click: function($event) {
+                            return _vm.suite()
+                          }
+                        }
+                      },
+                      [_vm._v("Enigme 7")]
+                    )
+                  : _vm._e()
+              ])
+            ],
+            1
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=template&id=1c51f89c&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=template&id=1c51f89c&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _c("div", { staticClass: "d-flex justify-content-center" }, [
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.password,
+              expression: "password"
+            }
+          ],
+          staticClass: "inpt-sculpure",
+          attrs: { type: "text" },
+          domProps: { value: _vm.password },
+          on: {
+            keyup: function($event) {
+              return _vm.verify()
+            },
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.password = $event.target.value
+            }
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _vm._m(2)
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "w-100", staticStyle: { "margin-bottom": "10px" } },
+      [
+        _c(
+          "h1",
+          {
+            staticClass: "title-egypte",
+            staticStyle: {
+              "margin-bottom": "50px",
+              opacity: "1",
+              transform: "matrix(1, 0, 0, 1, 0, 0)"
+            }
+          },
+          [_vm._v("ENIGME 7")]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex justify-content-center" }, [
+      _c("div", { staticClass: "sketchfab-embed-wrapper" }, [
+        _c("iframe", {
+          attrs: {
+            title: "A 3D model",
+            width: "640",
+            height: "350",
+            src:
+              "https://sketchfab.com/models/94bc2c401fa049308e117e891516aafb/embed?autostart=1&ui_controls=1&ui_infos=1&ui_inspector=1&ui_stop=1&ui_watermark=1&ui_watermark_link=1",
+            frameborder: "0",
+            allow: "autoplay; fullscreen; vr",
+            mozallowfullscreen: "true",
+            webkitallowfullscreen: "true"
+          }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row", staticStyle: { margin: "0" } }, [
+      _c(
+        "div",
+        {
+          staticClass: "col-md-4 mx-auto",
+          staticStyle: { "margin-top": "20px" }
+        },
+        [
+          _c(
+            "p",
+            {
+              staticClass: "sous-texte",
+              staticStyle: { "margin-top": "20px" }
+            },
+            [
+              _vm._v("\n                    Avant de résoudre cette énigme,"),
+              _c("br"),
+              _vm._v(
+                "\n                    aide ton partenaire qui est bloqué à l'énigme 6 :"
+              ),
+              _c("br"),
+              _vm._v(
+                '\n                    "Le soleil doit se coucher !"\n                '
+              )
+            ]
+          )
+        ]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8.vue?vue&type=template&id=17eeb281&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8.vue?vue&type=template&id=17eeb281&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._v("\n        " + _vm._s(_vm.fade) + "\n        "),
+      _c("div", { staticClass: "container text-center mt-3" }, [
+        _c(
+          "div",
+          [
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v(
+                      "\n                        Une stèle gravée semble égayer votre curiosité,\n                    "
+                    )
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show === true && _vm.show_etape >= 1
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v("celle-ci nécessite votre réflexion !")
+                  ])
+                : _vm._e()
+            ])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-center" }, [
+          _c(
+            "div",
+            { staticClass: "mt-5" },
+            [
+              _c("transition", { attrs: { name: "fade" } }, [
+                _vm.show === true && _vm.show_etape >= 2
+                  ? _c(
+                      "button",
+                      {
+                        staticClass: "button_egypte",
+                        on: {
+                          click: function($event) {
+                            return _vm.suite()
+                          }
+                        }
+                      },
+                      [_vm._v("Enigme 8")]
+                    )
+                  : _vm._e()
+              ])
+            ],
+            1
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=template&id=26bd3ef3&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=template&id=26bd3ef3&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "d-flex justify-content-center" }, [
+        _c("div", [
+          _c("div", { staticClass: "qua1", staticStyle: { margin: "0" } }, [
+            _c("div", { staticClass: "qua2" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.A1,
+                    expression: "A1"
+                  }
+                ],
+                staticClass: "inptCA in1",
+                domProps: { value: _vm.A1 },
+                on: {
+                  keyup: function($event) {
+                    return _vm.verify()
+                  },
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.A1 = $event.target.value
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "qua2" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.A2,
+                    expression: "A2"
+                  }
+                ],
+                staticClass: "inptCA in2",
+                domProps: { value: _vm.A2 },
+                on: {
+                  keyup: function($event) {
+                    return _vm.verify()
+                  },
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.A2 = $event.target.value
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "qua2" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.A3,
+                    expression: "A3"
+                  }
+                ],
+                staticClass: "inptCA in3",
+                domProps: { value: _vm.A3 },
+                on: {
+                  keyup: function($event) {
+                    return _vm.verify()
+                  },
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.A3 = $event.target.value
+                  }
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "qua1", staticStyle: { margin: "0" } }, [
+            _c("div", { staticClass: "qua2" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.B1,
+                    expression: "B1"
+                  }
+                ],
+                staticClass: "inptCA in4",
+                domProps: { value: _vm.B1 },
+                on: {
+                  keyup: function($event) {
+                    return _vm.verify()
+                  },
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.B1 = $event.target.value
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "qua2" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.B2,
+                    expression: "B2"
+                  }
+                ],
+                staticClass: "inptCA in5",
+                domProps: { value: _vm.B2 },
+                on: {
+                  keyup: function($event) {
+                    return _vm.verify()
+                  },
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.B2 = $event.target.value
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "qua2" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.B3,
+                    expression: "B3"
+                  }
+                ],
+                staticClass: "inptCA in6",
+                domProps: { value: _vm.B3 },
+                on: {
+                  keyup: function($event) {
+                    return _vm.verify()
+                  },
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.B3 = $event.target.value
+                  }
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "qua1", staticStyle: { margin: "0" } }, [
+            _c("div", { staticClass: "qua2" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.C1,
+                    expression: "C1"
+                  }
+                ],
+                staticClass: "inptCA in7",
+                domProps: { value: _vm.C1 },
+                on: {
+                  keyup: function($event) {
+                    return _vm.verify()
+                  },
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.C1 = $event.target.value
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "qua2" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.C2,
+                    expression: "C2"
+                  }
+                ],
+                staticClass: "inptCA in8",
+                domProps: { value: _vm.C2 },
+                on: {
+                  keyup: function($event) {
+                    return _vm.verify()
+                  },
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.C2 = $event.target.value
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "qua2" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.C3,
+                    expression: "C3"
+                  }
+                ],
+                staticClass: "inptCA in9",
+                domProps: { value: _vm.C3 },
+                on: {
+                  keyup: function($event) {
+                    return _vm.verify()
+                  },
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.C3 = $event.target.value
+                  }
+                }
+              })
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "w-100", staticStyle: { "margin-bottom": "10px" } },
+      [
+        _c(
+          "h1",
+          {
+            staticClass: "title-egypte",
+            staticStyle: {
+              "margin-bottom": "50px",
+              opacity: "1",
+              transform: "matrix(1, 0, 0, 1, 0, 0)"
+            }
+          },
+          [_vm._v("ENIGME 8")]
+        )
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9.vue?vue&type=template&id=17fcca02&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9.vue?vue&type=template&id=17fcca02&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._v("\n        " + _vm._s(_vm.fade) + "\n        "),
+      _c("div", { staticClass: "container text-center mt-3" }, [
+        _c(
+          "div",
+          [
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v(
+                      "\n                        Vous découvrez sur le sol un papyrus sur lequel\n                    "
+                    )
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show === true && _vm.show_etape >= 1
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v("vous pouvez distinguer quelques symboles,")
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show === true && _vm.show_etape >= 2
+                ? _c("p", { staticClass: "texte-intro" }, [
+                    _vm._v("mais de quoi peut-il bien s'agir ?")
+                  ])
+                : _vm._e()
+            ])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-center" }, [
+          _c(
+            "div",
+            { staticClass: "mt-5" },
+            [
+              _c("transition", { attrs: { name: "fade" } }, [
+                _vm.show === true && _vm.show_etape >= 4
+                  ? _c(
+                      "button",
+                      {
+                        staticClass: "button_egypte",
+                        on: {
+                          click: function($event) {
+                            return _vm.suite()
+                          }
+                        }
+                      },
+                      [_vm._v("Enigme 9")]
+                    )
+                  : _vm._e()
+              ])
+            ],
+            1
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=template&id=5ba37a34&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=template&id=5ba37a34&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _vm._m(2),
+      _vm._v(" "),
+      _c("div", { staticClass: "d-flex justify-content-center " }, [
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.password,
+              expression: "password"
+            }
+          ],
+          staticClass: "inpt-equation",
+          attrs: { type: "text" },
+          domProps: { value: _vm.password },
+          on: {
+            keyup: function($event) {
+              return _vm.verify()
+            },
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.password = $event.target.value
+            }
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _vm._m(3)
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "w-100", staticStyle: { "margin-bottom": "10px" } },
+      [
+        _c(
+          "h1",
+          {
+            staticClass: "title-egypte",
+            staticStyle: {
+              "margin-bottom": "50px",
+              opacity: "1",
+              transform: "matrix(1, 0, 0, 1, 0, 0)"
+            }
+          },
+          [_vm._v("ENIGME 9")]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex justify-content-center" }, [
+      _c("img", {
+        staticClass: "img-fluid equationimg",
+        attrs: { src: "/img/salles/anubis_riddle/equation.png" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", {}, [_c("p", { staticClass: "equal" }, [_vm._v("=")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row", staticStyle: { margin: "0" } }, [
+      _c(
+        "div",
+        {
+          staticClass: "col-md-4 mx-auto",
+          staticStyle: { "margin-top": "20px" }
+        },
+        [
+          _c(
+            "p",
+            {
+              staticClass: "sous-texte",
+              staticStyle: { "margin-top": "20px" }
+            },
+            [
+              _vm._v(
+                "\n                    Ton partenaire est bloqué à l'énigme 8 :"
+              ),
+              _c("br"),
+              _vm._v(
+                '\n                    "Clique deux fois sur la première case et glisse vers les abysses !"\n                '
+              )
+            ]
+          )
+        ]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=template&id=2f9766f4&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=template&id=2f9766f4&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._v("\n        " + _vm._s(_vm.fade) + "\n        "),
+      _c("div", { staticClass: "container text-center mt-3" }, [
+        _c(
+          "div",
+          [
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show
+                ? _c("p", { staticClass: "texte-fin" }, [
+                    _vm._v(
+                      "\n                        PERDU\n                    "
+                    )
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show === true && _vm.show_etape >= 1
+                ? _c(
+                    "div",
+                    { staticClass: "row", staticStyle: { margin: "0" } },
+                    [
+                      _c("div", { staticClass: "mx-auto" }, [
+                        _c("img", {
+                          staticClass: "img-fluid balance",
+                          attrs: {
+                            src: "/img/salles/anubis_riddle/COUTEAU.png"
+                          }
+                        })
+                      ])
+                    ]
+                  )
+                : _vm._e()
+            ])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-center" }, [
+          _c(
+            "div",
+            { staticClass: "mt-5" },
+            [
+              _c("transition", { attrs: { name: "fade" } }, [
+                _vm.show === true && _vm.show_etape >= 2
+                  ? _c("div", [
+                      _c("p", { staticClass: "texte-intro" }, [
+                        _vm._v(
+                          "\n                                Votre égoïsme vous a mené à votre perte ainsi qu’à celle de votre partenaire, vous voilà condamné à jamais dans ce tombeau.\n                            "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn-enigme",
+                          on: {
+                            click: function($event) {
+                              return _vm.home()
+                            }
+                          }
+                        },
+                        [_vm._v("Retour à l'accueil")]
+                      )
+                    ])
+                  : _vm._e()
+              ])
+            ],
+            1
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=template&id=7e87f972&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=template&id=7e87f972&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "terminal-body text-center" }, [
+    _c("div", { staticClass: "body-c w-100" }, [
+      _vm._v("\n        " + _vm._s(_vm.fade) + "\n        "),
+      _c("div", { staticClass: "container text-center mt-3" }, [
+        _c(
+          "div",
+          [
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show
+                ? _c("p", { staticClass: "texte-fin" }, [
+                    _vm._v(
+                      "\n                       VICTOIRE\n                    "
+                    )
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c("transition", { attrs: { name: "fade" } }, [
+              _vm.show === true && _vm.show_etape >= 1
+                ? _c(
+                    "div",
+                    { staticClass: "row", staticStyle: { margin: "0" } },
+                    [
+                      _c("div", { staticClass: "mx-auto" }, [
+                        _c("img", {
+                          staticClass: "img-fluid balance",
+                          attrs: {
+                            src: "/img/salles/anubis_riddle/balance.png"
+                          }
+                        })
+                      ])
+                    ]
+                  )
+                : _vm._e()
+            ])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-center" }, [
+          _c(
+            "div",
+            { staticClass: "mt-5" },
+            [
+              _c("transition", { attrs: { name: "fade" } }, [
+                _vm.show === true && _vm.show_etape >= 2
+                  ? _c("div", [
+                      _c("p", { staticClass: "texte-intro" }, [
+                        _vm._v(
+                          "\n                                Vous avez tous les deux choisi le sacrifice, ce qui est une qualité rare. Anubis vous laisse la vie sauve.\n                            "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn-enigme",
+                          on: {
+                            click: function($event) {
+                              return _vm.home()
+                            }
+                          }
+                        },
+                        [_vm._v("Retour à l'accueil")]
+                      )
+                    ])
+                  : _vm._e()
+              ])
+            ],
+            1
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -97106,6 +103454,1878 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/rooms/anubisRiddle.vue":
+/*!********************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle.vue ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _anubisRiddle_vue_vue_type_template_id_e3656c94___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./anubisRiddle.vue?vue&type=template&id=e3656c94& */ "./resources/js/components/rooms/anubisRiddle.vue?vue&type=template&id=e3656c94&");
+/* harmony import */ var _anubisRiddle_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./anubisRiddle.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _anubisRiddle_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./anubisRiddle.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/rooms/anubisRiddle.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _anubisRiddle_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _anubisRiddle_vue_vue_type_template_id_e3656c94___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _anubisRiddle_vue_vue_type_template_id_e3656c94___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_anubisRiddle_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./anubisRiddle.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_anubisRiddle_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle.vue?vue&type=style&index=0&lang=css&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle.vue?vue&type=style&index=0&lang=css& ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_anubisRiddle_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--8-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--8-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./anubisRiddle.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_anubisRiddle_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_anubisRiddle_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_anubisRiddle_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_anubisRiddle_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_anubisRiddle_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle.vue?vue&type=template&id=e3656c94&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle.vue?vue&type=template&id=e3656c94& ***!
+  \***************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_anubisRiddle_vue_vue_type_template_id_e3656c94___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./anubisRiddle.vue?vue&type=template&id=e3656c94& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle.vue?vue&type=template&id=e3656c94&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_anubisRiddle_vue_vue_type_template_id_e3656c94___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_anubisRiddle_vue_vue_type_template_id_e3656c94___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/enigme0.vue":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/enigme0.vue ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _enigme0_vue_vue_type_template_id_0ff27891___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./enigme0.vue?vue&type=template&id=0ff27891& */ "./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=template&id=0ff27891&");
+/* harmony import */ var _enigme0_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./enigme0.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _enigme0_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./enigme0.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _enigme0_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _enigme0_vue_vue_type_template_id_0ff27891___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _enigme0_vue_vue_type_template_id_0ff27891___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/enigme0.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_enigme0_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./enigme0.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_enigme0_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=style&index=0&lang=css&":
+/*!************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=style&index=0&lang=css& ***!
+  \************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_enigme0_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader!../../../../../node_modules/css-loader??ref--8-1!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../node_modules/vue-loader/lib??vue-loader-options!./enigme0.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_enigme0_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_enigme0_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_enigme0_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_enigme0_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_enigme0_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=template&id=0ff27891&":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=template&id=0ff27891& ***!
+  \**********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_enigme0_vue_vue_type_template_id_0ff27891___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./enigme0.vue?vue&type=template&id=0ff27891& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/enigme0.vue?vue&type=template&id=0ff27891&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_enigme0_vue_vue_type_template_id_0ff27891___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_enigme0_vue_vue_type_template_id_0ff27891___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1.vue":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1.vue ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme1_vue_vue_type_template_id_178c0dfa_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme1.vue?vue&type=template&id=178c0dfa&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1.vue?vue&type=template&id=178c0dfa&scoped=true&");
+/* harmony import */ var _J1_enigme1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme1.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _J1_enigme1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme1_vue_vue_type_template_id_178c0dfa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme1_vue_vue_type_template_id_178c0dfa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "178c0dfa",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme1.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1.vue?vue&type=template&id=178c0dfa&scoped=true&":
+/*!*********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1.vue?vue&type=template&id=178c0dfa&scoped=true& ***!
+  \*********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme1_vue_vue_type_template_id_178c0dfa_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme1.vue?vue&type=template&id=178c0dfa&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1.vue?vue&type=template&id=178c0dfa&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme1_vue_vue_type_template_id_178c0dfa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme1_vue_vue_type_template_id_178c0dfa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10.vue":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10.vue ***!
+  \***************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme10_vue_vue_type_template_id_4c1da8b4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme10.vue?vue&type=template&id=4c1da8b4&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10.vue?vue&type=template&id=4c1da8b4&scoped=true&");
+/* harmony import */ var _J1_enigme10_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme10.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _J1_enigme10_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme10_vue_vue_type_template_id_4c1da8b4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme10_vue_vue_type_template_id_4c1da8b4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "4c1da8b4",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme10_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme10.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme10_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10.vue?vue&type=template&id=4c1da8b4&scoped=true&":
+/*!**********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10.vue?vue&type=template&id=4c1da8b4&scoped=true& ***!
+  \**********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme10_vue_vue_type_template_id_4c1da8b4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme10.vue?vue&type=template&id=4c1da8b4&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10.vue?vue&type=template&id=4c1da8b4&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme10_vue_vue_type_template_id_4c1da8b4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme10_vue_vue_type_template_id_4c1da8b4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme10_1_vue_vue_type_template_id_720602d8_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme10_1.vue?vue&type=template&id=720602d8&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=template&id=720602d8&scoped=true&");
+/* harmony import */ var _J1_enigme10_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme10_1.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _J1_enigme10_1_vue_vue_type_style_index_0_id_720602d8_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./J1_enigme10_1.vue?vue&type=style&index=0&id=720602d8&scoped=true&lang=css& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=style&index=0&id=720602d8&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _J1_enigme10_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme10_1_vue_vue_type_template_id_720602d8_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme10_1_vue_vue_type_template_id_720602d8_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "720602d8",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme10_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme10_1.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme10_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=style&index=0&id=720602d8&scoped=true&lang=css&":
+/*!**************************************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=style&index=0&id=720602d8&scoped=true&lang=css& ***!
+  \**************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme10_1_vue_vue_type_style_index_0_id_720602d8_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader!../../../../../../node_modules/css-loader??ref--8-1!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme10_1.vue?vue&type=style&index=0&id=720602d8&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=style&index=0&id=720602d8&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme10_1_vue_vue_type_style_index_0_id_720602d8_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme10_1_vue_vue_type_style_index_0_id_720602d8_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme10_1_vue_vue_type_style_index_0_id_720602d8_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme10_1_vue_vue_type_style_index_0_id_720602d8_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme10_1_vue_vue_type_style_index_0_id_720602d8_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=template&id=720602d8&scoped=true&":
+/*!************************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=template&id=720602d8&scoped=true& ***!
+  \************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme10_1_vue_vue_type_template_id_720602d8_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme10_1.vue?vue&type=template&id=720602d8&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme10_1.vue?vue&type=template&id=720602d8&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme10_1_vue_vue_type_template_id_720602d8_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme10_1_vue_vue_type_template_id_720602d8_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1_1.vue":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1_1.vue ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme1_1_vue_vue_type_template_id_971cbfa8_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme1_1.vue?vue&type=template&id=971cbfa8&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1_1.vue?vue&type=template&id=971cbfa8&scoped=true&");
+/* harmony import */ var _J1_enigme1_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme1_1.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _J1_enigme1_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme1_1_vue_vue_type_template_id_971cbfa8_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme1_1_vue_vue_type_template_id_971cbfa8_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "971cbfa8",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1_1.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1_1.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1_1.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme1_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme1_1.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme1_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1_1.vue?vue&type=template&id=971cbfa8&scoped=true&":
+/*!***********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1_1.vue?vue&type=template&id=971cbfa8&scoped=true& ***!
+  \***********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme1_1_vue_vue_type_template_id_971cbfa8_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme1_1.vue?vue&type=template&id=971cbfa8&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme1_1.vue?vue&type=template&id=971cbfa8&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme1_1_vue_vue_type_template_id_971cbfa8_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme1_1_vue_vue_type_template_id_971cbfa8_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2.vue":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2.vue ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme2_vue_vue_type_template_id_179a257b_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme2.vue?vue&type=template&id=179a257b&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2.vue?vue&type=template&id=179a257b&scoped=true&");
+/* harmony import */ var _J1_enigme2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme2.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _J1_enigme2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme2_vue_vue_type_template_id_179a257b_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme2_vue_vue_type_template_id_179a257b_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "179a257b",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme2.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2.vue?vue&type=template&id=179a257b&scoped=true&":
+/*!*********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2.vue?vue&type=template&id=179a257b&scoped=true& ***!
+  \*********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme2_vue_vue_type_template_id_179a257b_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme2.vue?vue&type=template&id=179a257b&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2.vue?vue&type=template&id=179a257b&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme2_vue_vue_type_template_id_179a257b_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme2_vue_vue_type_template_id_179a257b_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2_1.vue":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2_1.vue ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme2_1_vue_vue_type_template_id_2d504926_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme2_1.vue?vue&type=template&id=2d504926&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2_1.vue?vue&type=template&id=2d504926&scoped=true&");
+/* harmony import */ var _J1_enigme2_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme2_1.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _J1_enigme2_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme2_1_vue_vue_type_template_id_2d504926_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme2_1_vue_vue_type_template_id_2d504926_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "2d504926",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2_1.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2_1.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2_1.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme2_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme2_1.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme2_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2_1.vue?vue&type=template&id=2d504926&scoped=true&":
+/*!***********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2_1.vue?vue&type=template&id=2d504926&scoped=true& ***!
+  \***********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme2_1_vue_vue_type_template_id_2d504926_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme2_1.vue?vue&type=template&id=2d504926&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme2_1.vue?vue&type=template&id=2d504926&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme2_1_vue_vue_type_template_id_2d504926_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme2_1_vue_vue_type_template_id_2d504926_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3.vue":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3.vue ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme3_vue_vue_type_template_id_17a83cfc_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme3.vue?vue&type=template&id=17a83cfc&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3.vue?vue&type=template&id=17a83cfc&scoped=true&");
+/* harmony import */ var _J1_enigme3_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme3.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _J1_enigme3_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme3_vue_vue_type_template_id_17a83cfc_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme3_vue_vue_type_template_id_17a83cfc_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "17a83cfc",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme3_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme3.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme3_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3.vue?vue&type=template&id=17a83cfc&scoped=true&":
+/*!*********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3.vue?vue&type=template&id=17a83cfc&scoped=true& ***!
+  \*********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme3_vue_vue_type_template_id_17a83cfc_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme3.vue?vue&type=template&id=17a83cfc&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3.vue?vue&type=template&id=17a83cfc&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme3_vue_vue_type_template_id_17a83cfc_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme3_vue_vue_type_template_id_17a83cfc_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme3_1_vue_vue_type_template_id_1e3e16ae_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme3_1.vue?vue&type=template&id=1e3e16ae&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=template&id=1e3e16ae&scoped=true&");
+/* harmony import */ var _J1_enigme3_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme3_1.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _J1_enigme3_1_vue_vue_type_style_index_0_id_1e3e16ae_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./J1_enigme3_1.vue?vue&type=style&index=0&id=1e3e16ae&scoped=true&lang=css& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=style&index=0&id=1e3e16ae&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _J1_enigme3_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme3_1_vue_vue_type_template_id_1e3e16ae_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme3_1_vue_vue_type_template_id_1e3e16ae_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "1e3e16ae",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme3_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme3_1.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme3_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=style&index=0&id=1e3e16ae&scoped=true&lang=css&":
+/*!*************************************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=style&index=0&id=1e3e16ae&scoped=true&lang=css& ***!
+  \*************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme3_1_vue_vue_type_style_index_0_id_1e3e16ae_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader!../../../../../../node_modules/css-loader??ref--8-1!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme3_1.vue?vue&type=style&index=0&id=1e3e16ae&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=style&index=0&id=1e3e16ae&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme3_1_vue_vue_type_style_index_0_id_1e3e16ae_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme3_1_vue_vue_type_style_index_0_id_1e3e16ae_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme3_1_vue_vue_type_style_index_0_id_1e3e16ae_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme3_1_vue_vue_type_style_index_0_id_1e3e16ae_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme3_1_vue_vue_type_style_index_0_id_1e3e16ae_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=template&id=1e3e16ae&scoped=true&":
+/*!***********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=template&id=1e3e16ae&scoped=true& ***!
+  \***********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme3_1_vue_vue_type_template_id_1e3e16ae_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme3_1.vue?vue&type=template&id=1e3e16ae&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme3_1.vue?vue&type=template&id=1e3e16ae&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme3_1_vue_vue_type_template_id_1e3e16ae_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme3_1_vue_vue_type_template_id_1e3e16ae_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4.vue":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4.vue ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme4_vue_vue_type_template_id_17b6547d_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme4.vue?vue&type=template&id=17b6547d&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4.vue?vue&type=template&id=17b6547d&scoped=true&");
+/* harmony import */ var _J1_enigme4_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme4.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _J1_enigme4_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme4_vue_vue_type_template_id_17b6547d_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme4_vue_vue_type_template_id_17b6547d_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "17b6547d",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme4_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme4.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme4_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4.vue?vue&type=template&id=17b6547d&scoped=true&":
+/*!*********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4.vue?vue&type=template&id=17b6547d&scoped=true& ***!
+  \*********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme4_vue_vue_type_template_id_17b6547d_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme4.vue?vue&type=template&id=17b6547d&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4.vue?vue&type=template&id=17b6547d&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme4_vue_vue_type_template_id_17b6547d_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme4_vue_vue_type_template_id_17b6547d_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme4_1_vue_vue_type_template_id_532451ef_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme4_1.vue?vue&type=template&id=532451ef&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=template&id=532451ef&scoped=true&");
+/* harmony import */ var _J1_enigme4_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme4_1.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _J1_enigme4_1_vue_vue_type_style_index_0_id_532451ef_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./J1_enigme4_1.vue?vue&type=style&index=0&id=532451ef&scoped=true&lang=css& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=style&index=0&id=532451ef&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _J1_enigme4_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme4_1_vue_vue_type_template_id_532451ef_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme4_1_vue_vue_type_template_id_532451ef_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "532451ef",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme4_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme4_1.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme4_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=style&index=0&id=532451ef&scoped=true&lang=css&":
+/*!*************************************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=style&index=0&id=532451ef&scoped=true&lang=css& ***!
+  \*************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme4_1_vue_vue_type_style_index_0_id_532451ef_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader!../../../../../../node_modules/css-loader??ref--8-1!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme4_1.vue?vue&type=style&index=0&id=532451ef&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=style&index=0&id=532451ef&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme4_1_vue_vue_type_style_index_0_id_532451ef_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme4_1_vue_vue_type_style_index_0_id_532451ef_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme4_1_vue_vue_type_style_index_0_id_532451ef_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme4_1_vue_vue_type_style_index_0_id_532451ef_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme4_1_vue_vue_type_style_index_0_id_532451ef_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=template&id=532451ef&scoped=true&":
+/*!***********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=template&id=532451ef&scoped=true& ***!
+  \***********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme4_1_vue_vue_type_template_id_532451ef_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme4_1.vue?vue&type=template&id=532451ef&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme4_1.vue?vue&type=template&id=532451ef&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme4_1_vue_vue_type_template_id_532451ef_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme4_1_vue_vue_type_template_id_532451ef_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5.vue":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5.vue ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme5_vue_vue_type_template_id_17c46bfe_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme5.vue?vue&type=template&id=17c46bfe&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5.vue?vue&type=template&id=17c46bfe&scoped=true&");
+/* harmony import */ var _J1_enigme5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme5.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _J1_enigme5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme5_vue_vue_type_template_id_17c46bfe_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme5_vue_vue_type_template_id_17c46bfe_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "17c46bfe",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme5.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5.vue?vue&type=template&id=17c46bfe&scoped=true&":
+/*!*********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5.vue?vue&type=template&id=17c46bfe&scoped=true& ***!
+  \*********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme5_vue_vue_type_template_id_17c46bfe_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme5.vue?vue&type=template&id=17c46bfe&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5.vue?vue&type=template&id=17c46bfe&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme5_vue_vue_type_template_id_17c46bfe_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme5_vue_vue_type_template_id_17c46bfe_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme5_1_vue_vue_type_template_id_efeae5a0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme5_1.vue?vue&type=template&id=efeae5a0&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=template&id=efeae5a0&scoped=true&");
+/* harmony import */ var _J1_enigme5_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme5_1.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _J1_enigme5_1_vue_vue_type_style_index_0_id_efeae5a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./J1_enigme5_1.vue?vue&type=style&index=0&id=efeae5a0&scoped=true&lang=css& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=style&index=0&id=efeae5a0&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _J1_enigme5_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme5_1_vue_vue_type_template_id_efeae5a0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme5_1_vue_vue_type_template_id_efeae5a0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "efeae5a0",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme5_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme5_1.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme5_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=style&index=0&id=efeae5a0&scoped=true&lang=css&":
+/*!*************************************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=style&index=0&id=efeae5a0&scoped=true&lang=css& ***!
+  \*************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme5_1_vue_vue_type_style_index_0_id_efeae5a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader!../../../../../../node_modules/css-loader??ref--8-1!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme5_1.vue?vue&type=style&index=0&id=efeae5a0&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=style&index=0&id=efeae5a0&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme5_1_vue_vue_type_style_index_0_id_efeae5a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme5_1_vue_vue_type_style_index_0_id_efeae5a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme5_1_vue_vue_type_style_index_0_id_efeae5a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme5_1_vue_vue_type_style_index_0_id_efeae5a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme5_1_vue_vue_type_style_index_0_id_efeae5a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=template&id=efeae5a0&scoped=true&":
+/*!***********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=template&id=efeae5a0&scoped=true& ***!
+  \***********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme5_1_vue_vue_type_template_id_efeae5a0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme5_1.vue?vue&type=template&id=efeae5a0&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme5_1.vue?vue&type=template&id=efeae5a0&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme5_1_vue_vue_type_template_id_efeae5a0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme5_1_vue_vue_type_template_id_efeae5a0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6.vue":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6.vue ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme6_vue_vue_type_template_id_17d2837f_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme6.vue?vue&type=template&id=17d2837f&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6.vue?vue&type=template&id=17d2837f&scoped=true&");
+/* harmony import */ var _J1_enigme6_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme6.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _J1_enigme6_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme6_vue_vue_type_template_id_17d2837f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme6_vue_vue_type_template_id_17d2837f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "17d2837f",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme6_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme6.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme6_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6.vue?vue&type=template&id=17d2837f&scoped=true&":
+/*!*********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6.vue?vue&type=template&id=17d2837f&scoped=true& ***!
+  \*********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme6_vue_vue_type_template_id_17d2837f_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme6.vue?vue&type=template&id=17d2837f&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6.vue?vue&type=template&id=17d2837f&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme6_vue_vue_type_template_id_17d2837f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme6_vue_vue_type_template_id_17d2837f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme6_1_vue_vue_type_template_id_861e6f1e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme6_1.vue?vue&type=template&id=861e6f1e&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=template&id=861e6f1e&scoped=true&");
+/* harmony import */ var _J1_enigme6_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme6_1.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _J1_enigme6_1_vue_vue_type_style_index_0_id_861e6f1e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./J1_enigme6_1.vue?vue&type=style&index=0&id=861e6f1e&scoped=true&lang=css& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=style&index=0&id=861e6f1e&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _J1_enigme6_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme6_1_vue_vue_type_template_id_861e6f1e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme6_1_vue_vue_type_template_id_861e6f1e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "861e6f1e",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme6_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme6_1.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme6_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=style&index=0&id=861e6f1e&scoped=true&lang=css&":
+/*!*************************************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=style&index=0&id=861e6f1e&scoped=true&lang=css& ***!
+  \*************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme6_1_vue_vue_type_style_index_0_id_861e6f1e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader!../../../../../../node_modules/css-loader??ref--8-1!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme6_1.vue?vue&type=style&index=0&id=861e6f1e&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=style&index=0&id=861e6f1e&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme6_1_vue_vue_type_style_index_0_id_861e6f1e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme6_1_vue_vue_type_style_index_0_id_861e6f1e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme6_1_vue_vue_type_style_index_0_id_861e6f1e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme6_1_vue_vue_type_style_index_0_id_861e6f1e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme6_1_vue_vue_type_style_index_0_id_861e6f1e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=template&id=861e6f1e&scoped=true&":
+/*!***********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=template&id=861e6f1e&scoped=true& ***!
+  \***********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme6_1_vue_vue_type_template_id_861e6f1e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme6_1.vue?vue&type=template&id=861e6f1e&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme6_1.vue?vue&type=template&id=861e6f1e&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme6_1_vue_vue_type_template_id_861e6f1e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme6_1_vue_vue_type_template_id_861e6f1e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7.vue":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7.vue ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme7_vue_vue_type_template_id_17e09b00_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme7.vue?vue&type=template&id=17e09b00&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7.vue?vue&type=template&id=17e09b00&scoped=true&");
+/* harmony import */ var _J1_enigme7_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme7.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _J1_enigme7_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme7_vue_vue_type_template_id_17e09b00_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme7_vue_vue_type_template_id_17e09b00_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "17e09b00",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme7_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme7.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme7_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7.vue?vue&type=template&id=17e09b00&scoped=true&":
+/*!*********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7.vue?vue&type=template&id=17e09b00&scoped=true& ***!
+  \*********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme7_vue_vue_type_template_id_17e09b00_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme7.vue?vue&type=template&id=17e09b00&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7.vue?vue&type=template&id=17e09b00&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme7_vue_vue_type_template_id_17e09b00_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme7_vue_vue_type_template_id_17e09b00_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme7_1_vue_vue_type_template_id_1c51f89c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme7_1.vue?vue&type=template&id=1c51f89c&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=template&id=1c51f89c&scoped=true&");
+/* harmony import */ var _J1_enigme7_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme7_1.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _J1_enigme7_1_vue_vue_type_style_index_0_id_1c51f89c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./J1_enigme7_1.vue?vue&type=style&index=0&id=1c51f89c&scoped=true&lang=css& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=style&index=0&id=1c51f89c&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _J1_enigme7_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme7_1_vue_vue_type_template_id_1c51f89c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme7_1_vue_vue_type_template_id_1c51f89c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "1c51f89c",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme7_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme7_1.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme7_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=style&index=0&id=1c51f89c&scoped=true&lang=css&":
+/*!*************************************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=style&index=0&id=1c51f89c&scoped=true&lang=css& ***!
+  \*************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme7_1_vue_vue_type_style_index_0_id_1c51f89c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader!../../../../../../node_modules/css-loader??ref--8-1!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme7_1.vue?vue&type=style&index=0&id=1c51f89c&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=style&index=0&id=1c51f89c&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme7_1_vue_vue_type_style_index_0_id_1c51f89c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme7_1_vue_vue_type_style_index_0_id_1c51f89c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme7_1_vue_vue_type_style_index_0_id_1c51f89c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme7_1_vue_vue_type_style_index_0_id_1c51f89c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme7_1_vue_vue_type_style_index_0_id_1c51f89c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=template&id=1c51f89c&scoped=true&":
+/*!***********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=template&id=1c51f89c&scoped=true& ***!
+  \***********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme7_1_vue_vue_type_template_id_1c51f89c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme7_1.vue?vue&type=template&id=1c51f89c&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme7_1.vue?vue&type=template&id=1c51f89c&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme7_1_vue_vue_type_template_id_1c51f89c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme7_1_vue_vue_type_template_id_1c51f89c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8.vue":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8.vue ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme8_vue_vue_type_template_id_17eeb281_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme8.vue?vue&type=template&id=17eeb281&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8.vue?vue&type=template&id=17eeb281&scoped=true&");
+/* harmony import */ var _J1_enigme8_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme8.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _J1_enigme8_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme8_vue_vue_type_template_id_17eeb281_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme8_vue_vue_type_template_id_17eeb281_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "17eeb281",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme8_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme8.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme8_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8.vue?vue&type=template&id=17eeb281&scoped=true&":
+/*!*********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8.vue?vue&type=template&id=17eeb281&scoped=true& ***!
+  \*********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme8_vue_vue_type_template_id_17eeb281_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme8.vue?vue&type=template&id=17eeb281&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8.vue?vue&type=template&id=17eeb281&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme8_vue_vue_type_template_id_17eeb281_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme8_vue_vue_type_template_id_17eeb281_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme8_1_vue_vue_type_template_id_26bd3ef3_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme8_1.vue?vue&type=template&id=26bd3ef3&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=template&id=26bd3ef3&scoped=true&");
+/* harmony import */ var _J1_enigme8_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme8_1.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _J1_enigme8_1_vue_vue_type_style_index_0_id_26bd3ef3_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./J1_enigme8_1.vue?vue&type=style&index=0&id=26bd3ef3&scoped=true&lang=css& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=style&index=0&id=26bd3ef3&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _J1_enigme8_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme8_1_vue_vue_type_template_id_26bd3ef3_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme8_1_vue_vue_type_template_id_26bd3ef3_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "26bd3ef3",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme8_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme8_1.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme8_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=style&index=0&id=26bd3ef3&scoped=true&lang=css&":
+/*!*************************************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=style&index=0&id=26bd3ef3&scoped=true&lang=css& ***!
+  \*************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme8_1_vue_vue_type_style_index_0_id_26bd3ef3_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader!../../../../../../node_modules/css-loader??ref--8-1!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme8_1.vue?vue&type=style&index=0&id=26bd3ef3&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=style&index=0&id=26bd3ef3&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme8_1_vue_vue_type_style_index_0_id_26bd3ef3_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme8_1_vue_vue_type_style_index_0_id_26bd3ef3_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme8_1_vue_vue_type_style_index_0_id_26bd3ef3_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme8_1_vue_vue_type_style_index_0_id_26bd3ef3_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme8_1_vue_vue_type_style_index_0_id_26bd3ef3_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=template&id=26bd3ef3&scoped=true&":
+/*!***********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=template&id=26bd3ef3&scoped=true& ***!
+  \***********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme8_1_vue_vue_type_template_id_26bd3ef3_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme8_1.vue?vue&type=template&id=26bd3ef3&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme8_1.vue?vue&type=template&id=26bd3ef3&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme8_1_vue_vue_type_template_id_26bd3ef3_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme8_1_vue_vue_type_template_id_26bd3ef3_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9.vue":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9.vue ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme9_vue_vue_type_template_id_17fcca02_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme9.vue?vue&type=template&id=17fcca02&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9.vue?vue&type=template&id=17fcca02&scoped=true&");
+/* harmony import */ var _J1_enigme9_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme9.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _J1_enigme9_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme9_vue_vue_type_template_id_17fcca02_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme9_vue_vue_type_template_id_17fcca02_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "17fcca02",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme9_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme9.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme9_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9.vue?vue&type=template&id=17fcca02&scoped=true&":
+/*!*********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9.vue?vue&type=template&id=17fcca02&scoped=true& ***!
+  \*********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme9_vue_vue_type_template_id_17fcca02_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme9.vue?vue&type=template&id=17fcca02&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9.vue?vue&type=template&id=17fcca02&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme9_vue_vue_type_template_id_17fcca02_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme9_vue_vue_type_template_id_17fcca02_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _J1_enigme9_1_vue_vue_type_template_id_5ba37a34_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./J1_enigme9_1.vue?vue&type=template&id=5ba37a34&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=template&id=5ba37a34&scoped=true&");
+/* harmony import */ var _J1_enigme9_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./J1_enigme9_1.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _J1_enigme9_1_vue_vue_type_style_index_0_id_5ba37a34_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./J1_enigme9_1.vue?vue&type=style&index=0&id=5ba37a34&scoped=true&lang=css& */ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=style&index=0&id=5ba37a34&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _J1_enigme9_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _J1_enigme9_1_vue_vue_type_template_id_5ba37a34_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _J1_enigme9_1_vue_vue_type_template_id_5ba37a34_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "5ba37a34",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme9_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme9_1.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme9_1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=style&index=0&id=5ba37a34&scoped=true&lang=css&":
+/*!*************************************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=style&index=0&id=5ba37a34&scoped=true&lang=css& ***!
+  \*************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme9_1_vue_vue_type_style_index_0_id_5ba37a34_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader!../../../../../../node_modules/css-loader??ref--8-1!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme9_1.vue?vue&type=style&index=0&id=5ba37a34&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=style&index=0&id=5ba37a34&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme9_1_vue_vue_type_style_index_0_id_5ba37a34_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme9_1_vue_vue_type_style_index_0_id_5ba37a34_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme9_1_vue_vue_type_style_index_0_id_5ba37a34_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme9_1_vue_vue_type_style_index_0_id_5ba37a34_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme9_1_vue_vue_type_style_index_0_id_5ba37a34_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=template&id=5ba37a34&scoped=true&":
+/*!***********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=template&id=5ba37a34&scoped=true& ***!
+  \***********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme9_1_vue_vue_type_template_id_5ba37a34_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./J1_enigme9_1.vue?vue&type=template&id=5ba37a34&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/joueur1/J1_enigme9_1.vue?vue&type=template&id=5ba37a34&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme9_1_vue_vue_type_template_id_5ba37a34_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_J1_enigme9_1_vue_vue_type_template_id_5ba37a34_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/lost.vue":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/lost.vue ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _lost_vue_vue_type_template_id_2f9766f4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lost.vue?vue&type=template&id=2f9766f4&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=template&id=2f9766f4&scoped=true&");
+/* harmony import */ var _lost_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lost.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _lost_vue_vue_type_style_index_0_id_2f9766f4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lost.vue?vue&type=style&index=0&id=2f9766f4&scoped=true&lang=css& */ "./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=style&index=0&id=2f9766f4&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _lost_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _lost_vue_vue_type_template_id_2f9766f4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _lost_vue_vue_type_template_id_2f9766f4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "2f9766f4",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/lost.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_lost_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./lost.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_lost_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=style&index=0&id=2f9766f4&scoped=true&lang=css&":
+/*!*********************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=style&index=0&id=2f9766f4&scoped=true&lang=css& ***!
+  \*********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_lost_vue_vue_type_style_index_0_id_2f9766f4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader!../../../../../node_modules/css-loader??ref--8-1!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../node_modules/vue-loader/lib??vue-loader-options!./lost.vue?vue&type=style&index=0&id=2f9766f4&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=style&index=0&id=2f9766f4&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_lost_vue_vue_type_style_index_0_id_2f9766f4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_lost_vue_vue_type_style_index_0_id_2f9766f4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_lost_vue_vue_type_style_index_0_id_2f9766f4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_lost_vue_vue_type_style_index_0_id_2f9766f4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_lost_vue_vue_type_style_index_0_id_2f9766f4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=template&id=2f9766f4&scoped=true&":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=template&id=2f9766f4&scoped=true& ***!
+  \*******************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_lost_vue_vue_type_template_id_2f9766f4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./lost.vue?vue&type=template&id=2f9766f4&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/lost.vue?vue&type=template&id=2f9766f4&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_lost_vue_vue_type_template_id_2f9766f4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_lost_vue_vue_type_template_id_2f9766f4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/victory.vue":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/victory.vue ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _victory_vue_vue_type_template_id_7e87f972_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./victory.vue?vue&type=template&id=7e87f972&scoped=true& */ "./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=template&id=7e87f972&scoped=true&");
+/* harmony import */ var _victory_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./victory.vue?vue&type=script&lang=js& */ "./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _victory_vue_vue_type_style_index_0_id_7e87f972_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./victory.vue?vue&type=style&index=0&id=7e87f972&scoped=true&lang=css& */ "./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=style&index=0&id=7e87f972&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _victory_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _victory_vue_vue_type_template_id_7e87f972_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _victory_vue_vue_type_template_id_7e87f972_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "7e87f972",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/rooms/anubisRiddle_components/victory.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_victory_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./victory.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_victory_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=style&index=0&id=7e87f972&scoped=true&lang=css&":
+/*!************************************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=style&index=0&id=7e87f972&scoped=true&lang=css& ***!
+  \************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_victory_vue_vue_type_style_index_0_id_7e87f972_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader!../../../../../node_modules/css-loader??ref--8-1!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/src??ref--8-2!../../../../../node_modules/vue-loader/lib??vue-loader-options!./victory.vue?vue&type=style&index=0&id=7e87f972&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=style&index=0&id=7e87f972&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_victory_vue_vue_type_style_index_0_id_7e87f972_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_victory_vue_vue_type_style_index_0_id_7e87f972_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_victory_vue_vue_type_style_index_0_id_7e87f972_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_victory_vue_vue_type_style_index_0_id_7e87f972_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_8_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_vue_loader_lib_index_js_vue_loader_options_victory_vue_vue_type_style_index_0_id_7e87f972_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=template&id=7e87f972&scoped=true&":
+/*!**********************************************************************************************************************!*\
+  !*** ./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=template&id=7e87f972&scoped=true& ***!
+  \**********************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_victory_vue_vue_type_template_id_7e87f972_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./victory.vue?vue&type=template&id=7e87f972&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/rooms/anubisRiddle_components/victory.vue?vue&type=template&id=7e87f972&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_victory_vue_vue_type_template_id_7e87f972_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_victory_vue_vue_type_template_id_7e87f972_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/rooms/infiniteCristal.vue":
 /*!***********************************************************!*\
   !*** ./resources/js/components/rooms/infiniteCristal.vue ***!
@@ -99161,8 +107381,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_hidden_Gemclicker__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/hidden/Gemclicker */ "./resources/js/components/hidden/Gemclicker.vue");
 /* harmony import */ var _components_rooms_room404__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/rooms/room404 */ "./resources/js/components/rooms/room404.vue");
 /* harmony import */ var _components_rooms_infiniteCristal__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/rooms/infiniteCristal */ "./resources/js/components/rooms/infiniteCristal.vue");
-/* harmony import */ var _components_admin_Dashboard__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/admin/Dashboard */ "./resources/js/components/admin/Dashboard.vue");
-/* harmony import */ var _components_errors_PageNotFound__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/errors/PageNotFound */ "./resources/js/components/errors/PageNotFound.vue");
+/* harmony import */ var _components_rooms_anubisRiddle__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/rooms/anubisRiddle */ "./resources/js/components/rooms/anubisRiddle.vue");
+/* harmony import */ var _components_admin_Dashboard__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/admin/Dashboard */ "./resources/js/components/admin/Dashboard.vue");
+/* harmony import */ var _components_errors_PageNotFound__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/errors/PageNotFound */ "./resources/js/components/errors/PageNotFound.vue");
  // Vues
 
 
@@ -99177,9 +107398,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ //Vue salles
 
 
- //Vue utilisateur
+
+ //Vue admin
 
  //Vue d'erreurs
 
@@ -99194,7 +107417,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
     component: _components_Home_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   }, {
     path: '/admin',
-    component: _components_admin_Dashboard__WEBPACK_IMPORTED_MODULE_15__["default"]
+    component: _components_admin_Dashboard__WEBPACK_IMPORTED_MODULE_16__["default"]
   }, {
     path: '/rooms',
     component: _components_Rooms__WEBPACK_IMPORTED_MODULE_3__["default"]
@@ -99240,6 +107463,12 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
   }, {
     path: '/rooms/infinitecristal/play',
     component: _components_rooms_infiniteCristal__WEBPACK_IMPORTED_MODULE_14__["default"]
+  }, {
+    path: '/rooms/anubisriddle',
+    component: _components_rooms_anubisRiddle__WEBPACK_IMPORTED_MODULE_15__["default"]
+  }, {
+    path: '/rooms/anubisriddle/play',
+    component: _components_rooms_anubisRiddle__WEBPACK_IMPORTED_MODULE_15__["default"]
   },
   /*{ path: '*', component: PageNotFound},*/
   {

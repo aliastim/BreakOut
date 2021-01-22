@@ -14,10 +14,13 @@ import Avatar from './components/parameters/Avatar';
 import Inventory from './components/parameters/Inventory';
 import Myrooms from './components/parameters/Myrooms';
 import Gemclicker from './components/hidden/Gemclicker';
+
+//Vue salles
 import Room404 from './components/rooms/room404';
 import InfiniteCristal from './components/rooms/infiniteCristal';
+import AnubisRiddle from './components/rooms/anubisRiddle';
 
-//Vue utilisateur
+//Vue admin
 import Admin_dashboard from './components/admin/Dashboard';
 
 //Vue d'erreurs
@@ -46,6 +49,9 @@ const router = new VueRouter({
 
         { path: '/rooms/infinitecristal', component: InfiniteCristal},
         { path: '/rooms/infinitecristal/play', component: InfiniteCristal},
+
+        { path: '/rooms/anubisriddle', component: AnubisRiddle},
+        { path: '/rooms/anubisriddle/play', component: AnubisRiddle},
 
         /*{ path: '*', component: PageNotFound},*/
         { path: '*', component: Room404},
