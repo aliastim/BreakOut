@@ -167,8 +167,8 @@ components: {RoomHeader, Enigme0, J1_enigme1, J1_enigme1_1, J1_enigme2, J1_enigm
         height: 100vh;
         width: 100vw;
         overflow: auto;
-        /*background: url(/img/salles/anubis_riddle/fond.gif) center no-repeat;*/
-        background: url(/img/salles/anubis_riddle/fond.png) center no-repeat;
+        /*background: url(/img/salles/anubis_riddle/Fond.gif) center no-repeat;*/
+        background: url(/img/salles/anubis_riddle/Fond.png) center no-repeat;
         background-size: cover;
     }
 
