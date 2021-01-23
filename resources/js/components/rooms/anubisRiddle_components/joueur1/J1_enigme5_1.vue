@@ -1,6 +1,7 @@
 <template>
     <div class="terminal-body text-center">
         <div class="body-c w-100">
+            <audio id="music" src="/audio/rooms/anubisriddle/5.mp3" loop autoplay></audio>
             <div class="w-100" style="margin-bottom: -100px;">
                 <h1 class="title-egypte" style="margin-bottom: 50px; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">ENIGME 5</h1>
             </div>
@@ -22,7 +23,7 @@
                 <div class="col-md-4 mx-auto" style="margin-top: 20px;">
                     <p class="sous-texte" style="margin-top: 20px;">
                         Ton partenaire est bloqué à l'énigme 4 :<br>
-                        "Clique en haut à gauche puis en haut à droite"
+                        "Allume le soleil"
                     </p>
                 </div>
             </div>

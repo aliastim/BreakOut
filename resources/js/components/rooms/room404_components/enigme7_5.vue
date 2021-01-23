@@ -8,7 +8,7 @@
             </div>
             <p class="terminal-text">
                 <br>Pour vous récompenser de vos prouesses,<br>
-                <B>500</B> pièces d'or on été ajoutées à votre compte !<br><br>
+                <B>500</B> pièces d'or ont été ajoutées à votre compte !<br><br>
            </p>
 
             <button class="btn-enigme" @click="home()">Retour à l'accueil</button>

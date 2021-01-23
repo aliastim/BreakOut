@@ -27,6 +27,24 @@
         <J1_enigme10_1 :room="this" v-if="(player === 1 && enigme === 10 && phase ===1)"></J1_enigme10_1>
 
         <!-- Joueur 2 -->
+        <J2_enigme1 :room="this" v-if="(player === 2 && enigme === 1 && phase ===0)"></J2_enigme1>
+        <J2_enigme1_1 :room="this" v-if="(player === 2 && enigme === 1 && phase ===1)"></J2_enigme1_1>
+        <J2_enigme2 :room="this" v-if="(player === 2 && enigme === 2 && phase ===0)"></J2_enigme2>
+        <J2_enigme2_1 :room="this" v-if="(player === 2 && enigme === 2 && phase ===1)"></J2_enigme2_1>
+        <J2_enigme4 :room="this" v-if="(player === 2 && enigme === 4 && phase ===0)"></J2_enigme4>
+        <J2_enigme4_1 :room="this" v-if="(player === 2 && enigme === 4 && phase ===1)"></J2_enigme4_1>
+        <J2_enigme5 :room="this" v-if="(player === 2 && enigme === 5 && phase ===0)"></J2_enigme5>
+        <J2_enigme5_1 :room="this" v-if="(player === 2 && enigme === 5 && phase ===1)"></J2_enigme5_1>
+        <J2_enigme6 :room="this" v-if="(player === 2 && enigme === 6 && phase ===0)"></J2_enigme6>
+        <J2_enigme6_1 :room="this" v-if="(player === 2 && enigme === 6 && phase ===1)"></J2_enigme6_1>
+        <J2_enigme7 :room="this" v-if="(player === 2 && enigme === 7 && phase ===0)"></J2_enigme7>
+        <J2_enigme7_1 :room="this" v-if="(player === 2 && enigme === 7 && phase ===1)"></J2_enigme7_1>
+        <J2_enigme8 :room="this" v-if="(player === 2 && enigme === 8 && phase ===0)"></J2_enigme8>
+        <J2_enigme8_1 :room="this" v-if="(player === 2 && enigme === 8 && phase ===1)"></J2_enigme8_1>
+        <J2_enigme9 :room="this" v-if="(player === 2 && enigme === 9 && phase ===0)"></J2_enigme9>
+        <J2_enigme9_1 :room="this" v-if="(player === 2 && enigme === 9 && phase ===1)"></J2_enigme9_1>
+        <J2_enigme10  :room="this" v-if="(player === 2 && enigme === 10 && phase ===0)"></J2_enigme10>
+        <J2_enigme_10_1  :room="this" v-if="(player === 2 && enigme === 10 && phase ===1)"></J2_enigme_10_1>
 
         <!-- FIN -->
         <lost :room="this" v-if="(player === 0 && enigme === 0 && phase ===0)"></lost>
@@ -59,13 +77,32 @@ import J1_enigme9 from "./anubisRiddle_components/joueur1/J1_enigme9";
 import J1_enigme9_1 from "./anubisRiddle_components/joueur1/J1_enigme9_1";
 import J1_enigme10 from "./anubisRiddle_components/joueur1/J1_enigme10";
 import J1_enigme10_1 from "./anubisRiddle_components/joueur1/J1_enigme10_1";
+import J2_enigme1 from "./anubisRiddle_components/joueur2/J2_enigme1";
+import J2_enigme1_1 from "./anubisRiddle_components/joueur2/J2_enigme1_1";
+import J2_enigme2 from "./anubisRiddle_components/joueur2/J2_enigme2";
+import J2_enigme2_1 from "./anubisRiddle_components/joueur2/J2_enigme2_1";
+import J2_enigme4 from "./anubisRiddle_components/joueur2/J2_enigme4";
+import J2_enigme4_1 from "./anubisRiddle_components/joueur2/J2_enigme4_1";
+import J2_enigme5 from "./anubisRiddle_components/joueur2/J2_enigme5";
+import J2_enigme5_1 from "./anubisRiddle_components/joueur2/J2_enigme5_1";
+import J2_enigme6 from "./anubisRiddle_components/joueur2/J2_enigme6";
+import J2_enigme6_1 from "./anubisRiddle_components/joueur2/J2_enigme6_1";
+import J2_enigme7 from "./anubisRiddle_components/joueur2/J2_enigme7";
+import J2_enigme7_1 from "./anubisRiddle_components/joueur2/J2_enigme7_1";
+import J2_enigme8 from "./anubisRiddle_components/joueur2/J2_enigme8";
+import J2_enigme8_1 from "./anubisRiddle_components/joueur2/J2_enigme8_1";
+import J2_enigme9 from "./anubisRiddle_components/joueur2/J2_enigme9";
+import J2_enigme9_1 from "./anubisRiddle_components/joueur2/J2_enigme9_1";
+import J2_enigme10 from "./anubisRiddle_components/joueur2/J2_enigme10";
+import J2_enigme_10_1 from "./anubisRiddle_components/joueur2/J2_enigme_10_1";
+
 import lost from "./anubisRiddle_components/lost";
 import victory from "./anubisRiddle_components/victory";
 
 export default {
 name: "anubisRiddle.vue",
 props: ['app'],
-components: {RoomHeader, Enigme0, J1_enigme1, J1_enigme1_1, J1_enigme2, J1_enigme2_1, J1_enigme3, J1_enigme3_1, J1_enigme4, J1_enigme4_1, J1_enigme5, J1_enigme5_1, J1_enigme6, J1_enigme6_1, J1_enigme7, J1_enigme7_1, J1_enigme8, J1_enigme8_1, J1_enigme9, J1_enigme9_1, J1_enigme10, J1_enigme10_1, lost, victory},
+components: {RoomHeader, Enigme0, J1_enigme1, J1_enigme1_1, J1_enigme2, J1_enigme2_1, J1_enigme3, J1_enigme3_1, J1_enigme4, J1_enigme4_1, J1_enigme5, J1_enigme5_1, J1_enigme6, J1_enigme6_1, J1_enigme7, J1_enigme7_1, J1_enigme8, J1_enigme8_1, J1_enigme9, J1_enigme9_1, J1_enigme10, J1_enigme10_1, J2_enigme1, J2_enigme1_1, J2_enigme2, J2_enigme2_1, J2_enigme4, J2_enigme4_1, J2_enigme5, J2_enigme5_1, J2_enigme6, J2_enigme6_1, J2_enigme7, J2_enigme7_1, J2_enigme8, J2_enigme8_1, J2_enigme9, J2_enigme9_1, J2_enigme10, J2_enigme_10_1, lost, victory},
     data(){
         return {
             enigme: 1,
@@ -201,6 +238,13 @@ components: {RoomHeader, Enigme0, J1_enigme1, J1_enigme1_1, J1_enigme2, J1_enigm
         font-family: Trajan;
         font-size: 35px;
         color: white;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .texte-intro
+        {
+            font-size: 16px;
+        }
     }
 
     .button_egypte

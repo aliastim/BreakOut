@@ -1,6 +1,7 @@
 <template>
     <div class="terminal-body text-center">
         <div class="body-c w-100">
+            <audio id="music" src="/audio/rooms/anubisriddle/lost.mp3" loop autoplay></audio>
             {{ fade }}
             <div class="container text-center mt-3">
                 <div>
@@ -88,7 +89,6 @@ export default {
     color: rgb(248, 170, 34);
     background: none;
     border: 1px solid rgb(248, 170, 34);
-    border-radius: 2px;
     border-radius: 4px;
     text-transform: uppercase;
     transition: 0.3s;

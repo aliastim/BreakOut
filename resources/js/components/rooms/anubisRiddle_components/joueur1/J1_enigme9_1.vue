@@ -1,6 +1,7 @@
 <template>
     <div class="terminal-body text-center">
         <div class="body-c w-100">
+            <audio id="music" src="/audio/rooms/anubisriddle/9.mp3" loop autoplay></audio>
             <div class="w-100" style="margin-bottom: 10px;">
                 <h1 class="title-egypte" style="margin-bottom: 50px; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">ENIGME 9</h1>
             </div>
@@ -17,7 +18,7 @@
                 <div class="col-md-4 mx-auto" style="margin-top: 20px;">
                     <p class="sous-texte" style="margin-top: 20px;">
                         Ton partenaire est bloqué à l'énigme 8 :<br>
-                        "Clique deux fois sur la première case et glisse vers les abysses !"
+                        "La dernière clé est celle qui ouvre le chemin !"
                     </p>
                 </div>
             </div>

@@ -1,7 +1,9 @@
 <template>
     <div class="terminal-body text-center">
         <div class="body-c w-100">
+            <audio id="music" src="/audio/rooms/anubisriddle/victory.mp3" loop autoplay></audio>
             {{ fade }}
+            {{ gold }}
             <div class="container text-center mt-3">
                 <div>
                     <transition name="fade">
@@ -24,6 +26,9 @@
                             <div v-if="(show === true) && (show_etape >= 2)">
                                 <p class="texte-intro">
                                     Vous avez tous les deux choisi le sacrifice, ce qui est une qualité rare. Anubis vous laisse la vie sauve.
+                                </p>
+                                <p class="pgold">
+                                    500 pièces d'or ont été ajoutées à votre compte !
                                 </p>
                                 <button class="btn-enigme" @click="home()">Retour à l'accueil</button>
                             </div>
@@ -64,7 +69,18 @@ export default {
                     this.show_etape++;
                 }, 1000);
             }, 1000);
+        },
+        gold() {
+            const data = {
+                gold: 500,
+            }
+            this.room.app.req.post("/useritems/addgold", data).then(response => {
+                console.log(response.data);
+            }).catch(error => {
+                console.log(error.response.data.error);
+            });
         }
+
     }
 }
 </script>
@@ -83,13 +99,12 @@ export default {
 
 .btn-enigme
 {
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 10px 20px;
     font-family: Volte;
     color: rgb(248, 170, 34);
     background: none;
     border: 1px solid rgb(248, 170, 34);
-    border-radius: 2px;
     border-radius: 4px;
     text-transform: uppercase;
     transition: 0.3s;
@@ -101,6 +116,14 @@ export default {
 {
     color: #2e4157;
     background:  rgb(248, 170, 34);
+}
+
+.pgold
+{
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: Volte_bold;
+    color: rgb(248, 170, 34);
 }
 
 </style>

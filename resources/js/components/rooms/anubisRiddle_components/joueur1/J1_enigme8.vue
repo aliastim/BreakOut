@@ -6,7 +6,7 @@
                 <div>
                     <transition name="fade">
                         <p v-if="show" class="texte-intro">
-                            Une stèle gravée semble égayer votre curiosité,
+                            Une dalle gravée semble égayer votre curiosité,
                         </p>
                     </transition>
                     <transition name="fade">

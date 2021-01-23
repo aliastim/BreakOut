@@ -47,12 +47,16 @@ export default {
             this.room.player = 1;
 
             /*Passe-muraille*/
-            /*this.room.enigme= 10;
+            /*this.room.enigme= 1;
             this.room.phase= 1;*/
 
         },
         joueur_deux() {
             this.room.player = 2;
+
+            /*Passe-muraille*/
+            /*this.room.enigme= 1;
+            this.room.phase= 1;*/
         }
     }
 }

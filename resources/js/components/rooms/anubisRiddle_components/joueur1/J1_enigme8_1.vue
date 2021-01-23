@@ -1,6 +1,7 @@
 <template>
     <div class="terminal-body text-center">
         <div class="body-c w-100">
+            <audio id="music" src="/audio/rooms/anubisriddle/8.mp3" loop autoplay></audio>
             <div class="w-100" style="margin-bottom: 10px;">
                 <h1 class="title-egypte" style="margin-bottom: 50px; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">ENIGME 8</h1>
             </div>
@@ -29,7 +30,9 @@
                     </div>
                 </div>
             </div>
-
+            <div class="text-center" style="margin-top: 50px;">
+                <img class="img-fluid" src="/img/salles/anubis_riddle/stele_indice.png" style="max-width: 100px;">
+            </div>
         </div>
     </div>
 </template>

@@ -48,6 +48,12 @@
                     <button class="button_egypte mt-5" @click="effacer()" style="padding: 5px 100px;">RECOMMENCER</button>
                 </div>
             </div>
+            <div class="w-100 text-center">
+                <p class="sous-texte" style="margin-top: 40px;">
+                    Ton partenaire est bloqué à l'énigme 3 :<br>
+                    "Clique sur le symbole de la plume"
+                </p>
+            </div>
 
         </div>
     </div>
