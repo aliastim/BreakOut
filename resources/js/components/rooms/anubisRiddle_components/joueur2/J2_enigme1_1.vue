@@ -58,7 +58,7 @@
                                 <path id="Tracé_662" data-name="Tracé 662" d="M20.013,4.179A14.425,14.425,0,0,1,12.74,2.366a10.483,10.483,0,0,0-2.971-1.13,11.119,11.119,0,0,0-5.323.31A19.855,19.855,0,0,0,.8,2.991a.515.515,0,0,1-.639-.048A.458.458,0,0,1,.039,2.4a.647.647,0,0,1,.267-.286A18.335,18.335,0,0,1,6.12.153a10.969,10.969,0,0,1,6.916,1.221,14.123,14.123,0,0,0,3.429,1.4,14.863,14.863,0,0,0,3.978.353c.7-.024,1.4-.081,2.094-.124a.506.506,0,1,1,.072,1C21.74,4.064,20.877,4.121,20.013,4.179Z" transform="translate(0.005 -0.031)" fill="#182b31"/>
                             </g>
                         </g>
-                        <text id="INVERSER" transform="translate(153.205 453.188) rotate(-90)" fill="#2e4258" font-size="60" font-family="Nahkt, PharaohGlyph"><tspan x="0" y="0">INVERSER</tspan></text>
+                        <text id="INVERSER"  transform="translate(153.205 453.188) rotate(-90)" fill="#2e4258" font-size="60" font-family="hieroglyphes"><tspan x="0" y="0">INVERSER</tspan></text>
                     </g>
                 </svg>
             </div>
