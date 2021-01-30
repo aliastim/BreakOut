@@ -29,7 +29,7 @@ export default {
     },
     methods: {
         loadScrolling(){
-            this.app.req.post('bo_dashboard/loadscrolling').then(response => {
+            axios.post('/bo_dashboard/loadscrolling').then(response => {
                 this.sentence = response.data.scrolling;
             }).catch(error => {
                 this.errors.push(error.response.data.error);

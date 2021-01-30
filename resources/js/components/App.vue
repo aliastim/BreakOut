@@ -36,7 +36,7 @@ export default {
         init() {
             this.loading = true;
 
-            this.req.post("auth/init").then(response => {
+            axios.post("/auth/init").then(response => {
                 /* this.req.get -> bug */
                 this.user = response.data.user;
                 console.log(response.data);

@@ -5,7 +5,7 @@
             <div class="container text-center mt-3">
                 <div>
                     <transition name="fade">
-                        <p v-if="show" class="texte-intro">La porte de l’épreuve suivante s’ouvre et vous voilà maintenant face à un étrange tableau de carcactères.</p>
+                        <p v-if="show" class="texte-intro">La porte de l’épreuve suivante s’ouvre et vous voilà maintenant face à un étrange tableau de caractères.</p>
                     </transition>
                     <!--<transition name="fade">
                         <p v-if="(show === true) && (show_etape >= 1)" class="texte-intro"></p>

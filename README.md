@@ -30,3 +30,7 @@ installer les paramètres de connexion :
 ```bash
 php artisan ui vue --auth
 ```
+-----
+
+Ajouter les dossiers public/css et public/js dans le .gitignore :
+-> Les fichiers css et js sont automatiquement (re)créés avec le npm run watch

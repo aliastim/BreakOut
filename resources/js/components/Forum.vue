@@ -9,10 +9,10 @@
             <div class="container text-center pt-4">
                 <div class="w-100 d-flex">
                     <div class="mr-auto"><h1 class="title-BO">Forum BreakOut</h1></div>
-                    <div><button class="button-plus" type="button" data-toggle="modal" data-target="#modaladdpost" @click="publish_active()" v-if="publication === false"><i class="fas fa-plus-circle"></i></button></div>
+                    <div><button class="button-plus" type="button" data-toggle="modal" data-target="#modaladdpost" @click="publish_active()"><i class="fas fa-plus-circle"></i></button></div>
                 </div>
                 <div class="w-100">
-                    <table class="table table-BO" v-if="publication === false">
+                    <table class="table table-BO">
                         <thead>
                         <tr>
                             <th scope="col" style="border-top-left-radius: 10px;">#</th>
@@ -30,7 +30,7 @@
                         <tbody>
                             <tr v-for="(post, index) in posts.slice().reverse()" v-bind:index="index">
                                 <td><p v-text="post.id"></p></td>
-                                <td><button class="btn-voir josephin-bold" @click="goTo(post.id)">Voir</button></td>
+                                <td><router-link class="btn-voir josephin-bold" :to="'/forum/posts/'+post.id">Voir</router-link></td>
                                 <td><p v-text="post.subject"></p></td>
                                 <!--<td><p v-text="post.user_id"></p></td>-->
                                 <td><p v-text="post.comments"></p></td>
@@ -51,7 +51,6 @@
                             </tr>
                         </tbody>
                     </table>
-                    <forum-publication :forum="this"  v-if="publication === true"></forum-publication>
 
                 </div>
 
@@ -106,18 +105,16 @@
 </template>
 <script>
 import GlobalFooter from "./layout/Footer";
-import ForumPublication from "./forum/ForumPublication";
 import moment from "moment";
 
 export default {
     name: "Forum",
-    components: {ForumPublication, GlobalFooter},
+    components: {GlobalFooter},
     props: ['app'],
     data() {
         return {
             sentence: "",
             admin: false,
-            publication: false,
             publish: false,
             posts: [],
             post_id: null,
@@ -136,7 +133,7 @@ export default {
     },
     methods: {
         loadScrolling(){
-            this.app.req.post('bo_dashboard/loadscrolling').then(response => {
+            axios.post('/bo_dashboard/loadscrolling').then(response => {
                 this.sentence = response.data.scrolling;
             }).catch(error => {
                 this.errors.push(error.response.data.error);
@@ -144,7 +141,7 @@ export default {
         },
         loadPost()
         {
-            this.app.req.post('forum/loadpost').then(response => {
+            axios.post('/forum/loadpost').then(response => {
                 this.posts = response.data;
                 //If message
                 //Alors on va vers la page message et on envoie l'id du message en paramètre
@@ -159,7 +156,7 @@ export default {
                 message : this.message,
                 img: this.img
             };
-            this.app.req.post('forum/addpost', data).then(response => {
+            axios.post('/forum/addpost', data).then(response => {
                 console.log(response.data);
                 this.publish = true;
                 //If message
@@ -171,7 +168,7 @@ export default {
         deletePost(id)
         {
             this.errors = [];
-            this.app.req.post('forum/deletepost/' + id).then(response => {
+            axios.post('/forum/deletepost/' + id).then(response => {
                 console.log(response.data);
 
             }).catch(error => {
@@ -181,7 +178,7 @@ export default {
         lockPost(id)
         {
             this.errors = [];
-            this.app.req.post('forum/lockpost/' + id).then(response => {
+            axios.post('/forum/lockpost/' + id).then(response => {
                 console.log(response.data);
 
             }).catch(error => {
@@ -191,20 +188,6 @@ export default {
         publish_active()
         {
             this.publish = false
-        },
-        goTo(id) {
-            this.publication = true;
-            this.post_id = id;
-            /*const data = {
-                messageId : n,
-            };
-            this.app.req.post('forum/loadscrolling', data).then(response => {
-                console.log(response.data);
-                //If message
-                //Alors on va vers la page message et on envoie l'id du message en paramètre
-            }).catch(error => {
-                this.errors.push(error.response.data.error);
-            });*/
         },
         page(){
 

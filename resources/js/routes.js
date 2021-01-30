@@ -4,6 +4,7 @@ import Home from './components/Home.vue'
 import Shop from './components/Shop';
 import Rooms from "./components/Rooms";
 import Forum from './components/Forum';
+import ForumPublication from './components/ForumPublication';
 import Mentions from './components/mentions/mentions_legales';
 import Infos from './components/mentions/info';
 import DonneesPerso from './components/mentions/donnees_personelles';
@@ -34,6 +35,7 @@ const router = new VueRouter({
         { path: '/admin', component: Admin_dashboard},
         { path: '/rooms', component: Rooms},
         { path: '/forum', component: Forum},
+        { path: '/forum/posts/:id', component: ForumPublication},
         { path: '/shop', component: Shop},
         { path: '/account', component: Account},
         { path: '/avatar', component: Avatar},

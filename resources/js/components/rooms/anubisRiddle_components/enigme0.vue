@@ -55,7 +55,7 @@ export default {
             this.room.player = 2;
 
             /*Passe-muraille*/
-            /*this.room.enigme= 1;
+            /*this.room.enigme= 2;
             this.room.phase= 1;*/
         }
     }

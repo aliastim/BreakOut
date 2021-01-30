@@ -84,7 +84,7 @@
                                 <div class="onglet-modal-login-body margin-modal-login-right" style="margin-top: 0 !important; margin-bottom: 10px !important;">
                                     <div class="w-100 h-100 p-3">
                                         <div class="d-flex justify-content-center">
-                                            <img class="modal-login-logo" src="img/logos/BreakOut_Logotype_Citation.png">
+                                            <img class="modal-login-logo" src="/img/logos/BreakOut_Logotype_Citation.png">
                                         </div>
                                         <form method="POST" @submit.prevent="login" class="mt-4">
                                             <label for="login-mail" class="modal-login-credentials-text">Nom d'utilisateur :</label>
@@ -134,14 +134,14 @@
                                             <div class="margin-modal-login-right h-100" style="margin-top: 0 !important; margin-bottom: 10px !important;">
                                                 <div class="w-100 h-100 p-3">
                                                     <div class="d-flex justify-content-center">
-                                                        <img class="modal-login-logo" src="img/logos/BreakOut_Logotype_Citation.png">
+                                                        <img class="modal-login-logo" src="/img/logos/BreakOut_Logotype_Citation.png">
                                                     </div>
                                                     <div class="text-center">
                                                         <label for="password-confirm" class="modal-login-credentials-text" style="margin-top: 42px;">Un code de parrainage :</label>
                                                         <div class="w-100">
                                                             <div class="input-group mb-3 d-flex justify-content-center">
                                                                 <div class="input-group-prepend btn-parrainage-prepend">
-                                                                    <span class="input-group-text" id="inputGroup-sizing-default"><img src="img/icones/ajouter_un_ami.png"></span>
+                                                                    <span class="input-group-text" id="inputGroup-sizing-default"><img src="/img/icones/ajouter_un_ami.png"></span>
                                                                 </div>
                                                                 <input type="text" class="btn-parrainage" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                                             </div>
@@ -187,13 +187,13 @@
 
                     <div style="float: left; width: 70px;">
                         {{ getGold }}
-                        <div style="background-image: url('img/Banque_graphique/Objets/BOCoin_64.png'); background-repeat: no-repeat; background-size: contain; max-height: 20px !important; height: 20px; width: 20px; float: left;"></div>
+                        <div style="background-image: url('/img/Banque_graphique/Objets/BOCoin_64.png'); background-repeat: no-repeat; background-size: contain; max-height: 20px !important; height: 20px; width: 20px; float: left;"></div>
                         <p>&nbsp;: {{ gold }}</p>
                     </div>
 
                     <div>
                         {{ getGem }}
-                        <div style="background-image: url('img/Banque_graphique/Objets/gemme96.png'); background-repeat: no-repeat; background-size: contain; max-height: 20px !important; height: 20px; width: 20px; float: left;"></div>
+                        <div style="background-image: url('/img/Banque_graphique/Objets/gemme96.png'); background-repeat: no-repeat; background-size: contain; max-height: 20px !important; height: 20px; width: 20px; float: left;"></div>
                         <p>&nbsp;: {{ gem }}</p>
                     </div>
                     <a href="#" @click="logout"><button class="btn-profile"><i class="fas fa-sign-out-alt"></i></button></a>
@@ -263,8 +263,8 @@ export default {
                 };
                 console.log(data)
 
-                this.app.req
-                .post("auth/login", data)
+                axios
+                .post("/auth/login", data)
                 .then(response => {
                     this.app.user = response.data;
                     console.log("user login : " + this.app.user.name)
@@ -321,7 +321,7 @@ export default {
                     password: this.password
                 }
 
-                this.app.req.post('auth/register', data).then(response => {
+                axios.post('/auth/register', data).then(response => {
                     this.app.user = response.data;
                     this.$router.push("/");
                 }).catch(error => {
@@ -334,7 +334,7 @@ export default {
             }
         },
         logout() {
-            this.app.req.post("auth/logout").then(() => {
+            axios.post("/auth/logout").then(() => {
                 this.app.user=null;
                 this.modal = "#modalconnexion";
                 this.$router.push("/home");
@@ -343,12 +343,12 @@ export default {
     },
     computed: {
         getGold: function () {
-            this.app.req.post("useritems/getgold").then(response => {
+            axios.post("/useritems/getgold").then(response => {
                 this.gold = response.data;
             });
         },
         getGem: function () {
-            this.app.req.post("useritems/getgem").then(response => {
+            axios.post("/useritems/getgem").then(response => {
                 this.gem = response.data;
             });
         }

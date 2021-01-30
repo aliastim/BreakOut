@@ -1,11 +1,11 @@
 <template>
     <footer>
-        <img class="img-fluid" src="img/Banque_graphique/Footer/footer_landscape_min.svg">
+        <img class="img-fluid" src="/img/Banque_graphique/Footer/footer_landscape_min.svg">
         <div class="row">
             <div class="col-12 col-md-4">
                 <div class="d-flex h-100">
                     <div class="d-flex flex-column text-center pt-2 pb-2 m-auto">
-                        <div><img class="img-fluid logo-footer" src="img/logos/BreakOut_Logotype_Blanc.png"></div>
+                        <div><img class="img-fluid logo-footer" src="/img/logos/BreakOut_Logotype_Blanc.png"></div>
                         <div class="texte-footer"><h6 class="josephin-bold">©Break Out 2020</h6></div>
                         <div>
                             <div class="d-flex justify-content-center">
