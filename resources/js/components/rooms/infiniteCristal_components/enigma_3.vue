@@ -1,11 +1,24 @@
 <template>
     <div>
+        <div v-if="Turn === true">
+            A vous de jouer
+        </div>
+        <div v-if="Turn === false">
+            A tour de l'archer
+        </div>
         <div class="row mb-3" v-for="n in arrow">
             <div class="arrow" v-on:click="pick_arrow()"></div>
         </div>
         <div class="row">
-            <button v-on:click="skip_turn">Tour terminé</button>
-            {{Turn}}
+            <div class="col-md-6">
+                <button v-on:click="start_game()">Commencer la partie</button>
+            </div>
+            <div class="col-md-6">
+                <button v-on:click="skip_turn()">Tour terminé</button>
+            </div>
+
+            {{ Turn }}
+            {{ Click }}
         </div>
     </div>
 </template>
@@ -16,39 +29,56 @@ export default {
     props: ['room'],
     data() {
         return {
-            arrow : 13,
-            Turn : 0,
+            arrow: 13,
+            Turn: null,
+            Click: 0,
         }
     },
     mounted() {
-      this.pick_arrow();
-      this.skip_turn();
+        this.cpu_turn()
     },
     methods: {
-        pick_arrow(){
-            if (this.Turn === 0){
-                this.arrow = this.arrow - 1;
-            }else if (this.Turn === 1){
-                this.arrow = this.arrow - Math.floor(Math.random() * 3);
+        start_game() {
+            if (this.Turn === null) {
+                this.Turn = true;
             }
         },
-
-        skip_turn(){
-            if (this.Turn === 0){
-                this.Turn = 1;
-            }else if (this.Turn === 1){
-                this.Turn = 0;
+        pick_arrow() {
+            if (this.Turn === true && this.Click < 3) {
+                this.arrow = this.arrow - 1;
+                this.Click = this.Click + 1;
+            }else if(this.Turn === true && this.Click >= 3){
+                this.skip_turn();
             }
-        }
-    }
+        },
+        skip_turn() {
+            if (this.Turn === true) {
+                this.Turn = false;
+                this.cpu_turn(2000)
+            }
+        },
+        cpu_turn(duration) {
+            if (this.Turn === false) {
+                setTimeout(() => {
+                    this.arrow = this.arrow - Math.floor(Math.random() * 3);
+                    this.Click = 0;
+                    this.Turn = true;
+                }, duration);
+            }
+        },
+    },
 }
 </script>
 
 <style scoped>
-.arrow{
+.arrow {
     height: 20px;
     width: 50px;
     background-color: #0f6674;
+}
+
+div {
+    color: white;
 }
 
 </style>

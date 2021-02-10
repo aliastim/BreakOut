@@ -5980,32 +5980,61 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "enigma_3.vue",
   props: ['room'],
   data: function data() {
     return {
       arrow: 13,
-      Turn: 0
+      Turn: null,
+      Click: 0
     };
   },
   mounted: function mounted() {
-    this.pick_arrow();
-    this.skip_turn();
+    this.cpu_turn();
   },
   methods: {
+    start_game: function start_game() {
+      if (this.Turn === null) {
+        this.Turn = true;
+      }
+    },
     pick_arrow: function pick_arrow() {
-      if (this.Turn === 0) {
+      if (this.Turn === true && this.Click < 3) {
         this.arrow = this.arrow - 1;
-      } else if (this.Turn === 1) {
-        this.arrow = this.arrow - Math.floor(Math.random() * 3);
+        this.Click = this.Click + 1;
+      } else if (this.Turn === true && this.Click >= 3) {
+        this.skip_turn();
       }
     },
     skip_turn: function skip_turn() {
-      if (this.Turn === 0) {
-        this.Turn = 1;
-      } else if (this.Turn === 1) {
-        this.Turn = 0;
+      if (this.Turn === true) {
+        this.Turn = false;
+        this.cpu_turn(2000);
+      }
+    },
+    cpu_turn: function cpu_turn(duration) {
+      var _this = this;
+
+      if (this.Turn === false) {
+        setTimeout(function () {
+          _this.arrow = _this.arrow - Math.floor(Math.random() * 3);
+          _this.Click = 0;
+          _this.Turn = true;
+        }, duration);
       }
     }
   }
@@ -12191,7 +12220,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.arrow[data-v-b6452aee]{\n    height: 20px;\n    width: 50px;\n    background-color: #0f6674;\n}\n\n", ""]);
+exports.push([module.i, "\n.arrow[data-v-b6452aee] {\n    height: 20px;\n    width: 50px;\n    background-color: #0f6674;\n}\ndiv[data-v-b6452aee] {\n    color: white;\n}\n\n", ""]);
 
 // exports
 
@@ -53359,6 +53388,14 @@ var render = function() {
   return _c(
     "div",
     [
+      _vm.Turn === true
+        ? _c("div", [_vm._v("\n        A vous de jouer\n    ")])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.Turn === false
+        ? _c("div", [_vm._v("\n        A tour de l'archer\n    ")])
+        : _vm._e(),
+      _vm._v(" "),
       _vm._l(_vm.arrow, function(n) {
         return _c("div", { staticClass: "row mb-3" }, [
           _c("div", {
@@ -53373,10 +53410,40 @@ var render = function() {
       }),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
-        _c("button", { on: { click: _vm.skip_turn } }, [
-          _vm._v("Tour terminé")
+        _c("div", { staticClass: "col-md-6" }, [
+          _c(
+            "button",
+            {
+              on: {
+                click: function($event) {
+                  return _vm.start_game()
+                }
+              }
+            },
+            [_vm._v("Commencer la partie")]
+          )
         ]),
-        _vm._v("\n        " + _vm._s(_vm.Turn) + "\n    ")
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-6" }, [
+          _c(
+            "button",
+            {
+              on: {
+                click: function($event) {
+                  return _vm.skip_turn()
+                }
+              }
+            },
+            [_vm._v("Tour terminé")]
+          )
+        ]),
+        _vm._v(
+          "\n\n        " +
+            _vm._s(_vm.Turn) +
+            "\n        " +
+            _vm._s(_vm.Click) +
+            "\n    "
+        )
       ])
     ],
     2
