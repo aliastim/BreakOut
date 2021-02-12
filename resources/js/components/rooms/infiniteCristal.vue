@@ -1,15 +1,18 @@
 <template>
-    <div class="crystal-body">
-        <room-header :room="this"></room-header>
-        <div class="a">
-            <div class="row">
+    <div>
+        <div>
+            <room-header :room="this" style="position: relative"></room-header>
+        </div>
+        <div class="container">
+            <div class="row pt-5">
                 <div class="col-md-9">
                     <Map :room="this" v-if="step === 0"/>
                     <Enigma_1 :room="this" v-if="step === 1"/>
-                    <div :room="this" v-if="step === 2">enigme 2</div>
+                    <Enigma_2 :room="this" v-if="step === 2"/>
+                    <Enigma_3 :room="this" v-if="step === 3" />
                 </div>
                 <div class="col-md-3">
-                    <inventory :room="this"></inventory>
+                    <Inventory :room="this"/>
                 </div>
             </div>
         </div>
@@ -19,13 +22,15 @@
 
 import RoomHeader from "../layout/RoomHeader";
 import Enigma_1 from "./infiniteCristal_components/enigma_1";
+import Enigma_2 from "./infiniteCristal_components/enigma_2";
+import Enigma_3 from "./infiniteCristal_components/enigma_3";
 import Map from "./infiniteCristal_components/Map"
-import inventory from "./infiniteCristal_components/inventory";
+import Inventory from "./infiniteCristal_components/inventory";
 
 export default {
     name: "infiniteCristal",
     props: ['app'],
-    components: {RoomHeader, Enigma_1, Map, inventory},
+    components: {RoomHeader, Enigma_1, Map, Inventory, Enigma_2, Enigma_3},
     data() {
         return {
             countDown: 60,
@@ -67,5 +72,21 @@ export default {
     color: #1FF042;
     text-transform: uppercase;
     box-shadow: 0 0 8px #1FF042;
+}
+
+.body-bis {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.body-ter {
+    position: absolute;
+    top: 50%; /* poussé de la moitié de hauteur du référent */
+    transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
 }
 </style>

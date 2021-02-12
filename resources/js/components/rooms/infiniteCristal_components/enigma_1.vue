@@ -1,73 +1,73 @@
 <template>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="row justify-content-center">
-                <input type="text" id="symb_1" v-model="symb_1" class="form-control">
-                <input type="text" id="symb_2" v-model="symb_2" class="form-control">
-                <input type="text" id="symb_3" v-model="symb_3" class="form-control">
-            </div>
-            <div class="row justify-content-center">
-                <button v-on:click="checkForm" class="btn-primary">Valider</button>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="row justify-content-center hint-row">
-                        <div class="offset-md-1 col-md-2">
-                            <img :src="'/images/crystal_infini/1.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
-                            <img :src="'/images/crystal_infini/2.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
-                            <img :src="'/images/crystal_infini/3.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
-                        </div>
-                        <div class="col-md-2">
-                            <p class="text-white">Rien n'est juste</p>
-                        </div>
+    <div>
+        <div class="row justify-content-center">
+            <input type="text" id="symb_1" v-model="symb_1">
+            <input type="text" id="symb_2" v-model="symb_2">
+            <input type="text" id="symb_3" v-model="symb_3">
+        </div>
+        <div class="row justify-content-center">
+            <button v-on:click="checkForm()" class="btn-primary">Valider</button>
+        </div>
+        <div class="row justify-content-center">
+            <button v-if="success === true" v-on:click="unlock">Etape suivante</button>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="row justify-content-center hint-row">
+                    <div class="offset-md-1 col-md-2">
+                        <img :src="'/images/crystal_infini/1.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                        <img :src="'/images/crystal_infini/2.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
+                        <img :src="'/images/crystal_infini/3.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
                     </div>
-                    <div class="row justify-content-center hint-row">
-                        <div class="offset-md-1 col-md-2">
-                            <img :src="'/images/crystal_infini/6.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
-                            <img :src="'/images/crystal_infini/1.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
-                            <img :src="'/images/crystal_infini/2.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
-                        </div>
-                        <div class="col-md-2">
-                            <p class="text-white">Un chiffre est juste mal placé</p>
-                        </div>
+                    <div class="col-md-2">
+                        <p class="text-white">Rien n'est juste</p>
                     </div>
-                    <div class="row justify-content-center hint-row">
-                        <div class="offset-md-1 col-md-2">
-                            <img :src="'/images/crystal_infini/4.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
-                            <img :src="'/images/crystal_infini/5.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
-                            <img :src="'/images/crystal_infini/6.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
-                        </div>
-                        <div class="col-md-2">
-                            <p class="text-white">Un chiffre est juste mal placé</p>
-                        </div>
+                </div>
+                <div class="row justify-content-center hint-row">
+                    <div class="offset-md-1 col-md-2">
+                        <img :src="'/images/crystal_infini/6.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                        <img :src="'/images/crystal_infini/1.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
+                        <img :src="'/images/crystal_infini/2.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
                     </div>
-                    <div class="row justify-content-center hint-row">
-                        <div class="offset-md-1 col-md-2">
-                            <img :src="'/images/crystal_infini/1.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
-                            <img :src="'/images/crystal_infini/5.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
-                            <img :src="'/images/crystal_infini/8.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
-                        </div>
-                        <div class="col-md-2">
-                            <p class="text-white">Un chiffre est juste et bien placé, un chiffre est juste mais mal placé</p>
-                        </div>
+                    <div class="col-md-2">
+                        <p class="text-white">Un chiffre est juste mal placé</p>
                     </div>
-                    <div class="row justify-content-center hint-row">
-                        <div class="offset-md-1 col-md-2">
-                            <img :src="'/images/crystal_infini/8.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
-                            <img :src="'/images/crystal_infini/3.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
-                            <img :src="'/images/crystal_infini/4.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
-                        </div>
-                        <div class="col-md-2">
-                            <p class="text-white">Un chiffre est juste mais mal placé</p>
-                        </div>
+                </div>
+                <div class="row justify-content-center hint-row">
+                    <div class="offset-md-1 col-md-2">
+                        <img :src="'/images/crystal_infini/4.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
+                        <img :src="'/images/crystal_infini/5.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                        <img :src="'/images/crystal_infini/6.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
+                    </div>
+                    <div class="col-md-2">
+                        <p class="text-white">Un chiffre est juste mal placé</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center hint-row">
+                    <div class="offset-md-1 col-md-2">
+                        <img :src="'/images/crystal_infini/1.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
+                        <img :src="'/images/crystal_infini/5.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                        <img :src="'/images/crystal_infini/8.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
+                    </div>
+                    <div class="col-md-2">
+                        <p class="text-white">Un chiffre est juste et bien placé, un chiffre est juste mais mal
+                            placé</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center hint-row">
+                    <div class="offset-md-1 col-md-2">
+                        <img :src="'/images/crystal_infini/8.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
+                        <img :src="'/images/crystal_infini/3.png'" alt="" :class="[opacity?'fullOpacity':'noOpacity']">
+                        <img :src="'/images/crystal_infini/4.png'" alt="" :class="[opacity?'noOpacity':'fullOpacity']">
+                    </div>
+                    <div class="col-md-2">
+                        <p class="text-white">Un chiffre est juste mais mal placé</p>
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <button v-if="success === true" v-on:click="unlock">Etape suivante</button>
-            </div>
         </div>
     </div>
+
 </template>
 
 <script>
@@ -84,8 +84,6 @@ export default {
         }
     },
     mounted() {
-        this.checkForm();
-        this.unlock();
         this.changeOpacity();
     },
     created() {
@@ -101,7 +99,7 @@ export default {
     },
     methods: {
         checkForm() {
-            if (this.symb_1 === 5 && this.symb_2 === 6 && this.symb_3 === 8) {
+            if (this.symb_1 === "5" && this.symb_2 === "6" && this.symb_3 === "8"){
                 this.success = true;
             }
         },
@@ -114,7 +112,7 @@ export default {
         },
 
         changeOpacity() {
-            setInterval(function (){
+            setInterval(function () {
                 this.opacity = !this.opacity;
             }.bind(this), 2500)
         }
@@ -123,6 +121,7 @@ export default {
 </script>
 
 <style scoped>
+
 input {
     border-radius: 4px;
     height: 80px;
@@ -144,19 +143,19 @@ input {
     font-size: 20px;
 }
 
-.hint-row{
+.hint-row {
     margin-top: 20px;
 }
 
-.fullOpacity{
-    height: 20px;
+.fullOpacity {
+    height: 50px;
     width: auto;
     transition: opacity 3s;
     opacity: 100%;
 }
 
-.noOpacity{
-    height: 20px;
+.noOpacity {
+    height: 50px;
     width: auto;
     transition: opacity 3s;
     opacity: 0;
