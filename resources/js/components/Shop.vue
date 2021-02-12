@@ -42,7 +42,7 @@
                                         <h6 class="text-left">1000 Pièces d'or</h6>
                                     </div>
                                     <div class="cadre-boutique-coffres-body">
-                                        <img src="img/Banque_graphique/Objets/BreakOut_Coffre_Surprise.png">
+                                        <img src="img/Banque_graphique/Objets/coffre_ouvert_or.png" style="max-height: 80%;">
                                     </div>
                                     <div class="cadre-boutique-coffres-footer">
                                         <div><button>Acheter</button></div>
@@ -61,7 +61,7 @@
                                         <h6 class="text-left">5000 Pièces d'or</h6>
                                     </div>
                                     <div class="cadre-boutique-coffres-body">
-                                        <img src="img/Banque_graphique/Objets/BreakOut_Coffre_Surprise.png">
+                                        <img src="img/Banque_graphique/Objets/coffre_ouvert_or_2.png" style="max-height: 90%;">
                                     </div>
                                     <div class="cadre-boutique-coffres-footer">
                                         <div><button>Acheter</button></div>
@@ -80,7 +80,7 @@
                                         <h6 class="text-left">10 000 Pièces d'or</h6>
                                     </div>
                                     <div class="cadre-boutique-coffres-body">
-                                        <img src="img/Banque_graphique/Objets/BreakOut_Coffre_Surprise.png">
+                                        <img src="img/Banque_graphique/Objets/coffre_ouvert_or_3.png">
                                     </div>
                                     <div class="cadre-boutique-coffres-footer">
                                         <div><button>Acheter</button></div>

@@ -517,6 +517,7 @@ export default {
         this.loadHomeCarousel();
         this.loadScrolling();
         this.loadRooms();
+        this.app.navbool = true;
     },
     methods : {
         loadHomeCarousel() {
