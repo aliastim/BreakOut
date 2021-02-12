@@ -1,6 +1,8 @@
 <template>
     <div>
-        <Enigma_3_1 :parent="this" v-if="Arrow_game === true"/>
+        <Enigma_3_1 :parent="this" v-if="enigma_3_step === 1"/>
+        <Enigma_3_2 :parent="this" v-if="enigma_3_step === 2"/>
+        <Enigma_3_3 :parent="this" v-if="enigma_3_step === 3"/>
     </div>
 </template>
 
@@ -15,11 +17,9 @@ export default {
     components: {Enigma_3_1, enigma_3_2, enigma_3_3},
     data() {
         return {
-            Arrow_game : true,
-            Archery : false,
-            Lumberjack : false,
+            enigma_3_step : 1,
         }
-    }
+    },
 }
 </script>
 
