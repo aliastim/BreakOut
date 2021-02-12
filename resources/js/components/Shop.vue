@@ -112,17 +112,17 @@
                                 Découvrez nos derniers scénarios disponibles.
                             </div>
                             <div class="row p-1">
-                                <!-- Salle 1 -->
-                                <div class="col-12 col-md-6">
+                                <!-- Salles -->
+                                <div class="col-12 col-md-6" v-for="shoproom in shoprooms" :id="'shop-'+shoproom.id">
                                     <div class="shop-cadre-salle-unite mt-3">
                                         <div class="shop-cadre-salle-unite-header">
                                             <div class="d-flex w-100">
                                                 <div class="mr-auto" style="color: white;">
-                                                    <i class="fas fa-user"></i> 3 <i class="fas fa-mobile-alt"></i> <i class="fas fa-desktop"></i>
+                                                    <i class="fas fa-user"></i> {{ shoproom.players }} <span v-if="shoproom.device === 'All'"><i class="fas fa-mobile-alt"></i> <i class="fas fa-desktop"></i></span> <i class="fas fa-mobile-alt" v-if="shoproom.device === 'Mobile'"></i> <i class="fas fa-desktop" v-if="shoproom.device === 'Desktop'"></i>
                                                 </div>
                                                 <div class="d-flex">
                                                     <div class="div-price">
-                                                        700
+                                                        {{ shoproom.price }}
                                                     </div>
                                                     <div class="div-gold"></div>
                                                 </div>
@@ -130,128 +130,17 @@
                                         </div>
                                         <div class="shop-cadre-salle-unite-body">
                                             <div class="w-100 h-100 position-relative">
-                                               <div style="background-image: url('img/illustrations_salles/exemple1.jpg')"></div>
+                                               <div :style="{'background-image': 'url(' + shoproom.img_link + ')'}"></div>
                                                <div>
                                                    <div>
-                                                       <div class="m-auto">Le tombeau<br>d'Agamemnon</div>
+                                                       <div class="m-auto">{{ shoproom.name }}</div>
                                                    </div>
                                                    <div>
                                                        <p>
-                                                           Charles le plus beau. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?
+                                                           {{ shoproom.description }}
                                                        </p>
                                                    </div>
                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="shop-cadre-salle-unite-footer">
-                                            <button>Sélectionner</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Salle 2 -->
-                                <div class="col-12 col-md-6">
-                                    <div class="shop-cadre-salle-unite mt-3">
-                                        <div class="shop-cadre-salle-unite-header">
-                                            <div class="d-flex w-100">
-                                                <div class="mr-auto" style="color: white;">
-                                                    <i class="fas fa-user"></i> 2 <i class="fas fa-desktop"></i>
-                                                </div>
-                                                <div class="d-flex">
-                                                    <div class="div-price">
-                                                        1200
-                                                    </div>
-                                                    <div class="div-gold"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="shop-cadre-salle-unite-body">
-                                            <div class="w-100 h-100 position-relative">
-                                                <div style="background-image: url('img/illustrations_salles/exemple2.png')"></div>
-                                                <div>
-                                                    <div>
-                                                        <div class="m-auto">La forêt<br>d'Esrael</div>
-                                                    </div>
-                                                    <div>
-                                                        <p>
-                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="shop-cadre-salle-unite-footer">
-                                            <button>Sélectionner</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Salle 3 -->
-                                <div class="col-12 col-md-6">
-                                    <div class="shop-cadre-salle-unite mt-3">
-                                        <div class="shop-cadre-salle-unite-header">
-                                            <div class="d-flex w-100">
-                                                <div class="mr-auto" style="color: white;">
-                                                    <i class="fas fa-user"></i> 1 <i class="fas fa-desktop"></i>
-                                                </div>
-                                                <div class="d-flex">
-                                                    <div class="div-price">
-                                                        600
-                                                    </div>
-                                                    <div class="div-gold"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="shop-cadre-salle-unite-body">
-                                            <div class="w-100 h-100 position-relative">
-                                                <div style="background-image: url('img/illustrations_salles/exemple3.png')"></div>
-                                                <div>
-                                                    <div>
-                                                        <div class="m-auto">La prison de<br>Pandragon</div>
-                                                    </div>
-                                                    <div>
-                                                        <p>
-                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="shop-cadre-salle-unite-footer">
-                                            <button>Sélectionner</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Salle 4 -->
-                                <div class="col-12 col-md-6">
-                                    <div class="shop-cadre-salle-unite mt-3">
-                                        <div class="shop-cadre-salle-unite-header">
-                                            <div class="d-flex w-100">
-                                                <div class="mr-auto" style="color: white;">
-                                                    <i class="fas fa-user"></i> 2 <i class="fas fa-desktop"></i>
-                                                </div>
-                                                <div class="d-flex">
-                                                    <div class="div-price">
-                                                        1700
-                                                    </div>
-                                                    <div class="div-gold"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="shop-cadre-salle-unite-body">
-                                            <div class="w-100 h-100 position-relative">
-                                                <div style="background-image: url('img/illustrations_salles/exemple4.jpg')"></div>
-                                                <div>
-                                                    <div>
-                                                        <div class="m-auto">Le désert<br>des dunes</div>
-                                                    </div>
-                                                    <div>
-                                                        <p>
-                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, animi aspernatur dolore enim est illo, laborum nisi quas repellat sequi vel vitae? Eligendi enim est eveniet illum nulla qui rem?
-                                                        </p>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                         <div class="shop-cadre-salle-unite-footer">
@@ -389,11 +278,13 @@ export default {
             itemsgem: [],
             golderrors: [],
             gemerrors: [],
+            shoprooms: [],
             purchase : []
         }
     },
     mounted() {
         document.title="Boutique";
+        this.loadRooms();
     },
     computed : {
         golditems: function () {
@@ -423,7 +314,15 @@ export default {
             }).catch(error => {
                 this.gemerrors.push(error.response.data.error);
             });
-        }
+        },
+        loadRooms(){
+            axios.post('/bo_rooms/loadall').then(response => {
+                this.shoprooms = response.data;
+
+            }).catch(error => {
+                this.errors.push(error.response.data.error);
+            });
+        },
     },
 }
 </script>

@@ -77,6 +77,7 @@ export default {
             second: "00",
 
             losted: false,
+            room_selected: "404"
         }
     },
     mounted() {
@@ -120,7 +121,7 @@ export default {
         src: url("/polices/Courier-Bold.ttf");
     }
 
-    .timer
+    .timer_404
     {
         font-family: Roboto, monospace !important;
         border-color : #1FF042;
@@ -130,7 +131,7 @@ export default {
         box-shadow: 0 0 8px #1FF042;
     }
 
-    .modalingame
+    .modalingame_404
     {
         font-family: Roboto, monospace !important;
         border: 1px solid #1FF042;
@@ -145,7 +146,7 @@ export default {
         border-radius: 4px;
     }
 
-    .modalingame:hover
+    .modalingame_404:hover
     {
         background: #1FF042;
         color: #232323;

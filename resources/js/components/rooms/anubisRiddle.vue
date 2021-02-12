@@ -114,6 +114,8 @@ components: {RoomHeader, Enigme0, J1_enigme1, J1_enigme1_1, J1_enigme2, J1_enigm
 
             player: 0,
             losted: false,
+
+            room_selected: "ar"
         }
     },
     mounted() {
@@ -162,7 +164,7 @@ components: {RoomHeader, Enigme0, J1_enigme1, J1_enigme1_1, J1_enigme2, J1_enigm
         src: url("/polices/anubis/TrajanPro3-Bold.otf");
     }
 
-    .timer
+    .timer_ar
     {
         font-family: Trajan, monospace !important;
         border-color : #f7aa1d;
@@ -175,7 +177,7 @@ components: {RoomHeader, Enigme0, J1_enigme1, J1_enigme1_1, J1_enigme2, J1_enigm
         padding-top: 5px !important;
     }
 
-    .modalingame
+    .modalingame_ar
     {
         font-family: Trajan, monospace !important;
         border: 1px outset #f7aa1d;
@@ -192,7 +194,7 @@ components: {RoomHeader, Enigme0, J1_enigme1, J1_enigme1_1, J1_enigme2, J1_enigm
         padding-top: 8px !important;
     }
 
-    .modalingame:hover
+    .modalingame_ar:hover
     {
         background: #f7aa1d;
         color: #232323;

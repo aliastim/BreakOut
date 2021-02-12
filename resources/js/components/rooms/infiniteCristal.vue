@@ -45,6 +45,7 @@ export default {
             hour: 24,
             minute: 0,
             second: 0,
+            room_selected: "qc"
         }
     },
     mounted() {
@@ -65,13 +66,34 @@ export default {
     width: 100vw;
 }
 
-.timer {
+.timer_qc {
     font-family: Roboto, monospace !important;
-    border-color: #1FF042;
+    border-color: orange;
     background: none;
-    color: #1FF042;
+    color: orange;
     text-transform: uppercase;
-    box-shadow: 0 0 8px #1FF042;
+    box-shadow: 0 0 8px orange;
+}
+
+.modalingame_qc
+{
+    font-family: Roboto, monospace !important;
+    border: 1px solid orange;
+    background: none;
+    color : orange;
+    text-transform: uppercase;
+    padding: 4px 20px;
+    font-size: 20px;
+    box-shadow: 0 0 8px orange;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.modalingame_qc:hover
+{
+    background: orange;
+    color: #232323;
 }
 
 .body-bis {

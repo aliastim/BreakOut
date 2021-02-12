@@ -1,10 +1,10 @@
 <template>
     <div class="w-100 d-flex" style="position: absolute; z-index: 10000;">
         <!-- le timer se modifie dans le composant parent / La forme est commune à toutes les salles -->
-       <div class="timer mt-3 ml-3">{{ hour }} : {{ minute }} : {{ second }}</div>
+       <div :class="{'timer mt-3 ml-3': true, 'timer_ar': room_selected === 'ar', 'timer_404': room_selected === '404', 'timer_qc': room_selected === 'qc'}">{{ hour }} : {{ minute }} : {{ second }}</div>
         <div class="ml-auto mt-3 mr-3">
             <!-- le bouton se modifie dans le composant parent -->
-            <button class="modalingame" type="button" data-toggle="modal" data-target="#modalingame">Menu</button>
+            <button :class="{'modalingame':true, 'modalingame_ar': room_selected === 'ar', 'modalingame_404': room_selected === '404', 'modalingame_qc': room_selected === 'qc' }" type="button" data-toggle="modal" data-target="#modalingame">Menu</button>
         </div>
 
         <div class="modal fade" id="modalingame" tabindex="-1" aria-labelledby="modalingame" aria-hidden="true">
@@ -36,6 +36,7 @@ export default {
                 hour: this.room.hour,
                 minute: this.room.minute,
                 second: this.room.second,
+                room_selected: this.room.room_selected,
             }
         },
         mounted() {

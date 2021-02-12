@@ -521,21 +521,21 @@ export default {
     },
     methods : {
         loadHomeCarousel() {
-            this.app.req.post('bo_dashboard/loadcarousel').then(response => {
+            axios.post('/bo_dashboard/loadcarousel').then(response => {
                 this.homecarousel = response.data;
             }).catch(error => {
                 this.errors.push(error.response.data.error);
             });
         },
         loadScrolling(){
-            this.app.req.post('bo_dashboard/loadscrolling').then(response => {
+            axios.post('/bo_dashboard/loadscrolling').then(response => {
                 this.sentence = response.data.scrolling;
             }).catch(error => {
                 this.errors.push(error.response.data.error);
             });
         },
         loadRooms(){
-            this.app.req.post('bo_rooms/loadall').then(response => {
+            axios.post('/bo_rooms/loadall').then(response => {
                 this.homerooms = response.data;
 
             }).catch(error => {
@@ -543,7 +543,7 @@ export default {
             });
         },
         letsplay(){
-            this.app.req.post('rooms/letsplay').then(response => {
+            axios.post('/rooms/letsplay').then(response => {
             }).catch(error => {
                 this.errors.push(error.response.data.error);
             });
