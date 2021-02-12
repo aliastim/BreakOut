@@ -11,7 +11,7 @@
                 Vous avez gagné
             </div>
             <div v-if="winner === 2">
-                L'arché a gagné
+                Gerrad L'archer a gagné
             </div>
             <div class="row mb-3 justify-content-center" v-for="n in arrow">
                 <div class="arrow" v-on:click="pick_arrow()"></div>
@@ -58,13 +58,14 @@ export default {
             }
         },
         pick_arrow() {
-            this.end_game()
             if (this.Turn === true && this.Click < 3) {
                 this.arrow = this.arrow - 1;
                 this.Player_arrows += 1;
                 this.Click = this.Click + 1;
+                this.end_game()
             } else if (this.Turn === true && this.Click >= 3) {
                 this.skip_turn();
+                this.end_game()
             }
         },
         skip_turn() {
@@ -96,8 +97,12 @@ export default {
                 } else if (this.Turn === false) {
                     this.winner = 1;
                 }
+                setTimeout(() => {
+                    this.parent.Arrow_game = false;
+                    this.parent.Achery = true;
+                })
             }
-        }
+        },
     },
 }
 </script>
