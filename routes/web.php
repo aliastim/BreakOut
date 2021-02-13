@@ -46,6 +46,7 @@ Route::prefix('bo_rooms')->group(function () {
     Route::post('loadall', 'RoomsController@loadAll');
     Route::post('updateroom', 'RoomsController@updateRoom');
     Route::delete('deleteroom/{id}', 'RoomsController@deleteRoom');
+    Route::post('rateroom', 'RoomsController@rateRoom');
 });
 
 // Admin - Items

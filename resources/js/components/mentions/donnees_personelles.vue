@@ -9,9 +9,10 @@
 
                 <div class="panneau-ligne-1" style="margin-top: -20px;">
                     <hr>
-                    <div class="d-flex justify-content-center"><div>
-                        <h1 class="title-mentions josephin-bold">Utilisation des données à caractère personnel</h1>
-                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div>
+                            <h1 class="title-mentions josephin-bold">Utilisation des données à caractère personnel</h1>
+                        </div>
                     </div>
                 </div>
 

@@ -3061,3 +3061,61 @@ footer>div
     font-size: 35px;
 }
 /*----------FIN FORUM----------*/
+/*------------ROOMS------------*/
+
+.star-rating {
+    /*font-family: 'FontAwesome';
+    margin: 50px auto;*/
+
+    > fieldset {
+        border: none;
+        display: inline-block;
+
+        &:not(:checked) {
+            > input {
+                position: absolute;
+                top: -9999px;
+                clip: rect(0,0,0,0);
+            }
+
+            > label {
+                float: right;
+                width: auto;
+                padding: 0 .05em;
+                overflow: hidden;
+                white-space: nowrap;
+                cursor: pointer;
+                font-size: 100%;
+                color: goldenrod;
+
+                &:before {
+                    //content: '\f006  ';
+                    content:  url("/img/icones/star32.png") !important;
+                }
+
+                &:hover,
+                &:hover ~ label {
+                    color: goldenrod;
+                    text-shadow: 0 0 3px goldenrod;
+                    &:before {
+                        //content: '\f005  ';
+                        content:  url("/img/icones/star321.png") !important;
+                    }
+                }
+            }
+        }
+
+        > input:checked {
+            & ~ label {
+                &:before {
+                    content: '\f005  ';
+                }
+            }
+        }
+
+        > label:active {
+            position: relative;
+            top: 2px;
+        }
+    }
+}

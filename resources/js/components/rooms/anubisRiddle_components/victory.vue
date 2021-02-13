@@ -30,6 +30,18 @@
                                 <p class="pgold">
                                     500 pièces d'or ont été ajoutées à votre compte !
                                 </p>
+                                <div class="star-rating">
+                                    <fieldset v-if="rating === false">
+                                        <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Outstanding" @click="rate(5)"></label>
+                                        <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Very Good" @click="rate(4)"></label>
+                                        <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Good" @click="rate(3)"></label>
+                                        <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Poor" @click="rate(2)"></label>
+                                        <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Very Poor" @click="rate(1)"></label>
+                                    </fieldset>
+                                    <p class="pgold" v-if="rating === true">
+                                        Votre note a bien été enregistrée
+                                    </p>
+                                </div>
                                 <button class="btn-enigme" @click="home()">Retour à l'accueil</button>
                             </div>
                         </transition>
@@ -48,6 +60,7 @@ export default {
         return {
             show: false,
             show_etape: 0,
+            rating: false,
 
             errors: []
         }
@@ -58,6 +71,23 @@ export default {
     methods: {
         home() {
             window.location.href = '/home'
+        },
+        rate(n)
+        {
+            if(this.rating === false)
+            {
+                const data = {
+                    room_slug: "anubis-riddle",
+                    note: n,
+                }
+                axios.post("/bo_rooms/rateroom", data).then(response => {
+                    console.log(response.data);
+                    this.rating = true; //Pour ne pas pouvoir noter la salle plusieurs fois
+                }).catch(error => {
+                    console.log(error.response.data.error);
+                });
+            }
+
         }
     },
     computed: {
@@ -74,7 +104,7 @@ export default {
             const data = {
                 gold: 500,
             }
-            this.room.app.req.post("/useritems/addgold", data).then(response => {
+            axios.post("/useritems/addgold", data).then(response => {
                 console.log(response.data);
             }).catch(error => {
                 console.log(error.response.data.error);
@@ -99,7 +129,7 @@ export default {
 
 .btn-enigme
 {
-    margin-top: 30px;
+    /*margin-top: 30px;*/
     padding: 10px 20px;
     font-family: Volte;
     color: rgb(248, 170, 34);

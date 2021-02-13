@@ -121,7 +121,7 @@
                                         <div class="d-flex justify-content-center w-100">
                                             <div class="w-100 d-flex flex-column text-center">
                                                 <div class="w-100 d-flex justify-content-center">
-                                                    <div style="color: #E0E0E0 !important;">Pseudo</div>
+                                                    <div style="color: #E0E0E0 !important;">CDamasse</div>
                                                 </div>
                                                 <p>Inscrit depuis le 24/09/2020</p>
                                             </div>
@@ -137,17 +137,17 @@
                                             <p>
                                                 <i class="fas fa-gamepad"></i><br>
                                                 Parties jouées :
-                                                <span>31</span>
+                                                <span>73</span>
                                             </p>
                                             <p>
                                                 <i class="fas fa-hourglass-half"></i><br>
                                                 Meilleur temps :
-                                                <span>43 min</span>
+                                                <span>13 min</span>
                                             </p>
                                             <p>
                                                 <i class="fas fa-hourglass-half"></i><br>
                                                 Temps moyen :
-                                                <span>56 min</span>
+                                                <span>26 min</span>
                                             </p>
                                         </div>
                                     </div>
@@ -164,7 +164,7 @@
                                         <div class="d-flex justify-content-center w-100">
                                             <div class="w-100 d-flex flex-column text-center">
                                                 <div class="w-100 d-flex justify-content-center">
-                                                    <div style="color: #FFE27A;">Pseudo</div>
+                                                    <div style="color: #FFE27A;">AliasTim</div>
                                                 </div>
                                                 <p>Inscrit depuis le 24/09/2020</p>
                                             </div>
@@ -175,22 +175,22 @@
                                         <i class="fas fa-trophy"></i>
                                     </div>
                                     <div class="cadre-top-joueurs-body text-center">
-                                        <h6>31 Victoires</h6>
+                                        <h6>56 Victoires</h6>
                                         <div>
                                             <p>
                                                 <i class="fas fa-gamepad"></i><br>
                                                 Parties jouées :
-                                                <span>32</span>
+                                                <span>108</span>
                                             </p>
                                             <p>
                                                 <i class="fas fa-hourglass-half"></i><br>
                                                 Meilleur temps :
-                                                <span>43 min</span>
+                                                <span>7 min</span>
                                             </p>
                                             <p>
                                                 <i class="fas fa-hourglass-half"></i><br>
                                                 Temps moyen :
-                                                <span>56 min</span>
+                                                <span>18 min</span>
                                             </p>
                                         </div>
                                     </div>
@@ -207,7 +207,7 @@
                                         <div class="d-flex justify-content-center w-100">
                                             <div class="w-100 d-flex flex-column text-center">
                                                 <div class="w-100 d-flex justify-content-center">
-                                                    <div style="color: #FF9838 !important;">Pseudo</div>
+                                                    <div style="color: #FF9838 !important;">PA</div>
                                                 </div>
                                                 <p>Inscrit depuis le 24/09/2020</p>
                                             </div>
@@ -223,17 +223,17 @@
                                             <p>
                                                 <i class="fas fa-gamepad"></i><br>
                                                 Parties jouées :
-                                                <span>31</span>
+                                                <span>46</span>
                                             </p>
                                             <p>
                                                 <i class="fas fa-hourglass-half"></i><br>
                                                 Meilleur temps :
-                                                <span>43 min</span>
+                                                <span>29 min</span>
                                             </p>
                                             <p>
                                                 <i class="fas fa-hourglass-half"></i><br>
                                                 Temps moyen :
-                                                <span>56 min</span>
+                                                <span>34 min</span>
                                             </p>
                                         </div>
                                     </div>

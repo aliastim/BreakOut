@@ -168,4 +168,32 @@ class RoomsController extends Controller
         }
 
     }
+
+    public function rateRoom(Request $request)
+    {
+        $user = Auth::user();
+        if($user !== null)
+        {
+            $room = Rooms::where('slug', $request->room_slug)->first();
+            if(isset($room->id))
+            {
+                $rate = $request->note;
+
+                $room->reviews = ((($room->reviews * $room->number_reviews) + $rate)/($room->number_reviews+1));
+                $room->number_reviews = $room->number_reviews+1;
+                $room->save();
+                return response("La note a bien été enregistée !");
+
+            } else
+            {
+                return response()->json(["error" => "Cette salle n'existe pas"], 401);
+            }
+
+
+        } else
+        {
+            return response()->json(["error" => "L'utilisateur doit être connecté pour noter une salle"], 401);
+        }
+
+    }
 }

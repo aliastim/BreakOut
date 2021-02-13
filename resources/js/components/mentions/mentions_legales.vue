@@ -5,8 +5,19 @@
         </div>
         <div class="breakout-body">
             <hr class="liseret-rouge">
-            <div class="container text-center pt-4">
-                <h1>Mentions légales</h1>
+            <div class="container">
+                <div class="panneau-ligne-1" style="margin-top: -20px;">
+                    <hr>
+                    <div class="d-flex justify-content-center">
+                        <div>
+                            <h1 class="title-mentions josephin-bold">Mentions légales</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-mentions pt-4">
+
+                </p>
             </div>
             <global-footer></global-footer>
         </div>
