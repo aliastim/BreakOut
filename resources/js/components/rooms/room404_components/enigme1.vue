@@ -40,8 +40,8 @@ export default {
                 this.room.phase = 2;
 
                 // Déplacement rapide
-                /*this.room.enigme = 5;
-                this.room.phase = 1;*/
+                /*this.room.enigme = 7;
+                this.room.phase = 5;*/
 
             } else
             {

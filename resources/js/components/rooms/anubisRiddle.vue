@@ -115,7 +115,11 @@ components: {RoomHeader, Enigme0, J1_enigme1, J1_enigme1_1, J1_enigme2, J1_enigm
             player: 0,
             losted: false,
 
-            room_selected: "ar"
+            room_selected: "ar",
+
+            room_slug:"anubis-riddle",
+            room_status: "",
+            end: false
         }
     },
     mounted() {

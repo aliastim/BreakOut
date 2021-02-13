@@ -37,11 +37,17 @@ export default {
     },
     mounted() {
         document.title="Breakout - ROOM404";
+        this.end();
     },
     methods: {
         home() {
             window.location.href = '/home'
-        }
+        },
+        end()
+        {
+            this.room.end = true
+            this.room.room_status = "lost"
+        },
     }
 }
 </script>

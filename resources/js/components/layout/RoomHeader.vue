@@ -77,14 +77,44 @@ export default {
                     }
 
                 }
+                this.endverify();
 
             }, 1000)
         },
         methods: {
             home() {
                 window.location.href = '/home'
+            },
+            endverify()
+            {
+                if(this.room.end === true)
+                {
+                    console.log("fini");
+                    clearInterval(this.$interval);
+                    this.userstat(this.room.room_slug, this.room.room_status);
+                }
+            },
+            userstat(room_slug, room_status)
+            {
+                const data = {
+                    room_slug: room_slug,
+                    room_status: room_status,
+                    room_duration_hour: this.room.hour,
+                    room_duration_minute: this.room.minute,
+                    room_duration_second: this.room.second,
+                    user_duration_hour: this.hour,
+                    user_duration_minute: this.minute,
+                    user_duration_second: this.second,
+                }
+                console.log(data);
+                axios.post('/users/setstats', data).then(response => {
+                    console.log(response.data);
+
+                }).catch(error => {
+                    this.errors.push(error.response.data.error);
+                });
             }
-        }
+        },
 }
 </script>
 <style>

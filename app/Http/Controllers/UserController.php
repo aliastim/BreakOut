@@ -47,6 +47,35 @@ class UserController extends Controller
 
     }
 
+    public function setStats(Request $request)
+    {
+        $user = Auth::user();
+        if($user !== null)
+        {
+            $user = User::find($user->id);
+            $room_duration = ((intval($request->room_duration_hour) * 60 * 60)+(intval($request->room_duration_minute) * 60)+intval($request->room_duration_second));
+            $user_duration = ((intval($request->user_duration_hour) * 60 * 60)+(intval($request->user_duration_minute) * 60)+intval($request->user_duration_second));
+            $duration = $room_duration - $user_duration;
+
+            $user->games_duration = ((($user->games_duration * $user->games_played) + $duration)/($user->games_played+1));
+            if(($user->games_best_duration > $duration) or ($user->games_best_duration == null) or  ($user->games_best_duration == 0) )
+            {
+                $user->games_best_duration = $duration;
+            }
+
+            if($request->room_status == 'victory')
+            {
+                $user->games_win = $user->games_win + 1;
+            }
+
+            $user->games_played = $user->games_played + 1;
+
+            $user->save();
+
+            return response("Statistiques de partie enregistrés.");
+        }
+    }
+
     /*Request pour les objets uniquement*/
     /*https://laravel.com/docs/4.2/eloquent*/
 

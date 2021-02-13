@@ -38,6 +38,7 @@ Route::prefix('users')->group(function () {
     Route::post('findone', [UserController::class, 'findOne']);
     Route::post('searchuser/{search}', [UserController::class, 'searchUser']);
     Route::post('updatestatus', 'UserController@updateStatus');
+    Route::post('setstats', 'UserController@setStats');
 });
 
 // Admin - Rooms

@@ -67,6 +67,7 @@ export default {
     },
     mounted() {
         document.title="Breakout - Anubis Riddle";
+        this.end();
     },
     methods: {
         home() {
@@ -87,8 +88,12 @@ export default {
                     console.log(error.response.data.error);
                 });
             }
-
-        }
+        },
+        end()
+        {
+            this.room.end = true
+            this.room.room_status = "victory"
+        },
     },
     computed: {
         fade: function ()

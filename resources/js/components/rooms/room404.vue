@@ -77,7 +77,11 @@ export default {
             second: "00",
 
             losted: false,
-            room_selected: "404"
+            room_selected: "404",
+
+            room_slug:"room404",
+            room_status: "",
+            end: false
         }
     },
     mounted() {
