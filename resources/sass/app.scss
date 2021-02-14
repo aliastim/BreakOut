@@ -240,9 +240,19 @@ main {
     font-family: 'JosefinSans-BoldItalic' !important;
 }
 
+.josephin-light-italic
+{
+    font-family: 'JosefinSans-LightItalic' !important;
+}
+
 .color-white
 {
     color: white !important;
+}
+
+.color-yellow-clear
+{
+    color: $fond !important;
 }
 
 .app
@@ -524,6 +534,11 @@ footer>div
     max-width: 750px !important;
 }
 
+.profile-modal-dialog
+{
+    max-width: 900px !important;
+}
+
 .login-modal-content
 {
     position: relative;
@@ -577,6 +592,66 @@ footer>div
     position: relative;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
+}
+
+.profile-modal-body
+{
+    position: relative;
+    height: 500px;
+    overflow: auto;
+}
+
+.profile-modal-container-left
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: $bleu_sombre;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px;
+}
+
+.profile-modal-container-right
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    height: 430px;
+    background: $bleu_sombre;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px;
+}
+
+.profile-modal-container-right-bottom
+{
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 40px;
+}
+
+.profile-modal-container-header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 31px;
+    padding: 3px 10px;
+    overflow: hidden;
+}
+
+.profile-modal-container-body
+{
+    position: absolute;
+    top: 26px;
+    bottom: 0;
+    right: 0px;
+    left: 0px;
 }
 
 .margin-modal-login-left
@@ -763,6 +838,33 @@ footer>div
 }
 
 .btn-profile>i
+{
+    color: $yellow2;
+    font-size: 22px;
+}
+
+.btn-profile2
+{
+    height: 45px;
+    width: 45px;
+    border: 2px solid #212121;
+    border-radius: 7px;
+    background: #2D3F52;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    transition: 0.3s;
+}
+
+.btn-profile2:hover
+{
+    background: $yellow2;
+}
+
+.btn-profile2:hover>i
+{
+    color: #2D3F52;
+}
+
+.btn-profile2>i
 {
     color: $yellow2;
     font-size: 22px;
