@@ -536,7 +536,7 @@ footer>div
 
 .profile-modal-dialog
 {
-    max-width: 900px !important;
+    max-width: 800px !important;
 }
 
 .login-modal-content
@@ -640,7 +640,7 @@ footer>div
     top: 0;
     left: 0;
     right: 0;
-    height: 31px;
+    height: 28px;
     padding: 3px 10px;
     overflow: hidden;
 }
@@ -932,6 +932,13 @@ footer>div
     .breakout-body-before {
         width: calc(95% - 2px);
     }
+}
+
+.breakout-body-before-title
+{
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 2px;
 }
 
 #carousel
@@ -3220,4 +3227,61 @@ footer>div
             top: 2px;
         }
     }
+}
+
+/*----------FIN ROOMS----------*/
+/*----PARAMETRES UTILISATEUR---*/
+.user-account-body-left
+{
+    width: calc(100% - 280px);
+    /*height: 100px;*/
+    background: $main;
+    /*border-radius: 5px 5px 0 0;*/
+    margin-top: 45px;
+}
+
+.user-account-body-left>.nav-pills
+{
+    margin-top: -45px;
+}
+
+.user-account-body-right
+{
+    margin-left: 30px;
+    width: 250px;
+    height: 650px;
+    background: $main;
+}
+
+@media screen and (max-width: 1199px){
+    .user-account-body-left
+    {
+        width: 100%;
+    }
+    .user-account-body-right
+    {
+        display: none;
+    }
+}
+
+.link-user-parameters
+{
+    width: calc(25% - 10px);
+    height: 35px;
+    text-align: center;
+}
+
+.link-user-parameters>.nav-link
+{
+    background: #617C96;
+    border-radius: 5px;
+    height: 100%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.link-user-parameters>.active
+{
+    background: $main !important;
+    color: $yellow2 !important;
 }

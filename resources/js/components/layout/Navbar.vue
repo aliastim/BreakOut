@@ -182,12 +182,12 @@
                 </div>
                 <div class="login-modal-body">
                     <div class="w-100 row" style="margin: 0 !important;">
-                        <div class="col-12 col-md-5 profile-modal-body">
+                        <div class="col-12 col-lg-5 profile-modal-body d-none-991">
                             <div class="profile-modal-container-left">
-                                <a href="#"><button class="btn-profile2" style="position: absolute; left:10px; top: 10px;"><i class="fas fa-pencil-alt"></i></button></a>
+                                <a href="/avatar"><button class="btn-profile2" style="position: absolute; left:10px; top: 10px;"><i class="fas fa-pencil-alt"></i></button></a>
                             </div>
                         </div>
-                        <div class="col-12 col-md-7 profile-modal-body">
+                        <div class="col-12 col-lg-7 profile-modal-body">
                             <div class="profile-modal-container-right">
                                 <div class="profile-modal-container-header">
                                     <div class="d-flex">
@@ -196,16 +196,16 @@
                                         <div class="">
                                             <div>
                                                 {{ getGold }}
-                                                <p style="float: left; color: #f9ba48; font-size: 18px;">{{ gold }}&nbsp;</p>
-                                                <div style="background-image: url('/img/Banque_graphique/Objets/BOCoin_64.png'); background-repeat: no-repeat; background-size: contain; max-height: 25px !important; height: 25px; width: 25px; float: right;"></div>
+                                                <p style="float: left; color: #f9ba48; font-size: 16px;">{{ gold }}&nbsp;</p>
+                                                <div style="background-image: url('/img/Banque_graphique/Objets/BOCoin_64.png'); background-repeat: no-repeat; background-size: contain; max-height: 22px !important; height: 22px; width: 22px; float: right;"></div>
 
                                             </div>
                                         </div>
                                         <div >
                                             <div>
                                                 {{ getGem }}
-                                                <p style="float: left; color: #7CB644; font-size: 18px;">&nbsp;{{ gem }}</p>
-                                                <div style="background-image: url('/img/Banque_graphique/Objets/gemme96.png'); background-repeat: no-repeat; background-size: contain; max-height: 25px !important; height: 25px; width: 25px; float: right;"></div>
+                                                <p style="float: left; color: #7CB644; font-size: 16px;">&nbsp;{{ gem }}</p>
+                                                <div style="background-image: url('/img/Banque_graphique/Objets/gemme96.png'); background-repeat: no-repeat; background-size: contain; max-height: 22px !important; height: 22px; width: 22px; float: right;"></div>
 
                                             </div>
                                         </div>
@@ -218,24 +218,24 @@
                                             <span class="josephin-light-italic color-yellow-clear" v-text="'Inscrit depuis le ' + dateinscription(app.user.created_at)"></span>
                                         </p>
                                         <hr style="border: 1px solid #212121; width: 100%;">
-                                        <div>
+                                        <div style="font-size: 16px;">
                                             <div class="w-100 d-flex">
-                                                <div><p style="font-weight: 900; color: #f9ba48;"><i class="fas fa-gamepad"></i>&nbsp;</p></div>
+                                                <div style="width: 30px; text-align: center;"><p style="font-weight: 900; color: #f9ba48;"><i class="fas fa-gamepad"></i>&nbsp;</p></div>
                                                 <div class="color-yellow-clear">Nombre de parties jouées :</div>
                                                 <div class="ml-auto"><p class="josephin-bold" style="color: #f9ba48;">{{ app.user.games_played }}</p></div>
                                             </div>
                                             <div class="w-100 d-flex">
-                                                <div><p style="font-weight: 900; color: #f9ba48;"><i class="fas fa-gamepad"></i>&nbsp;</p></div>
+                                                <div style="width: 30px; text-align: center;"><p style="font-weight: 900; color: #f9ba48;"><i class="fas fa-gamepad"></i>&nbsp;</p></div>
                                                 <div class="color-yellow-clear">Nombre de parties gagnées :</div>
                                                 <div class="ml-auto"><p class="josephin-bold" style="color: #f9ba48;">{{ app.user.games_win }}</p></div>
                                             </div>
                                             <div class="w-100 d-flex">
-                                                <div><p style="font-weight: 900; color: #f9ba48;"><i class="fas fa-hourglass-half"></i>&nbsp;</p></div>
+                                                <div style="width: 30px; text-align: center;"><p style="font-weight: 900; color: #f9ba48;"><i class="fas fa-hourglass-half"></i>&nbsp;</p></div>
                                                 <div class="color-yellow-clear">Temps moyen par partie :</div>
                                                 <div class="ml-auto"><p class="josephin-bold" style="color: #f9ba48;">{{ app.user.games_duration }}</p></div>
                                             </div>
                                             <div class="w-100 d-flex">
-                                                <div><p style="font-weight: 900; color: #f9ba48;"><i class="fas fa-hourglass-half"></i>&nbsp;</p></div>
+                                                <div style="width: 30px; text-align: center;"><p style="font-weight: 900; color: #f9ba48;"><i class="fas fa-hourglass-half"></i>&nbsp;</p></div>
                                                 <div class="color-yellow-clear">Meilleur temps :</div>
                                                 <div class="ml-auto"><p class="josephin-bold" style="color: #f9ba48;">{{ app.user.games_best_duration }}</p></div>
                                             </div>
@@ -251,15 +251,15 @@
                                         <a href="#" @click="logout"><button class="btn-profile"><i class="fas fa-sign-out-alt"></i></button></a>
                                     </div>
                                     <div>
-                                        <a href="#"><button class="btn-profile"><i class="fas fa-trophy" style="margin-left: -2px;"></i></button></a>
-                                        <a href="#"><button class="btn-profile"><i class="fas fa-shopping-cart" style="margin-left: -2px;"></i></button></a>
-                                        <a href="#"><button class="btn-profile"><i class="fas fa-cog"></i></button></a>
+                                        <a href="/inventory"><button class="btn-profile"><i class="fas fa-trophy" style="margin-left: -2px;"></i></button></a>
+                                        <a href="/account"><button class="btn-profile"><i class="fas fa-shopping-cart" style="margin-left: -2px;"></i></button></a>
+                                        <a href="/account"><button class="btn-profile"><i class="fas fa-cog"></i></button></a>
                                     </div>
                                     <div class="input-group d-flex justify-content-center" style="width: auto !important; margin-left: 4px;">
                                         <div class="input-group-prepend btn-parrainage-prepend" style="height: 45px; border-width: 4px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);">
                                             <span class="input-group-text"><img src="/img/icones/ajouter_un_ami.png"></span>
                                         </div>
-                                        <input type="text" class="btn-parrainage" style="height: 45px; border-width: 4px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);">
+                                        <input type="text" class="btn-parrainage" style="width: 150px; height: 45px; border-width: 4px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);">
                                     </div>
 
                                 </div>
