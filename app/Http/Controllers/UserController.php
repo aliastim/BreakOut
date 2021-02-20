@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use App\Avatar;
 
 class UserController extends Controller
 {
@@ -18,7 +19,9 @@ class UserController extends Controller
     public function userDelete($id)
     {
         $user = User::find($id);
+        $avatar = Avatar::where('user_id', $id)->first();
         $user->delete();
+        $avatar->delete();
         return response("User deleted");
 
     }

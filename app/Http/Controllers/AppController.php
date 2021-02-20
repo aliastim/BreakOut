@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use App\Avatar;
 
 class AppController extends Controller
 {
@@ -40,6 +41,10 @@ class AppController extends Controller
         $user->name = $request->name;
         $user->password = bcrypt($request->password);
         $user->save();
+
+        $avatar = new Avatar();
+        $avatar->user_id = intval($user->id);
+        $avatar->save();
 
         Auth::login($user);
 
