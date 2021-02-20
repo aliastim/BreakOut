@@ -55,13 +55,27 @@
                     </div>
                 </div>
                 <div class="row mt-3" style="margin: 0;">
-                    <div class="col-12 col-md-8">
+                    <div class="col-12 col-md-4">
                         <div><label>Prix en boutique :</label></div>
                         <div class="input-group">
                             <div class="input-group-prepend input-bo-prepend">
                                 <span class="input-group-text"><i class="fas fa-hourglass-half"></i></span>
                             </div>
                             <input class="input-bo" type="text" :value="item_price_selected" @change="item_price_selected = $event.target.value" placeholder="Prix en boutique">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div><label>Sexe (Avatar) :</label></div>
+                        <div class="input-group">
+                            <div class="input-group-prepend input-bo-prepend">
+                                <span class="input-group-text"><i class="fas fa-venus-mars"></i></span>
+                            </div>
+                            <select class="custom-select input-bo" @change="item_sexe_selected = $event.target.value" >
+                                <option disabled>Utilisable en jeu ?</option>
+                                <option :selected="item_sexe_selected === null" value="">Objet non avatar</option>
+                                <option :selected="item_sexe_selected === 'Homme'" value="Homme">Homme</option>
+                                <option :selected="item_sexe_selected === 'Femme'" value="Femme">Femme</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
@@ -128,6 +142,7 @@ export default {
             item_type_selected: "",
             item_money_selected: "",
             item_price_selected: 0,
+            item_sexe_selected: "",
             item_ingame_selected: 0,
             item_image_selected: "",
             item_description_selected: "",
@@ -143,6 +158,7 @@ export default {
             this.item_type_selected= this.items_app.items[this.item_index].type;
             this.item_money_selected= this.items_app.items[this.item_index].money;
             this.item_price_selected= this.items_app.items[this.item_index].price;
+            this.item_sexe_selected= this.items_app.items[this.item_index].sexe;
             this.item_ingame_selected= this.items_app.items[this.item_index].ingame;
             this.item_image_selected= this.items_app.items[this.item_index].img;
             this.item_description_selected= this.items_app.items[this.item_index].description;
@@ -183,6 +199,7 @@ export default {
                     item_type: this.item_type_selected,
                     item_money: this.item_money_selected,
                     item_price: this.item_price_selected,
+                    item_sexe: this.item_sexe_selected,
                     item_ingame: this.item_ingame_selected,
                     item_image: this.item_image_selected,
                     item_description: this.item_description_selected,

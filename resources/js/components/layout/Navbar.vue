@@ -184,7 +184,29 @@
                     <div class="w-100 row" style="margin: 0 !important;">
                         <div class="col-12 col-lg-5 profile-modal-body d-none-991">
                             <div class="profile-modal-container-left">
-                                <a href="/avatar"><button class="btn-profile2" style="position: absolute; left:10px; top: 10px;"><i class="fas fa-pencil-alt"></i></button></a>
+                                <a href="/avatar"><button class="btn-profile2" style="position: absolute; left:10px; top: 10px; z-index: 99999;"><i class="fas fa-pencil-alt"></i></button></a>
+                                <div class="w-100 h-100 d-flex justify-content-center overflow-hidden">
+                                        <!-- BreakOut homme 256x512px -->
+                                        <!--<div class="w-100 h-100 apercu_personnage_rar apercu_personnage_rar__affiche">
+                                            <img style="z-index: 2006;" src="/img/avatar/homme/accessoires/chapeau1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 2005;" src="/img/avatar/homme/tete/tete1.svg" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 2004;" src="/img/avatar/homme/gants/gants1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 2003;" src="/img/avatar/homme/chaussures/chaussures1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 2002;" src="/img/avatar/homme/bas/bas1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 2001;" src="/img/avatar/homme/hauts/haut1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 2000;" src="/img/avatar/homme/corps_h.png" class="res_1X apercu_personnage_rar__calque">
+                                        </div>-->
+                                        <!-- BreakOut femme 256x512px -->
+                                        <div class="w-100 h-100 apercu_personnage_rar apercu_personnage_rar__affiche">
+                                            <img style="z-index: 2006;" src="/img/avatar/femme/accessoires/cheveux1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 2005;" src="/img/avatar/femme/tete/tete1.svg" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 2004;" src="/img/avatar/femme/gants/gants1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 2003;" src="/img/avatar/femme/chaussures/chaussures1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 2002;" src="/img/avatar/femme/bas/bas1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 2001;" src="/img/avatar/femme/hauts/haut1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 2000;" src="/img/avatar/femme/corps_f.png" class="res_1X apercu_personnage_rar__calque">
+                                        </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-12 col-lg-7 profile-modal-body">

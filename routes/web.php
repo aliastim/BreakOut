@@ -92,3 +92,8 @@ Route::prefix('forum')->group(function () {
     Route::post('loadcomments/{post_id}', 'ForumController@loadComments');
     Route::post('deletecomment/{id}', 'ForumController@deleteComment');
 });
+
+//Avatar
+Route::prefix('bo_avatar')->group(function () {
+    Route::post('autogenerate', 'AvatarController@autoGenerate');
+});

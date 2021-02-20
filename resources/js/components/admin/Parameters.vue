@@ -121,6 +121,11 @@
                 <button class="admin-btn-regenerate-items"><i class="fas fa-sync-alt"></i> Régénérer les objets en vedette</button>
             </div>
         </div>
+        <div class="row" style="margin: 0 !important;">
+            <div class="col-12 text-center">
+                <button class="admin-btn-regenerate-items" @click="avatarGenerate()"><i class="fas fa-sync-alt"></i> Avatar Generate</button>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -220,6 +225,14 @@ export default {
                     text_scrolling: this.scrolling,
                 }
                 this.admin.req.post('bo_dashboard/updatescrolling', data).then(response => {
+                    console.log(response.data);
+                }).catch(error => {
+                    this.errors.push(error.response.data.error);
+                });
+            },
+            avatarGenerate()
+            {
+                this.admin.req.post('bo_avatar/autogenerate').then(response => {
                     console.log(response.data);
                 }).catch(error => {
                     this.errors.push(error.response.data.error);

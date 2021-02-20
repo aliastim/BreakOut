@@ -29,10 +29,10 @@
                             <select class="custom-select input-bo" v-model="item_type">
                                 <option disabled>Type d'objet</option>
                                 <option selected  value="objet">Objet</option>
-                                <option value="avatar/chapeau">Avatar/Chapeau</option>
+                                <option value="avatar/chapeau">Avatar/Visage</option>
                                 <option value="avatar/hauts">Avatar/Hauts</option>
                                 <option value="avatar/bas">Avatar/bas</option>
-                                <option value="avatar/manteaux">Avatar/Manteaux</option>
+                                <option value="avatar/manteaux">Avatar/Gants</option>
                                 <option value="avatar/chaussures">Avatar/Chaussures</option>
                                 <option value="avatar/accessoires">Avatar/Accessoires</option>
                                 <option value="avatar/familiers">Avatar/Familiers</option>
@@ -55,13 +55,27 @@
                     </div>
                 </div>
                 <div class="row mt-3" style="margin: 0;">
-                    <div class="col-12 col-md-8">
+                    <div class="col-12 col-md-4">
                         <div><label>Prix en boutique :</label></div>
                         <div class="input-group">
                             <div class="input-group-prepend input-bo-prepend">
                                 <span class="input-group-text"><i class="fas fa-hourglass-half"></i></span>
                             </div>
                             <input class="input-bo" type="text" v-model="item_price" placeholder="Prix en boutique">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div><label>Sexe (Avatar) :</label></div>
+                        <div class="input-group">
+                            <div class="input-group-prepend input-bo-prepend">
+                                <span class="input-group-text"><i class="fas fa-venus-mars"></i></span>
+                            </div>
+                            <select class="custom-select input-bo" v-model="item_sexe" >
+                                <option disabled>Utilisable en jeu ?</option>
+                                <option selected value="">Objet non avatar</option>
+                                <option value="Homme">Homme</option>
+                                <option value="Femme">Femme</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
@@ -128,6 +142,7 @@ export default {
             item_price: 0,
             item_ingame: 0,
             item_image: "",
+            item_sexe: "",
             item_description: "",
             errors: []
         }
@@ -166,6 +181,7 @@ export default {
                     item_price: this.item_price,
                     item_ingame: this.item_ingame,
                     item_image: this.item_image,
+                    item_sexe: this.item_sexe,
                     item_description: this.item_description,
                 }
                 //console.log(data);
@@ -180,6 +196,7 @@ export default {
                     this.item_price= 0;
                     this.item_ingame= 0;
                     this.item_image= "";
+                    this.item_sexe="";
                     this.item_description= "";
 
                     //Rechargement des items

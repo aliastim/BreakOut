@@ -11594,7 +11594,7 @@ footer > div {
 
 .profile-modal-body {
   position: relative;
-  height: 500px;
+  height: 550px;
   overflow: auto;
 }
 
@@ -11614,7 +11614,7 @@ footer > div {
   top: 10px;
   left: 10px;
   right: 10px;
-  height: 430px;
+  height: 470px;
   background: #1F3143;
   border-radius: 15px;
   box-shadow: 0 3px 6px;
@@ -13951,20 +13951,20 @@ footer > div {
 
 .user-account-body-left {
   width: calc(100% - 280px);
-  /*height: 100px;*/
+  min-height: 650px;
   background: #394e63;
   /*border-radius: 5px 5px 0 0;*/
-  margin-top: 45px;
+  margin-top: 50px;
 }
 
 .user-account-body-left > .nav-pills {
-  margin-top: -45px;
+  margin-top: -50px;
 }
 
 .user-account-body-right {
   margin-left: 30px;
   width: 250px;
-  height: 650px;
+  height: 700px;
   background: #394e63;
 }
 
@@ -13995,5 +13995,31 @@ footer > div {
 .link-user-parameters > .active {
   background: #394e63 !important;
   color: #f9ba48 !important;
+}
+
+/*--FIN PARAMETRES UTILISATEUR--*/
+
+/*------------AVATAR-----------*/
+
+.apercu_personnage_rar__affiche {
+  display: block;
+  margin: auto;
+}
+
+.apercu_personnage_rar {
+  position: relative;
+}
+
+.res_1X {
+  width: 256px;
+  height: 512px;
+  /*Ajouté*/
+  margin-left: 20px;
+}
+
+.apercu_personnage_rar__calque {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 

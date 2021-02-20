@@ -26,8 +26,93 @@
                             </li>
                         </ul>
 
-                        <div class="">
-                            Mon avatar
+                        <div class="h-100 w-100 position-relative">
+                            <div class="avatar-body">
+                                <div class="avatar-body-left">
+                                    <div style="margin-top: 8px;">
+                                        <div class="avatar-onglet" style="border-radius: 10px 10px 0 0;" @click="changeEquipements('hauts')">
+                                            <p class="josephin-bold" style="margin: 0;">
+                                                Hauts
+                                            </p>
+                                        </div>
+                                        <div class="avatar-onglet" @click="changeEquipements('bas')">
+                                            <p class="josephin-bold" style="margin: 0;">
+                                                Bas
+                                            </p>
+                                        </div>
+                                        <div class="avatar-onglet" @click="changeEquipements('gants')">
+                                            <p class="josephin-bold" style="margin: 0;">
+                                                Gants
+                                            </p>
+                                        </div>
+                                        <div class="avatar-onglet" @click="changeEquipements('chaussures')">
+                                            <p class="josephin-bold" style="margin: 0;">
+                                                Chaussures
+                                            </p>
+                                        </div>
+                                        <div class="avatar-onglet" @click="changeEquipements('accessoires')">
+                                            <p class="josephin-bold" style="margin: 0;">
+                                                Accessoires
+                                            </p>
+                                        </div>
+                                        <div class="avatar-onglet" @click="changeEquipements('familiers')">
+                                            <p class="josephin-bold" style="margin: 0;">
+                                                Familiers
+                                            </p>
+                                        </div>
+                                        <div class="avatar-onglet" @click="changeEquipements('fonds')" style="border-radius: 0 0 10px 10px;">
+                                            <p class="josephin-bold" style="margin: 0;">
+                                                Fonds
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="avatar-body-right">
+                                    <div class="avatar-window">
+
+                                        <div class="btn-group btn-group-toggle btn-sexe" data-toggle="buttons">
+                                            <label class="btn active">
+                                                <input type="radio" name="options" id="option1" checked> <i class="fas fa-mars"></i>
+                                            </label>
+                                            <label class="btn">
+                                                <input type="radio" name="options" id="option3"> <i class="fas fa-venus"></i>
+                                            </label>
+                                        </div>
+
+                                        <div class="w-100 h-100 apercu_personnage_rar apercu_personnage_rar__affiche" style="margin-top: 0px;">
+                                            <img style="z-index: 906; margin-left: calc(50% - 128px) !important;" src="/img/avatar/femme/accessoires/cheveux1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 905; margin-left: calc(50% - 128px) !important;" src="/img/avatar/femme/tete/tete1.svg" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 904; margin-left: calc(50% - 128px) !important;" src="/img/avatar/femme/gants/gants1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 903; margin-left: calc(50% - 128px) !important;" src="/img/avatar/femme/chaussures/chaussures1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 902; margin-left: calc(50% - 128px) !important;" src="/img/avatar/femme/bas/bas1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 901; margin-left: calc(50% - 128px) !important;" src="/img/avatar/femme/hauts/haut1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 900; margin-left: calc(50% - 128px) !important;" src="/img/avatar/femme/corps_f.png" class="res_1X apercu_personnage_rar__calque">
+
+                                            <!--<img style="z-index: 906; margin-left: calc(50% - 128px) !important;" src="/img/avatar/homme/accessoires/chapeau1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 905; margin-left: calc(50% - 128px) !important;" src="/img/avatar/homme/tete/tete1.svg" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 904; margin-left: calc(50% - 128px) !important;" src="/img/avatar/homme/gants/gants1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 903; margin-left: calc(50% - 128px) !important;" src="/img/avatar/homme/chaussures/chaussures1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 902; margin-left: calc(50% - 128px) !important;" src="/img/avatar/homme/bas/bas1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 901; margin-left: calc(50% - 128px) !important;" src="/img/avatar/homme/hauts/haut1.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img style="z-index: 900; margin-left: calc(50% - 128px) !important;" src="/img/avatar/homme/corps_h.png" class="res_1X apercu_personnage_rar__calque">-->
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="equipements">
+                                <div class="row" style="margin: 0; flex-wrap: nowrap !important;">
+                                    <div class="equipement">
+                                        <div :class="'avatar-item avatar-item-disabled ' + (item_disabled === true ? 'selected' : '')"><i class="fas fa-ban"></i></div>
+                                    </div>
+                                    <div class="equipement" v-for="(item, index) in items" :id="'item-'+item.id" @click="openitem(item.id, index)">
+                                        <div :class="'avatar-item d-flex ' + (item.id === item_id ? 'selected': '')">
+                                            <img :src="item.img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -52,6 +137,7 @@ export default {
     data() {
         return {
             connected: false,
+            equipements: [],
             errors: []
         }
     },
@@ -71,9 +157,188 @@ export default {
         },
     },
     methods: {
+        changeEquipements(equipements)
+        {
+            console.log(equipements);
+        }
     }
 }
 </script>
 <style>
+.avatar-body
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: calc(100% - 100px);
+    /*background: #122442;*/
+}
 
+.avatar-body-left
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    /*background: plum;*/
+}
+.avatar-body-right
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 250px;
+    width: calc(100% - 250px);
+    /*background: lavander;*/
+}
+
+.avatar-onglet
+{
+    margin: 2px auto auto;
+    text-align: center;
+    width: calc(100% - 20px);
+    background: #7B5B25;
+    color: white;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.avatar-onglet:hover
+{
+    background: #F9BA48;
+}
+
+.avatar-window
+{
+    background: white;
+    width: calc(100% - 10px);
+    height: calc(100% - 20px);
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 10px;
+    border-radius: 20px 5px 20px 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.btn-sexe
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+}
+
+.btn-sexe>.btn
+{
+    color: #000000;
+    background-color: #B79151;
+    border-color: #B79151;
+    font-weight: 900;
+}
+
+.btn-sexe>.active
+{
+    background-color: #7B5B25 !important;
+    border-color: #7B5B25;
+    color: #f9ba48 !important;
+}
+
+.equipements
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: #1C2731;
+}
+
+.equipement
+{
+    min-height: 100px;
+    min-width: 100px;
+    display: flex;
+}
+.equipement>.selected
+{
+    min-height: 90px !important;
+    min-width: 90px !important;
+    width: 90px !important;
+    height: 90px !important;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.avatar-item
+{
+    min-height: 80px;
+    min-width: 80px;
+    height: 80px;
+    width: 80px;
+    box-shadow: 0 3px 6px #212121;
+    border-radius: 20px;
+    background: #2C3946;
+    margin: auto;
+    border: 3px solid #c38414;
+    transition: 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.avatar-item:hover
+{
+    min-height: 90px !important;
+    min-width: 90px !important;
+    background: #2C4E71;
+}
+
+.avatar-item-disabled
+{
+    text-align: center;
+    color: #c38414;
+}
+
+
+.avatar-item:hover>i
+{
+    font-size: 47px !important;
+}
+
+.equipement>.selected>i
+{
+    font-size: 47px !important;
+}
+
+.equipement>.avatar-item-disabled>i
+{
+    font-size: 35px;
+    padding-top: 18px;
+    transition: 0.3s;
+}
+
+.avatar-item>img
+{
+    margin: auto;
+    height: 80px;
+    width: auto;
+    transition: 0.3s;
+}
+
+.avatar-item:hover>img
+{
+    height: 90px;
+}
+
+.equipement>.selected>img
+{
+    height: 90px !important;
+}
 </style>

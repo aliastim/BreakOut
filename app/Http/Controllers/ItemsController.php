@@ -46,6 +46,10 @@ class ItemsController extends Controller
                     $item->price = intval($request->item_price);
                 }
             }
+            if(isset($request->item_sexe) and !empty($request->item_sexe))
+            {
+                $item->sexe = $request->item_sexe;
+            }
             if(isset($request->item_ingame) and !empty($request->item_ingame))
             {
                 $item->ingame = $request->item_ingame;
@@ -101,6 +105,10 @@ class ItemsController extends Controller
                 {
                     $item->price = intval($request->item_price);
                 }
+            }
+            if(isset($request->item_sexe) and !empty($request->item_sexe))
+            {
+                $item->sexe = $request->item_sexe;
             }
             if(isset($request->item_ingame) and !empty($request->item_ingame))
             {
