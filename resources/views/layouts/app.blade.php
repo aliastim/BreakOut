@@ -29,16 +29,16 @@
 
     <!-- Scripts -->
     {{--<script src="public/js/app.js"></script>--}}
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ secure_asset('js/app.js') }}" defer></script>
 
     <!-- Styles -->
 {{--
     <link rel="stylesheet" href="public/css/app.css">
     <link rel="stylesheet" href="public/css/all.css">--}}
 
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link rel="stylesheet" href="{{asset('css/all.css')}}" > <!-- FontAwesome -->
-    <link rel="stylesheet" href="{{asset('css/room404.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/all.css')}}" > <!-- FontAwesome -->
+    <link rel="stylesheet" href="{{secure_asset('css/room404.css')}}">
 
 </head>
 <body>
