@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use Cocur\Slugify\Slugify;
 use Illuminate\Http\Request;
 use App\User;
@@ -28,14 +29,20 @@ class ShopController extends Controller
 
     public function loadAllGoldItem()
     {
-        $golditems = Items::where(['money' => 'gold'])->get();
+        $golditems = Items::where(['money' => 'gold', 'type' => 'objet'])->get();
         return response()->json($golditems, 200);
     }
 
     public function loadAllGemItem()
     {
-        $gemitems = Items::where(['money' => 'gem'])->get();
+        $gemitems = Items::where(['money' => 'gem', 'type' => 'objet'])->get();
         return response()->json($gemitems, 200);
+    }
+
+    public function loadAllAvatarItem()
+    {
+        $avataritems = Items::where('type', 'like', 'avatar/%')->get();
+        return response()->json($avataritems, 200);
     }
 
     public function buyItem(Request $request)
@@ -50,17 +57,16 @@ class ShopController extends Controller
                     if($user->gold >= $item->price)
                     {
                         // Vérifie que l'utilisateur possède l'item
-                        $item_verify = User_item::where(['user_id' => $user->id, 'item_id' => $request->id])->first();
-                        if (isset($item_verify) and !empty($item_verify))
-                        {
+                        try {
+                            $item_verify = User_item::where(['user_id' => $user->id, 'item_id' => $request->id])->first();
                             $item_verify->amount ++;
                             $item_verify->save();
 
                             $user->gold = ($user->gold - $item->price);
                             $user->save();
                             return response()->json("Achat validé !", 200);
-
-                        } else
+                            //return response()->json($item, 200);
+                        } catch (Exception $e)
                         {
                             $useritem = new User_item();
                             $useritem->user_id = $user->id;
@@ -73,6 +79,7 @@ class ShopController extends Controller
 
                             return response()->json("Achat validé !", 200);
                         }
+
                     } else
                     {
                         return response()->json(["error" => "Vous n'avez pas assez d'or"], 401);

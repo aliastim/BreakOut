@@ -29,10 +29,10 @@
                             <select class="custom-select input-bo" @change="item_type_selected = $event.target.value">
                                 <option disabled>Type d'objet</option>
                                 <option :selected="item_type_selected === 'objet'" value="objet">Objet</option>
-                                <option :selected="item_type_selected === 'avatar/chapeau'" value="avatar/chapeau">Avatar/Chapeau</option>
+                                <option :selected="item_type_selected === 'avatar/visage'" value="avatar/visage">Avatar/Visage</option>
                                 <option :selected="item_type_selected === 'avatar/hauts'" value="avatar/hauts">Avatar/Hauts</option>
-                                <option :selected="item_type_selected === 'avatar/bas'" value="avatar/bas">Avatar/bas</option>
-                                <option :selected="item_type_selected === 'avatar/manteaux'" value="avatar/manteaux">Avatar/Manteaux</option>
+                                <option :selected="item_type_selected === 'avatar/bas'" value="avatar/bas">Avatar/Bas</option>
+                                <option :selected="item_type_selected === 'avatar/gants'" value="avatar/gants">Avatar/Gants</option>
                                 <option :selected="item_type_selected === 'avatar/chaussures'" value="avatar/chaussures">Avatar/Chaussures</option>
                                 <option :selected="item_type_selected === 'avatar/accessoires'" value="avatar/accessoires">Avatar/Accessoires</option>
                                 <option :selected="item_type_selected === 'avatar/familiers'" value="avatar/familiers">Avatar/Familiers</option>

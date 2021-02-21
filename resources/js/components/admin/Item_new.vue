@@ -29,10 +29,10 @@
                             <select class="custom-select input-bo" v-model="item_type">
                                 <option disabled>Type d'objet</option>
                                 <option selected  value="objet">Objet</option>
-                                <option value="avatar/chapeau">Avatar/Visage</option>
+                                <option value="avatar/visage">Avatar/Visage</option>
                                 <option value="avatar/hauts">Avatar/Hauts</option>
-                                <option value="avatar/bas">Avatar/bas</option>
-                                <option value="avatar/manteaux">Avatar/Gants</option>
+                                <option value="avatar/bas">Avatar/Bas</option>
+                                <option value="avatar/gants">Avatar/Gants</option>
                                 <option value="avatar/chaussures">Avatar/Chaussures</option>
                                 <option value="avatar/accessoires">Avatar/Accessoires</option>
                                 <option value="avatar/familiers">Avatar/Familiers</option>

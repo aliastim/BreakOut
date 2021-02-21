@@ -121,11 +121,11 @@
                 <button class="admin-btn-regenerate-items"><i class="fas fa-sync-alt"></i> Régénérer les objets en vedette</button>
             </div>
         </div>
-        <div class="row" style="margin: 0 !important;">
+        <!--<div class="row" style="margin: 0 !important;">
             <div class="col-12 text-center">
                 <button class="admin-btn-regenerate-items" @click="avatarGenerate()"><i class="fas fa-sync-alt"></i> Avatar Generate</button>
             </div>
-        </div>
+        </div>-->
     </div>
 </template>
 <script>

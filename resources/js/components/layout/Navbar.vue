@@ -186,26 +186,18 @@
                             <div class="profile-modal-container-left">
                                 <a href="/avatar"><button class="btn-profile2" style="position: absolute; left:10px; top: 10px; z-index: 99999;"><i class="fas fa-pencil-alt"></i></button></a>
                                 <div class="w-100 h-100 d-flex justify-content-center overflow-hidden">
-                                        <!-- BreakOut homme 256x512px -->
-                                        <!--<div class="w-100 h-100 apercu_personnage_rar apercu_personnage_rar__affiche">
-                                            <img style="z-index: 2006;" src="/img/avatar/homme/accessoires/chapeau1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 2005;" src="/img/avatar/homme/tete/tete1.svg" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 2004;" src="/img/avatar/homme/gants/gants1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 2003;" src="/img/avatar/homme/chaussures/chaussures1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 2002;" src="/img/avatar/homme/bas/bas1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 2001;" src="/img/avatar/homme/hauts/haut1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 2000;" src="/img/avatar/homme/corps_h.png" class="res_1X apercu_personnage_rar__calque">
-                                        </div>-->
-                                        <!-- BreakOut femme 256x512px -->
-                                        <div class="w-100 h-100 apercu_personnage_rar apercu_personnage_rar__affiche">
-                                            <img style="z-index: 2006;" src="/img/avatar/femme/accessoires/cheveux1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 2005;" src="/img/avatar/femme/tete/tete1.svg" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 2004;" src="/img/avatar/femme/gants/gants1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 2003;" src="/img/avatar/femme/chaussures/chaussures1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 2002;" src="/img/avatar/femme/bas/bas1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 2001;" src="/img/avatar/femme/hauts/haut1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 2000;" src="/img/avatar/femme/corps_f.png" class="res_1X apercu_personnage_rar__calque">
-                                        </div>
+                                    {{ loadAvatar }}
+                                    <div class="w-100 h-100 apercu_personnage_rar apercu_personnage_rar__affiche">
+                                        <img v-if="avatar_items.accessoire" style="z-index: 2006; margin-left: calc(50% - 128px) !important;" :src="avatar_items.accessoire.img" class="res_1X apercu_personnage_rar__calque">
+                                        <img v-if="avatar_items.visage" style="z-index: 2005; margin-left: calc(50% - 128px) !important;" :src="avatar_items.visage.img" class="res_1X apercu_personnage_rar__calque">
+                                        <img v-if="avatar_items.gants" style="z-index: 2004; margin-left: calc(50% - 128px) !important;" :src="avatar_items.gants.img" class="res_1X apercu_personnage_rar__calque">
+                                        <img v-if="avatar_items.chaussures" style="z-index: 2003; margin-left: calc(50% - 128px) !important;" :src="avatar_items.chaussures.img" class="res_1X apercu_personnage_rar__calque">
+                                        <img v-if="avatar_items.bas" style="z-index: 2002; margin-left: calc(50% - 128px) !important;" :src="avatar_items.bas.img" class="res_1X apercu_personnage_rar__calque">
+                                        <img v-if="avatar_items.haut"  style="z-index: 2001; margin-left: calc(50% - 128px) !important;" :src="avatar_items.haut.img" class="res_1X apercu_personnage_rar__calque">
+
+                                        <img v-if="avatar.sexe === 'male'" style="z-index: 2000; margin-left: calc(50% - 128px) !important;" src="/img/avatar/homme/corps_h.png" class="res_1X apercu_personnage_rar__calque">
+                                        <img v-if="avatar.sexe === 'female'" style="z-index: 2000; margin-left: calc(50% - 128px) !important;" src="/img/avatar/femme/corps_f.png" class="res_1X apercu_personnage_rar__calque">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -321,7 +313,9 @@ export default {
             checked : false,
             /* Content */
             gold: 0,
-            gem: 0
+            gem: 0,
+            avatar: [],
+            avatar_items: [],
             /*test:""*/
         }
     },
@@ -451,7 +445,19 @@ export default {
             axios.post("/useritems/getgem").then(response => {
                 this.gem = response.data;
             });
-        }
+        },
+        loadAvatar: function ()
+        {
+            this.errors= [];
+            axios.post('/bo_avatar/loadavatar').then(response => {
+                this.avatar = response.data[0];
+                this.avatar_items = response.data[1];
+                //console.log(response.data);
+
+            }).catch(error => {
+                this.errors.push(error.response.data.error);
+            });
+        },
     }
 
     /*https://www.youtube.com/watch?v=qKr1V9GGpcA*/

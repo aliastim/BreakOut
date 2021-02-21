@@ -1,8 +1,8 @@
 <template>
     <div>
         {{ connect }}
-
         <div v-if="(connected === true)">
+            {{ loadingAvatar }}
             <div class="breakout-body-before text-center" style="margin-top: 100px;">
                 <h1 class="breakout-body-before-title josephin-bold">Personnaliser mon avatar</h1>
             </div>
@@ -29,38 +29,43 @@
                         <div class="h-100 w-100 position-relative">
                             <div class="avatar-body">
                                 <div class="avatar-body-left">
-                                    <div style="margin-top: 8px;">
-                                        <div class="avatar-onglet" style="border-radius: 10px 10px 0 0;" @click="changeEquipements('hauts')">
+                                    <div class="avatar-onglets" style="margin-top: 8px;">
+                                        <div :class="('avatar-onglet ' + ((selected_equipment === 'visage') ? 'selected'  : ''))" style="border-radius: 10px 10px 0 0;" @click="changeEquipements('visage', avatar.sexe)">
+                                            <p class="josephin-bold" style="margin: 0;">
+                                                Visages
+                                            </p>
+                                        </div>
+                                        <div :class="('avatar-onglet ' + ((selected_equipment === 'hauts') ? 'selected'  : ''))" @click="changeEquipements('hauts', avatar.sexe)">
                                             <p class="josephin-bold" style="margin: 0;">
                                                 Hauts
                                             </p>
                                         </div>
-                                        <div class="avatar-onglet" @click="changeEquipements('bas')">
+                                        <div :class="('avatar-onglet ' + ((selected_equipment === 'bas') ? 'selected'  : ''))" @click="changeEquipements('bas', avatar.sexe)">
                                             <p class="josephin-bold" style="margin: 0;">
                                                 Bas
                                             </p>
                                         </div>
-                                        <div class="avatar-onglet" @click="changeEquipements('gants')">
+                                        <div :class="('avatar-onglet ' + ((selected_equipment === 'gants') ? 'selected'  : ''))" @click="changeEquipements('gants', avatar.sexe)">
                                             <p class="josephin-bold" style="margin: 0;">
                                                 Gants
                                             </p>
                                         </div>
-                                        <div class="avatar-onglet" @click="changeEquipements('chaussures')">
+                                        <div :class="('avatar-onglet ' + ((selected_equipment === 'chaussures') ? 'selected'  : ''))" @click="changeEquipements('chaussures', avatar.sexe)">
                                             <p class="josephin-bold" style="margin: 0;">
                                                 Chaussures
                                             </p>
                                         </div>
-                                        <div class="avatar-onglet" @click="changeEquipements('accessoires')">
+                                        <div :class="('avatar-onglet ' + ((selected_equipment === 'accessoires') ? 'selected'  : ''))" @click="changeEquipements('accessoires', avatar.sexe)">
                                             <p class="josephin-bold" style="margin: 0;">
                                                 Accessoires
                                             </p>
                                         </div>
-                                        <div class="avatar-onglet" @click="changeEquipements('familiers')">
+                                        <div :class="('avatar-onglet ' + ((selected_equipment === 'familiers') ? 'selected'  : ''))" @click="changeEquipements('familiers', avatar.sexe)">
                                             <p class="josephin-bold" style="margin: 0;">
                                                 Familiers
                                             </p>
                                         </div>
-                                        <div class="avatar-onglet" @click="changeEquipements('fonds')" style="border-radius: 0 0 10px 10px;">
+                                        <div :class="('avatar-onglet ' + ((selected_equipment === 'fonds') ? 'selected'  : ''))" @click="changeEquipements('fonds', avatar.sexe)" style="border-radius: 0 0 10px 10px;">
                                             <p class="josephin-bold" style="margin: 0;">
                                                 Fonds
                                             </p>
@@ -71,30 +76,24 @@
                                     <div class="avatar-window">
 
                                         <div class="btn-group btn-group-toggle btn-sexe" data-toggle="buttons">
-                                            <label class="btn active">
-                                                <input type="radio" name="options" id="option1" checked> <i class="fas fa-mars"></i>
+                                            <label :class="('btn ' +  ((avatar.sexe === 'male') ? 'active': ''))" @click="changeSexe('male')">
+                                                <input type="radio" name="options" id="option1" :checked="(avatar.sexe === 'male')"> <i class="fas fa-mars"></i>
                                             </label>
-                                            <label class="btn">
-                                                <input type="radio" name="options" id="option3"> <i class="fas fa-venus"></i>
+                                            <label :class="('btn ' +  ((avatar.sexe === 'female') ? 'active': ''))" @click="changeSexe('female')">
+                                                <input type="radio" name="options" id="option3" :checked="(avatar.sexe === 'female')"> <i class="fas fa-venus"></i>
                                             </label>
                                         </div>
 
                                         <div class="w-100 h-100 apercu_personnage_rar apercu_personnage_rar__affiche" style="margin-top: 0px;">
-                                            <img style="z-index: 906; margin-left: calc(50% - 128px) !important;" src="/img/avatar/femme/accessoires/cheveux1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 905; margin-left: calc(50% - 128px) !important;" src="/img/avatar/femme/tete/tete1.svg" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 904; margin-left: calc(50% - 128px) !important;" src="/img/avatar/femme/gants/gants1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 903; margin-left: calc(50% - 128px) !important;" src="/img/avatar/femme/chaussures/chaussures1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 902; margin-left: calc(50% - 128px) !important;" src="/img/avatar/femme/bas/bas1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 901; margin-left: calc(50% - 128px) !important;" src="/img/avatar/femme/hauts/haut1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 900; margin-left: calc(50% - 128px) !important;" src="/img/avatar/femme/corps_f.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img v-if="avatar_items.accessoire" style="z-index: 906; margin-left: calc(50% - 128px) !important;" :src="avatar_items.accessoire.img" class="res_1X apercu_personnage_rar__calque">
+                                            <img v-if="avatar_items.visage" style="z-index: 905; margin-left: calc(50% - 128px) !important;" :src="avatar_items.visage.img" class="res_1X apercu_personnage_rar__calque">
+                                            <img v-if="avatar_items.gants" style="z-index: 904; margin-left: calc(50% - 128px) !important;" :src="avatar_items.gants.img" class="res_1X apercu_personnage_rar__calque">
+                                            <img v-if="avatar_items.chaussures" style="z-index: 903; margin-left: calc(50% - 128px) !important;" :src="avatar_items.chaussures.img" class="res_1X apercu_personnage_rar__calque">
+                                            <img v-if="avatar_items.bas" style="z-index: 902; margin-left: calc(50% - 128px) !important;" :src="avatar_items.bas.img" class="res_1X apercu_personnage_rar__calque">
+                                            <img v-if="avatar_items.haut"  style="z-index: 901; margin-left: calc(50% - 128px) !important;" :src="avatar_items.haut.img" class="res_1X apercu_personnage_rar__calque">
 
-                                            <!--<img style="z-index: 906; margin-left: calc(50% - 128px) !important;" src="/img/avatar/homme/accessoires/chapeau1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 905; margin-left: calc(50% - 128px) !important;" src="/img/avatar/homme/tete/tete1.svg" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 904; margin-left: calc(50% - 128px) !important;" src="/img/avatar/homme/gants/gants1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 903; margin-left: calc(50% - 128px) !important;" src="/img/avatar/homme/chaussures/chaussures1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 902; margin-left: calc(50% - 128px) !important;" src="/img/avatar/homme/bas/bas1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 901; margin-left: calc(50% - 128px) !important;" src="/img/avatar/homme/hauts/haut1.png" class="res_1X apercu_personnage_rar__calque">
-                                            <img style="z-index: 900; margin-left: calc(50% - 128px) !important;" src="/img/avatar/homme/corps_h.png" class="res_1X apercu_personnage_rar__calque">-->
+                                            <img v-if="avatar.sexe === 'male'" style="z-index: 900; margin-left: calc(50% - 128px) !important;" src="/img/avatar/homme/corps_h.png" class="res_1X apercu_personnage_rar__calque">
+                                            <img v-if="avatar.sexe === 'female'" style="z-index: 900; margin-left: calc(50% - 128px) !important;" src="/img/avatar/femme/corps_f.png" class="res_1X apercu_personnage_rar__calque">
                                         </div>
 
 
@@ -104,10 +103,10 @@
                             <div class="equipements">
                                 <div class="row" style="margin: 0; flex-wrap: nowrap !important;">
                                     <div class="equipement">
-                                        <div :class="'avatar-item avatar-item-disabled ' + (item_disabled === true ? 'selected' : '')"><i class="fas fa-ban"></i></div>
+                                        <div :class="'avatar-item avatar-item-disabled '" @click="updateAvatar(null)"><i class="fas fa-ban"></i></div>
                                     </div>
-                                    <div class="equipement" v-for="(item, index) in items" :id="'item-'+item.id" @click="openitem(item.id, index)">
-                                        <div :class="'avatar-item d-flex ' + (item.id === item_id ? 'selected': '')">
+                                    <div class="equipement" v-for="(item, index) in equipements" :id="'item-'+item.id" @click="updateAvatar(item.id)">
+                                        <div :class="'avatar-item d-flex '">
                                             <img :src="item.img">
                                         </div>
                                     </div>
@@ -137,13 +136,16 @@ export default {
     data() {
         return {
             connected: false,
+            avatar:[],
+            avatar_items:[],
             equipements: [],
+            selected_equipment: "visage",
             errors: []
         }
     },
     computed : {
         connect: function () {
-            this.app.req.post("auth/init").then(response => {
+            axios.post("auth/init").then(response => {
                 if(response.data.user == null) {
                     console.log('Utilisateur non connecté');
                     return false;
@@ -155,11 +157,83 @@ export default {
                 }
             });
         },
+        loadingAvatar: function ()
+        {
+            this.loadAvatar();
+        }
+
     },
     methods: {
-        changeEquipements(equipements)
+        loadAvatar()
         {
-            console.log(equipements);
+            this.errors= [];
+            axios.post('/bo_avatar/loadavatar').then(response => {
+                this.avatar = response.data[0];
+                this.avatar_items = response.data[1];
+                this.changeEquipements(this.selected_equipment, this.avatar.sexe);
+                console.log(response.data);
+
+            }).catch(error => {
+                this.errors.push(error.response.data.error);
+            });
+        },
+        changeSexe(sexe)
+        {
+            if(this.avatar.sexe !== sexe)
+            {
+                const data = {
+                    sexe : sexe
+                }
+                this.errors= [];
+                axios.post('/bo_avatar/changesexe', data).then(response => {
+                    this.avatar_items.visage = null;
+                    this.avatar_items.accessoire = null;
+                    this.avatar_items.haut = null;
+                    this.avatar_items.bas = null;
+                    this.avatar_items.gants = null;
+                    this.avatar_items.chaussures = null;
+                    this.avatar.sexe = sexe;
+                    this.changeEquipements(this.selected_equipment, sexe);
+
+                    console.log(response.data);
+
+                }).catch(error => {
+                    this.errors.push(error.response.data.error);
+                });
+            }
+
+        },
+        changeEquipements(equipements, sexe)
+        {
+            this.selected_equipment = equipements
+            const data = {
+                equipements : equipements,
+                sexe: sexe
+            }
+            this.errors= [];
+            axios.post('/bo_avatar/loadequipments', data).then(response => {
+                this.equipements = response.data;
+                console.log(response.data);
+
+            }).catch(error => {
+                this.errors.push(error.response.data.error);
+            });
+        },
+        updateAvatar(equipment_id)
+        {
+            const data = {
+                equipement_id : equipment_id,
+                selected_equipment : this.selected_equipment,
+            }
+            this.errors= [];
+            axios.post('/bo_avatar/updateavatar', data).then(response => {
+                //this.equipements = response.data;
+                this.loadAvatar();
+                console.log(response.data);
+
+            }).catch(error => {
+                this.errors.push(error.response.data.error);
+            });
         }
     }
 }
@@ -193,6 +267,11 @@ export default {
     min-width: 250px;
     width: calc(100% - 250px);
     /*background: lavander;*/
+}
+
+.avatar-onglets>.selected
+{
+    background: #F9BA48 !important;
 }
 
 .avatar-onglet

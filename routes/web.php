@@ -63,6 +63,7 @@ Route::prefix('bo_shop')->group(function () {
     Route::post('addgem', 'ShopController@addGem');
     Route::post('loadallgemitem', 'ShopController@loadAllGemItem');
     Route::post('loadallgolditem', 'ShopController@loadAllGoldItem');
+    Route::post('loadallavataritem', 'ShopController@loadAllAvatarItem');
     Route::post('buyitem', 'ShopController@buyItem');
 });
 
@@ -96,4 +97,8 @@ Route::prefix('forum')->group(function () {
 //Avatar
 Route::prefix('bo_avatar')->group(function () {
     Route::post('autogenerate', 'AvatarController@autoGenerate');
+    Route::post('loadavatar', 'AvatarController@loadAvatar');
+    Route::post('changesexe', 'AvatarController@changeSexe');
+    Route::post('loadequipments', 'AvatarController@loadEquipments');
+    Route::post('updateavatar', 'AvatarController@updateAvatar');
 });

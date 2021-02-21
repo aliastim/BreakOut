@@ -2,6 +2,7 @@
     <div>
         {{ gemitems }}
         {{ golditems }}
+        {{ avataritems }}
         <shop-before></shop-before>
         <div class="breakout-body">
             <div class="col-12 pt-4">
@@ -232,6 +233,45 @@
                 </div>
             </div>
 
+            <div class="col-12 pt-4">
+                <div class="panneau-ligne-1 pb-3" style="z-index: 2;">
+                    <hr>
+                    <div class="d-flex justify-content-center">
+                        <div><h2>Nos équipements pour avatar</h2></div>
+                    </div>
+                </div>
+                <div class="row p-1">
+                    <!-- Objets avatar -->
+                    <div class="col-12 col-md-2" v-for="avataritem in itemsavatar" :id="'item-'+avataritem.id">
+                        <div class="shop-cadre-items mt-3">
+                            <div class="shop-cadre-items-header">
+                                {{ avataritem.name }}
+                            </div>
+                            <div class="shop-cadre-items-body">
+                                <div>
+                                    <img :src="avataritem.img">
+                                </div>
+                                <div>
+                                    <p>{{ avataritem.description }}</p>
+                                </div>
+                            </div>
+                            <div class="shop-cadre-items-footer">
+                                <div>
+                                    <button @click="buyitem(avataritem.id)" type="button" data-toggle="modal" data-target="#modalpurchase">Acheter</button>
+                                </div>
+                                <div>
+                                    <div class="div-price">
+                                        {{ avataritem.price }}
+                                    </div>
+                                    <div class="div-gold"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
 
             <!-- Modal purchase -->
             <div class="modal fade" id="modalpurchase" tabindex="-1" aria-labelledby="modalpurchase" aria-hidden="true">
@@ -276,8 +316,10 @@ export default {
         return {
             itemsgold: [],
             itemsgem: [],
+            itemsavatar: [],
             golderrors: [],
             gemerrors: [],
+            avatarerrors: [],
             shoprooms: [],
             purchase : []
         }
@@ -297,6 +339,12 @@ export default {
             this.app.req.post("bo_shop/loadallgemitem").then(response => {
                 this.itemsgem = response.data;
                 //console.log(response.data);
+            });
+        },
+        avataritems: function () {
+            this.app.req.post("bo_shop/loadallavataritem").then(response => {
+                this.itemsavatar = response.data;
+                console.log(response.data);
             });
         },
     },
