@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Avatar;
 use App\User_item;
-use App\items;
+use App\Items;
 use Illuminate\Support\Facades\Auth;
 
 class AvatarController extends Controller
