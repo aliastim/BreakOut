@@ -29,6 +29,8 @@
             </div>
         </div>
         <button v-on:click="[player_scoping(), scoping_step+=1]">Viser</button>
+        {{this.scopeX}}
+        {{this.scopeY}}
         {{this.scoping_step}}
         {{this.points}}
     </div>
@@ -59,33 +61,34 @@ export default {
             if (this.scoping_step === 0) {
                 this.interval = setInterval(() => {
                     if (this.posY < 100) {
-                        this.posY += 10
+                        this.posY += 1
                     } else if (this.posY >= 100) {
                         this.posY = 0
                     }
-                }, 2000)
+                }, 10)
             }else if (this.scoping_step === 1){
                 this.beforeDestroy()
                 this.scopeY = this.posY
             }else if (this.scoping_step === 2){
                 this.interval = setInterval(() => {
                     if (this.posX < 100) {
-                        this.posX += 10
+                        this.posX += 1
                     } else if (this.posX >= 100) {
                         this.posX = 0
                     }
-                }, 2000)
+                }, 10)
             }else if(this.scoping_step === 3){
                 this.beforeDestroy()
                 this.scopeX = this.posX
+                this.calcPoints(this.scopeY, this.scopeX)
             }
         },
         beforeDestroy() {
             clearInterval(this.interval)
         },
-        calcPoints(){
-            if (this.posX === 50 && this.posY === 50){
-                this.points = 100
+        calcPoints(y,x){
+            if (0<y<20 && x<20){
+                this.points = 10
             }
         },
     }
@@ -166,9 +169,9 @@ canvas {
 }
 
 .scope {
-    height: 25px;
-    width: 25px;
-    background-color: #bbb;
+    height: 5px;
+    width: 5px;
+    background-color: black;
     border-radius: 50%;
     display: flex;
     position: absolute;
