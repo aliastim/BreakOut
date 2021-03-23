@@ -14,9 +14,13 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <button class="btn btn-primary" v-on:click="[moveTriangle(), click+=1]">Bouton</button>
+                <button class="btn btn-primary" v-on:click="[moveTriangle(), click+=1]" v-if="wood > 0">Couper la buche</button>
+                <button class="btn btn-warning" v-on:click="[newWood(),]" v-if="wood <= 0">Nouvelle buche</button>
+                <button class="btn btn-success" v-if="woodStack.length <= 0" v-on:click="changeView()">Revenir au tir à l'arc</button>
             </div>
         </div>
+        {{ this.wood}}
+        {{this.woodStack}}
     </div>
 </template>
 
@@ -29,9 +33,14 @@ export default {
             posY: 0,
             click: 0,
             interval: null,
+            wood: 100,
+            woodStack: ["buche 1", "buche 2","buche 3","buche 4","buche 5","buche 6","buche 7","buche 8","buche 9","buche 10","buche 11","buche 12",]
         }
     },
     methods: {
+        changeView(){
+            this.parent.enigma_3_step = 2
+        },
         moveTriangle() {
             if (this.click === 0){
                 this.interval = setInterval(() => {
@@ -43,12 +52,32 @@ export default {
                 }, 10)
             }else if (this.click >= 1){
                 this.beforeDestroy()
+                if (this.posY >= 30 && this.posY <= 45){
+                    this.wood -= 50
+                }else if (this.posY >= 55 && this.posY <= 70){
+                    this.wood -= 50
+                }else if (this.posY >= 46 && this.posY <= 54){
+                    this.wood -= 100
+                }
+                setTimeout(() => {
+                    this.reinitiateDatas()
+                }, 500)
             }
         },
         beforeDestroy() {
             clearInterval(this.interval)
         },
-    }
+        reinitiateDatas(){
+            this.click = 0
+            this.posY = 0
+        },
+        newWood(){
+            if (this.wood <= 0){
+                this.woodStack.pop()
+                this.wood = 100
+            }
+        }
+    },
 
 }
 </script>

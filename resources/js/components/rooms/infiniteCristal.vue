@@ -10,6 +10,7 @@
                     <Enigma_1 :room="this" v-if="step === 1"/>
                     <Enigma_2 :room="this" v-if="step === 2"/>
                     <Enigma_3 :room="this" v-if="step === 3" />
+                    <enigma_4 :room="this" v-if="step === 4" />
                 </div>
                 <div class="col-md-3">
                     <Inventory :room="this"/>
@@ -24,13 +25,14 @@ import RoomHeader from "../layout/RoomHeader";
 import Enigma_1 from "./infiniteCristal_components/enigma_1";
 import Enigma_2 from "./infiniteCristal_components/enigma_2";
 import Enigma_3 from "./infiniteCristal_components/enigma_3";
+import enigma_4 from "./infiniteCristal_components/enigma_4";
 import Map from "./infiniteCristal_components/Map"
 import Inventory from "./infiniteCristal_components/inventory";
 
 export default {
     name: "infiniteCristal",
     props: ['app'],
-    components: {RoomHeader, Enigma_1, Map, Inventory, Enigma_2, Enigma_3},
+    components: {RoomHeader, Enigma_1, Map, Inventory, Enigma_2, Enigma_3, enigma_4},
     data() {
         return {
             countDown: 60,

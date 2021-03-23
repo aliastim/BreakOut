@@ -32,17 +32,18 @@
                 Tableau des scores
                <div class="row">
                    <div class="col-md-6">
-                       Toi : {{scores(this.player_points)}}
+                       Toi : {{scores(this.player_points_array)}}
+                       {{turn}}
                    </div>
                    <div class="col-md-6">
-                       Gerrard : {{scores(this.cpu_points)}}
+                       Gerrard : {{scores(this.cpu_points_array)}}
                    </div>
                </div>
             </div>
-            <div v-if="this.end_game === true">Fin du jeu</div>
+            <button v-on:click="end_archery()">Fin du jeu</button>
         </div>
         <button class="btn btn-outline-primary" v-on:click="[scoping(), scoping_step+=1]"  v-if="this.scoping_step <= 3 || this.turn === 2">Viser</button>
-        <button class="btn btn-outline-danger" v-if="this.turn === 2 || this.scoping_step >= 3" v-on:click="changeTurn()">Tour de l'archer</button>
+        <button class="btn btn-outline-danger" v-if="this.turn === 1 && this.scoping_step >= 3" v-on:click="changeTurn()">Tour de l'archer</button>
     </div>
 </template>
 
@@ -61,17 +62,11 @@ export default {
             scoping_step: 0,
             player_points_array: [0],
             cpu_points_array : [0],
-            player_points : this.scores(this.player_points_array),
-            cpu_points : this.scores(this.cpu_points_array),
             //1 -> tour du joueur, 2 -> tour de l'ordinateur
             turn: this.parent.arrow_game_winner,
             end_game : false,
         }
     },
-    mounted() {
-        this.end_archery()
-    },
-    computed: {},
     methods: {
         scoping() {
             if (this.scoping_step === 0) {
@@ -121,227 +116,230 @@ export default {
             clearInterval(this.interval)
         },
         calcPoints(y,x){
+            console.log(x,y)
             if (y>0 && y<5 && x>0 && x<100){
                 if (this.turn === 1){
-                    this.player_points.push(1)
+                    this.player_points_array.push(1)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(1)
+                    this.cpu_points_array.push(1)
                 }
             }else if(y>95 && y<100 && x>0 && x<100){
                 if (this.turn === 1){
-                    this.player_points.push(1)
+                    this.player_points_array.push(1)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(1)
+                    this.cpu_points_array.push(1)
                 }
             }else if (y>0 && y<100 && x>0 && x<5){
                 if (this.turn === 1){
-                    this.player_points.push(1)
+                    this.player_points_array.push(1)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(1)
+                    this.cpu_points_array.push(1)
                 }
             }else if (y>0 && y<100 && x>95 && x<100){
                 if (this.turn === 1){
-                    this.player_points.push(1)
+                    this.player_points_array.push(1)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(1)
+                    this.cpu_points_array.push(1)
                 }
             }else if (y>5 && y<10 && x>5 && x<95){
                 if (this.turn === 1){
-                    this.player_points.push(2)
+                    this.player_points_array.push(2)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(2)
+                    this.cpu_points_array.push(2)
                 }
             }else if (y>90 && y<95 && x>5 && x<95){
                 if (this.turn === 1){
-                    this.player_points.push(2)
+                    this.player_points_array.push(2)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(2)
+                    this.cpu_points_array.push(2)
                 }
             }else if (y>5 && y<95 && x>5 && x<10){
                 if (this.turn === 1){
-                    this.player_points.push(2)
+                    this.player_points_array.push(2)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(2)
+                    this.cpu_points_array.push(2)
                 }
             }else if (y>5 && y<95 && x>90 && x<95){
                 if (this.turn === 1){
-                    this.player_points.push(2)
+                    this.player_points_array.push(2)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(2)
+                    this.cpu_points_array.push(2)
                 }
             }else if (y>10 && y<15 && x>10 && x<90){
                 if (this.turn === 1){
-                    this.player_points.push(3)
+                    this.player_points_array.push(3)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(3)
+                    this.cpu_points_array.push(3)
                 }
             }else if (y>85 && y<90 && x>10 && x<90){
                 if (this.turn === 1){
-                    this.player_points.push(3)
+                    this.player_points_array.push(3)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(3)
+                    this.cpu_points_array.push(3)
                 }
             }else if (y>10 && y<90 && x>10 && x<15){
                 if (this.turn === 1){
-                    this.player_points.push(3)
+                    this.player_points_array.push(3)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(3)
+                    this.cpu_points_array.push(3)
                 }
             }else if (y>10 && y<90 && x>85 && x<90){
                 if (this.turn === 1){
-                    this.player_points.push(3)
+                    this.player_points_array.push(3)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(3)
+                    this.cpu_points_array.push(3)
                 }
             }else if (y>15 && y<20 && x>15 && x<85){
                 if (this.turn === 1){
-                    this.player_points.push(4)
+                    this.player_points_array.push(4)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(4)
+                    this.cpu_points_array.push(4)
                 }
             }else if (y>80 && y<85 && x>15 && x<85){
                 if (this.turn === 1){
-                    this.player_points.push(4)
+                    this.player_points_array.push(4)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(4)
+                    this.cpu_points_array.push(4)
                 }
             }else if (y>15 && y<85 && x>15 && x<20){
                 if (this.turn === 1){
-                    this.player_points.push(4)
+                    this.player_points_array.push(4)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(4)
+                    this.cpu_points_array.push(4)
                 }
             }else if (y>15 && y<85 && x>80 && x<85){
                 if (this.turn === 1){
-                    this.player_points.push(4)
+                    this.player_points_array.push(4)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(4)
+                    this.cpu_points_array.push(4)
                 }
             }else if (y>20 && y<25 && x>20 && x<80){
                 if (this.turn === 1){
-                    this.player_points.push(5)
+                    this.player_points_array.push(5)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(5)
+                    this.cpu_points_array.push(5)
                 }
             }else if (y>75 && y<80 && x>20 && x<80){
                 if (this.turn === 1){
-                    this.player_points.push(5)
+                    this.player_points_array.push(5)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(5)
+                    this.cpu_points_array.push(5)
                 }
             }else if (y>20 && y<80 && x>20 && x<25){
                 if (this.turn === 1){
-                    this.player_points.push(5)
+                    this.player_points_array.push(5)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(5)
+                    this.cpu_points_array.push(5)
                 }
             }else if (y>20 && y<80 && x>75 && x<80){
                 if (this.turn === 1){
-                    this.player_points.push(5)
+                    this.player_points_array.push(5)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(5)
+                    this.cpu_points_array.push(5)
                 }
             }else if (y>25 && y<30 && x>25 && x<75){
                 if (this.turn === 1){
-                    this.player_points.push(6)
+                    this.player_points_array.push(6)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(6)
+                    this.cpu_points_array.push(6)
                 }
             }else if (y>70 && y<75 && x>25 && x<75){
                 if (this.turn === 1){
-                    this.player_points.push(6)
+                    this.player_points_array.push(6)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(6)
+                    this.cpu_points_array.push(6)
                 }
             }else if (y>25 && y<75 && x>25 && x<30){
                 if (this.turn === 1){
-                    this.player_points.push(6)
+                    this.player_points_array.push(6)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(6)
+                    this.cpu_points_array.push(6)
                 }
             }else if (y>25 && y<75 && x>70 && x<75){
                 if (this.turn === 1){
-                    this.player_points.push(6)
+                    this.player_points_array.push(6)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(6)
+                    this.cpu_points_array.push(6)
                 }
             }else if (y>30 && y<35 && x>30 && x<70){
                 if (this.turn === 1){
-                    this.player_points.push(7)
+                    this.player_points_array.push(7)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(7)
+                    this.cpu_points_array.push(7)
                 }
             }else if (y>65 && y<70 && x>30 && x<70){
                 if (this.turn === 1){
-                    this.player_points.push(7)
+                    this.player_points_array.push(7)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(7)
+                    this.cpu_points_array.push(7)
                 }
             }else if (y>30 && y<70 && x>30 && x<35){
                 if (this.turn === 1){
-                    this.player_points.push(7)
+                    this.player_points_array.push(7)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(7)
+                    this.cpu_points_array.push(7)
                 }
             }else if (y>30 && y<70 && x>65 && x<70){
                 if (this.turn === 1){
-                    this.player_points.push(7)
+                    this.player_points_array.push(7)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(7)
+                    this.cpu_points_array.push(7)
                 }
             }else if (y>35 && y<40 && x>35 && x<65){
                 if (this.turn === 1){
-                    this.player_points.push(8)
+                    this.player_points_array.push(8)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(8)
+                    this.cpu_points_array.push(8)
                 }
             }else if (y>60 && y<65 && x>35 && x<65){
                 if (this.turn === 1){
-                    this.player_points.push(8)
+                    this.player_points_array.push(8)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(8)
+                    this.cpu_points_array.push(8)
                 }
             }else if (y>35 && y<65 && x>35 && x<40){
                 if (this.turn === 1){
-                    this.player_points.push(8)
+                    this.player_points_array.push(8)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(8)
+                    this.cpu_points_array.push(8)
                 }
             }else if (y>35 && y<40 && x>60 && x<65){
                 if (this.turn === 1){
-                    this.player_points.push(8)
+                    this.player_points_array.push(8)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(8)
+                    this.cpu_points_array.push(8)
                 }
             }else if (y>40 && y<45 && x>40 && x<60){
                 if (this.turn === 1){
-                    this.player_points.push(9)
+                    this.player_points_array.push(9)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(9)
+                    this.cpu_points_array.push(9)
                 }
             }else if (y>55 && y<60 && x>40 && x<60){
                 if (this.turn === 1){
-                    this.player_points.push(9)
+                    this.player_points_array.push(9)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(9)
+                    this.cpu_points_array.push(9)
                 }
             }else if (y>40 && y<60 && x>40 && x<45){
                 if (this.turn === 1){
-                    this.player_points.push(9)
+                    this.player_points_array.push(9)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(9)
+                    this.cpu_points_array.push(9)
                 }
             }else if (y>40 && y<60 && x>55 && x<60){
                 if (this.turn === 1){
-                    this.player_points.push(9)
+                    this.player_points_array.push(9)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(9)
+                    this.cpu_points_array.push(9)
                 }
             }else if (y>45 && y<55 && x>45 && x<55){
+                console.log(x,y)
                 if (this.turn === 1){
-                    this.player_points.push(10)
+                    console.log(x,y)
+                    this.player_points_array.push(10)
                 }else if(this.turn === 2){
-                    this.cpu_points.push(10)
+                    this.cpu_points_array.push(10)
                 }
             }
         },
@@ -357,11 +355,21 @@ export default {
             return array.reduce(reducer);
         },
         end_archery(){
-            if (this.player_points || this.cpu_points >= 30){
+            console.log('end_archery')
+            if (this.scores(this.player_points_array) >= 30){
                 this.end_game = true
+                this.parent.room.step = 4
+            }else if (this.scores(this.cpu_points_array) >= 30){
+                console.log('loose archery')
+                this.parent.enigma_3_step = 3
+            }else{
+                console.log('else archery')
             }
         }
-    }
+    },
+    mounted() {
+
+    },
 }
 
 
