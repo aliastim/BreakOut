@@ -7,14 +7,13 @@
             <div class="row" style="position:fixed">
                 <div class="col-md-6">
                     <button v-on:click="start_game()" v-if="turn === null">Commencer la partie</button>
-                    <button v-on:click="skip_turn()" v-if="turn !== null && winner === null">Tour terminé</button>
-                    <button v-if="winner === 1" v-on:click="parent.enigma_3_step = 2">Etape suivante</button>
+                    <button v-on:click="skip_turn()" v-if="turn !== null && this.parent.arrow_game_winner === null">Tour terminé</button>
+                    <button v-if="this.parent.arrow_game_winner != null" v-on:click="parent.enigma_3_step = 2">Etape suivante</button>
                 </div>
                 Tours : {{ turn }}
                 Cliques : {{ Click }}
-                Nombre de flèches : {{ Player_arrows }}
                 Flèches restantes : {{ arrow }}
-                Vainqueur : {{ winner }}
+                Vainqueur : {{ this.parent.arrow_game_winner }}
                 plays : {{ plays }}
                 etape : {{ this.parent.enigma_3_step}}
             </div>
@@ -22,12 +21,12 @@
         <div class="col-md-2">
             <div class="row">
                 <div class="col-md-12">
-                    <div v-if="turn === true && winner === null">A toi de jouer</div>
-                    <div v-if="turn === false && winner === null">Gerrard l'archer joue</div>
-                    <div v-if="winner === 1">
+                    <div v-if="turn === true && this.parent.arrow_game_winner === null">A toi de jouer</div>
+                    <div v-if="turn === false && this.parent.arrow_game_winner === null">Gerrard l'archer joue</div>
+                    <div v-if="this.parent.arrow_game_winner === 1">
                         Vous avez gagné
                     </div>
-                    <div v-if="winner === 2">
+                    <div v-if="this.parent.arrow_game_winner === 2">
                         Gerrard L'archer a gagné
                     </div>
                 </div>
@@ -53,10 +52,6 @@ export default {
             turn: null,
             // Permet de limiter a 3 maximum le nombre de flèches choisies par l'utilisateur
             Click: 0,
-            // Compte le nombre de flèches choisies par le joueur, cela représentera son nombre d'essai pour l'épreuve suivante du tir à l'arc
-            Player_arrows: 0,
-            // Si égale à 1 le joueur gagne, si égale a 2 c'est l'ordi qui gagne
-            winner: null,
             plays: [],
         }
     },
@@ -72,7 +67,6 @@ export default {
         pick_arrow() {
             if (this.turn === true && this.Click < 3) {
                 this.arrow = this.arrow - 1;
-                this.Player_arrows += 1;
                 this.Click = this.Click + 1;
                 this.end_game()
             } else if (this.turn === true && this.Click >= 3) {
@@ -111,9 +105,9 @@ export default {
         end_game() {
             if (this.arrow <= 0) {
                 if (this.turn === true) {
-                    this.winner = 2;
+                    this.parent.arrow_game_winner = 2;
                 } else if (this.turn === false) {
-                    this.winner = 1;
+                    this.parent.arrow_game_winner = 1;
                 }
                 setTimeout(() => {
                     this.parent.Arrow_game = false;

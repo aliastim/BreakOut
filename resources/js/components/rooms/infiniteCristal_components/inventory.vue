@@ -7,7 +7,7 @@
                         INVENTAIRE
                     </div>
                     <div class="col-md-6">
-                        <button v-on:click="toMap">Carte</button>
+                        <button class="btn btn-primary" v-on:click="toMap">Carte</button>
                     </div>
                 </div>
                 <div v-if="this.room.step === 1">
