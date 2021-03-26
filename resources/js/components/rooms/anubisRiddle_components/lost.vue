@@ -26,6 +26,8 @@
                                 <p class="texte-intro">
                                     Votre égoïsme vous a mené à votre perte ainsi qu’à celle de votre partenaire, vous voilà condamné à jamais dans ce tombeau.
                                 </p>
+                                <p>Pour nous aider dans l'amélioration de nos salle, peux-tu répondre à ce formulaire ? Voici ton code nous permettant d'attester que tu as terminé la salle : AR2021R</p>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScZg3JuffjBdst6Xvkqn23HaeeTc15zQNKrmo8BeD6o-NjJUw/formResponse">Lien vers le formulaire</a>
                                 <button class="btn-enigme" @click="home()">Retour à l'accueil</button>
                             </div>
                         </transition>

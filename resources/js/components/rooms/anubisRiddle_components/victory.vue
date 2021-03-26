@@ -30,6 +30,8 @@
                                 <p class="pgold">
                                     500 pièces d'or ont été ajoutées à votre compte !
                                 </p>
+                                <p>Pour nous aider dans l'amélioration de nos salle, peux-tu répondre à ce formulaire ? Voici ton code nous permettant d'attester que tu as terminé la salle : AR2021R</p>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScZg3JuffjBdst6Xvkqn23HaeeTc15zQNKrmo8BeD6o-NjJUw/formResponse">Lien vers le formulaire</a>
                                 <div class="star-rating">
                                     <fieldset v-if="rating === false">
                                         <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Outstanding" @click="rate(5)"></label>
