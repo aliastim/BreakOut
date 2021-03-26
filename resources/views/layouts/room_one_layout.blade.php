@@ -5,6 +5,6 @@
 @endsection
 
 @section('styles')
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link rel="stylesheet" href="{{asset('css/room_one.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/room_one.css')}}">
 @endsection
