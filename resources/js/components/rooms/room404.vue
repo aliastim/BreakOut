@@ -1,8 +1,8 @@
 <template>
     <div class="r404-body">
         <room-header :room="this"></room-header>
-
-        <enigme0 :room="this" v-if="enigme === 0"></enigme0>
+        <!--
+        <enigme0 :room="this" v-if="enigme === 0"></enigme0>-->
 
         <enigme1 :room="this" v-if="(enigme === 1 && phase ===0)"></enigme1>
         <enigme1_1 :room="this" v-if="(enigme === 1 && phase ===1)"></enigme1_1>
@@ -70,7 +70,7 @@ export default {
         return {
             timer: 45,
             enigme: 1,
-            phase: 1,
+            phase: 0,
 
             hour: "00",
             minute: "45",
