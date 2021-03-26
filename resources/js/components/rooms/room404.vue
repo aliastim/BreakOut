@@ -69,7 +69,7 @@ export default {
     data(){
         return {
             timer: 45,
-            enigme: 0,
+            enigme: 1,
             phase: 0,
 
             hour: "00",
