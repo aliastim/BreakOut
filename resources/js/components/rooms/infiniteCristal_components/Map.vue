@@ -4,7 +4,7 @@
             <div class="col-md-auto">
                 <h1>A la recherche du cristal d'infini</h1>
                 <div class="alert alert-warning" role="alert">
-                    Cette salle n'est pas encore terminée, donc non testable en l'état merci de votre comprehension
+                    cette salle est en cours d'élaboration par nos Game masters aggueris, revenez plus tard !
                 </div>
             </div>
         </div>
