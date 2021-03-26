@@ -70,7 +70,7 @@ export default {
         return {
             timer: 45,
             enigme: 1,
-            phase: 0,
+            phase: 1,
 
             hour: "00",
             minute: "45",
