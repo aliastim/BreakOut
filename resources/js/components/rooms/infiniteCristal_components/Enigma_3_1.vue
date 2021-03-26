@@ -2,7 +2,7 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="row mb-3 justify-content-center" v-for="n in arrow">
-                <div class="arrow" v-on:click="pick_arrow(n)" v-bind:id="n">{{n}}</div>
+                <div class="arrow" v-on:click="pick_arrow(n)" v-bind:id="n"></div>
             </div>
             <div class="row" style="position:fixed">
                 <div class="col-md-6">

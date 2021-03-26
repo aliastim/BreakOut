@@ -17,7 +17,7 @@ export default {
     components: {enigma_3_1, enigma_3_2, enigma_3_3},
     data() {
         return {
-            enigma_3_step : 3,
+            enigma_3_step : 1,
             arrow_game_winner : null,
         }
     },
