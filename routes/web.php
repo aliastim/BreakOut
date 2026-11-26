@@ -13,6 +13,7 @@ Route::get('/{route}', function () {
     return view('index');
 })->where('route', '.*');
 
+
 // Pour authentification
 Route::prefix('auth')->group(function () {
     Route::post('init', 'AppController@init');

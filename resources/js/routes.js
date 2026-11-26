@@ -24,6 +24,9 @@ import AnubisRiddle from './components/rooms/anubisRiddle';
 //Vue admin
 import Admin_dashboard from './components/admin/Dashboard';
 
+// Salles de jeu
+import CristalInfini from './components/rooms/CristalInfini'
+
 //Vue d'erreurs
 import PageNotFound from './components/errors/PageNotFound'
 
@@ -42,21 +45,8 @@ const router = new VueRouter({
         { path: '/inventory', component: Inventory},
         { path: '/myrooms', component: Myrooms},
         { path: '/gemclicker', component: Gemclicker},
-        { path: '/mentions_legales', component: Mentions},
-        { path: '/infos', component: Infos},
-        { path: '/donnees_personnelles', component: DonneesPerso},
-
-        { path: '/rooms/room404', component: Room404},
-        { path: '/rooms/room404/play', component: Room404},
-
-        { path: '/rooms/infinitecristal', component: InfiniteCristal},
-        { path: '/rooms/infinitecristal/play', component: InfiniteCristal},
-
-        { path: '/rooms/anubisriddle', component: AnubisRiddle},
-        { path: '/rooms/anubisriddle/play', component: AnubisRiddle},
-
-        /*{ path: '*', component: PageNotFound},*/
-        { path: '*', component: Room404},
+        { path: '/play/cristal-infini', component: CristalInfini},
+        { path: '*', component: PageNotFound},
 
     ]
 });
