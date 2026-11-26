@@ -8,13 +8,13 @@
                 </div>
             </div>
             <div class="row h-100">
-                <div class="col-6 h-100">
+                <div class="col-md-6 h-100 d-none-767">
                     <div class="shop-barre-annonce-image d-flex h-100 w-100">
                         <img src="img/Banque_graphique/Objets/BreakOut_Coffre_Surprise.png">
                         <hr class="yellow-border">
                     </div>
                 </div>
-                <div class="col-6 h-100">
+                <div class="col-12 col-md-6 h-100">
                     <div class="shop-barre-annonce-description d-flex text-center h-100 w-100 p-3">
                         <div class="m-auto d-flex flex-column">
                             <div><h2>Coffre surprise</h2></div>
@@ -31,13 +31,13 @@
                                 </p>
                             </div>
                             <div>
-                                <div>
+                                <div class="m-auto">
                                     <button>Acheter</button>
                                     <div>
-                                        <div class="div-price">
+                                        <div class="div-price" style="font-size: 20px; margin-top: 1px;">
                                             400
                                         </div>
-                                        <div class="div-gold"></div>
+                                        <div class="div-gold" style="margin-top: 2px; height: 25px; width: 25px;"></div>
                                     </div>
                                 </div>
                             </div>

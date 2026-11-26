@@ -3,13 +3,26 @@ import VueRouter from 'vue-router';
 import Home from './components/Home.vue'
 import Shop from './components/Shop';
 import Rooms from "./components/Rooms";
+import Forum from './components/Forum';
+import ForumPublication from './components/ForumPublication';
+import Mentions from './components/mentions/mentions_legales';
+import Infos from './components/mentions/info';
+import DonneesPerso from './components/mentions/donnees_personelles';
 
 //Vue utilisateur
 import Account from './components/parameters/Account';
 import Avatar from './components/parameters/Avatar';
 import Inventory from './components/parameters/Inventory';
 import Myrooms from './components/parameters/Myrooms';
-import Gemclicker from './components/hidden/Gemclicker'
+import Gemclicker from './components/hidden/Gemclicker';
+
+//Vue salles
+import Room404 from './components/rooms/room404';
+import InfiniteCristal from './components/rooms/infiniteCristal';
+import AnubisRiddle from './components/rooms/anubisRiddle';
+
+//Vue admin
+import Admin_dashboard from './components/admin/Dashboard';
 
 // Salles de jeu
 import CristalInfini from './components/rooms/CristalInfini'
@@ -22,7 +35,10 @@ const router = new VueRouter({
     routes : [
         { path: '/', component: Home},
         { path: '/home', component: Home},
+        { path: '/admin', component: Admin_dashboard},
         { path: '/rooms', component: Rooms},
+        { path: '/forum', component: Forum},
+        { path: '/forum/posts/:id', component: ForumPublication},
         { path: '/shop', component: Shop},
         { path: '/account', component: Account},
         { path: '/avatar', component: Avatar},

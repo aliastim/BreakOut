@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse navbar-left" id="navbarTogglerDemo02">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <router-link class="nav-link nav-link-info nav-link-icones" to="#"><span class="nav-link-icones-span">Info</span><span class="sr-only">(current)</span></router-link>
+                    <router-link class="nav-link nav-link-info nav-link-icones" to="/infos"><span class="nav-link-icones-span">Info</span><span class="sr-only">(current)</span></router-link>
                 </li>
             </ul>
             <ul class="navbar-nav my-2 my-lg-0">
@@ -84,7 +84,7 @@
                                 <div class="onglet-modal-login-body margin-modal-login-right" style="margin-top: 0 !important; margin-bottom: 10px !important;">
                                     <div class="w-100 h-100 p-3">
                                         <div class="d-flex justify-content-center">
-                                            <img class="modal-login-logo" src="img/logos/BreakOut_Logotype_Citation.png">
+                                            <img class="modal-login-logo" src="/img/logos/BreakOut_Logotype_Citation.png">
                                         </div>
                                         <form method="POST" @submit.prevent="login" class="mt-4">
                                             <label for="login-mail" class="modal-login-credentials-text">Nom d'utilisateur :</label>
@@ -134,14 +134,14 @@
                                             <div class="margin-modal-login-right h-100" style="margin-top: 0 !important; margin-bottom: 10px !important;">
                                                 <div class="w-100 h-100 p-3">
                                                     <div class="d-flex justify-content-center">
-                                                        <img class="modal-login-logo" src="img/logos/BreakOut_Logotype_Citation.png">
+                                                        <img class="modal-login-logo" src="/img/logos/BreakOut_Logotype_Citation.png">
                                                     </div>
                                                     <div class="text-center">
                                                         <label for="password-confirm" class="modal-login-credentials-text" style="margin-top: 42px;">Un code de parrainage :</label>
                                                         <div class="w-100">
                                                             <div class="input-group mb-3 d-flex justify-content-center">
                                                                 <div class="input-group-prepend btn-parrainage-prepend">
-                                                                    <span class="input-group-text" id="inputGroup-sizing-default"><img src="img/icones/ajouter_un_ami.png"></span>
+                                                                    <span class="input-group-text" id="inputGroup-sizing-default"><img src="/img/icones/ajouter_un_ami.png"></span>
                                                                 </div>
                                                                 <input type="text" class="btn-parrainage" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                                             </div>
@@ -171,10 +171,8 @@
     </div>
     <!-- FIN Modal connexion/register -->
     <!-- Modal profil -->
-
-    <!-- FIN Modal profil -->
     <div class="modal fade" id="modalprofil" v-if="app.user" tabindex="-1" aria-labelledby="modalprofil" aria-hidden="true">
-        <div class="modal-dialog login-modal-dialog modal-dialog-centered">
+        <div class="modal-dialog profile-modal-dialog modal-dialog-centered">
             <div class="login-modal-content">
                 <div class="login-modal-header">
                     <div class="josephin-bold color-white">{{ app.user.name }} - Mon profil</div>
@@ -183,18 +181,119 @@
                     </button>
                 </div>
                 <div class="login-modal-body">
-                    <div class="">{{ app.user.name }} - Mon profil</div>
+                    <div class="w-100 row" style="margin: 0 !important;">
+                        <div class="col-12 col-lg-5 profile-modal-body d-none-991">
+                            <div class="profile-modal-container-left">
+                                <a href="/avatar"><button class="btn-profile2" style="position: absolute; left:10px; top: 10px; z-index: 99999;"><i class="fas fa-pencil-alt"></i></button></a>
+                                <div class="w-100 h-100 d-flex justify-content-center overflow-hidden">
+                                    {{ loadAvatar }}
+                                    <div class="w-100 h-100 apercu_personnage_rar apercu_personnage_rar__affiche">
+                                        <img v-if="avatar_items.accessoire" style="z-index: 2006; margin-left: calc(50% - 128px) !important;" :src="avatar_items.accessoire.img" class="res_1X apercu_personnage_rar__calque">
+                                        <img v-if="avatar_items.visage" style="z-index: 2005; margin-left: calc(50% - 128px) !important;" :src="avatar_items.visage.img" class="res_1X apercu_personnage_rar__calque">
+                                        <img v-if="avatar_items.gants" style="z-index: 2004; margin-left: calc(50% - 128px) !important;" :src="avatar_items.gants.img" class="res_1X apercu_personnage_rar__calque">
+                                        <img v-if="avatar_items.chaussures" style="z-index: 2003; margin-left: calc(50% - 128px) !important;" :src="avatar_items.chaussures.img" class="res_1X apercu_personnage_rar__calque">
+                                        <img v-if="avatar_items.bas" style="z-index: 2002; margin-left: calc(50% - 128px) !important;" :src="avatar_items.bas.img" class="res_1X apercu_personnage_rar__calque">
+                                        <img v-if="avatar_items.haut"  style="z-index: 2001; margin-left: calc(50% - 128px) !important;" :src="avatar_items.haut.img" class="res_1X apercu_personnage_rar__calque">
 
-                    <a href="#" @click="logout"><button class="btn-profile"><i class="fas fa-sign-out-alt"></i></button></a>
+                                        <img v-if="avatar.sexe === 'male'" style="z-index: 2000; margin-left: calc(50% - 128px) !important;" src="/img/avatar/homme/corps_h.png" class="res_1X apercu_personnage_rar__calque">
+                                        <img v-if="avatar.sexe === 'female'" style="z-index: 2000; margin-left: calc(50% - 128px) !important;" src="/img/avatar/femme/corps_f.png" class="res_1X apercu_personnage_rar__calque">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-7 profile-modal-body">
+                            <div class="profile-modal-container-right">
+                                <div class="profile-modal-container-header">
+                                    <div class="d-flex">
+                                        <div class="mr-auto">
+                                        </div>
+                                        <div class="">
+                                            <div>
+                                                {{ getGold }}
+                                                <p style="float: left; color: #f9ba48; font-size: 16px;">{{ gold }}&nbsp;</p>
+                                                <div style="background-image: url('/img/Banque_graphique/Objets/BOCoin_64.png'); background-repeat: no-repeat; background-size: contain; max-height: 22px !important; height: 22px; width: 22px; float: right;"></div>
+
+                                            </div>
+                                        </div>
+                                        <div >
+                                            <div>
+                                                {{ getGem }}
+                                                <p style="float: left; color: #7CB644; font-size: 16px;">&nbsp;{{ gem }}</p>
+                                                <div style="background-image: url('/img/Banque_graphique/Objets/gemme96.png'); background-repeat: no-repeat; background-size: contain; max-height: 22px !important; height: 22px; width: 22px; float: right;"></div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile-modal-container-body">
+                                    <div class="w-100 text-center p-2">
+                                        <p class="josephin-bold" style="color: #f9ba48;">
+                                            <span style="font-size: 20px;">{{ app.user.name }}</span><br>
+                                            <span class="josephin-light-italic color-yellow-clear" v-text="'Inscrit depuis le ' + dateinscription(app.user.created_at)"></span>
+                                        </p>
+                                        <hr style="border: 1px solid #212121; width: 100%;">
+                                        <div style="font-size: 16px;">
+                                            <div class="w-100 d-flex">
+                                                <div style="width: 30px; text-align: center;"><p style="font-weight: 900; color: #f9ba48;"><i class="fas fa-gamepad"></i>&nbsp;</p></div>
+                                                <div class="color-yellow-clear">Nombre de parties jouées :</div>
+                                                <div class="ml-auto"><p class="josephin-bold" style="color: #f9ba48;">{{ app.user.games_played }}</p></div>
+                                            </div>
+                                            <div class="w-100 d-flex">
+                                                <div style="width: 30px; text-align: center;"><p style="font-weight: 900; color: #f9ba48;"><i class="fas fa-gamepad"></i>&nbsp;</p></div>
+                                                <div class="color-yellow-clear">Nombre de parties gagnées :</div>
+                                                <div class="ml-auto"><p class="josephin-bold" style="color: #f9ba48;">{{ app.user.games_win }}</p></div>
+                                            </div>
+                                            <div class="w-100 d-flex">
+                                                <div style="width: 30px; text-align: center;"><p style="font-weight: 900; color: #f9ba48;"><i class="fas fa-hourglass-half"></i>&nbsp;</p></div>
+                                                <div class="color-yellow-clear">Temps moyen par partie :</div>
+                                                <div class="ml-auto"><p class="josephin-bold" style="color: #f9ba48;">{{ app.user.games_duration }}</p></div>
+                                            </div>
+                                            <div class="w-100 d-flex">
+                                                <div style="width: 30px; text-align: center;"><p style="font-weight: 900; color: #f9ba48;"><i class="fas fa-hourglass-half"></i>&nbsp;</p></div>
+                                                <div class="color-yellow-clear">Meilleur temps :</div>
+                                                <div class="ml-auto"><p class="josephin-bold" style="color: #f9ba48;">{{ app.user.games_best_duration }}</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="profile-modal-container-right-bottom">
+                                <div class="d-flex">
+                                    <div class="mr-auto">
+                                        <a href="#" @click="logout"><button class="btn-profile"><i class="fas fa-sign-out-alt"></i></button></a>
+                                    </div>
+                                    <div>
+                                        <a href="/inventory"><button class="btn-profile"><i class="fas fa-trophy" style="margin-left: -2px;"></i></button></a>
+                                        <a href="/account"><button class="btn-profile"><i class="fas fa-shopping-cart" style="margin-left: -2px;"></i></button></a>
+                                        <a href="/account"><button class="btn-profile"><i class="fas fa-cog"></i></button></a>
+                                    </div>
+                                    <div class="input-group d-flex justify-content-center" style="width: auto !important; margin-left: 4px;">
+                                        <div class="input-group-prepend btn-parrainage-prepend" style="height: 45px; border-width: 4px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);">
+                                            <span class="input-group-text"><img src="/img/icones/ajouter_un_ami.png"></span>
+                                        </div>
+                                        <input type="text" class="btn-parrainage" style="width: 150px; height: 45px; border-width: 4px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
 
 
                 </div>
             </div>
         </div>
-    </div>
+    </div><!-- FIN Modal profil -->
     </div>
 </template>
 <script>
+import moment from "moment";
 export default {
     name: "Navbar",
     props: ['app'],
@@ -212,6 +311,11 @@ export default {
             name : "",
             password_verify : "",
             checked : false,
+            /* Content */
+            gold: 0,
+            gem: 0,
+            avatar: [],
+            avatar_items: [],
             /*test:""*/
         }
     },
@@ -249,8 +353,8 @@ export default {
                 };
                 console.log(data)
 
-                this.app.req
-                .post("auth/login", data)
+                axios
+                .post("/auth/login", data)
                 .then(response => {
                     this.app.user = response.data;
                     console.log("user login : " + this.app.user.name)
@@ -307,7 +411,7 @@ export default {
                     password: this.password
                 }
 
-                this.app.req.post('auth/register', data).then(response => {
+                axios.post('/auth/register', data).then(response => {
                     this.app.user = response.data;
                     this.$router.push("/");
                 }).catch(error => {
@@ -320,12 +424,40 @@ export default {
             }
         },
         logout() {
-            this.app.req.post("auth/logout").then(() => {
+            axios.post("/auth/logout").then(() => {
                 this.app.user=null;
                 this.modal = "#modalconnexion";
                 this.$router.push("/home");
             });
+        },
+        dateinscription(d)
+        {
+            return moment(d).format('DD/MM/YYYY');
         }
+    },
+    computed: {
+        getGold: function () {
+            axios.post("/useritems/getgold").then(response => {
+                this.gold = response.data;
+            });
+        },
+        getGem: function () {
+            axios.post("/useritems/getgem").then(response => {
+                this.gem = response.data;
+            });
+        },
+        loadAvatar: function ()
+        {
+            this.errors= [];
+            axios.post('/bo_avatar/loadavatar').then(response => {
+                this.avatar = response.data[0];
+                this.avatar_items = response.data[1];
+                //console.log(response.data);
+
+            }).catch(error => {
+                this.errors.push(error.response.data.error);
+            });
+        },
     }
 
     /*https://www.youtube.com/watch?v=qKr1V9GGpcA*/

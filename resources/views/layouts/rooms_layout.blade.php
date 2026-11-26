@@ -14,7 +14,7 @@
 
     <!-- Styles généraux à toutes les salles-->
     @yield('styles')
-    <link rel="stylesheet" href="{{asset('css/all.css')}}" > <!-- FontAwesome -->
+    <link rel="stylesheet" href="{{secure_asset('css/all.css')}}" > <!-- FontAwesome -->
 
 </head>
 <body>

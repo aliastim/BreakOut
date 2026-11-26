@@ -1,6 +1,6 @@
 <template>
     <div>
-        <navbar :app="this"></navbar>
+        <navbar v-if="navbool" :app="this"></navbar>
         <main>
             <router-view :app="this"></router-view>
         </main>
@@ -13,6 +13,7 @@ export default {
     components: {Navbar},
     data() {
         return {
+            navbool: true,
             carousel: false,
             /*Authentification*/
             user: null,
@@ -35,7 +36,7 @@ export default {
         init() {
             this.loading = true;
 
-            this.req.post("auth/init").then(response => {
+            axios.post("/auth/init").then(response => {
                 /* this.req.get -> bug */
                 this.user = response.data.user;
                 console.log(response.data);

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <HomeCarousel></HomeCarousel>
+        <HomeCarousel :home="this"></HomeCarousel>
             <div class="breakout-body">
             <hr class="liseret-rouge">
             <div class="d-flex justify-content-center">
@@ -12,18 +12,18 @@
                     <div class="d-none-991">5 parties en cours</div>
                 </div>
                 <div class="row pb-5">
-                    <div class="col-md-4 col-12 mt-3 text-center">
-                        <div class="carre-salle-accueil" style="background: url('img/illustrations_salles/exemple1.jpg')">
+                    <div class="col-md-4 col-12 mt-3 text-center" v-for="room in homerooms">
+                        <div class="carre-salle-accueil" :style="{'background-image': 'url(' + room.img_link + ')'}">
                             <div class="carre-salle-accueil-apres">
                                 <div class="d-flex flex-column w-100">
                                     <div class="w-100 d-flex" style="height: calc(100% - 60px);">
                                         <div class="m-auto">
-                                            <h2>Le tombeau<br> d'agamemnon</h2>
+                                            <h2>{{ room.name }}</h2>
                                         </div>
                                     </div>
                                     <div class="w-100" style="height: 60px;">
                                         <div class="h-100">
-                                            <a href=""><button>Jouer</button></a>
+                                            <router-link :to="room.url"><button>Jouer</button></router-link>
                                         </div>
                                     </div>
                                 </div>
@@ -31,56 +31,10 @@
                         </div>
                         <div class="carre-salle-accueil-footer p-2">
                             <div class="d-flex justify-content-between">
-                                <div><i class="fas fa-user">&nbsp;</i><i class="fas fa-user"></i>&nbsp;<i class="fas fa-user"></i></div>
-                                <div><i class="fas fa-hourglass-half"></i><small> ≃ 30 min</small></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-12 mt-3 text-center">
-                        <div class="carre-salle-accueil" style="background: url('img/illustrations_salles/exemple2.png')">
-                            <div class="carre-salle-accueil-apres">
-                                <div class="d-flex flex-column w-100">
-                                    <div class="w-100 d-flex" style="height: calc(100% - 60px);">
-                                        <div class="m-auto">
-                                            <h2>La forêt<br> d'esrael</h2>
-                                        </div>
-                                    </div>
-                                    <div class="w-100" style="height: 60px;">
-                                        <div class="h-100">
-                                            <a href=""><button>Jouer</button></a>
-                                        </div>
-                                    </div>
+                                <div>
+                                    <i class="fas fa-user" v-for="user in room.players">&nbsp;</i>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="carre-salle-accueil-footer p-2">
-                            <div class="d-flex justify-content-between">
-                                <div><i class="fas fa-user">&nbsp;</i><i class="fas fa-user"></i>&nbsp;<i class="fas fa-user"></i></div>
-                                <div><i class="fas fa-hourglass-half"></i><small> ≃ 30 min</small></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-12 mt-3 text-center">
-                        <div class="carre-salle-accueil" style="background: url('img/illustrations_salles/exemple3.png')">
-                            <div class="carre-salle-accueil-apres">
-                                <div class="d-flex flex-column w-100">
-                                    <div class="w-100 d-flex" style="height: calc(100% - 60px);">
-                                        <div class="m-auto">
-                                            <h2>La prison<br> de pandragon</h2>
-                                        </div>
-                                    </div>
-                                    <div class="w-100" style="height: 60px;">
-                                        <div class="h-100">
-                                            <a href=""><button>Jouer</button></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carre-salle-accueil-footer p-2">
-                            <div class="d-flex justify-content-between">
-                                <div><i class="fas fa-user">&nbsp;</i><i class="fas fa-user"></i>&nbsp;<i class="fas fa-user"></i></div>
-                                <div><i class="fas fa-hourglass-half"></i><small> ≃ 30 min</small></div>
+                                <div><i class="fas fa-hourglass-half"></i><small> ≃ {{ room.duration }}</small></div>
                             </div>
                         </div>
                     </div>
@@ -167,7 +121,7 @@
                                         <div class="d-flex justify-content-center w-100">
                                             <div class="w-100 d-flex flex-column text-center">
                                                 <div class="w-100 d-flex justify-content-center">
-                                                    <div style="color: #E0E0E0 !important;">Pseudo</div>
+                                                    <div style="color: #E0E0E0 !important;">CDamasse</div>
                                                 </div>
                                                 <p>Inscrit depuis le 24/09/2020</p>
                                             </div>
@@ -183,17 +137,17 @@
                                             <p>
                                                 <i class="fas fa-gamepad"></i><br>
                                                 Parties jouées :
-                                                <span>31</span>
+                                                <span>73</span>
                                             </p>
                                             <p>
                                                 <i class="fas fa-hourglass-half"></i><br>
                                                 Meilleur temps :
-                                                <span>43 min</span>
+                                                <span>13 min</span>
                                             </p>
                                             <p>
                                                 <i class="fas fa-hourglass-half"></i><br>
                                                 Temps moyen :
-                                                <span>56 min</span>
+                                                <span>26 min</span>
                                             </p>
                                         </div>
                                     </div>
@@ -210,7 +164,7 @@
                                         <div class="d-flex justify-content-center w-100">
                                             <div class="w-100 d-flex flex-column text-center">
                                                 <div class="w-100 d-flex justify-content-center">
-                                                    <div style="color: #FFE27A;">Pseudo</div>
+                                                    <div style="color: #FFE27A;">AliasTim</div>
                                                 </div>
                                                 <p>Inscrit depuis le 24/09/2020</p>
                                             </div>
@@ -221,22 +175,22 @@
                                         <i class="fas fa-trophy"></i>
                                     </div>
                                     <div class="cadre-top-joueurs-body text-center">
-                                        <h6>31 Victoires</h6>
+                                        <h6>56 Victoires</h6>
                                         <div>
                                             <p>
                                                 <i class="fas fa-gamepad"></i><br>
                                                 Parties jouées :
-                                                <span>32</span>
+                                                <span>108</span>
                                             </p>
                                             <p>
                                                 <i class="fas fa-hourglass-half"></i><br>
                                                 Meilleur temps :
-                                                <span>43 min</span>
+                                                <span>7 min</span>
                                             </p>
                                             <p>
                                                 <i class="fas fa-hourglass-half"></i><br>
                                                 Temps moyen :
-                                                <span>56 min</span>
+                                                <span>18 min</span>
                                             </p>
                                         </div>
                                     </div>
@@ -253,7 +207,7 @@
                                         <div class="d-flex justify-content-center w-100">
                                             <div class="w-100 d-flex flex-column text-center">
                                                 <div class="w-100 d-flex justify-content-center">
-                                                    <div style="color: #FF9838 !important;">Pseudo</div>
+                                                    <div style="color: #FF9838 !important;">PA</div>
                                                 </div>
                                                 <p>Inscrit depuis le 24/09/2020</p>
                                             </div>
@@ -269,17 +223,17 @@
                                             <p>
                                                 <i class="fas fa-gamepad"></i><br>
                                                 Parties jouées :
-                                                <span>31</span>
+                                                <span>46</span>
                                             </p>
                                             <p>
                                                 <i class="fas fa-hourglass-half"></i><br>
                                                 Meilleur temps :
-                                                <span>43 min</span>
+                                                <span>29 min</span>
                                             </p>
                                             <p>
                                                 <i class="fas fa-hourglass-half"></i><br>
                                                 Temps moyen :
-                                                <span>56 min</span>
+                                                <span>34 min</span>
                                             </p>
                                         </div>
                                     </div>
@@ -288,7 +242,9 @@
                         </div>
                         <div class="w-100 text-center pt-4 pb-3">
                             <a href="#">
-                                <button class="btn-sous-top">Accéder au forum</button>
+                                <router-link class="" to="/forum">
+                                    <button class="btn-sous-top">Accéder au forum</button>
+                                </router-link>
                             </a>
                         </div>
                     </div>
@@ -393,7 +349,9 @@
                         </div>
                         <div class="w-100 text-center pt-4 pb-3">
                             <a href="#">
-                                <button class="btn-sous-top">Voir toutes les salles</button>
+                                <router-link class="" to="/rooms">
+                                    <button class="btn-sous-top">Voir toutes les salles</button>
+                                </router-link>
                             </a>
                         </div>
                     </div>
@@ -489,7 +447,11 @@
                         </div>
                         <div class="w-100 d-flex pb-4">
                             <div class="mr-auto"></div>
-                            <div><a href="#" class="lien-simple">Voir la boutique</a></div>
+                            <div>
+                                <router-link class="" to="/shop">
+                                    <a href="#" class="lien-simple">Voir la boutique</a>
+                                </router-link>
+                            </div>
                         </div>
                     </div>
 
@@ -539,7 +501,54 @@ import HomeCarousel from "./carousel/HomeCarousel";
 import GlobalFooter from "./layout/Footer";
 export default {
     name: "Home",
-    components: {HomeCarousel, GlobalFooter}
+    components: {HomeCarousel, GlobalFooter},
+    props: ['app'],
+    data() {
+        return {
+            homecarousel: [],
+            sentence: "",
+            homerooms: [],
+            errors: []
+        }
+    },
+
+    mounted() {
+        document.title="Accueil";
+        this.loadHomeCarousel();
+        this.loadScrolling();
+        this.loadRooms();
+        this.app.navbool = true;
+    },
+    methods : {
+        loadHomeCarousel() {
+            axios.post('/bo_dashboard/loadcarousel').then(response => {
+                this.homecarousel = response.data;
+            }).catch(error => {
+                this.errors.push(error.response.data.error);
+            });
+        },
+        loadScrolling(){
+            axios.post('/bo_dashboard/loadscrolling').then(response => {
+                this.sentence = response.data.scrolling;
+            }).catch(error => {
+                this.errors.push(error.response.data.error);
+            });
+        },
+        loadRooms(){
+            axios.post('/bo_rooms/loadall').then(response => {
+                this.homerooms = response.data;
+
+            }).catch(error => {
+                this.errors.push(error.response.data.error);
+            });
+        },
+        letsplay(){
+            axios.post('/rooms/letsplay').then(response => {
+            }).catch(error => {
+                this.errors.push(error.response.data.error);
+            });
+        },
+    }
 }
 </script>
 <style>

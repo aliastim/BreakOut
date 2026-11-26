@@ -1,3 +1,8 @@
+<?php
+    $titles = [
+        "index.php" => "Page d'accueil"
+    ]
+?>
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -8,15 +13,32 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'BreakOut') }}</title>
+    <!--<title> echo $titles[$_SERVER['PHP_SELF']] ?></title>-->
     <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">-->
     <!-- bootstrap est importé dans app.scss et se charge avec npm run watch -->
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-21NYBDTC99"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-21NYBDTC99');
+    </script>
+
     <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
+    {{--<script src="public/js/app.js"></script>--}}
+    <script src="{{ secure_asset('js/app.js') }}" defer></script>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link rel="stylesheet" href="{{asset('css/all.css')}}" > <!-- FontAwesome -->
+{{--
+    <link rel="stylesheet" href="public/css/app.css">
+    <link rel="stylesheet" href="public/css/all.css">--}}
+
+    <link rel="stylesheet" href="{{secure_asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/all.css')}}" > <!-- FontAwesome -->
+    <link rel="stylesheet" href="{{secure_asset('css/room404.css')}}">
 
 </head>
 <body>

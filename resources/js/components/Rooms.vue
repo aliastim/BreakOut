@@ -1,5 +1,8 @@
 <template>
     <div>
+        <div class="breakout-body-before" style="margin-top: 100px;">
+            <marquee>{{ sentence }}</marquee>
+        </div>
         <div class="breakout-body">
             <div class="container mt-4 pb-5">
                 <div class="panneau-ligne-1 pb-3">
@@ -105,7 +108,36 @@
 import GlobalFooter from "./layout/Footer";
 export default {
     name: "Rooms",
-    components: {GlobalFooter}
+    components: {GlobalFooter},
+    props: ['app'],
+    data() {
+        return {
+            sentence: "",
+            allrooms: []
+        }
+    },
+    mounted() {
+        document.title="BreakOut - Page Info";
+        this.loadScrolling();
+        this.loadRooms();
+    },
+    methods: {
+        loadScrolling(){
+            axios.post('/bo_dashboard/loadscrolling').then(response => {
+                this.sentence = response.data.scrolling;
+            }).catch(error => {
+                this.errors.push(error.response.data.error);
+            });
+        },
+        loadRooms(){
+            axios.post('/bo_rooms/loadall').then(response => {
+                this.allrooms = response.data;
+
+            }).catch(error => {
+                this.errors.push(error.response.data.error);
+            });
+        },
+    }
 }
 </script>
 
